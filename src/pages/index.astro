@@ -1,15 +1,46 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeaderScreen from "../components/astro/HeaderScreen.astro";
+import OurTeam from "../components/astro/OurTeam.astro";
 import ImageComp from "../components/ImageComp.astro";
-import BentoGrid from "../components/BentoGrid.astro";
+//import ProgramSwiper from "../components/ProgramSwiper.astro";
+//import ContentSplit from "../components/ContentSplit.astro";
+//import CTAColor from "../components/CTAColor.astro";
+//import Testimonials from "../components/Testimonials.astro";
+//import ContentCTA from "../components/ContentCTA.astro";
+import homePage from "../data/homePage";
+//import programsSwiper from "../data/programSwiper";
+//import BlogFeed from "../components/BlogFeed.astro";
+//import BookCTA from "../components/BookCTA.astro";
+//import bookCTA from "../data/book-cta";
+//import UnderHeaderVideo from "../components/UnderHeaderVideo.astro";
+//import Awards from "../components/Awards.astro";
 
-const image = "/src/assets/peter-thomas-QiqdAtV9U18-unsplash.jpg";
+const { data } = homePage;
 ---
 
-<Layout title="Welcome to Astro.">
-  <main>
-    <BentoGrid upper="Tailwind UI Example" title="Awesome Components" />
-  </main>
-</Layout>
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+  <OurTeam />
+  <!-- <Awards /> -->
+
+  <!-- <ProgramSwiper content={programsSwiper} /> -->
+  <!-- <UnderHeaderVideo
+    title="Best Flight School in the Southwest"
+    description="Experience, customer service, and excellence in flight training make Sun City the best choice for your aviation career. Watch the video to learn more."
+    videoId="F68KG_5tauU"
+  /> -->
+  <!-- <ContentSplit content={data.whySuncity} /> -->
+  <!-- <ContentCTA content={data.quizCTA} /> -->
+  <!-- <Testimonials content={data.testimonials} /> -->
+  <!-- <BookCTA content={bookCTA} /> -->
+  <!-- <BlogFeed data={data.blogfeed} /> -->
+  <!-- <CTAColor content={data.flyWithUsCTA} /> -->
+  <!-- <script src="../scripts/creativeSwiper.js"></script> -->
+</BaseLayout>
