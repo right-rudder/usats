@@ -50,11 +50,11 @@ const Navbar = ({ pathname }) => {
           item.link + "/" === pathname ||
           item.subsubmenu?.some(
             (subItem) =>
-              subItem.link === pathname || subItem.link + "/" === pathname
-          )
+              subItem.link === pathname || subItem.link + "/" === pathname,
+          ),
       ) ||
       menuItem?.subsubmenu?.some(
-        (item) => item.link === pathname || item.link + "/" === pathname
+        (item) => item.link === pathname || item.link + "/" === pathname,
       ) ||
       menuItem.link === pathname ||
       menuItem.link + "/" === pathname;
@@ -80,7 +80,7 @@ const Navbar = ({ pathname }) => {
         className={`${
           navBar || openMobile
             ? "bg-primary-950/90 backdrop-blur-sm"
-            : "bg-transparent bg-gray-900/90"
+            : "bg-transparent"
         } duration-500`}
       >
         <div className="px-5 max-w-7xl mx-auto top-0">
@@ -116,14 +116,14 @@ const Navbar = ({ pathname }) => {
                         <a
                           href={item.link}
                           target={`${item.link.includes("http") ? "_blank" : "_self"}`}
-                          className="font-semibold text-lg duration-300 hover:underline decoration-accent-200 decoration-4 underline-offset-[10px] py-12 border-accent whitespace-nowrap group-last:font-bold group-last:hover:text-muted-950 group-last:bg-accent-300 group-last:py-3 group-last:px-5 group-last:rounded-sm group-last:hover:bg-accent-400 group-last:hover:no-underline"
+                          className="font-medium font-sans text-lg duration-300 hover:underline decoration-accent-200 decoration-4 underline-offset-[10px] py-12 border-accent whitespace-nowrap group-last:font-bold group-last:hover:text-muted-950 group-last:bg-accent-300 group-last:py-3 group-last:px-5 group-last:rounded-sm group-last:hover:bg-accent-400 group-last:hover:no-underline"
                         >
-                          <span className="relative font-semibold text-accent-50 group-last:text-muted-950">
+                          <span className="relative font-light text-accent-50 group-last:text-muted-950">
                             {item.name}
                           </span>
                         </a>
                       ) : (
-                        <span className="font-semibold cursor-default text-accent-50 text-lg duration-300 hover:underline decoration-accent-200 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
+                        <span className="font-light cursor-default text-accent-50 text-lg duration-300 hover:underline decoration-accent-200 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
@@ -171,7 +171,7 @@ const Navbar = ({ pathname }) => {
                                             {subsubitem.name}
                                           </a>
                                         </li>
-                                      )
+                                      ),
                                     )}
                                   </ul>
                                 )}

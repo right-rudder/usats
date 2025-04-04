@@ -2,9 +2,8 @@
 import BaseHead from "../components/layouts/BaseHead.astro";
 import Footer from "../components/layouts/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, KEYWORDS, OG_IMAGE } from "../consts"; // first one to start, this are the default props for BaseHead
-//import "@fontsource-variable/montserrat";
-//import "@fontsource/merriweather";
-//import "@fontsource-variable/quicksand";
+import "@fontsource-variable/inter";
+import "@fontsource-variable/montserrat";
 import Navbar from "../components/react/Navbar";
 const { pathname } = Astro.url;
 const { siteTitle, siteDescription, keywords, ogImage } = Astro.props; // this are local props (custom props for BaseHead one)
@@ -32,8 +31,8 @@ import Banner from "../components/layouts/Banner.astro";
         style="display:none;visibility:hidden"></iframe></noscript
     >
     <!-- End Google Tag Manager (noscript) -->
-      <Banner />
-      <Navbar pathname={pathname} client:load />
+    <Banner />
+    <Navbar pathname={pathname} client:load />
     <main>
       <slot />
     </main>
