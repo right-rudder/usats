@@ -1,0 +1,24 @@
+---
+
+const { content } = Astro.props;
+
+---
+
+<div class="bg-white shadow-sm sm:rounded-lg">
+    <div class="px-4 py-5 sm:p-6 flex justify-between">
+      <div>
+        <h3 class="text-2xl font-semibold text-gray-900">Subscribe to updates</h3>
+        <div class="mt-2 max-w-xl text-sm text-gray-500">
+            <p>Stay informed about our latest courses and offers.</p>
+        </div>
+      </div>
+      
+      <form class="mt-5 sm:flex sm:items-center">
+        <div class="w-full sm:max-w-xs">
+          <input type="email" name="email" id="email" aria-label="Email" class="block w-full rounded-md bg-white px-6 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-muted-800 sm:text-sm/6" placeholder="you@example.com">
+        </div>
+        <button type="submit" class="mt-3 inline-flex w-full items-center justify-center bg-muted-900 px-6 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-muted-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-800 sm:mt-0 sm:ml-3 sm:w-auto">Join</button>
+      </form>
+    </div>
+  </div>
+  
