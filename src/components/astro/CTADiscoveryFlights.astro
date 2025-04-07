@@ -15,7 +15,7 @@ if (!images[content.imagePath]) {
 ---
 
 <section
-  class="relative lg:mt-0 lg:h-[81vh] -z-0 bg-gray-800 flex flex-col items-center justify-center overflow-hidden"
+  class="relative lg:mt-0 -z-0 bg-gray-800 flex flex-col items-center justify-center "
 >
   <Image
     src={images[content.imagePath]()}
@@ -30,15 +30,15 @@ if (!images[content.imagePath]) {
     class="text-accent-100 py-12 mt-20 lg:mt-0 text-left z-10 flex flex-col items-start gap-4 px-5 h-full lg:pt-28 justify-center"
   >
     <h3
-      class="text-4xl md:text-4xl lg:text-6xl font-sans2 text-left md:max-w-3xl lg:max-w-6xl font-black italic tracking-wide text-accent-200 uppercase"
+      class="mt-10 text-4xl md:text-4xl lg:text-6xl font-sans2 text-left md:max-w-3xl lg:max-w-6xl font-black italic tracking-wide text-accent-200 uppercase"
       set:html={content.headerH1}
     />
     <p
-      class="text-base lg:text-xl mt-3 font-semibold tracking-wide text-accend-300 text-left max-w-5xl"
+      class="text-base md:text-base lg:text-xl mt-3 font-semibold tracking-wide text-accend-300 text-left max-w-5xl"
       set:html={content.paragraph}
     />
     <div
-      class="mt-6 w-full flex flex-wrap justify-start align-middle items-center gap-6 z-10"
+      class="pt-6 w-full flex flex-wrap justify-start align-middle items-center gap-4 z-10"
     >
       {
         content.buttons.map((btn) => (
