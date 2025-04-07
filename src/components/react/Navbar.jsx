@@ -92,7 +92,7 @@ const Navbar = ({ pathname }) => {
               <a
                 href="/"
                 title=" "
-                className="relative hover:brightness-110 duration-200 ease-in-out w-4/6 md:w-1/3 lg:w-2/12"
+                className="relative hover:brightness-110 duration-200 ease-in-out w-4/6 md:w-1/3 lg:w-2/12 px-1 py-1"
               >
                 <img
                   src="/USATS_Logo_White.webp"
@@ -116,14 +116,14 @@ const Navbar = ({ pathname }) => {
                         <a
                           href={item.link}
                           target={`${item.link.includes("http") ? "_blank" : "_self"}`}
-                          className="font-medium font-sans text-lg duration-300 hover:underline decoration-accent-200 decoration-4 underline-offset-[10px] py-12 border-accent whitespace-nowrap group-last:font-bold group-last:hover:text-muted-950 group-last:bg-accent-300 group-last:py-3 group-last:px-5 group-last:rounded-sm group-last:hover:bg-accent-400 group-last:hover:no-underline"
+                          className="font-medium font-sans text-lg duration-300 hover:underline decoration-muted-900 decoration-4 underline-offset-[10px] py-12 border-accent whitespace-nowrap group-last:font-bold group-last:hover:text-muted-950 group-last:bg-muted-900 group-last:py-3 group-last:px-5 group-last:rounded-sm group-last:hover:bg-accent-400 group-last:hover:no-underline"
                         >
-                          <span className="relative font-light text-accent-50 group-last:text-muted-950">
+                          <span className="relative font-light text-accent-50 group-last:text-accent-50">
                             {item.name}
                           </span>
                         </a>
                       ) : (
-                        <span className="font-light cursor-default text-accent-50 text-lg duration-300 hover:underline decoration-accent-200 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
+                        <span className="font-light cursor-default text-accent-50 text-lg duration-300 hover:underline decoration-muted-900 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
@@ -236,7 +236,7 @@ const Navbar = ({ pathname }) => {
       <div
         className={`${
           openMobile ? "max-h-screen" : "max-h-0"
-        } overflow-x-hidden duration-700 ease-in-out h-screen lg:hidden absolute w-full bg-gradient-to-b from-accent-300 to-yellow-500 z-20 top-0`}
+        } overflow-x-hidden duration-700 ease-in-out h-screen lg:hidden absolute w-full bg-gradient-to-b from-accent-00 to-accent-800 z-20 top-0`}
         id="mobile-menu"
       >
         <div className="flex justify-end pl-5 pr-[26px] py-6">
