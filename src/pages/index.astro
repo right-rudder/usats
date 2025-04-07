@@ -9,6 +9,12 @@ import "/src/styles/global.css";
 import OurAdvantages from "../components/astro/OurAdvantages.astro";
 import ElevateYourCarrer from "../components/astro/ElevateYourCarrer.astro";
 import LetsFlyTogether from "../components/astro/LetsFlyTogether.astro";
+import UnderHeader from "../components/astro/UnderHeader.astro";
+import CTADiscoveryFlight from "../components/astro/CTADiscoveryFlights.astro"
+import ctaFligth from "../data/ctaFlight";
+import Programs from "../components/layouts/ProgramsSwiper.astro";
+import programsSwiper from "../data/programsSwiper";
+import GridPrograms from "../components/layouts/GridPrograms.astro";
 
 const { data } = homePage;
 ---
@@ -20,9 +26,17 @@ const { data } = homePage;
 >
   <!-- HEADER -->
   <HeaderScreen content={data.header} />
+  <UnderHeader content={data.underHeader} />
+  <!-- <WhoAreUs content={data.whatWeOffer} /> -->
   <WhyUs content={data.whyUs} />
+  <!-- <OurAdvantages content={data.ourAdvantages} /> -->
+  <!-- <Programs content={programsSwiper} /> -->
+  <GridPrograms content={programsSwiper} />
+  <ElevateYourCarrer content={data.yourCarrer} />
   <Testimonials content={data.testimonials} />
-  <LetsFlyTogether />
+  <!-- <LetsFlyTogether /> -->
 
   <FreQuestions content={data.frequentQuestions} />
+  <CTADiscoveryFlight content={ctaFligth} />
+  <!-- <script src="../scripts/creativeSwiper.js"></script> -->
 </BaseLayout>

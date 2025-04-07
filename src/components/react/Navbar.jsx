@@ -100,11 +100,11 @@ const Navbar = ({ pathname }) => {
                   aria-label="  Logo"
                   title=" "
                   loading="eager"
-                  className={`${navBar || openMobile ? "h-16 lg:h-24 w-9/12 lg:w-2/3" : "h-20 lg:h-24 w-10/12 lg:w-full"} mx-auto object-contain duration-500`}
+                  className={`${navBar || openMobile ? "h-16 lg:h-32 w-9/12 lg:w-10/12" : "h-20 lg:h-32 w-10/12 lg:w-full"} object-contain duration-500`}
                 />
               </a>
               <div className="hidden lg:flex justify-end w-full">
-                <ul className="flex justify-between align-middle w-3/4 items-center">
+                <ul className="flex justify-between align-middle w-10/12 items-center">
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}
@@ -116,25 +116,25 @@ const Navbar = ({ pathname }) => {
                         <a
                           href={item.link}
                           target={`${item.link.includes("http") ? "_blank" : "_self"}`}
-                          className="font-medium font-sans text-lg duration-300 hover:underline decoration-accent-900 decoration-4 underline-offset-[10px] py-12 border-accent whitespace-nowrap group-last:font-bold group-last:hover:text-muted-950 group-last:bg-accent-900 group-last:py-3 group-last:px-5 group-last:rounded-sm group-last:hover:bg-accent-500 group-last:hover:no-underline"
+                          className="font-medium font-sans text-lg duration-300 hover:underline decoration-muted-900 decoration-4 underline-offset-[10px] py-12 border-accent whitespace-nowrap group-last:font-bold group-last:hover:text-muted-950 group-last:bg-muted-900 group-last:py-3 group-last:px-5 group-last:rounded-sm group-last:hover:bg-accent-400 group-last:hover:no-underline"
                         >
-                          <span className="relative font-light text-white group-last:text-white">
+                          <span className="relative font-light text-accent-50 group-last:text-accent-50">
                             {item.name}
                           </span>
                         </a>
                       ) : (
-                        <span className="font-light cursor-default text-white text-lg duration-300 hover:underline decoration-accent-900 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
+                        <span className="font-light cursor-default text-accent-50 text-lg duration-300 hover:underline decoration-muted-900 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute top-10 bg-black/90 border-b-4 border-black/20 whitespace-nowrap text-primary-50 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
+                          className={`absolute top-10 bg-accent-300/95 border-b-4 border-black/20 whitespace-nowrap text-primary-950 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
                         >
                           {item.submenu.map((subitem, subIndex) => (
                             <li
                               key={subIndex}
-                              className={`${isActive(subitem, pathname) ? "bg-accent-900 text-primary-900" : ""} relative hover:bg-accent-800 hover:scale-105 px-1 hover:font-semibold hover:shadow-sm drop-shadow-sm font-medium`}
+                              className={`${isActive(subitem, pathname) ? "bg-accent-200 text-primary-900" : ""} relative hover:bg-accent-200 hover:scale-105 px-1 hover:font-semibold hover:shadow-sm drop-shadow-sm font-medium`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
                               onMouseLeave={() => setSubHoveredIndex(null)}
                             >
