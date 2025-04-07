@@ -14,6 +14,8 @@ import OurAdvantages from "../components/astro/OurAdvantages.astro";
 import ElevateYourCarrer from "../components/astro/ElevateYourCarrer.astro";
 import LetsFlyTogether from "../components/astro/LetsFlyTogether.astro";
 import UnderHeader from "../components/astro/UnderHeader.astro";
+import CTADiscoveryFlight from "../components/astro/CTADiscoveryFlights.astro"
+import ctaFligth from "../data/ctaFlight";
 
 const { data } = homePage;
 ---
@@ -34,4 +36,5 @@ const { data } = homePage;
   <LetsFlyTogether />
 
   <FreQuestions content={data.frequentQuestions} />
+  <CTADiscoveryFlight content={ctaFligth} />
 </BaseLayout>
