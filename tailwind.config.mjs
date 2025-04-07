@@ -18,7 +18,7 @@ export default {
         ],
       },
       colors: {
-        accent: {
+        muted: {
           50: "#fafafa",
           100: "#f4f4f5",
           200: "#e4e4e7",
@@ -44,7 +44,7 @@ export default {
           900: "#18181b",
           950: "#09090b",
         },
-        muted: {
+        accent: {
           50: "#fff1f2",
           100: "#ffe4e6",
           200: "#fecdd3",
