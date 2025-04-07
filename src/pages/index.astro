@@ -11,8 +11,8 @@ import Subscribe from "../components/astro/Subscribe.astro";
 import "/src/styles/global.css";
 import WhoAreUs from "../components/astro/WhoAreUs.astro";
 import OurAdvantages from "../components/astro/OurAdvantages.astro";
-import ElevateYourCarrer from "../components/astro/ElevateYourCarrer.astro"
-import LetsFlyTogether from "../components/astro/LetsFlyTogether.astro"
+import ElevateYourCarrer from "../components/astro/ElevateYourCarrer.astro";
+import LetsFlyTogether from "../components/astro/LetsFlyTogether.astro";
 
 const { data } = homePage;
 ---
@@ -22,15 +22,14 @@ const { data } = homePage;
   siteDescription={data.pageDescription}
   keywords={data.pageKeywords}
 >
-
   <!-- HEADER -->
   <HeaderScreen content={data.header} />
+  <!-- <WhoAreUs content={data.whatWeOffer} /> -->
   <WhyUs content={data.whyUs} />
-  <WhoAreUs content={data.whatWeOffer} />
   <OurAdvantages content={data.ourAdvantages} />
   <ElevateYourCarrer content={data.yourCarrer} />
   <Testimonials content={data.testimonials} />
   <LetsFlyTogether />
-  
-  <FreQuestions content={data.frequentQuestions}/>
+
+  <FreQuestions content={data.frequentQuestions} />
 </BaseLayout>
