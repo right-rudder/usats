@@ -23,7 +23,24 @@ const homePage = {
         },
       ],
     },
-
+    underHeader: {
+      title: "YOUR FLIGHT JOURNEY STARTS HERE",
+      paragraphs:[
+        "Experience flight like never before. We're here to help you become the ultimate pilot.",
+        "For over three decades, our organization has been at the forefront of helicopter pilot training, boasting a legacy that spans the globe. There are only a few places around the world where you will not find a pilot we had the privilege to mentor. Our commitment to excellence has empowered countless individuals to soar to new heights in their aviation careers.",
+        "We have put many pilots with diverse backgrounds into airline cockpits. Our glass-cockpit airplanes and airline training environment will give you the knowledge and skills necessary to make you a highly desirable airline pilot candidate and allow for a smooth transition into your first airline job. ",
+      ],
+      image: {
+        imagePath: "/src/assets/ALTO_NG.webp",
+        imageAlt: "AirPlane Panel",
+      },
+      buttons: [
+        {
+          text: "About Us",
+          link: "/#",
+        },
+      ]
+    },
     ourAdvantages: {
       images: {
         panel: {

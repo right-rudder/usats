@@ -13,6 +13,7 @@ import WhoAreUs from "../components/astro/WhoAreUs.astro";
 import OurAdvantages from "../components/astro/OurAdvantages.astro";
 import ElevateYourCarrer from "../components/astro/ElevateYourCarrer.astro";
 import LetsFlyTogether from "../components/astro/LetsFlyTogether.astro";
+import UnderHeader from "../components/astro/UnderHeader.astro";
 
 const { data } = homePage;
 ---
@@ -24,6 +25,7 @@ const { data } = homePage;
 >
   <!-- HEADER -->
   <HeaderScreen content={data.header} />
+  <UnderHeader content={data.underHeader} />
   <!-- <WhoAreUs content={data.whatWeOffer} /> -->
   <WhyUs content={data.whyUs} />
   <OurAdvantages content={data.ourAdvantages} />
