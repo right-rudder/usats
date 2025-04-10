@@ -1,5 +1,5 @@
 // transform this to get the info from data/programs/*.js and populate the cards
-import { COMPANY_NAME } from "../../../consts";
+import { COMPANY_NAME } from "../consts";
 
 const programs = {
     upperHeading: "Explore",
@@ -14,6 +14,14 @@ const programs = {
         description:
           "Take the first step toward becoming a pilot with our comprehensive Profissional Pilot Course.",
         link: "/airplane-training/professional-pilot-program",
+      },
+      {
+        title: "Private Pilot License (PPL)",
+        imagePath: "/src/assets/placeholder.webp",
+        imageAlt: "",
+        description:
+          "",
+        link: "/airplane-training/private-pilot-license",
       },
     ],
   };
