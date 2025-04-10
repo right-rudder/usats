@@ -15,33 +15,27 @@ export const navbarLinks = [
   },
   {
     name: "Flight Training",
-    link: "#",
+    link: "/flight-training",
     submenu: [
       {
         name: "Airplane Training",
-        link: "#",
+        link: "/airplane-training",
         subsubmenu: [
           {
-            name: "Private Pilot",
-            link: "#",
-          },
-          {
-            name: "Instrument Rating",
-            link: "#",
-          },
-          {
-            name: "Commercial Pilot",
-            link: "#",
-          },
-          {
-            name: "Flight Instructor",
-            link: "#",
+            name: "Private Pilot Program (PPP)",
+            link: "/airplane-training/professional-pilot-program",
           },
         ],
       },
       {
         name: "Helicopter Training",
-        link: "#",
+        link: "/helicopter-training",
+        subsubmenu: [
+          {
+            name: "Private Pilot Program (PPP)",
+            link: "/helicopter-training/professional-pilot-program",
+          },
+        ],
       },
     ],
   },
