@@ -25,6 +25,26 @@ export const navbarLinks = [
             name: "Private Pilot Program (PPP)",
             link: "/airplane-training/professional-pilot-program",
           },
+          {
+            name: "Private Pilot License (PPL)",
+            link: "/helicopter-training/professional-pilot-program",
+          },
+          {
+            name: "Instrument Rating (IR)",
+            link: "/helicopter-training/instrument-rating",
+          },
+          {
+            name: "Commercial Pilot License (CPL)",
+            link: "/helicopter-training/commercial-pilot-license",
+          },
+          {
+            name: "Certified FLight Instructor (CFI)",
+            link: "/helicopter-training/certified-flight-instructor",
+          },
+          {
+            name: "Certified FLight Instructor Instrument (CFII)",
+            link: "/helicopter-training/certified-flight-instructor-instrument",
+          },
         ],
       },
       {
@@ -32,14 +52,41 @@ export const navbarLinks = [
         link: "/helicopter-training",
         subsubmenu: [
           {
-            name: "Private Pilot Program (PPP)",
+            name: "Professional Pilot Program (PPP)",
             link: "/helicopter-training/professional-pilot-program",
+          },
+          {
+            name: "Private Pilot License (PPL)",
+            link: "/helicopter-training/professional-pilot-program",
+          },
+          {
+            name: "Instrument Rating (IR)",
+            link: "/helicopter-training/instrument-rating",
+          },
+          {
+            name: "Commercial Pilot License (CPL)",
+            link: "/helicopter-training/commercial-pilot-license",
+          },
+          {
+            name: "Certified FLight Instructor (CFI)",
+            link: "/helicopter-training/certified-flight-instructor",
+          },
+          {
+            name: "Certified FLight Instructor Instrument (CFII)",
+            link: "/helicopter-training/certified-flight-instructor-instrument",
+          },
+          {
+            name: "ATP-L",
+            link: "/helicopter-training/atp-l",
+          },
+          {
+            name: "Military",
+            link: "/helicopter-training/military",
           },
         ],
       },
     ],
   },
-
   {
     name: "Services",
     link: "#",
@@ -58,7 +105,6 @@ export const navbarLinks = [
       },
     ],
   },
-
   {
     name: "About",
     link: "/our-team",
