@@ -5,7 +5,7 @@ import CTAColor from "../../components/astro/CTADiscoveryFlights.astro";
 import CTAFlight from "../../data/ctaFlight.js";
 
 import ProgramDetails from "../../components/layouts/ProgramDetails.astro";
-import programs from "../../data/programsSlugData";
+import programs from "../../data/programs/programsSlugData";
 
 export function getStaticPaths() {
   return programs.map(( {data} ) => {

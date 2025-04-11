@@ -1,5 +1,5 @@
 // transform this to get the info from data/programs/*.js and populate the cards
-import { COMPANY_NAME } from "../consts";
+import { COMPANY_NAME } from "../../consts";
 
 const programs = {
     upperHeading: "Explore",
@@ -22,6 +22,14 @@ const programs = {
         description:
           "",
         link: "/airplane-training/private-pilot-license",
+      },
+      {
+        title: "Instrument Rating (IR)",
+        imagePath: "/src/assets/placeholder.webp",
+        imageAlt: "",
+        description:
+          "",
+        link: "/airplane-training/instrument-rating",
       },
     ],
   };
