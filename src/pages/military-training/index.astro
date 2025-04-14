@@ -1,8 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeaderScreen from "../../components/astro/HeaderScreen.astro";
-import CTAColor from "../../components/astro/CTADiscoveryFlights.astro";
-import CTAFlight from "../../data/ctaFlight.js";
+import CTAMilitary from "../../components/astro/CTAMilitary.astro";
+import ctaMilitary from "../../data/programs/ctaMilitary.js";
 import underHeaderHeli from "../../data/programs/underHeaderHeli";
 
 import UnderHeader from "../../components/astro/UnderHeader.astro";
@@ -30,6 +30,6 @@ const pageKeywords = []
   <UnderHeader content={militaryPage.data.underHeader} />
   <ProgramDetails program={militaryTraining.data.details} />
   <RoadMap />
-  <CTAColor content={CTAFlight} />
+  <CTAMilitary content={ctaMilitary} />
   
 </BaseLayout>
