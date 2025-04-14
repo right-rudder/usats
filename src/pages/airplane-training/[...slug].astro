@@ -2,10 +2,13 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeaderScreen from "../../components/astro/HeaderScreen.astro";
 import CTAColor from "../../components/astro/CTADiscoveryFlights.astro";
+
 import CTAFlight from "../../data/ctaFlight.js";
+import underHeaderHeli from "../../data/programs/underHeaderAirplane.js"
 
 import ProgramDetails from "../../components/layouts/ProgramDetails.astro";
 import programs from "../../data/programs/programsSlugData";
+import UnderHeader from "../../components/astro/UnderHeader.astro";
 
 export function getStaticPaths() {
   return programs.map(( {data} ) => {
@@ -60,6 +63,7 @@ const { data } = Astro.props;
   /> -->
   
   <HeaderScreen content={data.header} />
+  <UnderHeader content={underHeaderHeli.data.underHeader} />
   <ProgramDetails program={data.details} />
   <CTAColor content={CTAFlight} />
   

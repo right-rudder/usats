@@ -3,7 +3,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeaderScreen from "../../components/astro/HeaderScreen.astro";
 import CTAColor from "../../components/astro/CTADiscoveryFlights.astro";
 import CTAFlight from "../../data/ctaFlight.js";
+import underHeaderHeli from "../../data/programs/underHeaderHeli";
 
+import UnderHeader from "../../components/astro/UnderHeader.astro";
 import ProgramDetails from "../../components/layouts/ProgramDetails.astro";
 import programs from "../../data/programs/programsHelicopterData";
 
@@ -60,6 +62,7 @@ const { data } = Astro.props;
   /> -->
   
   <HeaderScreen content={data.header} />
+  <UnderHeader content={underHeaderHeli.data.underHeader} />
   <ProgramDetails program={data.details} />
   <CTAColor content={CTAFlight} />
   
