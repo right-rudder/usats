@@ -9,7 +9,7 @@ const programs = {
       cards: [
         {
           title: "Professional Pilot Program (PPP)",
-          imagePath: "/src/assets/placeholder.webp",
+          imagePath: "/src/assets/USATS_banner_Application.webp",
           imageAlt: "",
           description:
             "Take the first step toward becoming a pilot with our comprehensive Professional Pilot Course.",
@@ -17,7 +17,7 @@ const programs = {
         },
         {
           title: "Private Pilot License (PPL)",
-          imagePath: "/src/assets/placeholder.webp",
+          imagePath: "/src/assets/USATS_Plane_N3544W.webp",
           imageAlt: "",
           description:
             "Start your aviation journey by learning to fly for recreation or as the first step toward a flying career.",
@@ -25,7 +25,7 @@ const programs = {
         },
         {
           title: "Instrument Rating (IR)",
-          imagePath: "/src/assets/placeholder.webp",
+          imagePath: "/src/assets/ALO_NG_INTERIOR.webp",
           imageAlt: "",
           description:
             "Enhance your skills by learning to fly solely using instruments, preparing you for complex weather conditions.",
@@ -33,7 +33,7 @@ const programs = {
         },
         {
           title: "Commercial Pilot License (CPL)",
-          imagePath: "/src/assets/placeholder.webp",
+          imagePath: "/src/assets/ALTO_NG_Panel.jpg",
           imageAlt: "",
           description:
             "Advance your career with professional training that prepares you to fly commercially and meet industry standards.",
@@ -41,7 +41,7 @@ const programs = {
         },
         {
           title: "Certified Flight Instructor (CFI)",
-          imagePath: "/src/assets/placeholder.webp",
+          imagePath: "/src/assets/Happy_Landings_ALO_NG.webp",
           imageAlt: "",
           description:
             "Become a flight instructor and start teaching others to fly while gaining valuable experience and flight hours.",
