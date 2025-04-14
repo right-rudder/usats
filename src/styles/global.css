@@ -17,6 +17,9 @@
   .btn-white {
     @apply text-center hover:scale-105 backdrop-blur-md uppercase font-semibold tracking-wide py-3 px-6 ring-1 ring-primary-200 w-fit bg-white/20 hover:bg-gray-200/50 hover:ring-white hover:text-white text-primary-50 duration-300;
   }
+  .btn-black {
+    @apply text-center hover:scale-105 backdrop-blur-md uppercase font-semibold tracking-wide py-3 px-6 ring-1 ring-primary-800 w-fit bg-black/90 hover:bg-gray-900/50 hover:ring-black hover:text-white text-primary-50 duration-300;
+  }
 
   .paragraph {
     @apply text-gray-600 lg:text-base leading-loose font-sans;
