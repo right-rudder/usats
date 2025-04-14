@@ -13,7 +13,7 @@ const coursesIndex = {
         imagePath: "/src/assets/placeholder.webp",
         imageAlt:
           "image alt",
-        headerH1: `Pilot <br>PROGRAMS</span>`,
+        headerH1: `AIRPLANE TRAINING<br>PROGRAMS</span>`,
         paragraph: ``,
         buttons: [
           {

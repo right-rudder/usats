@@ -22,27 +22,27 @@ export const navbarLinks = [
         link: "/airplane-training",
         subsubmenu: [
           {
-            name: "Private Pilot Program (PPP)",
+            name: "Private Pilot Program",
             link: "/airplane-training/professional-pilot-program",
           },
           {
-            name: "Private Pilot License (PPL)",
+            name: "Private Pilot License",
             link: "/helicopter-training/professional-pilot-program",
           },
           {
-            name: "Instrument Rating (IR)",
+            name: "Instrument Rating",
             link: "/helicopter-training/instrument-rating",
           },
           {
-            name: "Commercial Pilot License (CPL)",
+            name: "Commercial Pilot License",
             link: "/helicopter-training/commercial-pilot-license",
           },
           {
-            name: "Certified FLight Instructor (CFI)",
+            name: "Certified FLight Instructor",
             link: "/helicopter-training/certified-flight-instructor",
           },
           {
-            name: "Certified FLight Instructor Instrument (CFII)",
+            name: "Certified FLight Instructor Instrument",
             link: "/helicopter-training/certified-flight-instructor-instrument",
           },
         ],
@@ -56,32 +56,32 @@ export const navbarLinks = [
             link: "/helicopter-training/military-training",
           },
           {
-            name: "Professional Pilot Program (PPP)",
+            name: "Professional Pilot Program",
             link: "/helicopter-training/professional-pilot-program",
           },
           {
-            name: "Private Pilot License (PPL)",
+            name: "Private Pilot License",
             link: "/helicopter-training/professional-pilot-program",
           },
           {
-            name: "Instrument Rating (IR)",
+            name: "Instrument Rating",
             link: "/helicopter-training/instrument-rating",
           },
           {
-            name: "Commercial Pilot License (CPL)",
+            name: "Commercial Pilot License",
             link: "/helicopter-training/commercial-pilot-license",
           },
           {
-            name: "Certified FLight Instructor (CFI)",
+            name: "Certified FLight Instructor",
             link: "/helicopter-training/certified-flight-instructor",
           },
           {
-            name: "Certified FLight Instructor Instrument (CFII)",
+            name: "Certified FLight Instructor Instrument",
             link: "/helicopter-training/certified-flight-instructor-instrument",
           },
           {
-            name: "ATP-L",
-            link: "/helicopter-training/atp-l",
+            name: "Airline Transport Pilot License",
+            link: "/helicopter-training/airline-transport-pilot-license",
           },
         ],
       },

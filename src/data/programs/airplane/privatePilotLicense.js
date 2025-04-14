@@ -101,6 +101,9 @@ const privatePilotLicense = {
         },
       },
 
+      price: "$11,263",
+
+
       // FAQs
       faqs: [
         {

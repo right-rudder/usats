@@ -88,6 +88,9 @@ const commercialPilotLicense = {
         ],
       },
 
+      price: "$25,508",
+
+
       cta: {
         imagePath: "/src/assets/placeholder.webp",
         imageAlt: "",

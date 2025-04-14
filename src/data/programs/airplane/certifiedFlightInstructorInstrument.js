@@ -97,6 +97,8 @@ const certifiedFlightInstructorInstrument = {
         },
       },
 
+      price: "$4,850",
+
       // FAQs
       faqs: [
         {

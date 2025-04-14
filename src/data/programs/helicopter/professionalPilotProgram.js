@@ -87,6 +87,8 @@ const professionalPilotProgram = {
         ],
       },
 
+      price: "$126,898",
+
       cta: {
         imagePath: "/src/assets/placeholder.webp",
         imageAlt: "",

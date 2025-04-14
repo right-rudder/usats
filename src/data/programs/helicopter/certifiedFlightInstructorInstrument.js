@@ -93,6 +93,9 @@ const cfiiCourse = {
         },
       },
 
+      price: "$9,818",
+
+
       faqs: [
         {
           question: "How long is the CFII course?",

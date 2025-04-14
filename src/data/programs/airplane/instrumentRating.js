@@ -99,6 +99,8 @@ const instrumentRating = {
         },
       },
 
+      price: "$13,034",
+
       // FAQs
       faqs: [
         {

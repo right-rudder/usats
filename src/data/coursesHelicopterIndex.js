@@ -13,7 +13,7 @@ const coursesIndex = {
         imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
         imageAlt:
           "image alt",
-        headerH1: `Helicopter Pilot <br>PROGRAMS</span>`,
+        headerH1: `HELICOPTER TRAINING <br>PROGRAMS</span>`,
         paragraph: ``,
         buttons: [
           {

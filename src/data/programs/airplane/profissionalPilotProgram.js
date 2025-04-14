@@ -115,6 +115,9 @@ const professionalPilotProgram = {
         },
       },
 
+
+      price: "$62,143 - $74,123*",
+
       // FAQs
       faqs: [
         {

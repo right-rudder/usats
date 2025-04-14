@@ -96,6 +96,9 @@ const commercialPilotLicense = {
         },
       },
 
+      price: "$22,906",
+
+
       faqs: [
         {
           question: "How long does the course take?",

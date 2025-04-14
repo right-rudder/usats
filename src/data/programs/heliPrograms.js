@@ -8,7 +8,16 @@ const programs = {
       `Whether you're starting your aviation journey, advancing your skills, or pursuing a career in aviation, ${COMPANY_NAME} offers tailored programs for all experience levels.`,
       cards: [
         {
-          title: "Professional Pilot Program (PPP)",
+          title: "Military Training",
+          imagePath: "/src/assets/militaryTraingingBH6.png",
+          imageAlt: "",
+          description:
+            "Prepare yourself for anything with our military training programs.",
+          link: "/helicopter-training/military",
+        },
+        {
+          title: "Professional Pilot Program",
+          badgets: ['PPP'],
           imagePath: "/src/assets/flyingWhiteHeli8.png",
           imageAlt: "",
           description:
@@ -16,7 +25,8 @@ const programs = {
           link: "/helicopter-training/professional-pilot-program",
         },
         {
-          title: "Private Pilot License (PPL)",
+          title: "Private Pilot License",
+          badgets: ['PPL'],
           imagePath: "/src/assets/flyingBlackHeli5.png",
           imageAlt: "",
           description:
@@ -24,7 +34,8 @@ const programs = {
           link: "/helicopter-training/private-pilot-license",
         },
         {
-          title: "Instrument Rating (IR)",
+          title: "Instrument Rating",
+          badgets: ['IR'],
           imagePath: "/src/assets/flyingWhiteHeli4.png",
           imageAlt: "",
           description:
@@ -32,7 +43,8 @@ const programs = {
           link: "/helicopter-training/instrument-rating",
         },
         {
-          title: "Commercial Pilot License (CPL)",
+          title: "Commercial Pilot License",
+          badgets: ['CPL'],
           imagePath: "/src/assets/flyingWhiteHeli9.png",
           imageAlt: "",
           description:
@@ -40,7 +52,8 @@ const programs = {
           link: "/helicopter-training/commercial-pilot-license",
         },
         {
-          title: "Certified Flight Instructor (CFI)",
+          title: "Certified Flight Instructor",
+          badgets: ['CFI'],
           imagePath: "/src/assets/flyingWhiteHeli7.png",
           imageAlt: "",
           description:
@@ -48,7 +61,8 @@ const programs = {
           link: "/helicopter-training/certified-flight-instructor",
         },
         {
-          title: "Certified Flight Instructor Instrument (CFII)",
+          title: "Certified Flight Instructor Instrument",
+          badgets: ['CFII'],
           imagePath: "/src/assets/maintanceHeli4.png",
           imageAlt: "",
           description:
@@ -56,20 +70,13 @@ const programs = {
           link: "/helicopter-training/certified-flight-instructor-instrument",
         },
         {
-          title: "ATP-L",
+          title: "Airline Transport Pilot License",
+          badgets: ['ATP-L'],
           imagePath: "/src/assets/militaryTraingingBH8.png",
           imageAlt: "",
           description:
             "Earn the highest helicopter certification available and qualify to pilot multi-crew IFR operations.",
-          link: "/helicopter-training/atp-l",
-        },
-        {
-          title: "Military Training",
-          imagePath: "/src/assets/militaryTraingingBH6.png",
-          imageAlt: "",
-          description:
-            "Prepare yourself for anything with our military training programs.",
-          link: "/helicopter-training/military",
+          link: "/helicopter-training/airline-transport-pilot-license",
         },
       ],
   };

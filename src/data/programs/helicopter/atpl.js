@@ -2,7 +2,7 @@ import { COMPANY_NAME } from "../../../consts";
 
 const atpL = {
   data: {
-    slug: "atp-l",
+    slug: "airline-transport-pilot-license",
     pageTitle: `ATP-L | ${COMPANY_NAME}`,
     pageDescription:
       "Earn the highest level of helicopter certification: Airline Transport Pilot (ATP-L). Tailored refresher training and checkride prep for experienced commercial pilots.",

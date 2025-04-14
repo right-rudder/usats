@@ -8,7 +8,8 @@ const programs = {
       `Whether you're starting your aviation journey, advancing your skills, or pursuing a career in aviation, ${COMPANY_NAME} offers tailored programs for all experience levels.`,
       cards: [
         {
-          title: "Professional Pilot Program (PPP)",
+          title: "Professional Pilot Program",
+          badgets: ['Part 141/61','PPP'],
           imagePath: "/src/assets/USATS_banner_Application.webp",
           imageAlt: "",
           description:
@@ -16,7 +17,8 @@ const programs = {
           link: "/airplane-training/professional-pilot-program",
         },
         {
-          title: "Private Pilot License (PPL)",
+          title: "Private Pilot License",
+          badgets: [' 141', 'PPL'],
           imagePath: "/src/assets/USATS_Plane_N3544W.webp",
           imageAlt: "",
           description:
@@ -25,6 +27,7 @@ const programs = {
         },
         {
           title: "Instrument Rating (IR)",
+          badgets: [' 141', 'IR'],
           imagePath: "/src/assets/ALO_NG_INTERIOR.webp",
           imageAlt: "",
           description:
@@ -33,6 +36,7 @@ const programs = {
         },
         {
           title: "Commercial Pilot License (CPL)",
+          badgets: [' 141', 'CPL'],
           imagePath: "/src/assets/ALTO_NG_Panel.jpg",
           imageAlt: "",
           description:
@@ -41,6 +45,7 @@ const programs = {
         },
         {
           title: "Certified Flight Instructor (CFI)",
+          badgets: [' 61', 'CFI'],
           imagePath: "/src/assets/Happy_Landings_ALO_NG.webp",
           imageAlt: "",
           description:
@@ -49,6 +54,7 @@ const programs = {
         },
         {
           title: "Certified Flight Instructor Instrument (CFII)",
+          badgets: [' 61', 'CFII'],
           imagePath: "/src/assets/placeholder.webp",
           imageAlt: "",
           description:

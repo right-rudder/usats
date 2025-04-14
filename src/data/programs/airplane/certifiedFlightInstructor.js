@@ -85,6 +85,8 @@ const certifiedFlightInstructor = {
         ],
       },
 
+      price: "$7,488",
+
       cta: {
         imagePath: "/src/assets/placeholder.webp",
         imageAlt: "",

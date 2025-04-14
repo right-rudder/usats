@@ -8,6 +8,7 @@ const faqs = program.faqs;
 const included = program.included;
 const additionalCosts = program.additionalCosts;
 const benefits = program.benefits;
+const price = program.price;
 ---
 
 <section class="mx-auto md:px-8 py-12 bg-primary-800 bg-fixed">
@@ -72,6 +73,12 @@ const benefits = program.benefits;
           </ul>
         </div>
       )}
+
+      {price && (<div class="mb-10 ">
+        <h3 class="text-3xl font-semibold mb-4 text-accent-700">Price</h3>
+        <p class="text-primary-100 leading-relaxed mb-10 text-2xl text-right">{price}</p>
+      </div>)}
+      
     </div>
 
     <!-- Right: FAQs, Benefits & CTA -->

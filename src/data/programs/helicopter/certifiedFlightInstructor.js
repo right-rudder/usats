@@ -95,6 +95,8 @@ const cfiCourse = {
         },
       },
 
+      price: "$19,611",
+
       faqs: [
         {
           question: "How long does the CFI course take?",
