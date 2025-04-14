@@ -80,8 +80,8 @@ export const navbarLinks = [
             link: "/helicopter-training/atp-l",
           },
           {
-            name: "Military",
-            link: "/helicopter-training/military",
+            name: "Military Training",
+            link: "/helicopter-training/military-training",
           },
         ],
       },

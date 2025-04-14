@@ -3,7 +3,7 @@ import { COMPANY_NAME } from "../../consts";
 
 const programs = {
     upperHeading: "Explore",
-    heading: "Our Training Programs",
+    heading: "Our Airplane Training Programs",
     description:
       `Whether you're starting your aviation journey, advancing your skills, or pursuing a career in aviation, ${COMPANY_NAME} offers tailored programs for all experience levels.`,
       cards: [
