@@ -13,7 +13,7 @@ const programs = {
           imageAlt: "",
           description:
             "Prepare yourself for anything with our military training programs.",
-          link: "/helicopter-training/military",
+          link: "/military-training",
         },
         {
           title: "Professional Pilot Program",
