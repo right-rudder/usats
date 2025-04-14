@@ -28,6 +28,7 @@ export const LOCATIONS = [
 ];
 
 // CHANGE client business info
+export const COMPANY_NAME = "US Aviation Training Solutions";
 export const PHONE_NUMBER = "3215296243";
 export const ADDRESS_LINE_1 = "355 Golden Knights Blvd";
 export const ADDRESS_LINE_2 = "Titusville, FL 32780";

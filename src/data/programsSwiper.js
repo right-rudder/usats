@@ -11,7 +11,7 @@ const programsSwiper = {
           "USATS  airline plane landing view from below",
         description:
           "This program is designed for students with zero flying experience. You will obtain your FAA Private, Instrument, Commercial license, CFI, and CFII licenses.",
-        link: "/#",
+        link: "/airplane-training",
       },
       {
         title: "Helicopter Pilot Traning Programs",
@@ -20,7 +20,7 @@ const programsSwiper = {
           "USATS  airline plane landing view from below",
         description:
           "With an average of 320 flying days per year, we can make sure your training will be done on time. Our practice areas are located within 10 nautical miles from our airport, limiting the transit time for your off-airport training.",
-        link: "/#",
+        link: "/helicopter-training",
       },
     ],
   };

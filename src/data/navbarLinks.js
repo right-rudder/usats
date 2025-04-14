@@ -15,37 +15,78 @@ export const navbarLinks = [
   },
   {
     name: "Flight Training",
-    link: "#",
+    link: "/flight-training",
     submenu: [
       {
         name: "Airplane Training",
-        link: "#",
+        link: "/airplane-training",
         subsubmenu: [
           {
-            name: "Private Pilot",
-            link: "#",
+            name: "Private Pilot Program",
+            link: "/airplane-training/professional-pilot-program",
+          },
+          {
+            name: "Private Pilot License",
+            link: "/helicopter-training/professional-pilot-program",
           },
           {
             name: "Instrument Rating",
-            link: "#",
+            link: "/helicopter-training/instrument-rating",
           },
           {
-            name: "Commercial Pilot",
-            link: "#",
+            name: "Commercial Pilot License",
+            link: "/helicopter-training/commercial-pilot-license",
           },
           {
-            name: "Flight Instructor",
-            link: "#",
+            name: "Certified FLight Instructor",
+            link: "/helicopter-training/certified-flight-instructor",
+          },
+          {
+            name: "Certified FLight Instructor Instrument",
+            link: "/helicopter-training/certified-flight-instructor-instrument",
           },
         ],
       },
       {
         name: "Helicopter Training",
-        link: "#",
+        link: "/helicopter-training",
+        subsubmenu: [
+          {
+            name: "Military Training",
+            link: "/helicopter-training/military-training",
+          },
+          {
+            name: "Professional Pilot Program",
+            link: "/helicopter-training/professional-pilot-program",
+          },
+          {
+            name: "Private Pilot License",
+            link: "/helicopter-training/professional-pilot-program",
+          },
+          {
+            name: "Instrument Rating",
+            link: "/helicopter-training/instrument-rating",
+          },
+          {
+            name: "Commercial Pilot License",
+            link: "/helicopter-training/commercial-pilot-license",
+          },
+          {
+            name: "Certified FLight Instructor",
+            link: "/helicopter-training/certified-flight-instructor",
+          },
+          {
+            name: "Certified FLight Instructor Instrument",
+            link: "/helicopter-training/certified-flight-instructor-instrument",
+          },
+          {
+            name: "Airline Transport Pilot License",
+            link: "/helicopter-training/airline-transport-pilot-license",
+          },
+        ],
       },
     ],
   },
-
   {
     name: "Services",
     link: "#",
@@ -64,7 +105,6 @@ export const navbarLinks = [
       },
     ],
   },
-
   {
     name: "About",
     link: "/our-team",

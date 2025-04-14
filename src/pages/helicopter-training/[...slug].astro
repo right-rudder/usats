@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../components/astro/HeaderScreen.astro";
+import CTAColor from "../../components/astro/CTADiscoveryFlights.astro";
+import CTAFlight from "../../data/ctaFlight.js";
+import underHeaderHeli from "../../data/programs/underHeaderHeli";
+
+import UnderHeader from "../../components/astro/UnderHeader.astro";
+import ProgramDetails from "../../components/layouts/ProgramDetails.astro";
+import programs from "../../data/programs/programsHelicopterData";
+
+export function getStaticPaths() {
+  return programs.map(( {data} ) => {
+    return {
+      params: { slug: data.slug },
+      props: {
+        data
+      },
+    };
+  });
+}
+
+const { data } = Astro.props;
+
+// Create course-specific schema markup
+// const courseSchemaMarkup = {
+//   "@context": "https://schema.org",
+//   "@type": "Course",
+//   name:
+//     data.pageSummary?.title?.replace(/<br>|\<.*?\>/g, " ").trim() ||
+//     data.pageTitle,
+//   description: data.pageDescription,
+//   provider: {
+//     "@type": "Organization",
+//     name: COMPANY_NAME,
+//     address: {
+//       "@type": "PostalAddress",
+//       streetAddress: ADDRESS_LINE_1,
+//       addressLocality: "Van Nuys",
+//       addressRegion: "CA",
+//       postalCode: "91406",
+//       addressCountry: "US",
+//     },
+//   },
+//   offers: {
+//     "@type": "Offer",
+//     category: "Flight Training",
+//     availability: "https://schema.org/InStock",
+//   },
+//   keywords: data.pageKeywords,
+// };
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- <script
+    type="application/ld+json"
+    set:html={JSON.stringify(courseSchemaMarkup)}
+  /> -->
+  
+  <HeaderScreen content={data.header} />
+  <UnderHeader content={underHeaderHeli.data.underHeader} />
+  <ProgramDetails program={data.details} />
+  <CTAColor content={CTAFlight} />
+  
+</BaseLayout>

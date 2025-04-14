@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../components/astro/HeaderScreen.astro";
+import GridPrograms from "../../components/layouts/GridPrograms.astro";
+import programs from "../../data/programsSwiper.js";
+import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astro";
+import CTAFlight from "../../data/ctaFlight.js";
+
+import coursesIndex from "../../data/coursesIndex.js";
+
+const { data } = coursesIndex;
+
+---
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+  >
+  
+  <HeaderScreen content = {data.header} />
+  <GridPrograms content={programs} />
+  <CTADiscoveryFlights content={CTAFlight} />
+</BaseLayout>
+
