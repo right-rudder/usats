@@ -41,7 +41,7 @@ export const EMAIL_ADDRESS = "info@usatsolutions.com";
 
 // Pages Data
 
-export const BANNER_TITLE = `Experience flight like never before. Become a pilot today!`;
+export const BANNER_TITLE = `Experience flight like never before.`;
 
 // Video links
 

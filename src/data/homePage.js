@@ -8,25 +8,20 @@ const homePage = {
       stars: true,
       imagePath: "/src/assets/Direct_Fly_Alto_NG.jpg",
       imageAlt: "Alto NG Air Plane",
-      headerH1: ` YOUR FLIGHT JOURNEY STARTS HERE`,
+      headerH1: `Become a pilot today`,
       paragraph:
-        "Your path to becoming a professional pilot starts here. Our experienced instructors will help you achieve your aviation goals. We're here to help you become the ultimate pilot.",
+        "Your path to becoming a professional pilot starts here. Join us for a unique training experience that will prepare you for a successful career in aviation. Your journey begins with USATS.",
       buttons: [
         {
-          name: "Learn More",
-          link: "#",
-          primary: true,
-        },
-        {
-          name: "Sign Up",
-          link: "#",
+          name: "Enroll Now",
+          link: "/enroll-now",
           primary: false,
         },
       ],
     },
 
     underHeader: {
-      title: "YOUR FLIGHT JOURNEY STARTS HERE",
+      title: "Your Journey Starts Here",
       paragraphs: [
         "Experience flight like never before. We're here to help you become the ultimate pilot.",
         "For over three decades, our organization has been at the forefront of helicopter pilot training, boasting a legacy that spans the globe. There are only a few places around the world where you will not find a pilot we had the privilege to mentor. Our commitment to excellence has empowered countless individuals to soar to new heights in their aviation careers.",
