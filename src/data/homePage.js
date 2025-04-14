@@ -1,16 +1,12 @@
 const homePage = {
   data: {
-    pageTitle: "USATS",
-    pageDescription: "",
-    pageKeywords: "",
-
     header: {
       stars: true,
       imagePath: "/src/assets/Direct_Fly_Alto_NG.jpg",
       imageAlt: "Alto NG Air Plane",
       headerH1: `Become a pilot today`,
       paragraph:
-        "Your path to becoming a professional pilot starts here. Join us for a unique training experience that will prepare you for a successful career in aviation. Your journey begins with USATS.",
+        "Launch your professional pilot career with USATS in Titusville, FL. </br>Our Professional Pilot Programs will get you airline ready, serving student pilots in Titusville, Cocoa Beach, Merritt Island.</br>Become a pilot at USATS today!",
       buttons: [
         {
           name: "Enroll Now",

@@ -1,5 +1,6 @@
 // CHANGE Default title
-export const SITE_TITLE = "";
+export const SITE_TITLE =
+  "Airplane and Helicopter Flight Training in Titusville, FL | USATS";
 
 // CHANGE default meta description -> should only be used in homepage technically, but is there for a fallback in case a page is missed
 export const SITE_DESCRIPTION = "";
