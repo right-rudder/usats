@@ -2,23 +2,31 @@
 import ImageComp from "../ImageComp.astro";
 
 const { content } = Astro.props;
-
 ---
 
-<div class="overflow-hidden bg-white py-24 sm:py-32">
+<div class="overflow-hidden bg-primary-900 py-24 sm:py-32 px-10 md:px-20 lg:px-30">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
       <div class="max-w-4xl">
         <p class="text-base/7 font-semibold text-muted-900">About us</p>
-        <h1 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">On a mission to train the best pilots in the world</h1>
-        <p class="mt-6 text-xl/8 text-balance text-gray-700">Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas.</p>
+        <h1 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-accent-800 sm:text-5xl">{content.title}</h1>
+        <p class="mt-6 text-xl/8 text-balance text-muted-200">{content.paragraph}</p>
       </div>
       <section class="mt-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
+        
+        <!-- Text -->
         <div class="lg:pr-8">
-          <h2 class="text-2xl font-semibold tracking-tight text-pretty text-gray-900">Our mission</h2>
-          <p class="mt-6 text-base/7 text-gray-600">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-          <p class="mt-8 text-base/7 text-gray-600">Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.</p>
+          { content.bullets && content.bullets.map((bullet) => (
+            <div class="pb-10 last:pb-0">
+              <h2 class="text-2xl font-semibold tracking-tight text-pretty text-accent-600">{bullet.title}</h2>
+              {bullet.description.map((description) => (
+                  <p class="mt-6 text-base/7 text-muted-200">{description}</p>
+              ))}
+            </div>
+          ))}
         </div>
-        <div class="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
+        
+        <!-- Image Grid -->
+        <div class="pt-32 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:-mr-16 xl:mr-auto">
           <div class="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
             <div class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
                 <ImageComp
@@ -53,30 +61,33 @@ const { content } = Astro.props;
                 />
             </div>
           </div>
+
+        <!-- Numbers -->
+          <div class="pt-20">
+            <p class="text-base/7 font-semibold text-muted-700">THE NUMBERS</p>
+            <hr class="mt-6 border-t border-primary-500">
+            <dl class="mt-1 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
+              <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
+                <dt class="text-sm/6 text-muted-200">Students from 120 countries</dt>
+                <dd class="order-first text-6xl font-semibold tracking-tight text-accent-700">+120</dd>
+              </div>
+              <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
+                <dt class="text-sm/6 text-muted-200">Thousands of students gradutated</dt>
+                <dd class="order-first text-6xl font-semibold tracking-tight text-accent-700">+3000</dd>
+              </div>
+              <div class="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4">
+                <dt class="text-sm/6 text-muted-200">Great fleet with 3 airplanes and 5 helicopters</dt>
+                <dd class="order-first text-6xl font-semibold tracking-tight text-accent-700">+8</dd>
+              </div>
+              <div class="flex flex-col gap-y-2">
+                <dt class="text-sm/6 text-muted-200">Accept M1 Students, FAA training (Gold Standard), Well-maintained fleet</dt>
+                <dd class="order-first text-6xl font-semibold tracking-tight text-accent-700"> + More</dd>
+              </div>
+            </dl>
+          </div>
         </div>
-        <div class="max-lg:mt-16 lg:col-span-1">
-          <p class="text-base/7 font-semibold text-gray-500">The numbers</p>
-          <hr class="mt-6 border-t border-gray-200">
-          <dl class="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
-            <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
-              <dt class="text-sm/6 text-gray-600">1x R44, 2x S-300 and 1x UH-60 Black Hawk</dt>
-              <dd class="order-first text-6xl font-semibold tracking-tight">4 Heli...</dd>
-            </div>
-            <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
-              <dt class="text-sm/6 text-gray-600">Thousands of students from 120 countries</dt>
-              <dd class="order-first text-6xl font-semibold tracking-tight">+1000 students</dd>
-            </div>
-            <div class="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4">
-              <dt class="text-sm/6 text-gray-600">1 Cesna 172, and 2x Dynon hdx1200</dt>
-              <dd class="order-first text-6xl font-semibold tracking-tight">3 Airplanes</dd>
-            </div>
-            <div class="flex flex-col gap-y-2">
-              <dt class="text-sm/6 text-gray-600">Accept M1 Students, FAA training (Gold Standard), Well-maintained fleet</dt>
-              <dd class="order-first text-6xl font-semibold tracking-tight"> + More</dd>
-            </div>
-          </dl>
-        </div>
-      </section>
+        
+      </section>`
     </div>
   </div>
   
