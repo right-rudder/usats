@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../components/astro/HeaderScreen.astro";
+import CTAMilitary from "../../components/astro/CTAMilitary.astro";
+import ctaMilitary from "../../data/programs/ctaMilitary.js";
+import underHeaderHeli from "../../data/programs/underHeaderHeli";
+
+import UnderHeader from "../../components/astro/UnderHeader.astro";
+import ProgramDetails from "../../components/layouts/ProgramDetails.astro";
+
+import militaryTraining from "../../data/programs/helicopter/militaryTraining";
+import militaryPage from "../../data/programs/militaryIndex";
+import RoadMap from "../../components/astro/RoadMap.astro";
+const { data } = Astro.props;
+
+const pageTitle = "Military Training"
+const pageDescription = "Qui veniam labore incididunt magna enim elit aliquip tempor sint proident commodo cillum. Eu exercitation ullamco enim nulla esse dolor laborum occaecat tempor anim. Cillum anim velit incididunt consequat proident laboris velit irure Lorem Lorem incididunt aute id. Deserunt non pariatur incididunt labore aliquip ex Lorem dolore magna anim elit. Consequat adipisicing anim est adipisicing minim dolore officia eiusmod dolor reprehenderit irure."
+const pageKeywords = []
+
+
+---
+
+<BaseLayout
+  siteTitle={pageTitle}
+  siteDescription={pageDescription}
+  keywords={pageKeywords}
+>
+  
+  <HeaderScreen content={militaryPage.data.header} />
+  <UnderHeader content={militaryPage.data.underHeader} />
+  <ProgramDetails program={militaryTraining.data.details} />
+  <RoadMap />
+  <CTAMilitary content={ctaMilitary} />
+  
+</BaseLayout>

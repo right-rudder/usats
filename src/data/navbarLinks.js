@@ -53,7 +53,7 @@ export const navbarLinks = [
         subsubmenu: [
           {
             name: "Military Training",
-            link: "/helicopter-training/military-training",
+            link: "/military-training",
           },
           {
             name: "Professional Pilot Program",
