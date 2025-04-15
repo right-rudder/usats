@@ -222,12 +222,16 @@ const homePage = {
       description: "",
       questions: [
         {
-          question: "Question 1",
-          answer: "ans 1",
+          question: "Why choose USATS?",
+          answer: "USATS is a globally recognized military aviation leader with 30+ years of training elite pilots, offering FAA + NATO-certified programs on combat-proven platforms like the UH-60 Black Hawk—all with 320+ annual flying days and a 38-acre tactical training complex.",
         },
         {
-          question: "Question 2",
-          answer: "ans 2",
+          question: "What I can Expect from USATS training?",
+          answer: "Career-focused training: Master everything from private pilot basics to advanced instrument flying, with optional courses in leadership (CRM/TEM) honed from military programs. Enjoy small classes, 2:1 instructor ratios, and access to NASA-adjacent airspace for unparalleled training diversity.",
+        },
+        {
+          question: "Is there any requirements to join?",
+          answer: "No experience needed! Start with zero hours—just a passion to fly. Medical certification (Class 2+) and English proficiency required. Military veterans: leverage your background for accelerated pathways. International students: M1 visa eligibility, proof of funds, and academic transcripts. USATS assists with visa logistics, housing, and airport transfers!",
         },
       ],
       buttons: [

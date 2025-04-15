@@ -27,23 +27,23 @@ export const navbarLinks = [
           },
           {
             name: "Private Pilot License",
-            link: "/helicopter-training/professional-pilot-program",
+            link: "/airplane-training/professional-pilot-program",
           },
           {
             name: "Instrument Rating",
-            link: "/helicopter-training/instrument-rating",
+            link: "/airplane-training/instrument-rating",
           },
           {
             name: "Commercial Pilot License",
-            link: "/helicopter-training/commercial-pilot-license",
+            link: "/airplane-training/commercial-pilot-license",
           },
           {
             name: "Certified FLight Instructor",
-            link: "/helicopter-training/certified-flight-instructor",
+            link: "/airplane-training/certified-flight-instructor",
           },
           {
             name: "Certified FLight Instructor Instrument",
-            link: "/helicopter-training/certified-flight-instructor-instrument",
+            link: "/airplane-training/certified-flight-instructor-instrument",
           },
         ],
       },
