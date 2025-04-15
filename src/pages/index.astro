@@ -15,6 +15,8 @@ import ctaFligth from "../data/ctaFlight";
 import Programs from "../components/layouts/ProgramsSwiper.astro";
 import programsSwiper from "../data/programsSwiper";
 import GridPrograms from "../components/layouts/GridPrograms.astro";
+import CTAMilitary from "../components/astro/CTAMilitary.astro";
+import militaryCta from "../data/programs/ctaMilitary";
 
 const { data } = homePage;
 ---
@@ -34,6 +36,7 @@ const { data } = homePage;
   <GridPrograms content={programsSwiper} />
   <Testimonials content={data.testimonials} />
   <!-- <LetsFlyTogether /> -->
+  <CTAMilitary content={militaryCta} />
 
   <FreQuestions content={data.frequentQuestions} />
   <CTADiscoveryFlight content={ctaFligth} />
