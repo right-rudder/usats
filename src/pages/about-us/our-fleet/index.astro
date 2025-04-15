@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../../components/astro/HeaderScreen.astro";
+import OurTeam from "../../../components/astro/OurTeam.astro";
+import ImageComp from "../../../components/ImageComp.astro";
+import WhyUs from "../../../components/astro/WhyUs.astro";
+import Testimonials from "../../../components/astro/Testimonials.astro";
+import FreQuestions from "../../../components/astro/FreQuestions.astro";
+import Subscribe from "../../../components/astro/Subscribe.astro";
+import "/src/styles/global.css";
+import WhoAreUs from "../../../components/astro/WhoAreUs.astro";
+import OurAdvantages from "../../../components/astro/OurAdvantages.astro";
+import ElevateYourCarrer from "../../../components/astro/ElevateYourCarrer.astro";
+import LetsFlyTogether from "../../../components/astro/LetsFlyTogether.astro";
+
+import aboutUs from "../../../data/about-us/aboutUs";
+
+const { data } = aboutUs;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+  <WhoAreUs content={data.whatWeOffer} />
+</BaseLayout>
