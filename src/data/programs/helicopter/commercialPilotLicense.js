@@ -2,7 +2,7 @@ import { COMPANY_NAME } from "../../../consts";
 
 const commercialPilotLicense = {
   data: {
-    slug: "commercial-pilot",
+    slug: "commercial-pilot-license",
     pageTitle: `Commercial Pilot Certificate | ${COMPANY_NAME}`,
     pageDescription:
       "Turn your passion into a profession with our Commercial Pilot Certificate. Get personalized training to meet FAA requirements and prepare for a career in aviation.",
