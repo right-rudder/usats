@@ -155,12 +155,12 @@ const Navbar = ({ pathname }) => {
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute top-10 bg-black/90 border-b-4 border-black/20 whitespace-nowrap text-primary-50 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
+                          className={`absolute top-14 bg-black/90 border-b-4 border-black/20 whitespace-nowrap text-primary-50 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
                         >
                           {item.submenu.map((subitem, subIndex) => (
                             <li
                               key={subIndex}
-                              className={`${isActive(subitem, pathname) ? "bg-accent-900 text-primary-900" : ""} relative hover:bg-accent-800 hover:scale-105 px-1 hover:font-semibold hover:shadow-sm drop-shadow-sm font-medium`}
+                              className={`${isActive(subitem, pathname) ? "bg-accent-100 text-primary-900" : ""} relative hover:bg-accent-900 hover:text-white hover:scale-105 px-1 hover:font-semibold hover:shadow-sm drop-shadow-sm font-medium`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
                               onMouseLeave={() => setSubHoveredIndex(null)}
                             >
@@ -181,13 +181,13 @@ const Navbar = ({ pathname }) => {
                               {subitem.subsubmenu &&
                                 subitem.subsubmenu.length > 0 && (
                                   <ul
-                                    className={`absolute z-20 top-0 bg-primary-400 whitespace-nowrap left-full duration-500 ${subHoveredIndex === subIndex ? "max-h-auto w-auto opacity-100" : "max-h-0 w-0 opacity-0 overflow-hidden"}`}
+                                    className={`absolute z-20 top-0 bg-primary-700/80 whitespace-nowrap left-full duration-500 ${subHoveredIndex === subIndex ? "max-h-auto w-auto opacity-100" : "max-h-0 w-0 opacity-0 overflow-hidden"}`}
                                   >
                                     {subitem.subsubmenu.map(
                                       (subsubitem, subsubIndex) => (
                                         <li
                                           key={subsubIndex}
-                                          className={`${isActive(subsubitem, pathname) ? "bg-accent" : ""} relative hover:bg-secondary`}
+                                          className={`${isActive(subsubitem, pathname) ? "bg-accent-100 text-accent-900" : ""} relative hover:bg-accent-700 hover:text-white`}
                                         >
                                           <a
                                             href={subsubitem.link}
