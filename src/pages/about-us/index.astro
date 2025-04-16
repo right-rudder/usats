@@ -16,6 +16,8 @@ import homePage from "../../data/homePage";
 
 import aboutUs from "../../data/about-us/aboutUs";
 import PageSumarry from "../../components/astro/PageSummary.astro"
+import ourTeam from "../../data/about-us/ourTeam";
+import TeamGrid from "../../components/layouts/TeamGrid.astro";
 const { data } = aboutUs;
 
 ---
@@ -29,6 +31,7 @@ const { data } = aboutUs;
   <HeaderScreen content={aboutUs.header} />
   <PageSumarry content={aboutUs.pageSummary} />
   <WhoAreUs content={aboutUs.whatWeOffer} />
+  <TeamGrid data={ourTeam.teamGrid} />
   <!-- Our Team? -->
    <!-- quizCTA -->
   <!-- Testimonials? -->
