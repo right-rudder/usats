@@ -18,6 +18,7 @@ import aboutUs from "../../data/about-us/aboutUs";
 import PageSumarry from "../../components/astro/PageSummary.astro"
 import ourTeam from "../../data/about-us/ourTeam";
 import TeamGrid from "../../components/layouts/TeamGrid.astro";
+import StaffGrid from "../../components/layouts/StaffGrid.astro";
 const { data } = aboutUs;
 
 ---
@@ -31,6 +32,7 @@ const { data } = aboutUs;
   <HeaderScreen content={aboutUs.header} />
   <PageSumarry content={aboutUs.pageSummary} />
   <WhoAreUs content={aboutUs.whatWeOffer} />
+  <StaffGrid data={ourTeam.staffGrid} />
   <TeamGrid data={ourTeam.teamGrid} />
   <!-- Our Team? -->
    <!-- quizCTA -->
