@@ -1,25 +1,10 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeaderScreen from "../../components/astro/HeaderScreen.astro";
-import OurTeam from "../../components/astro/OurTeam.astro";
-import ImageComp from "../../components/ImageComp.astro";
-import WhyUs from "../../components/astro/WhyUs.astro";
-import Testimonials from "../../components/astro/Testimonials.astro";
-import FreQuestions from "../../components/astro/FreQuestions.astro";
-import Subscribe from "../../components/astro/Subscribe.astro";
-import "/src/styles/global.css";
 import WhoAreUs from "../../components/astro/WhoAreUs.astro";
-import OurAdvantages from "../../components/astro/OurAdvantages.astro";
-import ElevateYourCarrer from "../../components/astro/ElevateYourCarrer.astro";
-import LetsFlyTogether from "../../components/astro/LetsFlyTogether.astro";
-import homePage from "../../data/homePage";
 
 import aboutUs from "../../data/about-us/aboutUs";
 import PageSumarry from "../../components/astro/PageSummary.astro"
-import ourTeam from "../../data/about-us/ourTeam";
-import TeamGrid from "../../components/layouts/TeamGrid.astro";
-import StaffGrid from "../../components/layouts/StaffGrid.astro";
-const { data } = aboutUs;
 
 ---
 
@@ -32,8 +17,6 @@ const { data } = aboutUs;
   <HeaderScreen content={aboutUs.header} />
   <PageSumarry content={aboutUs.pageSummary} />
   <WhoAreUs content={aboutUs.whatWeOffer} />
-  <StaffGrid data={ourTeam.staffGrid} />
-  <TeamGrid data={ourTeam.teamGrid} />
   <!-- Our Team? -->
    <!-- quizCTA -->
   <!-- Testimonials? -->
