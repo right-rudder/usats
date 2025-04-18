@@ -1,29 +1,105 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import HeaderScreen from "../../../components/astro/HeaderScreen.astro";
-import OurTeam from "../../../components/astro/OurTeam.astro";
-import ImageComp from "../../../components/ImageComp.astro";
-import WhyUs from "../../../components/astro/WhyUs.astro";
-import Testimonials from "../../../components/astro/Testimonials.astro";
-import FreQuestions from "../../../components/astro/FreQuestions.astro";
-import Subscribe from "../../../components/astro/Subscribe.astro";
-import "/src/styles/global.css";
-import WhoAreUs from "../../../components/astro/WhoAreUs.astro";
-import OurAdvantages from "../../../components/astro/OurAdvantages.astro";
-import ElevateYourCarrer from "../../../components/astro/ElevateYourCarrer.astro";
-import LetsFlyTogether from "../../../components/astro/LetsFlyTogether.astro";
+// import HeaderSmall from "../../../components/HeaderSmall.astro";
+import { Image } from "astro:assets";
+import Intro from "../../../assets/placeholder.webp";
+import ourFleet  from "../../../data/about-us/ourFleet";
+import PlaneCard from "../../../components/astro/PlaneCard.astro";
+import PageSummary from "../../../components/astro/PageSummary.astro";
 
-import aboutUs from "../../../data/about-us/aboutUs";
+import { fleet } from "../../../data/about-us/fleet";
 
-const { data } = aboutUs;
+const header = {
+  imagePath: "/src/assets/atlanta-airport-Speedway-Flight-Training-116.webp",
+  headerH1: "Our Fleet",
+  imageAlt: "Speedway Flight Training aircraft lined up at Atlanta Speedway Airport",
+  paragraph: "Explore Speedway Flight Training's modern, well-maintained fleet based in Hampton, GA. From Cessna 172s to TAA-equipped aircraft, our lineup is designed to support students through every stage of flight training.",
+  buttons: [
+    {
+      name: "View Our Aircraft",
+      link: "#fleet",
+      primary: false,
+    },
+  ],
+};
 ---
 
 <BaseLayout
-  siteTitle={data.pageTitle}
-  siteDescription={data.pageDescription}
-  keywords={data.pageKeywords}
+  siteTitle="Fleet and Rentals | Speedway Flight Training"
+  siteDescription="Explore Speedway Flight Training's modern aircraft available for training and time building in Hampton, GA. Our fleet includes Cessna 172s equipped for both VFR and IFR operations."
+  siteKeywords="aircraft rental Atlanta, Cessna 172 for rent Georgia, pilot training fleet Hampton GA, time building aircraft near Atlanta, flight training aircraft GA"
 >
-  <!-- HEADER -->
-  <HeaderScreen content={data.header} />
-  <WhoAreUs content={data.whatWeOffer} />
+  <PageSummary content={ourFleet.data.pageSummary} />
+
+  <section class="py-24 px-5 bg-primary-900">
+    <div class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20">
+      <div class="flex-1 relative">
+        <Image
+          class="pr-6"
+          src={Intro}
+          alt="Speedway Flight Training tail view of a Cessna"
+          widths={[240, 540, 720, 1080, 1440, 1980]}
+          sizes={`(max-width: 240px) 240px, (max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1080px) 1080px, (max-width: 1440px) 1440px, 1920px`}      
+        />
+        <div class="h-3/4 bg-primary-600 absolute -z-10 -right-0 w-20 top-[12.5%]"></div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-accent-700 font-bold tracking-widest">
+          Our Fleet
+        </h2>
+        <h3 class="text-5xl text-accent-700 font-bold leading-tight">
+          Fly with Confidence
+        </h3>
+        <p class="text-muted-200 leading-relaxed my-5">
+          At Speedway, our fleet consists of IFR-equipped Cessna 172s, including technically advanced aircraft (TAA) with Garmin G5 and GFC 500 avionics. All aircraft are kept in top condition and ready for flight training, time building, or rental by qualified pilots. Explore the details below.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <a href="#contact" class="btn-primary">Rent Today</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fleet" class="py-24 px-5 bg-checkered bg-fixed bg-primary-950 scroll-my-20">
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-accent-800 font-bold tracking-widest">
+        Available for Rent
+      </h2>
+      <h3 class="text-5xl text-accent-600 font-bold leading-tight mb-5">
+        Our Cessna 172 Fleet
+      </h3>
+      <div class="grid gap-8 mt-5 lg:grid-cols-2">
+        {
+          fleet
+            .filter((plane) => !plane.advancedOnly)
+            .map((plane) => (
+              <PlaneCard
+                name={plane.name}
+                rentalPrice={plane.rentalPrice}
+                imagePath={plane.imagePath}
+                slug={plane.slug}
+                model={plane.model}
+                hasRibbon={plane.hasRibbon}
+                ribbonTitle={plane.ribbonTitle}
+                specialUrl={plane.specialUrl}
+              />
+            ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 px-5 bg-primary-900">
+    <div class="max-w-7xl mx-auto gap-10 lg:gap-52 flex justify-between items-center lg:flex-row flex-col">
+      <div>
+        <h3 class="text-5xl text-white font-bold leading-tight text-center lg:text-left">
+          Reach out to fly with Speedway
+        </h3>
+      </div>
+      <a href="#" class="flex-shrink-0 btn-primary">
+        Submit Rental Inquiry
+      </a>
+    </div>
+  </section>
+
 </BaseLayout>

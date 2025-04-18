@@ -28,12 +28,12 @@ const { content } = Astro.props;
         <!-- Image Grid -->
         <div class="pt-32 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:-mr-16 xl:mr-auto">
           <div class="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
-            <div class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+            <div class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 ">
                 <ImageComp
                     imagePath={content.images.h60.imagePath}
                     imageAlt={content.images.h60.imageAlt}
                     loading={"lazy"}
-                    styles="block size-full object-cover"
+                    styles="w-full h-full object-cover object-top group-hover:scale-110 group-hover:shadow-lg group-hover:brightness-110 duration-300 ease-in-out"
                 />
             </div>
             <div class="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
