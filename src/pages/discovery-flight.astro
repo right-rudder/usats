@@ -1,0 +1,33 @@
+---
+import Discovery from "../components/layouts/Discovery.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Location from "../components/astro/Location.astro";
+import HeaderSmall from "../components/astro/HeaderSmall.astro";
+
+const header = {
+    imagePath: "/src/assets/placeholder.webp",
+    headerH1: "Discovery Flights</br>at USATS",
+    imageAlt: "Speedway Flight Training instructors and staff in front of a Cessna at KHMP",
+    paragraph:
+        "Ready to take the controls? A discovery flight is the perfect first step. Fly with a certified instructor, experience what it’s like to be a pilot, and enjoy stunning views of the Atlanta Motor Speedway, Lake Horton, and the city skyline.",
+    buttons: [
+        {
+        name: "Schedule a Flight",
+        link: "#contact",
+        primary: false,
+        },
+    ],
+};
+---
+
+<BaseLayout
+  siteTitle="Discovery Flights | Speedway Flight Training"
+  siteDescription="Book a discovery flight with Speedway Flight Training in Hampton, GA. Take the controls and experience what it’s like to become a pilot!"
+  keywords="discovery flight Georgia, intro flight Hampton GA, first flight experience, flight school near Atlanta, learn to fly"
+>
+  <HeaderSmall content={header} />
+
+  <Discovery />
+
+  <Location />
+</BaseLayout>
