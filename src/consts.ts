@@ -41,6 +41,15 @@ export const YOUTUBE_URL = null;
 export const TWITTER_URL = null;
 export const EMAIL_ADDRESS = "info@usatsolutions.com";
 
+
+export const COMPANY_NICKNAME = "USATS"
+export const ADDRESS = "355 Golden Knight Blvd"
+export const ADDRESS_STATE = "FL"
+export const ADDRESS_CITY = "Titusville"
+export const ADDRESS_ZIP = "32780"
+export const AIRPORT = "Titusville Cocoa Airport"
+export const AIRPORT_CODE = "TCA"
+
 // Pages Data
 
 export const BANNER_TITLE = `Experience flight like never before.`;

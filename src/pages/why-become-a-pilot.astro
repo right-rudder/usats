@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeaderScreen from "../components/astro/HeaderScreen.astro";
+import CTADiscoveryFlight from "../components/astro/CTADiscoveryFlights.astro";
+import whyBecomePilot from "../data/why-become-a-pilot";
+import Content from "../components/astro/Content.astro";
+
+const { data } = whyBecomePilot;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+
+  <Content data={data.shouldBePilot} />
+  
+  <CTADiscoveryFlight content={data.flyWithUsCTA} />
+  <script src="../scripts/creativeSwiper.js"></script>
+</BaseLayout>
