@@ -28,7 +28,7 @@ const posts = (await getCollection("blog")).sort(
   <Header data={data} />
     {
         posts.map((post) => (
-            <p>{post.slug}</p>
+            <p>{post.data.title}</p>
         ))
     }
   <section
@@ -39,7 +39,7 @@ const posts = (await getCollection("blog")).sort(
         posts.map((post, index) => (
           <li class="h-96 lg:h-80 ring-1 hover:ring-2 hover:shadow-lg hover:scale-[1.02] ring-primary-dark bg-white/60 hover:bg-white/80 rounded-tr-xl rounded-bl-xl duration-300 ease-in-out overflow-hidden group w-full md:first:w-[98.2%] md:w-[48%] md:first:h-screen-1/2">
             <a
-              href={`/blog/${post.slug}/`}
+              href={`/blog/${post.slug}`}
               class={`flex flex-col lg:flex-row gap-5 h-full ${index === 0 ? "" : ""}`}
             >
               <div class="flex-1 h-full flex flex-col justify-between p-4 lg:px-8 lg:py-10">
