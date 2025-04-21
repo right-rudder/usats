@@ -11,9 +11,9 @@ const aboutUs = {
   header: {
     stars: true,
     imagePath: "/src/assets/maintanceHeli2.png",
-    imageAlt: "US Avation Training Solutions student pilot celebrating her first solo flight",
+    imageAlt: "US Aviation Training Solutions student pilot celebrating her first solo flight",
     headerH1: `<span class="text-accent-900 text-shadow-lg">Why Choose <br>USATS?</span>`,
-    paragraph: `At US Avation Training Solutions, our mission is to deliver high-quality flight training in a supportive and professional environment. From your first flight to your commercial career, we’re here to guide your journey with integrity, safety, and passion.`,
+    paragraph: `At US Aviation Training Solutions, our mission is to deliver high-quality flight training in a supportive and professional environment. From your first flight to your commercial career, we’re here to guide your journey with integrity, safety, and passion.`,
     buttons: [
       {
         name: "Contact Us",
