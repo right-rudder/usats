@@ -92,7 +92,7 @@ const aboutUs = {
       },
       cesna172: {
         imagePath: "/src/assets/USATS_Plane_N3544W.webp",
-        imageAlt: "One CESNA 172 parked in a ramp",
+        imageAlt: "One Cessna 172 parked in a ramp",
       },
       s300: {
         imagePath: "/src/assets/Schweizer_S300_Usats_Ramp.webp",
