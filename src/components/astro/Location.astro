@@ -1,0 +1,37 @@
+---
+const { bgColorRed = true } = Astro.props;
+---
+
+<section
+  class={`bg-primary-950 text-accent-200`}
+>
+  <div class="max-w-7xl mx-auto flex flex-col-reverse items-center px-10 lg:flex-row">
+    <div class="lg:w-1/2 flex flex-col items-center py-10 h-[30rem] w-full">
+      <iframe
+        src="https://maps.google.com/maps?q=355+Golden+Knights+Blvd.%2C+Titusville%2C+Florida-+32780%2C+United+States&output=embed"
+        class="w-full h-full max-w-2xl"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <div class="w-10/12 lg:w-1/2 flex flex-col items-center py-10">
+      <div class="max-w-2xl lg:px-10 flex flex-col items-center">
+        <h2 class="text-3xl font-semibold text-muted-200 text-center tracking-tight">
+          Our Location
+        </h2>
+        <h3 class="pt-10 w-full text-xl  text-muted-200 italic text-center">
+          Located at Titusville Cocoa Airport (TCA) in Titusville, Florida
+        </h3>
+        <div class="tracking-wider">
+          <p class="pt-10  text-muted-200">
+            US Aviation Training Solutions (USATS) operates from Titusville-Cocoa Airport (KTIX), just minutes from Florida's Space Coast and the Kennedy Space Center. Our prime location offers unrestricted airspace with 320+ annual flying days, rapid access to both coastal and inland training zones, and proximity to Class C/D airspace for real-world navigation experience. We serve aspiring pilots from Orlando, Cocoa Beach, Melbourne, and across Central Florida—providing an ideal environment for focused, year-round flight training.
+          </p>
+        </div>
+        <a href="/discovery-flight">
+          <div class="btn-primary mt-10">Visit Us Today</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

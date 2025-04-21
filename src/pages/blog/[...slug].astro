@@ -2,14 +2,6 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import BlogPost from "../../layouts/BlogPost.astro";
 
-// export async function getStaticPaths() {
-//   const posts = await getCollection("blog");
-//   return posts.map((post) => ({
-//     params: { slug: post.slug },
-//     props: post,
-//   }));
-// }
-
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
   return posts.map((post) => ({
@@ -25,7 +17,7 @@ const { Content } = await post.render();
 ---
 
 <BlogPost {...post.data}>
-  <div class="max-w-4xl prose prose-img:w-full">
+  <div class="max-w-4xl prose prose-img:w-full bg-primary-900">
     <Content />
   </div>
 </BlogPost>

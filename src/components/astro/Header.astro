@@ -4,7 +4,7 @@ import type { ImageMetadata } from "astro";
 
 const { data } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif}"
+  "/src/assets/*.{jpeg,jpg,png,gif,webp}"
 );
 if (!images[data.imagePath])
   throw new Error(
@@ -28,7 +28,7 @@ if (!images[data.imagePath])
   </div>
   {
     (data.headerH1 || data.headerH2) && (
-      <div class="text-muted-100 text-center lg:text-left z-10 flex flex-col items-center gap-4 px-5 h-full lg:pt-16 justify-center">
+      <div class="text-muted-100  text-center lg:text-left z-10 flex flex-col items-center gap-4 px-5 h-full lg:pt-16 justify-center">
         {data.headerH1 && (
           <h1
             class="text-2xl px-6 lg:px-24 md:text-5xl lg:text-6xl drop-shadow-lg xl:text-7xl text-center font-black tracking-normal animate-slow-fade"

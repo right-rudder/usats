@@ -107,15 +107,15 @@ export const navbarLinks = [
   },
   {
     name: "About",
-    link: "/our-team",
+    link: "/about-us",
     submenu: [
       {
         name: "Our Team",
-        link: "/our-team",
+        link: "/about-us/our-team",
       },
       {
         name: "Our Fleet",
-        link: "/our-fleet",
+        link: "/about-us/our-fleet",
       },
       {
         name: "Financing",

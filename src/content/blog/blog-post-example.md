@@ -1,6 +1,6 @@
 ---
 pubDate: "2025-04-11"
-author: Rodrigo Johann Reckziegel Nunes
+author: John Joe
 title: "Blog Post Example"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 heroImage: "/blog/placeholder.webp"

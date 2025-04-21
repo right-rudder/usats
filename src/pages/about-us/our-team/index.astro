@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../../components/astro/HeaderScreen.astro";
+import homePage from "../../../data/homePage";
+import "/src/styles/global.css";
+import ourTeam from "../../../data/about-us/ourTeam";
+import StaffGrid from "../../../components/layouts/StaffGrid.astro";
+import TeamGrid from "../../../components/layouts/TeamGrid.astro";
+
+const { data } = homePage;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+  <StaffGrid data={ourTeam.staffGrid} />
+  <TeamGrid data={ourTeam.teamGrid} />
+</BaseLayout>
