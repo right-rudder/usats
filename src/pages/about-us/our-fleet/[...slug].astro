@@ -1,12 +1,15 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-// import HeaderSmall from "../../../components/HeaderSmall.astro";
+import HeaderSmall from "../../../components/astro/HeaderSmall.astro";
 import { Image } from "astro:assets";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 import ourFleet  from "../../../data/about-us/ourFleet";
 import { fleet } from "../../../data/about-us/fleet";
 // import PlaneCarousel from "../../../components/PlaneCarousel.jsx";
+import CTADiscoveryFlights from "../../../components/astro/CTADiscoveryFlights.astro";
+
+import { COMPANY_NAME, COMPANY_NICKNAME } from "../../../consts";
 
 export async function getStaticPaths() {
   return fleet.map(({ slug, ...plane }) => ({
@@ -28,6 +31,7 @@ const {
 } = Astro.props;
 
 import type { ImageMetadata } from "astro";
+import DiscoveryFlight from "../../discovery-flight.astro";
 const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg,jpg,png,gif,webp}");
 
 if (!images[imagePath]) {
@@ -44,14 +48,14 @@ const newImagesArray = await Promise.all(
 );
 
 const header = {
-  imagePath: "/src/assets/atlanta-airport-Speedway-Flight-Training-146.webp",
-  imageAlt: "Speedway Flight Training aircraft lined up at Atlanta Speedway Airport",
+  imagePath: "/src/assets/placeholder.webp",
+  imageAlt: `${COMPANY_NAME} aircraft lined up at Atlanta ${COMPANY_NICKNAME} Airport`,
   headerH1: name,
   buttons: [
     {
       name: "More Information",
       link: "#plane",
-      primary: false,
+      primary: true,
     },
   ],
 };
@@ -59,35 +63,35 @@ const header = {
 
 <BaseLayout
   siteTitle={`Aircraft Details | ${name}`}
-  siteDescription={`Speedway Flight Training offers a fleet of IFR-equipped Cessna 172s for rental and instruction. Learn more about ${name} and schedule your flight today.`}
-  siteKeywords="aircraft rental Georgia, flight training fleet Atlanta, Cessna 172 rental Hampton GA, IFR training aircraft GA"
+  siteDescription={`${COMPANY_NAME} offers a fleet of IFR-equipped Cessna 172s for rental and instruction. Learn more about ${name} and schedule your flight today.`}
+  siteKeywords=""
 >
-  <!-- <HeaderSmall content={header} /> -->
+  <HeaderSmall content={header} />
 
   <section class="py-24 px-5 bg-checkered bg-fixed" id="plane">
     <div class="max-w-xl gap-8 lg:max-w-6xl mx-auto flex flex-col lg:flex-row items-center">
       <!-- <PlaneCarousel client:load imagesArray={newImagesArray} swiperClass="inline lg:h-[27rem] lg:flex-[4_4_0] w-full" /> -->
       <div class="flex lg:flex-1 w-full py-8 px-10 flex-col justify-around gap-2 lg:h-[27rem] lg:min-w-60 bg-primary-950">
         <div class="flex flex-col gap-2">
-          <h4 class="text-accent-200 font-medium">Model:</h4>
-          <p class="text-accent-200">{model}</p>
+          <h4 class="text-muted-200 font-medium">Model:</h4>
+          <p class="text-muted-200">{model}</p>
         </div>
         <hr />
         <div class="flex flex-col gap-2">
-          <h4 class="text-accent-200 font-medium">Tail Number:</h4>
-          <p class="text-accent-200">{name}</p>
+          <h4 class="text-muted-200 font-medium">Tail Number:</h4>
+          <p class="text-muted-200">{name}</p>
         </div>
         <hr />
         <div class="flex flex-col gap-2">
-          <h4 class="text-accent-200 font-medium">Usable Fuel:</h4>
-          <p class="text-accent-200">{usableFuel}</p>
+          <h4 class="text-muted-200 font-medium">Usable Fuel:</h4>
+          <p class="text-muted-200">{usableFuel}</p>
         </div>
         {rentalPrice && (
           <>
             <hr />
             <div class="flex flex-col gap-2">
-              <h4 class="text-accent-200 font-medium">Rental Price:</h4>
-              <p class="text-accent-200">{rentalPrice}</p>
+              <h4 class="text-muted-200 font-medium">Rental Price:</h4>
+              <p class="text-muted-200">{rentalPrice}</p>
             </div>
           </>
         )}
@@ -95,18 +99,18 @@ const header = {
     </div>
 
     <div class="max-w-xl mx-auto lg:max-w-6xl mt-8 flex flex-col gap-8 bg-accent-200/10 p-8 backdrop-blur-sm">
-      <h2 class="text-5xl text-accent-200 font-medium">{name}</h2>
+      <h2 class="text-5xl text-muted-200 font-medium">{name}</h2>
       {description?.map((item) => (
-        <p class="leading-loose text-accent-200">{item}</p>
+        <p class="leading-loose text-muted-200">{item}</p>
       ))}
       {equipment.length > 0 && (
         <>
-          <h3 class="text-3xl text-accent-200 font-medium">Equipment</h3>
+          <h3 class="text-3xl text-muted-200 font-medium">Equipment</h3>
           <ul class="grid sm:grid-cols-2 gap-3">
             {equipment.map((item) => (
               <li class="flex items-center gap-3">
                 <FaArrowAltCircleRight className="text-primary-600 size-5" />
-                <p class="text-accent-200 font-semibold">{item}</p>
+                <p class="text-muted-200 font-semibold">{item}</p>
               </li>
             ))}
           </ul>
@@ -119,27 +123,27 @@ const header = {
       <hr />
       <div class="flex justify-between">
         <a
-          href={`/speedway/fleet/${index === 0 ? fleet[fleet.length - 1].slug : fleet[index - 1].slug}`}
+          href={`/about-us/our-fleet/${index === 0 ? fleet[fleet.length - 1].slug : fleet[index - 1].slug}`}
           class="flex gap-3 items-center group"
         >
           <div class="p-3 bg-primary-600/20 rounded-full group-hover:bg-primary-600 duration-300">
-            <IoIosArrowRoundBack className="text-accent-200 size-6 group-hover:text-white duration-300" />
+            <IoIosArrowRoundBack className="text-muted-200 size-6 group-hover:text-white duration-300" />
           </div>
-          <p class="text-accent-200 text-sm uppercase font-medium tracking-widest">Previous</p>
+          <p class="text-muted-200 text-sm uppercase font-medium tracking-widest">Previous</p>
         </a>
         <a
-          href={`/speedway/fleet/${index === fleet.length - 1 ? fleet[0].slug : fleet[index + 1].slug}`}
+          href={`/about-us/our-fleet/${index === fleet.length - 1 ? fleet[0].slug : fleet[index + 1].slug}`}
           class="flex gap-3 items-center group"
         >
-          <p class="text-accent-200 text-sm uppercase font-medium tracking-widest">Next</p>
+          <p class="text-muted-200 text-sm uppercase font-medium tracking-widest">Next</p>
           <div class="p-3 bg-primary-600/20 rounded-full group-hover:bg-primary-600 duration-300">
-            <IoIosArrowRoundForward className="text-accent-200 size-6 group-hover:text-white duration-300" />
+            <IoIosArrowRoundForward className="text-muted-200 size-6 group-hover:text-white duration-300" />
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- <ContactUs /> -->
+  <CTADiscoveryFlights content={ourFleet.data.flyWithUsCTA} />
 
 </BaseLayout>

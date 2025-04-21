@@ -14,7 +14,7 @@ if (!images[content.imagePath]) {
 ---
 
 <section
-  class="relative h-[100vh] lg:h-[83vh] min-h-fit font-sans bg-gray-800 text-white flex flex-col items-center justify-center overflow-hidden pt-12 pb-6"
+  class="relative min-h-fit font-sans bg-gray-800 text-white flex flex-col items-center justify-center overflow-hidden pb-6"
 >
   <Image
     src={images[content.imagePath]()}
@@ -33,7 +33,7 @@ if (!images[content.imagePath]) {
     class="text-white mt-20 md:px-60 lg:mt-0 text-center lg:text-left z-10 flex flex-col items-center px-5 h-full lg:pt-28 justify-center animate-fade-top"
   >
     <h1
-      class="text-5xl md:text-6xl uppercase lg:text-8xl font-sans2 -skew-x-12 drop-shadow-lg xl:text-8xl text-center font-bold text-accent-900 animate-fade-top"
+      class="text-5xl md:text-6xl uppercase lg:text-6xl font-sans2 -skew-x-12 drop-shadow-lg xl:text-8xl text-center font-bold text-accent-900 animate-fade-top"
       set:html={content.headerH1}
     />
     <h2

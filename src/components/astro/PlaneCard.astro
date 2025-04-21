@@ -22,14 +22,14 @@ if (!images[imagePath]) {
 ---
 
 <a
-  href={`/speedway/fleet/${slug}`}
+  href={`/about-us/our-fleet/${slug}`}
   class="flex cursor-pointer flex-col bg-accent-800 group relative overflow-hidden scroll-my-20"
   id={name}
 >
   {
     ribbonTitle && (
       <div class="absolute right-[-24px] 2xl:right-[-21px] rtl:right-auto rtl:left-[-8px] rtl:2xl:left-[-0px] top-[-5px] 2xl:top-[0px] z-[1] h-[200px] w-[200px] overflow-hidden text-right">
-        <span class="absolute top-[45px] right-[-21px] rtl:right-auto rtl:left-[-21px] block w-full rotate-45 rtl:-rotate-45 bg-medium-blue text-center text-[10px] font-bold uppercase leading-5 text-accent-100 shadow-[0_3px_10px_-5px_rgba(0,0,0,0.3)] before:absolute before:left-0 before:top-full before:z-[-1] before:border-[3px] before:border-r-transparent before:border-b-transparent before:border-l-green-800 before:border-t-green-800 before:content-[''] after:absolute after:right-0 after:top-full after:z-[-1] after:border-[3px] after:border-l-transparent after:border-b-transparent after:border-r-green-800 after:border-t-green-800 after:content-['']">
+        <span class="absolute top-[45px] right-[-21px] rtl:right-auto rtl:left-[-21px] block w-full rotate-45 rtl:-rotate-45 bg-medium-blue text-center text-[10px] font-bold uppercase leading-5 text-muted-100 shadow-[0_3px_10px_-5px_rgba(0,0,0,0.3)] before:absolute before:left-0 before:top-full before:z-[-1] before:border-[3px] before:border-r-transparent before:border-b-transparent before:border-l-green-800 before:border-t-green-800 before:content-[''] after:absolute after:right-0 after:top-full after:z-[-1] after:border-[3px] after:border-l-transparent after:border-b-transparent after:border-r-green-800 after:border-t-green-800 after:content-['']">
           {ribbonTitle}
         </span>
       </div>
@@ -57,7 +57,7 @@ if (!images[imagePath]) {
     <div class="flex flex-col gap-0 sm:flex-row sm:gap-5">
       <div class="flex gap-2 text-sm sm:text-base shadow-2xl shadow-accent-950">
         <p class="text-accent-900">Model:</p>
-        <p class="text-primary-200">{model}</p>
+        <p class="text-muted-200">{model}</p>
       </div>
       {
         rentalPrice && (
