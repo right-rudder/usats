@@ -79,7 +79,7 @@ export const fleet = [
     },
     {
       name: "Robinson R44 Fleet",
-      slug: "uh60blackhawk",
+      slug: "robinsonr44fleet",
       rentalPrice: "1",
       usableFuel: "",
       model: "UH-60",
