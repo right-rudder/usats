@@ -103,7 +103,7 @@ export const fleet = [
     },
     {
       name: "Schweizer S-300",
-      slug: "uh60blackhawk",
+      slug: "schweizers300",
       rentalPrice: "1",
       usableFuel: "",
       model: "UH-60",
