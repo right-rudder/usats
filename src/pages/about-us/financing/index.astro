@@ -57,6 +57,53 @@ const stratusFinance = {
   ],
 };
 
+const aopaFinance = {
+    upperHeading: "AOPA Finance",
+    heading: "Quick & Easy, Affordable, Flexible",
+    description:
+        "AOPA's Flexible Aviation Loan removes the cost barrier so more students can start and complete their training.",
+    imagePath: "/src/assets/logo_aopa_finance.webp",
+    imageAlt: "AOPA Finance Logo",
+    paragraph1:
+        "Stop paying for one lesson at a time, apply for a loan today so you can get your training done faster!",
+    subTitle1: "Your Aviation Dreams Start Here",
+    paragraph2:
+        "Our flight training loan is not a typical student loan. It is a line of credit that can be used for any flight training school or program. You can use the funds to pay the school directly as you make your way from private pilot to instrument pilot and beyond. AOPA's Flexible Aviation Loan removes the cost barrier so more students can start and complete their training.",
+    list: [
+        " Maximum loan amount: $100,000",
+        " 7 year maximum to repay, payments begin as    soon  as funds are disbursed",
+        " Inquire online or by calling 1-800-627-5263",
+    ],
+    applyButton: {
+    name: "Visit Website",
+    link: "https://finance.aopa.org/flight-training-finance",
+    primary: true,
+  },
+};
+
+const weFloridaFinancial = {
+    upperHeading: "We Florida Financial",
+    heading: "Let's Get The Engine Running",
+    description:
+        "Don't ground the conversation, get in contact with our aviation loan experts to learn more about what We Florida Financial has to offer.",
+    imagePath: "/src/assets/logo_We-Fly.webp",
+    imageAlt: "AOPA Finance Logo",
+    paragraph1:
+        "We fly's Learn to Fly program makes achieving your aviation training goals easy and affordable. Pilot school loans provide a fixed-rate line of credit from $5,000 to $30,000. Access your line of credit and transfer funds to your checking account online, reducing time and stress managing receipts, faxes and wire transfers. A line of credit will allow the student to pay the flight school directly and to attend any flight school they desire.",
+    subTitle1: "Your Aviation Dreams Start Here",
+    paragraph2:
+        "We fly's Learn to Fly program makes achieving your aviation training goals easy and affordable.",
+    list: [
+        " Pilot school loans provide a fixed-rate line of credit from $5,000 to $30,000",
+        " Inquire online or by calling 1-800-230-0200",
+    ],
+    applyButton: {
+    name: "Visit Website",
+    link: "https://wefloridafinancial.com/flight-training",
+    primary: true,
+  },
+};
+
 const { data } = stratusInfo;
 ---
 
@@ -71,15 +118,16 @@ const { data } = stratusInfo;
   <section
     class="bg-gradient-to-b from-primary-950 to-90% to-primary-800 px-6 py-24 sm:py-32 lg:px-20"
   >
+  <!-- Stratus Financial -->
     <div class="flex flex-col justify-center align-middle items-center">
       <div class="text-center">
         <div class="max-w-4xl">
           <p
-            class="text-base font-semibold leading-7 text-accent-700 uppercase"
+            class="text-base font-semibold leading-7 text-muted-600 uppercase"
           >
             {stratusFinance.upperHeading}
           </p>
-          <h1 class="mt-0 text-4xl font-bold tracking-tight text-muted-800">
+          <h1 class="mt-0 text-4xl font-bold tracking-tight text-accent-700">
             {stratusFinance.heading}
           </h1>
           <p
@@ -167,6 +215,116 @@ const { data } = stratusInfo;
         </div>
       </div>
     </div>
+    
+  <!-- AOPA Finance -->
+  <div class="flex flex-col justify-center align-middle items-center pt-20">
+    <div class="text-center">
+      <div class="max-w-4xl">
+        <p
+          class="text-base font-semibold leading-7 text-muted-500 uppercase"
+        >
+          {aopaFinance.upperHeading}
+        </p>
+        <h1 class="mt-0 text-4xl font-bold tracking-tight text-accent-700">
+          {aopaFinance.heading}
+        </h1>
+        <p
+          class="mt-6 text-xl leading-8 text-muted-300"
+          set:html={aopaFinance.description}
+        />
+      </div>
+    </div>
+    <div class="max-w-xl mt-12">
+      <ImageComp
+        imagePath={aopaFinance.imagePath}
+        imageAlt={aopaFinance.imageAlt}
+        styles="object-contain w-full bg-white rounded-md"
+        quality={99}
+      />
+    </div>
+    <div class="max-w-5xl mt-8">
+      <p class="font-sans2 text-xl text-muted-200" set:html={aopaFinance.paragraph1} />
+      <h4
+        class="font-semibold text-3xl mt-12 text-accent-600"
+        set:html={aopaFinance.subTitle1}
+      />
+      <p class="mt-4 font-sans2 text-muted-200" set:html={aopaFinance.paragraph2} />
+      <ul role="list" class="max-w-2xl mt-6 list-disc font-sans2">
+        {
+          aopaFinance.list.map((item) => (
+            <li class="mt-2 font-medium text-muted-200" set:html={item} />
+          ))
+        }
+      </ul>
+      
+      
+      <div class="flex pt-10 lg:pt-20">
+        <a
+          target="_blank"
+          href={aopaFinance.applyButton.link}
+          class={`${aopaFinance.applyButton.primary ? "btn-accent" : "btn-white"} w-full md:w-auto`}
+        >
+          {aopaFinance.applyButton.name}
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- WeFly We FLorida Financial -->
+  <div class="flex flex-col justify-center align-middle items-center pt-20">
+    <div class="text-center">
+      <div class="max-w-4xl">
+        <p
+          class="text-base font-semibold leading-7 text-muted-400 uppercase"
+        >
+          {weFloridaFinancial.upperHeading}
+        </p>
+        <h1 class="mt-0 text-4xl font-bold tracking-tight text-accent-700">
+          {weFloridaFinancial.heading}
+        </h1>
+        <p
+          class="mt-6 text-xl leading-8 text-muted-300"
+          set:html={weFloridaFinancial.description}
+        />
+      </div>
+    </div>
+    <div class="max-w-xl mt-12">
+      <ImageComp
+        imagePath={weFloridaFinancial.imagePath}
+        imageAlt={weFloridaFinancial.imageAlt}
+        styles="object-contain w-full bg-white rounded-md"
+        quality={99}
+      />
+    </div>
+    <div class="max-w-5xl mt-8">
+      <p class="font-sans2 text-xl text-muted-200" set:html={weFloridaFinancial.paragraph1} />
+      <h4
+        class="font-semibold text-3xl mt-12 text-accent-600"
+        set:html={weFloridaFinancial.subTitle1}
+      />
+      <p class="mt-4 font-sans2 text-muted-200" set:html={weFloridaFinancial.paragraph2} />
+      <ul role="list" class="max-w-2xl mt-6 list-disc font-sans2">
+        {
+          weFloridaFinancial.list.map((item) => (
+            <li class="mt-2 font-medium text-muted-200" set:html={item} />
+          ))
+        }
+      </ul>
+      
+      
+      <div class="flex pt-10 lg:pt-20">
+        <a
+          target="_blank"
+          href={weFloridaFinancial.applyButton.link}
+          class={`${weFloridaFinancial.applyButton.primary ? "btn-accent" : "btn-white"} w-full md:w-auto`}
+        >
+          {weFloridaFinancial.applyButton.name}
+        </a>
+      </div>
+    </div>
+  </div>
   </section>
+
+
   <CTADiscoveryFlights content={data.flyWithUsCTA} />
 </BaseLayout>

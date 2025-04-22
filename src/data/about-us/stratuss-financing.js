@@ -3,11 +3,11 @@ import { COMPANY_NAME } from "../../consts";
 const stratusInfo = {
     data: {
       //SEO Header Stuff
-      pageTitle: "Stratus Financial | Financing | Sun City Aviation Academy",
+      pageTitle: `Financing | ${COMPANY_NAME}`,
       pageDescription:
-        "Stratus Financial is a financing option for students looking to become a pilot. Sun City Aviation Academy has partnered with Stratus Financial to provide students with the financial assistance they need to complete their pilot training.",
+        `Stratus Financial is a financing option for students looking to become a pilot. ${COMPANY_NAME} has partnered with Stratus Financial to provide students with the financial assistance they need to complete their pilot training.`,
       pageKeywords:
-        "stratus finance, financing, pilot financing, pilot training financing, pilot training loans, pilot loans, pilot training loans, pilot training financing options, pilot training financial assistance, pilot training financial aid, pilot training scholarships, pilot training grants, pilot training payment plans, pilot training financing companies, pilot training financing programs, pilot training financing bad credit, pilot training financing no credit check, pilot training financing for international students, pilot training financing for veterans, pilot training financing for disabled, pilot training",
+        "",
   
       //top header
       header: {
@@ -15,9 +15,9 @@ const stratusInfo = {
         imagePath: "/src/assets/placeholder.webp",
         imageAlt:
           "",
-        headerH1: `Financing</br><span class="text-accent-800">Stratus Financial</span>`,
+        headerH1: `<span class="text-accent-700">FINANCING</span>`,
         paragraph:
-          `At ${COMPANY_NAME}, we understand that investing in your aviation career is a big decision. That's why we’ve partnered with trusted financing providers like Stratus Financing, AOPA Financing, and We Fly – Financing the Sky to help make your goals more accessible. Whether you're starting from zero or advancing your certifications, these flexible loan options are designed to support your journey every step of the way.`,
+          `At USATS, we understand that investing in your aviation career is a big decision. That's why we’ve partnered with trusted financing providers like <span class="text-accent-600">Stratus Financing</span>, <span class="text-accent-600">AOPA Financing</span>, and <span class="text-accent-600">We Florida Financial</span> to help make your goals more accessible. Whether you're starting from zero or advancing your certifications, these flexible loan options are designed to support your journey every step of the way.`,
         buttons: [
           {
             name: "Apply Now",
@@ -30,22 +30,6 @@ const stratusInfo = {
             primary: false,
           },
         ],
-      },
-  
-      bookCTA: {
-        upperHeading: "Still looking for more information on pilot training?",
-        headerH1: `Get Your <span class="text-accent-300">FREE</span><br> Pilot Training Guide!`,
-        paragraph:
-          "We have a free booklet which explains everything you need to know for your pilot certificate.",
-        buttons: [
-          {
-            name: "Download Now",
-            link: "/book-download",
-            primary: true,
-          },
-        ],
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "Right Rudder Marketing team on the runway",
       },
   
       flyWithUsCTA: {
