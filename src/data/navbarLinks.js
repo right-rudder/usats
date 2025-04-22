@@ -119,7 +119,7 @@ export const navbarLinks = [
       },
       {
         name: "Financing",
-        link: "/stratus-finance",
+        link: "/about-us/financing",
       },
       {
         name: "Blog",
