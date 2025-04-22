@@ -1,7 +1,7 @@
 export const navbarLinks = [
   {
     name: "New to Flying?",
-    link: "/pilot-training-guide",
+    link: "/why-become-a-pilot",
     submenu: [
       {
         name: "Why Become a Pilot?",
@@ -103,6 +103,10 @@ export const navbarLinks = [
         name: "CATS Testing Center",
         link: "#",
       },
+      {
+        name: "TSA Fingerprinting",
+        link: "#",
+      },
     ],
   },
   {
@@ -124,6 +128,14 @@ export const navbarLinks = [
       {
         name: "Blog",
         link: "/blog",
+      },
+      {
+        name: "Careers",
+        link: "/careers",
+      },
+      {
+        name: "Local Attractions",
+        link: "/local-attractions",
       },
     ],
   },
