@@ -83,7 +83,7 @@ const financingOptions = {
       flyWithUsCTA: {
         imagePath: "/src/assets/placeholder.webp",
         imageAlt: "",
-        headerH1: `<span class="text-primary-600">Why don't you check the skyies </br></span>With a Discovery Flight`,
+        headerH1: `<span class="text-primary-600">Why don't you check the skies </br></span>With a Discovery Flight`,
         paragraph:
           "Doing a discovery flight is the best way to determine if being a pilot is right for you. Whether you're trying it out for fun or want to fly professionally, doing a discovery flight will allow you to see the Ft. Lauderdale and Hollywood from a new perspective.",
         buttons: [
