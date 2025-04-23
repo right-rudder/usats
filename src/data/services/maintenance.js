@@ -95,7 +95,7 @@ const maintenanceServices = {
       link: "/enroll",
       primary: true,
     },
-    imagePath: "/src/assets/maintanceHeli4.png",
+    imagePath: "/src/assets/maintenanceHeli4.png",
     imageAlt:
       "",
   },
