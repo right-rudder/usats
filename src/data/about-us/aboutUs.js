@@ -8,7 +8,7 @@ const aboutUs = {
   // Top Header
   header: {
     stars: true,
-    imagePath: "/src/assets/maintanceHeli2.png",
+    imagePath: "/src/assets/maintenanceHeli2.png",
     imageAlt:
       "US Aviation Training Solutions student pilot celebrating her first solo flight",
     headerH1: `Why Choose<br>USATS?`,

@@ -130,16 +130,16 @@ export const navbarLinks = [
         link: "/about-us/financing",
       },
       {
-        name: "Blog",
-        link: "/blog",
-      },
-      {
         name: "Careers",
         link: "/careers",
       },
       {
         name: "Local Attractions",
         link: "/local-attractions",
+      },
+      {
+        name: "Blog",
+        link: "/blog",
       },
     ],
   },
