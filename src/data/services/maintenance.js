@@ -100,6 +100,115 @@ const maintenanceServices = {
       "",
   },
 
+  repairStationCapabilities: {
+    title: "US Aviation Training Solutions Maintenance Capabilities",
+    heather2: "145 Repair Station Capabilities",
+    description: [
+      "USATS repair station #HA4R295X has capabilities on a variety of airframes and engines. When these aircraft are serviced, all work is completed in accordance with the current regulations and our RSM (Repair station manual). Maintenance is signed off under our repair station number. Having these airframes/engines on our capabilities list shows we have the required training, tooling and manuals to perform the required maintenance."
+    ],
+    airframes:[
+      {
+        "manufacturer": "Schwiezer",
+        "models": ["269/300 Series"]
+      },
+      {
+        "manufacturer": "Robinson",
+        "models": ["R22", "R44 Series"]
+      },
+      {
+        "manufacturer": "Bell",
+        "models": ["206 Series"]
+      },
+      {
+        "manufacturer": "Cessna",
+        "models": ["172 Series"]
+      },
+    ],
+    
+    capabilities: {
+      "Schweizer Helicopters": [
+        "Scheduled Inspections",
+        "Un-Scheduled Maintenance",
+        "Component maintenance excluding Schweizer restricted parts",
+        "Refurbishment: complete tear down and re-build",
+        "Large stock of new, serviceable and repairable Schweizer specific parts"
+      ],
+      "Robinson Helicopters": [
+        "Authorized Service Center for R22 & R44",
+        "Scheduled, Inspection, Un-Scheduled Maintenance"
+      ],
+      "Cessna": [
+        "Scheduled Inspections",
+        "Un-Scheduled Maintenance"
+      ],
+      "Parts Sales": [
+        "Schweizer, Robinson and limited Cessna Parts",
+        "Lycoming, standard hardware, Instruments",
+        "Large stock of Bell 206 parts",
+        "Consumables: Oil, grease, chemicals"
+      ]
+    },
+
+    engines: [
+      {
+      "Lycoming" :
+        [
+          "HIO-360-G1A","O-36C1A", "O-360-J2A", "O-540-F1BS", "IO-360L2A", "IO-540-AE1A5", "HIO-360-D1A",
+        ]
+      },
+      {
+        "Rolls Royce" :
+          [
+            "250-C20B","250-C30P",
+          ]
+        }
+    ],
+
+    robinson_service_center: {
+      "description": "USATS is an authorized service center for Robinson Helicopters. Under our current agreement we can service R22 and R44 helicopters. Service will be completed in accordance with RCH recommended and required maintenance procedures. Robinson suggests all owners have their aircraft service completed at a Robinson authorized facility",
+      "models": ["R22", "R44"],
+      "benefits": [
+        "Ability to buy parts from Robinson",
+        "Ability to sell Robinson parts to customers",
+        "Receive up to 25% discount on parts",
+        "Listed as a Service Center on RHC website"
+      ]
+    },
+
+    part_43_maintenance: {
+      "description": "Maintenance performed and signed off under an individual's A&P license",
+      "fullDescription": [
+        "We offer limited maintenance under part 43. This would include any aircraft that are not listed on our Repair Station. Maintenance is performed and signed off under an individual's A&P license. Essentially, the mechanic taking responsibility for the work they did instead of that liability being on the repair station.",
+        "Currently, we service about half of the tango ramp tenants. Their aircraft include Piper PA-28, Vans RV-6 &amp; RV-12, Cessna 150, and Grumman Tiger . We are best equipped to handle airplanes similar in size to the Cessna 172 and reciprocating helicopters. Most of this maintenance is considered on a case-by-case basis.",
+      ],
+      "current_serviced_aircraft": [
+        "Piper PA-28",
+        "Vans RV-6",
+        "Vans RV-12",
+        "Cessna 150",
+        "Grumman Tiger",
+        "Other case-by-case maintenance"
+      ],
+
+      services: {
+        description: "With our current tooling we can offer a variety of services. Typically, someone presents us with a discrepancy, and we suggest what service they would need based from that. These “services” are charged as labor hours. This is just a very general list; we can do more complex inspections and maintenance.",
+        generalServices: [
+        "Borescope Inspection",
+        "Facilitate outside repairs",
+        "Nitrogen Service",
+        "Battery Capacitance Checks",
+        "Tire Service/Change",
+        "Aircraft Salt washes",
+        "Corrosion treatment",
+        "Standard Replacement",
+        "Troubleshooting",
+        "For more complex and maintenance contact us",
+      ],
+    },
+    },
+
+  },
+
   ctaMaintenance: {
     imagePath: "/src/assets/placeholder.webp",
     imageAlt: "",
