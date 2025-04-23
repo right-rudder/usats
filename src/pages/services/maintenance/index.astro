@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../../components/astro/HeaderScreen.astro";
+import ContentSplit from "../../../components/astro/ContentSplit.astro";
+import CTADiscoveryFlights from "../../../components/astro/CTADiscoveryFlights.astro";
+
+import maintenanceServices from "../../../data/services/maintenance";
+import PageSumarry from "../../../components/astro/PageSummary.astro";
+
+---
+
+<BaseLayout
+  siteTitle={maintenanceServices.pageTitle}
+  siteDescription={maintenanceServices.pageDescription}
+  keywords={maintenanceServices.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={maintenanceServices.header} />
+  <PageSumarry content={maintenanceServices.pageSummary} />
+  <ContentSplit content={maintenanceServices.contentSplit} />
+  <CTADiscoveryFlights content={maintenanceServices.ctaMaintenance} />
+
+  <!-- <WhoAreUs content={maintenanceServices.whatWeOffer} /> -->
+</BaseLayout>

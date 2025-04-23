@@ -97,7 +97,7 @@ export const navbarLinks = [
       },
       {
         name: "Maintenance",
-        link: "#",
+        link: "/services/maintenance",
       },
       {
         name: "CATS Testing Center",
