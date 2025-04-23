@@ -130,4 +130,6 @@ export const helicopterFleet = [
   },
 ];
 
-  // 2 alto NG: dynon hdx1200 dual displays, garmin 175s (lower operating cost)
+export const fleet = [...airplaneFleet, ...helicopterFleet];
+
+// 2 alto NG: dynon hdx1200 dual displays, garmin 175s (lower operating cost)
