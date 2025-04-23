@@ -27,7 +27,7 @@ export const navbarLinks = [
           },
           {
             name: "Private Pilot License",
-            link: "/airplane-training/professional-pilot-program",
+            link: "/airplane-training/private-pilot-license",
           },
           {
             name: "Instrument Rating",
