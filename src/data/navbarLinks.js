@@ -89,7 +89,7 @@ export const navbarLinks = [
   },
   {
     name: "Services",
-    link: "#",
+    link: "/services/",
     submenu: [
       {
         name: "Alto Planes",
