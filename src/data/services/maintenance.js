@@ -10,7 +10,7 @@ const maintenanceServices = {
   // Top Header
   header: {
     stars: true,
-    imagePath: "/src/assets/maintanceHeli3.png",
+    imagePath: "/src/assets/maintenanceHeli3.png",
     imageAlt: "US Aviation Training Solutions mechanic performing maintenance on a helicopter",
     headerH1: `REPAIR TODAY <br> WITH ${COMPANY_NICKNAME}`,
     paragraph: `${COMPANY_NICKNAME} strives to meet our customers’ needs through the capabilities of our Certified Repair Station. With our strong attention to detail, we maintain high standards of safety and quality excellence. Our team of highly skilled mechanics are eager to provide both scheduled and unscheduled maintenance to meet your needs.`,
