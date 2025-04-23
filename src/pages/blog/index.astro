@@ -7,7 +7,7 @@ import Header from "../../components/astro/Header.astro";
 import ImageComp from "../../components/ImageComp.astro";
 
 const data = {
-  imagePath:"/src/assets/ALTO_NG_Panel.jpg",
+  imagePath: "/src/assets/ALTO_NG_Panel.jpg",
   imageAlt: "",
   headerH1: "Blog",
   headerH2: "Blog Post 1",
@@ -16,7 +16,6 @@ const data = {
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-
 ---
 
 <BaseLayout
@@ -32,31 +31,29 @@ const posts = (await getCollection("blog")).sort(
     <ul class="flex justify-evenly items-center align-middle flex-wrap gap-6">
       {
         posts.map((post, index) => (
-          <li class="h-96 lg:h-80 ring-1 hover:ring-2 hover:shadow-lg hover:scale-[1.02] ring-accent-900 bg-primary-950/90 hover:bg-accent-900/80 rounded-tr-xl rounded-bl-xl duration-300 ease-in-out overflow-hidden group w-full md:first:w-[98.2%] md:w-[48%] md:first:h-screen-1/2">
+          <li class="h-96 lg:h-80 ring-1 hover:ring-2 hover:shadow-lg hover:scale-[1.02] ring-accent-900 bg-primary-950/90 hover:bg-accent-950/90 rounded-tr-xl rounded-bl-xl duration-300 ease-in-out overflow-hidden group w-full md:w-[48%]">
             <a
               href={`/blog/${post.slug}`}
-              class={`flex flex-col lg:flex-row gap-5 h-full ${index === 0 ? "" : ""}`}
+              class={`flex flex-col lg:flex-row gap-5 h-full`}
             >
-              <div class="flex-1 h-full flex flex-col justify-between p-4 lg:px-8 lg:py-10">
+              <div class="flex-1 h-full flex flex-col justify-end p-4 lg:px-8 lg:py-10">
                 <div>
-                  <h4
-                    class={`font-semibold leading-8 text-muted-400 ${index === 0 ? "text-xl lg:text-4xl" : "text-2xl"}`}
-                  >
+                  <h4 class={`font-semibold leading-8 text-white text-2xl`}>
                     {post.data.title}
                   </h4>
-                  <div class="flex items-center gap-1 mt-2">
+                  <div class="flex items-center gap-1 mt-4">
                     <p class="font-medium text-lg text-muted-100 text-muted-200/90">
                       {post.data.author}
                     </p>
                   </div>
                 </div>
-                <p
-                  class={`mt-12 font-sans1 text-muted-100 ${index === 0 ? "hidden md:block" : "hidden"}`}
-                >
+                <p class={`mt-12 font-sans1 text-muted-100 hidden`}>
                   {post.data.description}
                 </p>
-                <p class="text-muted-200/50 text-lg font-medium group-hover:text-muted-100/90 duration-500">
-                  {post.data.readingTime} minutes read ·{" "}
+                <p class="text-muted-200/70 text-lg font-medium group-hover:text-muted-100/90 duration-500">
+                  {post.data.readingTime} minutes read
+                </p>
+                <p class="text-muted-200/60 text-base font-medium group-hover:text-muted-100/90 duration-500">
                   <FormattedDate date={post.data.pubDate} />
                 </p>
               </div>
