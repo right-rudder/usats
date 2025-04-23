@@ -16,12 +16,12 @@ const aboutUs = {
     buttons: [
       {
         name: "Contact Us",
-        link: "/#",
+        link: "/contact-us",
         primary: true,
       },
       {
         name: "Join the Team",
-        link: "/#",
+        link: "/career",
         primary: true,
       },
     ],

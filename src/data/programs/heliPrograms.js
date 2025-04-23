@@ -8,14 +8,6 @@ const programs = {
       `Whether you're starting your aviation journey, advancing your skills, or pursuing a career in aviation, ${COMPANY_NAME} offers tailored programs for all experience levels.`,
       cards: [
         {
-          title: "Military Training",
-          imagePath: "/src/assets/militaryTraingingBH6.png",
-          imageAlt: "",
-          description:
-            "Prepare yourself for anything with our military training programs.",
-          link: "/military-training",
-        },
-        {
           title: "Professional Pilot Program",
           badgets: ['PPP'],
           imagePath: "/src/assets/flyingWhiteHeli8.png",
@@ -77,6 +69,14 @@ const programs = {
           description:
             "Earn the highest helicopter certification available and qualify to pilot multi-crew IFR operations.",
           link: "/helicopter-training/airline-transport-pilot-license",
+        },
+        {
+          title: "Military Training",
+          imagePath: "/src/assets/militaryTraingingBH6.png",
+          imageAlt: "",
+          description:
+            "Prepare yourself for anything with our military training programs.",
+          link: "/military-training",
         },
       ],
   };

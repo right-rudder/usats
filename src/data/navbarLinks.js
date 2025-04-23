@@ -52,10 +52,6 @@ export const navbarLinks = [
         link: "/helicopter-training",
         subsubmenu: [
           {
-            name: "Military Training",
-            link: "/military-training",
-          },
-          {
             name: "Professional Pilot Program",
             link: "/helicopter-training/professional-pilot-program",
           },
@@ -82,6 +78,10 @@ export const navbarLinks = [
           {
             name: "Airline Transport Pilot License",
             link: "/helicopter-training/airline-transport-pilot-license",
+          },
+          {
+            name: "Military Training",
+            link: "/military-training",
           },
         ],
       },

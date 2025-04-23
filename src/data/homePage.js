@@ -30,68 +30,68 @@ const homePage = {
       buttons: [
         {
           text: "About Us",
-          link: "/#",
+          link: "/about-us",
         },
       ],
     },
 
-    ourAdvantages: {
-      images: {
-        panel: {
-          imagePath: "/src/assets/ALTO_NG_Panel.jpg",
-          imageAlt: "AirPlane Panel",
-        },
-        h60Repair: {
-          imagePath: "/src/assets/USATS_145_Repair_Station_UH-60.webp",
-          imageAlt: "Two mechanic reparing a UH-60 Helicopter",
-        },
-        base: {
-          imagePath: "/src/assets/USATS_base_Cover.webp",
-          imageAlt: "USATS base building",
-        },
-      },
-      buttons: [
-        {
-          name: "First Button",
-          link: "#",
-          primary: true,
-        },
-        {
-          name: "Second Button",
-          link: "#",
-          primary: false,
-        },
-      ],
-    },
+    // ourAdvantages: {
+    //   images: {
+    //     panel: {
+    //       imagePath: "/src/assets/ALTO_NG_Panel.jpg",
+    //       imageAlt: "AirPlane Panel",
+    //     },
+    //     h60Repair: {
+    //       imagePath: "/src/assets/USATS_145_Repair_Station_UH-60.webp",
+    //       imageAlt: "Two mechanic reparing a UH-60 Helicopter",
+    //     },
+    //     base: {
+    //       imagePath: "/src/assets/USATS_base_Cover.webp",
+    //       imageAlt: "USATS base building",
+    //     },
+    //   },
+    //   buttons: [
+    //     {
+    //       name: "First Button",
+    //       link: "#",
+    //       primary: true,
+    //     },
+    //     {
+    //       name: "Second Button",
+    //       link: "#",
+    //       primary: false,
+    //     },
+    //   ],
+    // },
 
-    yourCarrer: {
-      images: {
-        pilotSeat: {
-          imagePath: "/src/assets/ALO_NG_INTERIOR.webp",
-          imageAlt: "AirPlane Chair's",
-        },
-        planeFront: {
-          imagePath: "/src/assets/Happy_Landings_ALO_NG.webp",
-          imageAlt: "The front of an airplane",
-        },
-        dismantled: {
-          imagePath: "/src/assets/ALTO_NG_KIT.jpg",
-          imageAlt: "Dismantled airplane",
-        },
-      },
-      buttons: [
-        {
-          name: "First Button",
-          link: "#",
-          primary: true,
-        },
-        {
-          name: "Second Button",
-          link: "#",
-          primary: false,
-        },
-      ],
-    },
+    // yourCarrer: {
+    //   images: {
+    //     pilotSeat: {
+    //       imagePath: "/src/assets/ALO_NG_INTERIOR.webp",
+    //       imageAlt: "AirPlane Chair's",
+    //     },
+    //     planeFront: {
+    //       imagePath: "/src/assets/Happy_Landings_ALO_NG.webp",
+    //       imageAlt: "The front of an airplane",
+    //     },
+    //     dismantled: {
+    //       imagePath: "/src/assets/ALTO_NG_KIT.jpg",
+    //       imageAlt: "Dismantled airplane",
+    //     },
+    //   },
+    //   buttons: [
+    //     {
+    //       name: "First Button",
+    //       link: "#",
+    //       primary: true,
+    //     },
+    //     {
+    //       name: "Second Button",
+    //       link: "#",
+    //       primary: false,
+    //     },
+    //   ],
+    // },
 
     whatWeOffer: {
       images: {
@@ -237,7 +237,7 @@ const homePage = {
       buttons: [
         {
           name: "Contact Us",
-          link: "#",
+          link: "contact-us",
           primary: true,
         },
       ],

@@ -13,7 +13,7 @@ const coursesIndex = {
         imagePath: "/src/assets/placeholder.webp",
         imageAlt:
           "image alt",
-        headerH1: `AIRPLANE TRAINING<br>PROGRAMS</span>`,
+        headerH1: `FLIGHT TRAINING<br>PROGRAMS</span>`,
         paragraph: ``,
         buttons: [
           {
@@ -23,7 +23,7 @@ const coursesIndex = {
           },
           {
             name: "Program Guide",
-            link: "/path",
+            link: "/flight-training#grid-programs",
             primary: false,
           },
         ],

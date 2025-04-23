@@ -1,6 +1,7 @@
 export const mobileNavbarLinks = [
   {
     name: "New to Flying?",
+    link: "#",
     submenu: [
       {
         name: "Why Become a Pilot?",
@@ -14,19 +15,81 @@ export const mobileNavbarLinks = [
   },
   {
     name: "Flight Training",
+    link: "#",
     submenu: [
       {
         name: "Airplane Training",
         link: "/airplane-training",
+        subsubmenu: [
+          {
+            name: "Private Pilot Program",
+            link: "/airplane-training/professional-pilot-program",
+          },
+          {
+            name: "Private Pilot License",
+            link: "/airplane-training/professional-pilot-program",
+          },
+          {
+            name: "Instrument Rating",
+            link: "/airplane-training/instrument-rating",
+          },
+          {
+            name: "Commercial Pilot License",
+            link: "/airplane-training/commercial-pilot-license",
+          },
+          {
+            name: "Certified FLight Instructor",
+            link: "/airplane-training/certified-flight-instructor",
+          },
+          {
+            name: "Certified FLight Instructor Instrument",
+            link: "/airplane-training/certified-flight-instructor-instrument",
+          },
+        ],
       },
       {
         name: "Helicopter Training",
         link: "/helicopter-training",
+        subsubmenu: [
+          {
+            name: "Military Training",
+            link: "/military-training",
+          },
+          {
+            name: "Professional Pilot Program",
+            link: "/helicopter-training/professional-pilot-program",
+          },
+          {
+            name: "Private Pilot License",
+            link: "/helicopter-training/professional-pilot-program",
+          },
+          {
+            name: "Instrument Rating",
+            link: "/helicopter-training/instrument-rating",
+          },
+          {
+            name: "Commercial Pilot License",
+            link: "/helicopter-training/commercial-pilot-license",
+          },
+          {
+            name: "Certified FLight Instructor",
+            link: "/helicopter-training/certified-flight-instructor",
+          },
+          {
+            name: "Certified FLight Instructor Instrument",
+            link: "/helicopter-training/certified-flight-instructor-instrument",
+          },
+          {
+            name: "Airline Transport Pilot License",
+            link: "/helicopter-training/airline-transport-pilot-license",
+          },
+        ],
       },
     ],
   },
   {
     name: "Services",
+    link: "#",
     submenu: [
       {
         name: "Alto Planes",
@@ -34,28 +97,45 @@ export const mobileNavbarLinks = [
       },
       {
         name: "Maintenance",
-        link: "#",
+        link: "/services/maintenance",
       },
       {
         name: "CATS Testing Center",
         link: "#",
       },
+      {
+        name: "TSA Fingerprinting",
+        link: "#",
+      },
+      {
+        name: "Air Tours",
+        link: "https://airtoursusats.com",
+      },
     ],
   },
   {
     name: "About",
+    link: "#",
     submenu: [
       {
         name: "Our Team",
-        link: "/our-team",
+        link: "/about-us/our-team",
       },
       {
         name: "Our Fleet",
-        link: "/our-fleet",
+        link: "/about-us/our-fleet",
       },
       {
         name: "Financing",
-        link: "/stratus-finance",
+        link: "/about-us/financing",
+      },
+      {
+        name: "Careers",
+        link: "/careers",
+      },
+      {
+        name: "Local Attractions",
+        link: "/local-attractions",
       },
       {
         name: "Blog",

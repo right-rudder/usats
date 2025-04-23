@@ -18,12 +18,12 @@ const commercialPilotLicense = {
       buttons: [
         {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
           primary: false,
         },
         {
           name: "Request Info",
-          link: "/contact",
+          link: "/contact-us",
           primary: false,
         },
       ],
