@@ -43,26 +43,26 @@ if (!images[imagePath]) {
     sizes={`(max-width: 240px) 240px, (max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1080px) 1080px, (max-width: 1440px) 1440px, 1920px`}
   />
   <div
-    class="absolute w-full h-full bg-mariner-900/15 -translate-x-[101%] group-hover:translate-x-0 duration-700"
+    class="absolute w-full h-full bg-primary-900/15 -translate-x-[101%] group-hover:translate-x-0 duration-700"
   >
   </div>
   <div
-    class="py-2 px-4 lg:py-6 lg:px-10 z-10 absolute bottom-0 left-0 bg-dark-blue/80 w-4/5"
+    class="py-2 px-4 lg:py-6 lg:px-10 z-10 absolute bottom-0 left-0 w-4/5"
   >
     <h2
-      class="text-accent-800 text-2xl sm:text-3xl lg:text-5xl font-medium lg:mb-3 duration-700 uppercase"
+      class="text-accent-600 text-2xl sm:text-3xl lg:text-5xl font-medium lg:mb-3 duration-700 uppercase"
     >
       {name}
     </h2>
     <div class="flex flex-col gap-0 sm:flex-row sm:gap-5">
-      <div class="flex gap-2 text-sm sm:text-base shadow-2xl shadow-accent-950">
-        <p class="text-accent-900">Model:</p>
+      <div class="flex gap-2 text-sm sm:text-base shadow-2xl shadow-accent-800">
+        <!-- <p class="text-muted-100">Model:</p> -->
         <p class="text-muted-200">{model}</p>
       </div>
       {
         rentalPrice && (
           <div class="flex gap-2 text-sm sm:text-base shadow-2xl">
-            <p class="text-accent-900">Price:</p>
+            <p class="text-muted-100">Available:</p>
             <p class="text-primary-100">{rentalPrice}</p>
           </div>
         )
