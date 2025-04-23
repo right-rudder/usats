@@ -107,6 +107,10 @@ export const navbarLinks = [
         name: "TSA Fingerprinting",
         link: "#",
       },
+      {
+        name: "Air Tours",
+        link: "https://airtoursusats.com",
+      },
     ],
   },
   {
