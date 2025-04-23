@@ -1,7 +1,7 @@
 export const navbarLinks = [
   {
     name: "New to Flying?",
-    link: "/pilot-training-guide",
+    link: "/why-become-a-pilot",
     submenu: [
       {
         name: "Why Become a Pilot?",
@@ -89,7 +89,7 @@ export const navbarLinks = [
   },
   {
     name: "Services",
-    link: "#",
+    link: "/services/",
     submenu: [
       {
         name: "Alto Planes",
@@ -97,11 +97,19 @@ export const navbarLinks = [
       },
       {
         name: "Maintenance",
-        link: "#",
+        link: "/services/maintenance",
       },
       {
         name: "CATS Testing Center",
         link: "#",
+      },
+      {
+        name: "TSA Fingerprinting",
+        link: "#",
+      },
+      {
+        name: "Air Tours",
+        link: "https://airtoursusats.com",
       },
     ],
   },
@@ -119,7 +127,15 @@ export const navbarLinks = [
       },
       {
         name: "Financing",
-        link: "/stratus-finance",
+        link: "/about-us/financing",
+      },
+      {
+        name: "Careers",
+        link: "/careers",
+      },
+      {
+        name: "Local Attractions",
+        link: "/local-attractions",
       },
       {
         name: "Blog",

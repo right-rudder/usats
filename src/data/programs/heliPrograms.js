@@ -63,7 +63,7 @@ const programs = {
         {
           title: "Certified Flight Instructor Instrument",
           badgets: ['CFII'],
-          imagePath: "/src/assets/maintanceHeli4.png",
+          imagePath: "/src/assets/maintenanceHeli4.png",
           imageAlt: "",
           description:
             "Expand your teaching credentials by training pilots in instrument flight operations.",

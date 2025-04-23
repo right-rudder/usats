@@ -1,0 +1,330 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../../components/astro/HeaderScreen.astro";
+import CTADiscoveryFlights from "../../../components/astro/CTADiscoveryFlights.astro";
+import ImageComp from "../../../components/ImageComp.astro";
+
+import financingOptions from "../../../data/about-us/financing";
+import stratusInfo from "../../../data/about-us/stratuss-financing"
+
+const stratusFinance = {
+  upperHeading: "Stratus Financial",
+  heading: "The Future of Finance",
+  description:
+    "Stratus Finance is a program that will help you understand the future of finance and how to navigate the ever-changing landscape of the financial world.",
+  imagePath: "/src/assets/logo_Stratus_Financial.webp",
+  imageAlt: "Stratus Finance Logo",
+  paragraph1:
+    "Stratus Financial was founded by FAA Certificated Flight and Ground Instructors passionate about helping others achieve their aviation dreams. We know it's not just about achieving your dreams (because we looked up in the sky every time, we heard an airplane too!), but funding your family's dreams as well. That's why Stratus was created, because with Stratus, the sky is no longer the limit.",
+  subTitle1: "Your Aviation Dreams Start Here",
+  paragraph2:
+    "You're not just a number, and it shows with Stratus. We look beyond the typical FICO scores and look at you as a whole aviator. We want to set you up for success before you even apply with us!. We offer exceptional lending packages, including:",
+  list: [
+    "The best rate you'll get anywhere to go from zero to hero!",
+    "Full financing for your entire flight training",
+    "Affordable payment options, including deferment for 12 months while you complete your training AND find a job",
+    "Pay your loan off any time you want with no consequences or penalties whatsoever.",
+  ],
+  subTitle2: "Stratus Has You Covered For Resources For Your Aviation Career",
+  list2: [
+    "Counseling with our team of flight instructors and ground instructors to support you through flight training, check rides and interviews with airlines.",
+    "Resume reviewing, editing, and building",
+    "AMA Phone Calls with Pilots in the 121 and 135 Industry - What It's like, How They Got Their Job, etc.",
+  ],
+  paragraph3:
+    "We look forward to helping you achieving your aviation dreams and seeing you in the sky!<br>If you are interested in getting started, please click here to apply now: ",
+  applyButton: {
+    name: "Apply Now",
+    link: "https://apply.stratus.finance/usaviationtraining818394",
+    primary: true,
+  },
+  paragraph4:
+    "If you have limited credit or low income you may need a Co-Borrower; if so, please have your co-borrower complete their application here:",
+  subTitle3: "Need More Information?",
+  paragraph5:
+    "We've prepared a free informational booklet to help you understand how financing with Stratus Financial works. Click below to find out more and download the booklet or check out the Stratus Financial website.",
+  buttons: [
+    {
+      name: "Visit Stratus Financial",
+      link: "https://stratus.finance/",
+      primary: true,
+    },
+    {
+      name: "Download Booklet",
+      link: "#",
+      primary: true,
+    },
+  ],
+};
+
+const aopaFinance = {
+    upperHeading: "AOPA Finance",
+    heading: "Quick & Easy, Affordable, Flexible",
+    description:
+        "AOPA's Flexible Aviation Loan removes the cost barrier so more students can start and complete their training.",
+    imagePath: "/src/assets/logo_aopa_finance.webp",
+    imageAlt: "AOPA Finance Logo",
+    paragraph1:
+        "Stop paying for one lesson at a time, apply for a loan today so you can get your training done faster!",
+    subTitle1: "Your Aviation Dreams Start Here",
+    paragraph2:
+        "Our flight training loan is not a typical student loan. It is a line of credit that can be used for any flight training school or program. You can use the funds to pay the school directly as you make your way from private pilot to instrument pilot and beyond. AOPA's Flexible Aviation Loan removes the cost barrier so more students can start and complete their training.",
+    list: [
+        " Maximum loan amount: $100,000",
+        " 7 year maximum to repay, payments begin as    soon  as funds are disbursed",
+        " Inquire online or by calling 1-800-627-5263",
+    ],
+    applyButton: {
+    name: "Visit Website",
+    link: "https://finance.aopa.org/flight-training-finance",
+    primary: true,
+  },
+};
+
+const weFloridaFinancial = {
+    upperHeading: "We Florida Financial",
+    heading: "Let's Get The Engine Running",
+    description:
+        "Don't ground the conversation, get in contact with our aviation loan experts to learn more about what We Florida Financial has to offer.",
+    imagePath: "/src/assets/logo_We-Fly.webp",
+    imageAlt: "AOPA Finance Logo",
+    paragraph1:
+        "We fly's Learn to Fly program makes achieving your aviation training goals easy and affordable. Pilot school loans provide a fixed-rate line of credit from $5,000 to $30,000. Access your line of credit and transfer funds to your checking account online, reducing time and stress managing receipts, faxes and wire transfers. A line of credit will allow the student to pay the flight school directly and to attend any flight school they desire.",
+    subTitle1: "Your Aviation Dreams Start Here",
+    paragraph2:
+        "We fly's Learn to Fly program makes achieving your aviation training goals easy and affordable.",
+    list: [
+        " Pilot school loans provide a fixed-rate line of credit from $5,000 to $30,000",
+        " Inquire online or by calling 1-800-230-0200",
+    ],
+    applyButton: {
+    name: "Visit Website",
+    link: "https://wefloridafinancial.com/flight-training",
+    primary: true,
+  },
+};
+
+const { data } = stratusInfo;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+
+  <section
+    class="bg-gradient-to-b from-primary-950 to-90% to-primary-800 px-6 py-24 sm:py-32 lg:px-20"
+  >
+  <!-- Stratus Financial -->
+    <div class="flex flex-col justify-center align-middle items-center">
+      <div class="text-center">
+        <div class="max-w-4xl">
+          <p
+            class="text-base font-semibold leading-7 text-muted-600 uppercase"
+          >
+            {stratusFinance.upperHeading}
+          </p>
+          <h1 class="mt-0 text-4xl font-bold tracking-tight text-accent-700">
+            {stratusFinance.heading}
+          </h1>
+          <p
+            class="mt-6 text-xl leading-8 text-muted-300"
+            set:html={stratusFinance.description}
+          />
+        </div>
+      </div>
+      <div class="max-w-xl mt-12">
+        <ImageComp
+          imagePath={stratusFinance.imagePath}
+          imageAlt={stratusFinance.imageAlt}
+          styles="object-contain w-full bg-white rounded-md"
+          quality={99}
+        />
+      </div>
+      <div class="max-w-5xl mt-8">
+        <p class="font-sans2 text-xl text-muted-200" set:html={stratusFinance.paragraph1} />
+        <h4
+          class="font-semibold text-3xl mt-12 text-accent-600"
+          set:html={stratusFinance.subTitle1}
+        />
+        <p class="mt-4 font-sans2 text-muted-200" set:html={stratusFinance.paragraph2} />
+        <ul role="list" class="max-w-2xl mt-6 list-disc font-sans2">
+          {
+            stratusFinance.list.map((item) => (
+              <li class="mt-2 font-medium text-muted-200" set:html={item} />
+            ))
+          }
+        </ul>
+        <h4
+          class="font-semibold text-3xl mt-12 text-accent-600"
+          set:html={stratusFinance.subTitle2}
+        />
+        <ul role="list" class="max-w-2xl mt-6 list-disc font-sans2 text-muted-200">
+          {
+            stratusFinance.list2.map((item) => (
+              <li class="mt-2 font-medium text-muted-200" set:html={item} />
+            ))
+          }
+        </ul>
+        <p
+          class="font-sans2 mt-12 mb-6 text-xl text-muted-200"
+          set:html={stratusFinance.paragraph3}
+        />
+        <div class="flex">
+          <a
+            target="_blank"
+            href={stratusFinance.applyButton.link}
+            class={`${stratusFinance.applyButton.primary ? "btn-accent" : "btn-white"} w-full md:w-auto`}
+          >
+            {stratusFinance.applyButton.name}
+          </a>
+        </div>
+        <p
+          class="font-sans2 mt-12 mb-6 text-xl text-muted-200"
+          set:html={stratusFinance.paragraph4}
+        />
+        <div class="flex">
+          <a
+            target="_blank"
+            href={stratusFinance.applyButton.link}
+            class={`${stratusFinance.applyButton.primary ? "btn-accent" : "btn-white"} w-full md:w-auto`}
+          >
+            {stratusFinance.applyButton.name}
+          </a>
+        </div>
+        <h4
+          class="font-semibold text-3xl mt-12 text-accent-600"
+          set:html={stratusFinance.subTitle3}
+        />
+        <p class="mt-4 font-sans2 mb-6 text-muted-200" set:html={stratusFinance.paragraph5} />
+        <div class="mt-6 flex flex-wrap align-middle items-center gap-6">
+          {
+            stratusFinance.buttons.map((btn) => (
+              <a
+                target="_blank"
+                href={btn.link}
+                class={`${btn.primary ? "btn-accent" : "btn-white"} w-full md:w-auto mt-6`}
+              >
+                {btn.name}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    
+  <!-- AOPA Finance -->
+  <div class="flex flex-col justify-center align-middle items-center pt-20">
+    <div class="text-center">
+      <div class="max-w-4xl">
+        <p
+          class="text-base font-semibold leading-7 text-muted-500 uppercase"
+        >
+          {aopaFinance.upperHeading}
+        </p>
+        <h1 class="mt-0 text-4xl font-bold tracking-tight text-accent-700">
+          {aopaFinance.heading}
+        </h1>
+        <p
+          class="mt-6 text-xl leading-8 text-muted-300"
+          set:html={aopaFinance.description}
+        />
+      </div>
+    </div>
+    <div class="max-w-xl mt-12">
+      <ImageComp
+        imagePath={aopaFinance.imagePath}
+        imageAlt={aopaFinance.imageAlt}
+        styles="object-contain w-full bg-white rounded-md"
+        quality={99}
+      />
+    </div>
+    <div class="max-w-5xl mt-8">
+      <p class="font-sans2 text-xl text-muted-200" set:html={aopaFinance.paragraph1} />
+      <h4
+        class="font-semibold text-3xl mt-12 text-accent-600"
+        set:html={aopaFinance.subTitle1}
+      />
+      <p class="mt-4 font-sans2 text-muted-200" set:html={aopaFinance.paragraph2} />
+      <ul role="list" class="max-w-2xl mt-6 list-disc font-sans2">
+        {
+          aopaFinance.list.map((item) => (
+            <li class="mt-2 font-medium text-muted-200" set:html={item} />
+          ))
+        }
+      </ul>
+      
+      
+      <div class="flex pt-10 lg:pt-20">
+        <a
+          target="_blank"
+          href={aopaFinance.applyButton.link}
+          class={`${aopaFinance.applyButton.primary ? "btn-accent" : "btn-white"} w-full md:w-auto`}
+        >
+          {aopaFinance.applyButton.name}
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- WeFly We FLorida Financial -->
+  <div class="flex flex-col justify-center align-middle items-center pt-20">
+    <div class="text-center">
+      <div class="max-w-4xl">
+        <p
+          class="text-base font-semibold leading-7 text-muted-400 uppercase"
+        >
+          {weFloridaFinancial.upperHeading}
+        </p>
+        <h1 class="mt-0 text-4xl font-bold tracking-tight text-accent-700">
+          {weFloridaFinancial.heading}
+        </h1>
+        <p
+          class="mt-6 text-xl leading-8 text-muted-300"
+          set:html={weFloridaFinancial.description}
+        />
+      </div>
+    </div>
+    <div class="max-w-xl mt-12">
+      <ImageComp
+        imagePath={weFloridaFinancial.imagePath}
+        imageAlt={weFloridaFinancial.imageAlt}
+        styles="object-contain w-full bg-white rounded-md"
+        quality={99}
+      />
+    </div>
+    <div class="max-w-5xl mt-8">
+      <p class="font-sans2 text-xl text-muted-200" set:html={weFloridaFinancial.paragraph1} />
+      <h4
+        class="font-semibold text-3xl mt-12 text-accent-600"
+        set:html={weFloridaFinancial.subTitle1}
+      />
+      <p class="mt-4 font-sans2 text-muted-200" set:html={weFloridaFinancial.paragraph2} />
+      <ul role="list" class="max-w-2xl mt-6 list-disc font-sans2">
+        {
+          weFloridaFinancial.list.map((item) => (
+            <li class="mt-2 font-medium text-muted-200" set:html={item} />
+          ))
+        }
+      </ul>
+      
+      
+      <div class="flex pt-10 lg:pt-20">
+        <a
+          target="_blank"
+          href={weFloridaFinancial.applyButton.link}
+          class={`${weFloridaFinancial.applyButton.primary ? "btn-accent" : "btn-white"} w-full md:w-auto`}
+        >
+          {weFloridaFinancial.applyButton.name}
+        </a>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+  <CTADiscoveryFlights content={data.flyWithUsCTA} />
+</BaseLayout>

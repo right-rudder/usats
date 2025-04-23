@@ -6,13 +6,14 @@ import Intro from "../../../assets/placeholder.webp";
 import ourFleet from "../../../data/about-us/ourFleet";
 import PlaneCard from "../../../components/astro/PlaneCard.astro";
 import PageSummary from "../../../components/astro/PageSummary.astro";
+import HeaderSmall from "../../../components/astro/HeaderSmall.astro";
 
-import { fleet } from "../../../data/about-us/fleet";
+import { airplaneFleet, helicopterFleet } from "../../../data/about-us/fleet";
 
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../../consts";
 
 const header = {
-  imagePath: "",
+  imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
   headerH1: "Our Fleet",
   imageAlt: "",
   paragraph: "",
@@ -20,7 +21,7 @@ const header = {
     {
       name: "View Our Aircraft",
       link: "#fleet",
-      primary: false,
+      primary: false, 
     },
   ],
 };
@@ -31,7 +32,7 @@ const header = {
   siteDescription=`Explore ${COMPANY_NAME}'s modern aircraft available for training and time building in Hampton, GA. Our fleet includes Cessna 172s equipped for both VFR and IFR operations.`
   siteKeywords=""
 >
-  <PageSummary content={ourFleet.data.pageSummary} />
+  <HeaderSmall content={header} />
 
   <section class="py-24 px-5 bg-primary-900">
     <div
@@ -51,7 +52,7 @@ const header = {
         </div>
       </div>
       <div class="flex flex-col flex-1">
-        <h2 class="uppercase text-accent-700 font-bold tracking-widest">
+        <h2 class="uppercase text-muted-500 font-bold tracking-widest">
           Our Fleet
         </h2>
         <h3 class="text-5xl text-white font-bold leading-tight">
@@ -65,26 +66,24 @@ const header = {
           the details below.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-5">
-          <a href="#contact" class="btn-primary">Rent Today</a>
+          <a href="#contact" class="btn-primary">Book a Flight</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section
-    id="fleet"
-    class="py-24 px-5 bg-checkered bg-fixed bg-primary-950 scroll-my-20"
-  >
-    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
-      <h2 class="uppercase text-accent-800 font-bold tracking-widest">
-        Available for Rent
+  <section id="airplane-fleet" class="py-24 px-5 scroll-my-20 bg-gradient-to-b from-black to-primary-900">
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center ">
+      <!-- <h2 class="uppercase text-accent-800 font-bold tracking-widest">
+        Our Airplanes
+      </h2> -->
+      <h2 class="text-5xl text-accent-600 font-bold leading-tight mb-5">
+        Our Airplanes Fleet
       </h2>
-      <h3 class="text-5xl text-white font-bold leading-tight mb-5">
-        Our Cessna 172 Fleet
-      </h3>
+
       <div class="grid gap-8 mt-5 lg:grid-cols-2">
         {
-          fleet
+          airplaneFleet
             .filter((plane) => !plane.advancedOnly)
             .map((plane) => (
               <PlaneCard
@@ -103,6 +102,36 @@ const header = {
     </div>
   </section>
 
+  <section id="helicopter-fleet" class="py-12 px-5 scroll-my-20 bg-gradient-to-b from-black to-primary-900">
+
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center pt-20 lg:pt-30">
+      <!-- <h2 class="uppercase text-accent-800 font-bold tracking-widest">
+        Our Airplanes
+      </h2> -->
+      <h2 class="text-5xl text-accent-600 font-bold leading-tight mb-5">
+        Our Helicopter Fleet
+      </h2>
+      <div class="grid gap-4 mt-5 lg:grid-cols-2">
+        {
+          helicopterFleet
+            .filter((plane) => !plane.advancedOnly)
+            .map((plane) => (
+              <PlaneCard
+                name={plane.name}
+                rentalPrice={plane.rentalPrice}
+                imagePath={plane.imagePath}
+                slug={plane.slug}
+                model={plane.model}
+                hasRibbon={plane.hasRibbon}
+                ribbonTitle={plane.ribbonTitle}
+                specialUrl={plane.specialUrl}
+              />
+            ))
+        }
+      </div>
+    </div>
+  </section>
+        
   <section class="py-12 px-5 bg-primary-900">
     <div
       class="max-w-7xl mx-auto gap-10 lg:gap-52 flex justify-between items-center lg:flex-row flex-col"
@@ -115,6 +144,7 @@ const header = {
         </h3>
       </div>
       <a href="#" class="flex-shrink-0 btn-primary"> Submit Rental Inquiry </a>
+
     </div>
   </section>
 </BaseLayout>
