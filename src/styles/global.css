@@ -46,6 +46,35 @@
   }
 }
 
+/* Add prefers-reduced-motion media query for animations */
+@media (prefers-reduced-motion: no-preference) {
+  @layer components {
+    .btn-primary, .btn-accent, .btn-white, .btn-black {
+      /* Re-apply transition/transform properties if they should be disabled */
+      @apply transition-transform duration-300;
+    }
+    .btn-animate {
+       @apply transition-all duration-300;
+    }
+    .has-tooltip:hover .tooltip {
+      @apply transition-all duration-300;
+    }
+    .swiper-button-next, .swiper-button-prev {
+      @apply transition-opacity duration-300 ease-in-out;
+    }
+  }
+  /* Apply custom animations only if no preference for reduced motion */
+  .animate-slow-fade {
+    animation: fade 1s forwards ease-out;
+  }
+  .animate-slow-zoom {
+     animation: zoom 45s alternate infinite ease-in-out;
+  }
+  .animate-mid-zoom {
+     animation: zoom 18s alternate infinite ease-in-out;
+  }
+}
+
 .outlined-text {
   text-shadow:
     -1px -1px 0 white,
@@ -69,4 +98,15 @@
 
 .swiper-slide {
   height: auto !important;
+}
+
+/* Define keyframes outside the media query so they exist, but apply animation within */
+@keyframes zoom {
+  0% { transform: scale(1) }
+  100% { transform: scale(1.2) }
+}
+@keyframes fade {
+  0% { opacity: 0; transform: scale(1.2) }
+  25% { opacity: 0 }
+  100% { opacity: 1; transform: scale(1) }
 }
