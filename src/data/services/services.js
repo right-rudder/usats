@@ -3,7 +3,7 @@ import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
 const servicesIndex = {
     data: {
         // SEO Header Stuff
-        pageTitle: "Training Courses | US Academy ",
+        pageTitle: "Services | US Academy",
         pageDescription:
             "",
         pageKeywords:
