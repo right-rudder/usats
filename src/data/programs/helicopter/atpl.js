@@ -13,7 +13,7 @@ const atpL = {
       badges: ["ATP-L"],
       imagePath: "/src/assets/placeholder.webp",
       imageAlt: "Helicopter pilot preparing for ATP-L checkride",
-      headerH1: `Airline Transport</br>Pilot`,
+      headerH1: `Airline Transport<br>Pilot`,
       paragraph: `The ATP-L is the highest certification you can achieve as a helicopter pilot. Required for acting as PIC in IFR two-crew operations, it’s primarily an advanced instrument checkride with elevated standards. We’ll help you refresh and sharpen your skills to pass with confidence.`,
       buttons: [
         {
