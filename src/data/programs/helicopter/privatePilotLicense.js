@@ -13,7 +13,7 @@ const privatePilotLicense = {
       badges: ["PPL"],
       imagePath: "/src/assets/placeholder.webp",
       imageAlt: "Private pilot flying a helicopter in mountainous terrain",
-      headerH1: `Private Pilot</br>License`,
+      headerH1: `Private Pilot<br>License`,
       paragraph:
         "Whether you're flying for recreation or planning a professional career in aviation, the Private Pilot License course builds strong fundamentals in aeronautical decision-making, flight safety, and aircraft performance from day one.",
       buttons: [
