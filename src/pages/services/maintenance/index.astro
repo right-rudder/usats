@@ -6,6 +6,7 @@ import CTADiscoveryFlights from "../../../components/astro/CTADiscoveryFlights.a
 
 import maintenanceServices from "../../../data/services/maintenance";
 import PageSumarry from "../../../components/astro/PageSummary.astro";
+import Maintenance from "../../../components/astro/Maintenance.astro";
 
 ---
 
@@ -18,7 +19,6 @@ import PageSumarry from "../../../components/astro/PageSummary.astro";
   <HeaderScreen content={maintenanceServices.header} />
   <PageSumarry content={maintenanceServices.pageSummary} />
   <ContentSplit content={maintenanceServices.contentSplit} />
+  <Maintenance data={maintenanceServices.repairStationCapabilities} />
   <CTADiscoveryFlights content={maintenanceServices.ctaMaintenance} />
-
-  <!-- <WhoAreUs content={maintenanceServices.whatWeOffer} /> -->
 </BaseLayout>
