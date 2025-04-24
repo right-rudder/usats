@@ -10,7 +10,7 @@ const instrumentRating = {
 
     // Top Header
     header: {
-      stars: true,
+      badges: ["Part 141", "IR"],
       imagePath: "/src/assets/placeholder.webp",
       imageAlt: "Pilot training with flight instruments in a Cessna cockpit",
       headerH1: `Instrument <br>RATING</span>`,
@@ -124,7 +124,8 @@ const instrumentRating = {
             "Yes, this program is <strong>FAA Part 141</strong> approved, ensuring a structured and streamlined training process.",
         },
         {
-          question: "What will I be qualified for after completing this course?",
+          question:
+            "What will I be qualified for after completing this course?",
           answer:
             "You’ll be qualified to fly under Instrument Flight Rules (IFR), improving your flexibility, safety, and professionalism as a pilot.",
         },

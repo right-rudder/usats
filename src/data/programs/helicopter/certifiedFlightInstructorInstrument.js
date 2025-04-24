@@ -10,10 +10,11 @@ const cfiiCourse = {
 
     // Top Header
     header: {
-      stars: true,
+      badges: ["CFII"],
       imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "Flight instructor training a student in helicopter IFR procedures",
-      headerH1: `Certified Flight Instructor<br><span>Instrument (CFII)</span>`,
+      imageAlt:
+        "Flight instructor training a student in helicopter IFR procedures",
+      headerH1: `Certified Flight Instructor<br>Instrument`,
       paragraph: `Take the next step in your instructional career by adding an Instrument Instructor rating to your credentials. Our CFII course prepares you to teach instrument flying in helicopters, increasing your employability and deepening your technical skillset.`,
       buttons: [
         {
@@ -94,7 +95,6 @@ const cfiiCourse = {
       },
 
       price: "$9,818",
-
 
       faqs: [
         {

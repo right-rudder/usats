@@ -10,9 +10,10 @@ const professionalPilotProgram = {
 
     // Top Header
     header: {
-      stars: true,
+      badges: ["Part 141/61", "PPL", "IR", "CPL", "CFI", "CFII"],
       imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "Students training under sunny Florida skies at US Aviation Training Solutions",
+      imageAlt:
+        "Students training under sunny Florida skies at US Aviation Training Solutions",
       headerH1: `Professional Pilot <br>PROGRAM</span>`,
       paragraph: `From zero experience to fully licensed professional pilot. Earn your FAA Private, Instrument, Commercial, CFI, and CFII licenses with US Aviation Training Solutions in Central Florida.`,
       buttons: [
@@ -114,7 +115,6 @@ const professionalPilotProgram = {
           link: "/enroll",
         },
       },
-
 
       price: "$62,143 (Alto-NG) <br> $74,123 (C-172S)",
 

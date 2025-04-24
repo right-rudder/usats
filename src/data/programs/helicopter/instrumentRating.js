@@ -10,7 +10,7 @@ const instrumentRating = {
 
     // Top Header
     header: {
-      stars: true,
+      badges: ["IR"],
       imagePath: "/src/assets/placeholder.webp",
       imageAlt: "Helicopter pilot flying in IMC with advanced cockpit display",
       headerH1: `Instrument Rating<br><span>(IR)</span>`,
@@ -98,7 +98,6 @@ const instrumentRating = {
       },
 
       price: "$30,865",
-
 
       // FAQs
       faqs: [

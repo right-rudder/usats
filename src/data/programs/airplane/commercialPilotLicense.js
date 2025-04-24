@@ -10,7 +10,7 @@ const commercialPilotLicense = {
 
     // Top Header
     header: {
-      stars: true,
+      badges: ["Part 141", "CPL"],
       imagePath: "/src/assets/placeholder.webp",
       imageAlt: "Commercial pilot training in a modern aircraft cockpit",
       headerH1: `Commercial <br>PILOT LICENSE</span>`,
@@ -89,7 +89,6 @@ const commercialPilotLicense = {
       },
 
       price: "$25,508 (Alto-NG) <br> $31,508 (C-172S)",
-
 
       cta: {
         imagePath: "/src/assets/placeholder.webp",

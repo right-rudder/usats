@@ -10,10 +10,10 @@ const commercialPilotLicense = {
 
     // Top Header
     header: {
-      stars: true,
+      badges: ["CPL"],
       imagePath: "/src/assets/placeholder.webp",
       imageAlt: "Commercial helicopter pilot flying over scenic terrain",
-      headerH1: `Commercial Pilot<br><span>Certificate</span>`,
+      headerH1: `Commercial Pilot<br>Certificate`,
       paragraph: `The Commercial Pilot Certificate is your next big step toward flying for a living. Whether you're looking to become an instructor, EMS pilot, or tour captain, this course will help turn your passion into a paying profession. Our personalized training adapts to your experience, helping you meet FAA requirements and career goals.`,
       buttons: [
         {
@@ -97,7 +97,6 @@ const commercialPilotLicense = {
       },
 
       price: "$22,906",
-
 
       faqs: [
         {
