@@ -36,6 +36,7 @@ const { content } = Astro.props;
           content.cards.map((program) => (
             <ProgramCard
               title={program.title}
+              badges={program.badges}
               imagePath={program.imagePath}
               imageAlt={program.imageAlt}
               link={program.link}
