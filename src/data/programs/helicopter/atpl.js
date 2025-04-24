@@ -10,10 +10,10 @@ const atpL = {
 
     // Top Header
     header: {
-      stars: true,
+      badges: ["ATP-L"],
       imagePath: "/src/assets/placeholder.webp",
       imageAlt: "Helicopter pilot preparing for ATP-L checkride",
-      headerH1: `Airline Transport Pilot<br><span>ATP-L</span>`,
+      headerH1: `Airline Transport</br>Pilot`,
       paragraph: `The ATP-L is the highest certification you can achieve as a helicopter pilot. Required for acting as PIC in IFR two-crew operations, it’s primarily an advanced instrument checkride with elevated standards. We’ll help you refresh and sharpen your skills to pass with confidence.`,
       buttons: [
         {
@@ -51,7 +51,8 @@ const atpL = {
       ],
 
       included: {
-        heading: "Typical Training Profile (Based on Prior FAA Certificate Holders):",
+        heading:
+          "Typical Training Profile (Based on Prior FAA Certificate Holders):",
         items: [
           "5 hours Ground Training",
           "3 hours Dual VFR Training",

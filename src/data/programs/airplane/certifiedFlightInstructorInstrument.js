@@ -10,7 +10,7 @@ const certifiedFlightInstructorInstrument = {
 
     // Top Header
     header: {
-      stars: true,
+      badges: ["Part 61", "CFII"],
       imagePath: "/src/assets/placeholder.webp",
       imageAlt: "CFII Instructor teaching in-flight instrument techniques",
       headerH1: `Certified Flight Instructor<br><span>INSTRUMENT</span>`,

@@ -29,8 +29,23 @@ if (!images[content.imagePath]) {
   </div>
   <!-- Text -->
   <div
-    class="text-white mt-20 lg:mt-0 text-center lg:text-left z-10 flex flex-col items-center gap-4 px-5 h-full lg:pt-28 justify-center"
+    class="text-white relative pt-16 mt-0 text-center lg:text-left z-10 flex flex-col items-center gap-4 px-5 h-full lg:pt-28 justify-center"
   >
+    {
+      content.badges && (
+        <div
+          class={`flex z-10 gap-1 py-2 px-4 absolute top-2 left-0 w-full justify-center duration-200 ease-in animate-slow-fade`}
+        >
+          {content.badges.map((badge) => (
+            <div
+              class={`flex duration-200 ease-in opacity-80 hover:opacity-95 items-center justify-center ${badge.includes("Part") || badge.includes("MILITARY") ? "bg-accent-700 text-muted-100" : "bg-primary-200 text-muted-800"} rounded-md px-3 py-1 text-sm font-semibold`}
+            >
+              <p class="">{badge}</p>
+            </div>
+          ))}
+        </div>
+      )
+    }
     <h1
       class="text-4xl md:text-5xl lg:text-6xl max-w-6xl drop-shadow-lg xl:text-7xl text-center font-bold uppercase tracking-wide text-gray-100 animate-slow-fade"
       set:html={content.headerH1}

@@ -10,10 +10,10 @@ const professionalPilotProgram = {
 
     // Top Header
     header: {
-      stars: true,
+      badges: ["PPL", "IR", "CPL", "CFI", "CFII"],
       imagePath: "/src/assets/placeholder.webp",
       imageAlt: "Professional helicopter pilot flying training mission",
-      headerH1: `Professional Pilot<br><span>Program (PPP)</span>`,
+      headerH1: `Professional Pilot</br>Program`,
       paragraph: `This all-in-one training program is designed for students with no prior aviation experience. In just 10 months, you’ll earn all the certificates and ratings you need to start your career as a professional helicopter pilot.`,
       buttons: [
         {

@@ -10,10 +10,11 @@ const cfiCourse = {
 
     // Top Header
     header: {
-      stars: true,
+      badges: ["CFI"],
       imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "Certified flight instructor guiding a student in helicopter controls",
-      headerH1: `Certified Flight<br><span>Instructor (CFI)</span>`,
+      imageAlt:
+        "Certified flight instructor guiding a student in helicopter controls",
+      headerH1: `Certified Flight<br>Instructor`,
       paragraph: `The most common path to a commercial flying career starts with becoming a Certified Flight Instructor. Build flight time, refine your skills, and pass on your knowledge in a rewarding and challenging role. Our CFI program is designed to turn experienced pilots into excellent teachers and mentors.`,
       buttons: [
         {

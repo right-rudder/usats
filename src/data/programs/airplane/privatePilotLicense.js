@@ -10,7 +10,7 @@ const privatePilotLicense = {
 
     // Top Header
     header: {
-      stars: true,
+      badges: ["Part 141", "PPL"],
       imagePath: "/src/assets/placeholder.webp",
       imageAlt: "Cessna 172 training aircraft at the Titusville airport",
       headerH1: `Private Pilot <br>LICENSE</span>`,
@@ -102,7 +102,6 @@ const privatePilotLicense = {
       },
 
       price: "$11,263 (Alto-NG) <br> $13,013 (C-172S)",
-
 
       // FAQs
       faqs: [

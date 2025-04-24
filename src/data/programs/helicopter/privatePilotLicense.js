@@ -10,10 +10,10 @@ const privatePilotLicense = {
 
     // Top Header
     header: {
-      stars: true,
+      badges: ["PPL"],
       imagePath: "/src/assets/placeholder.webp",
       imageAlt: "Private pilot flying a helicopter in mountainous terrain",
-      headerH1: `Private Pilot License<br><span>(PPL)</span>`,
+      headerH1: `Private Pilot</br>License`,
       paragraph:
         "Whether you're flying for recreation or planning a professional career in aviation, the Private Pilot License course builds strong fundamentals in aeronautical decision-making, flight safety, and aircraft performance from day one.",
       buttons: [
@@ -112,8 +112,7 @@ const privatePilotLicense = {
         },
         {
           question: "What aircraft will I train in?",
-          answer:
-            "Training is conducted in the S300CBi and R44 helicopters.",
+          answer: "Training is conducted in the S300CBi and R44 helicopters.",
         },
         {
           question: "Can airplane pilots take an add-on course?",
