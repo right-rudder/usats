@@ -7,63 +7,22 @@ const { content } = Astro.props;
     <p class="upperheading">FAQs</p>
     <h2 class="heading">Frequently asked questions</h2>
     <dl class="mt-20 divide-y divide-gray-200/10">
-      <div class="py-8 first:pt-0 last:pb-0 lg:grid lg:grid-cols-12 lg:gap-8">
-        <dt class="text-base/7 font-semibold text-gray-200 lg:col-span-5">
-          Why choose USATS?
-        </dt>
-        <dd class="mt-4 lg:col-span-7 lg:mt-0">
-          <p class="text-base/7 text-gray-400">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea,
-            dolorum nihil. Et quasi ipsum quia deserunt quae labore, a error
-            laboriosam impedit cum incidunt porro doloremque perferendis dolore
-            ab doloribus!
-          </p>
-        </dd>
-      </div>
-
-      <div class="py-8 first:pt-0 last:pb-0 lg:grid lg:grid-cols-12 lg:gap-8">
-        <dt class="text-base/7 font-semibold text-gray-200 lg:col-span-5">
-          What I can Expect from USATS training?
-        </dt>
-        <dd class="mt-4 lg:col-span-7 lg:mt-0">
-          <p class="text-base/7 text-gray-400">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            ipsa tempore eveniet eum vero, cupiditate, voluptate voluptates
-            similique eaque repellendus beatae vel ad ipsum quas hic ducimus
-            omnis delectus doloribus.
-          </p>
-        </dd>
-      </div>
-
-      <div class="py-8 first:pt-0 last:pb-0 lg:grid lg:grid-cols-12 lg:gap-8">
-        <dt class="text-base/7 font-semibold text-gray-200 lg:col-span-5">
-          Is there any requirements to join?
-        </dt>
-        <dd class="mt-4 lg:col-span-7 lg:mt-0">
-          <p class="text-base/7 text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-            corrupti aut facilis fugiat quam minima eaque repellat distinctio
-            harum animi recusandae nobis temporibus libero atque, maiores,
-            tenetur architecto quaerat laboriosam.
-          </p>
-        </dd>
-      </div>
-
-      <div class="py-8 first:pt-0 last:pb-0 lg:grid lg:grid-cols-12 lg:gap-8">
-        <dt class="text-base/7 font-semibold text-gray-200 lg:col-span-5">
-          What&#039;s the best thing about Switzerland?
-        </dt>
-        <dd class="mt-4 lg:col-span-7 lg:mt-0">
-          <p class="text-base/7 text-gray-400">
-            I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Quas cupiditate laboriosam
-            fugiat.
-          </p>
-        </dd>
-      </div>
-
-      <!-- More questions... -->
+      {
+        content.questions.map((question) => (
+        <div class="py-8 first:pt-0 last:pb-0 lg:grid lg:grid-cols-12 lg:gap-8">
+          <dt class="text-base/7 font-semibold text-gray-200 lg:col-span-5">
+            {question.question}
+          </dt>
+          <dd class="mt-4 lg:col-span-7 lg:mt-0">
+            <p class="text-base/7 text-gray-400">
+              {question.answer}
+            </p>
+          </dd>
+        </div>
+        ))
+      }
     </dl>
+    
     <div class="mx-auto max-w-7xl px-6 py-12 sm:py-32 lg:px-8 lg:py-20">
       <h3
         class="text-3xl font-semibold tracking-tight text-gray-200 sm:text-5xl"

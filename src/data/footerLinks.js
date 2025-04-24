@@ -2,19 +2,23 @@ export const footerLinks = {
     links: [
       {
         name: "About",
-        link: "/#",
+        link: "/about-us",
       },
       {
         name: "Flight Training Programs",
-        link: "/#",
+        link: "/flight-training",
       },
       {
         name: "Services",
-        link: "/#",
+        link: "/services",
+      },
+      {
+        name: "Air Tours",
+        link: "https://airtoursusats.com",
       },
       {
         name: "Contact",
-        link: "/#",
+        link: "/contact-us",
       },
     ],
 };

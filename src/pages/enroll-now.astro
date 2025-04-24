@@ -3,10 +3,9 @@ import Header from "../components/astro/Header.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { COMPANY_NAME } from "../consts";
 const headerData = {
-  headerH1: "Enrollment Form",
+  headerH1: "START TODAY",
   imagePath: "/src/assets/placeholder.webp",
-  imageAlt:
-    "",
+  imageAlt: "",
 };
 
 const checkboxText =
@@ -82,7 +81,37 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
           />
         </div>
 
-        <label class="text-muted-300"class="text-muted-300"class="mt-4 text-xl text-center font-semibold text-muted-300" for="experience"
+        <fieldset class="flex flex-col justify-center items-center align-middle mt-6">
+          <legend class="mb-2 text-xl font-semibold text-muted-300 text-center w-full">
+            Which aircraft type are you interested in? <span class="text-red-500">*</span>
+          </legend>
+          <div class="flex gap-6">
+            <div class="flex items-center gap-2">
+              <input
+                type="radio"
+                id="airplane-type"
+                name="aircraft-type"
+                value="Airplane"
+                required
+                class="w-4 h-4 text-primary-600 focus:ring-primary-600"
+              />
+              <label for="airplane-type" class="text-muted-300">Airplane</label>
+            </div>
+            <div class="flex items-center gap-2">
+              <input
+                type="radio"
+                id="helicopter-type"
+                name="aircraft-type"
+                value="Helicopter"
+                required
+                class="w-4 h-4 text-primary-600 focus:ring-primary-600"
+              />
+              <label for="helicopter-type" class="text-muted-300">Helicopter</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <label class="text-muted-300" class="mt-4 text-xl text-center font-semibold text-muted-300" for="experience"
           >How far along are you in pilot training?*</label
         >
         <input
@@ -94,125 +123,13 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
           required
         />
 
-        <fieldset
-          class="flex flex-col justify-center items-center align-middle mt-4"
-        >
-          <legend
-            class="mb-2 text-muted-300 text-xl font-semibold text-center w-full"
-          >
-            Primary Training Program Interest?
+        <!-- Dynamic Program Options -->
+        <fieldset class="flex flex-col justify-center items-center align-middle mt-4">
+          <legend class="mb-2 text-muted-300 text-xl font-semibold text-center w-full">
+            Primary Training Program Interest? <span class="text-red-500">*</span>
           </legend>
-
-          <div>
-            <div>
-              <input
-                type="radio"
-                class="mx-2 text-muted-300"
-                id="private-pilot"
-                name="interest"
-                value="private-pilot"
-                required
-              />
-              <label class="text-muted-300"for="private-pilot">Private Pilot Certificate</label>
-            </div>
-
-            <div>
-              <input
-                type="radio"
-                class="mx-2 text-muted-300"
-                id="instrument-rating"
-                name="interest"
-                value="instrument-rating"
-                required
-              />
-              <label class="text-muted-300"for="instrument-rating">Instrument Rating</label>
-            </div>
-
-            <div>
-              <input
-                type="radio"
-                class="mx-2 text-muted-300"
-                id="commercial-pilot"
-                name="interest"
-                value="commercial-pilot"
-                required
-              />
-              <label class="text-muted-300"for="commercial-pilot">
-                Commercial Pilot Certificate
-              </label>
-            </div>
-
-            <div>
-              <input
-                type="radio"
-                class="mx-2 text-muted-300"
-                id="multiengine"
-                name="interest"
-                value="multiengine"
-                required
-              />
-              <label class="text-muted-300"for="multiengine">Multi-Engine</label>
-            </div>
-
-            <div>
-              <input
-                type="radio"
-                class="mx-2 text-muted-300"
-                id="cfi"
-                name="interest"
-                value="cfi"
-                required
-              />
-              <label class="text-muted-300"for="cfi"  class="text-muted-300">Flight Instructor (CFI, CFII, MEI)</label>
-            </div>
-
-            <div>
-              <input
-                type="radio"
-                class="mx-2 "
-                id="airline-transport"
-                name="interest"
-                value="airline-transport"
-                required
-              />
-              <label class="text-muted-300"class="text-muted-300"for="airline-transport">Airline Transport Pilot</label>
-            </div>
-
-            <div>
-              <input
-                type="radio"
-                class="mx-2"
-                id="high-performance"
-                name="interest"
-                value="high-performance"
-                required
-              />
-              <label class="text-muted-300"class="text-muted-300"for="high-performance">High Performance Endorsement</label>
-            </div>
-
-            <div>
-              <input
-                type="radio"
-                class="mx-2"
-                id="high-altitude"
-                name="interest"
-                value="high-altitude"
-                required
-              />
-              <label class="text-muted-300"class="text-muted-300"for="high-altitude">High Altitude Endorsement</label>
-            </div>
-
-            <div>
-              <input
-                type="radio"
-                class="mx-2"
-                id="complex"
-                name="interest"
-                value="complex"
-                required
-              />
-              <label class="text-muted-300"class="text-muted-300"for="complex">Complex Endorsement</label>
-            </div>
+          <div id="program-options-container" class="hidden flex flex-col gap-2">
+            <!-- Options will be populated by JavaScript -->
           </div>
         </fieldset>
 
@@ -249,7 +166,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
                 value="yes-visit"
                 required
               />
-              <label class="text-muted-300"class="text-muted-300"for="yes-visit">Yes</label>
+              <label class="text-muted-300" for="yes-visit">Yes</label>
             </div>
             <input
               type="radio"
@@ -259,7 +176,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
               value="no-visit"
               required
             />
-            <label class="text-muted-300"class="text-muted-300"for="no-visit">No</label>
+            <label class="text-muted-300" for="no-visit">No</label>
           </div>
         </fieldset>
 
@@ -267,7 +184,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
           id="location-container"
           class="hidden flex-col justify-center items-center align-middle"
         >
-          <label class="text-muted-300"class="text-muted-300"for="visit-location" class="text-xl font-semibold"
+          <label for="visit-location" class="text-xl font-semibold text-muted-300"
             >Choose a location:</label
           >
 
@@ -310,102 +227,129 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
 </BaseLayout>
 
 <script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL }}>
-  // Function to format date as YYYY-MM-DD
-  function formatDate(date) {
-    let day = date.getDate();
-    let month = date.getMonth() + 1; // Months are zero based
-    let year = date.getFullYear();
+  const trainingPrograms = {
+    Airplane: [
+      { value: "private-pilot", text: "Private Pilot Certificate" },
+      { value: "instrument-rating", text: "Instrument Rating" },
+      { value: "commercial-pilot", text: "Commercial Pilot Certificate" },
+      { value: "cfi", text: "Flight Instructor (CFI)" },
+      { value: "cfii", text: "Flight Instructor Instrument (CFII)" },
+    ],
+    Helicopter: [
+      { value: "private-pilot-h", text: "Private Pilot - Helicopter" },
+      { value: "instrument-rating-h", text: "Instrument Rating - Helicopter" },
+      { value: "commercial-pilot-h", text: "Commercial Pilot - Helicopter" },
+      { value: "cfi-h", text: "Flight Instructor - Helicopter" },
+      { value: "cfii-h", text: "Flight Instructor Instrument - Helicopter" },
+      { value: "military-transition", text: "Military Transition Training" },
+    ]
+  };
 
-    if (day < 10) {
-      day = "0" + day;
+  function updateProgramOptions(selectedType) {
+    const container = document.getElementById("program-options-container");
+    container.innerHTML = '';
+    
+    const programs = trainingPrograms[selectedType];
+    if (programs) {
+      programs.forEach(program => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'flex items-center gap-2';
+        wrapper.innerHTML = `
+          <input
+            type="radio"
+            class="mx-2 text-muted-300"
+            id="${program.value}"
+            name="interest"
+            value="${program.value}"
+            required
+          />
+          <label class="text-muted-300" for="${program.value}">${program.text}</label>
+        `;
+        container.appendChild(wrapper);
+      });
+      container.classList.remove('hidden');
+    } else {
+      container.classList.add('hidden');
     }
-    if (month < 10) {
-      month = "0" + month;
-    }
-
-    return `${year}-${month}-${day}`;
   }
 
-  // Calculate the date four days from today
-  const today = new Date();
-  const fourDaysFromToday = new Date(today);
-  fourDaysFromToday.setDate(today.getDate() + 4);
-
-  // Set the min attribute
-  document
-    .getElementById("requested-date")
-    ?.setAttribute("min", formatDate(fourDaysFromToday));
-
-  const checkbox = document.getElementById("agree-data-collection");
-  const submitButton = document.getElementById("submit-button");
-  const yesVisit = document.getElementById("yes-visit");
-  const noVisit = document.getElementById("no-visit");
-
-  yesVisit.addEventListener("change", function () {
-    if (yesVisit.checked) {
-      document.getElementById("location-container").classList.remove("hidden");
-      document.getElementById("location-container").classList.add("flex");
-    } else {
-      document.getElementById("location-container").classList.add("hidden");
-    }
-  });
-
-  noVisit.addEventListener("change", function () {
-    if (noVisit.checked) {
-      document.getElementById("location-container").classList.add("hidden");
-    }
-  });
-
-  checkbox.addEventListener("change", function () {
-    if (checkbox.checked) {
-      submitButton.disabled = false;
-      submitButton.classList.remove(
-        "cursor-not-allowed",
-        "bg-gray-400",
-        "hover:bg-gray-500",
-        "bg-primary"
-      );
-    } else {
-      submitButton.disabled = true;
-      submitButton.classList.add(
-        "btn-primary",
-        "cursor-not-allowed",
-        "bg-gray-400",
-        "hover:bg-gray-500"
-      );
-    }
-  });
-
-  // Wait for the DOM content to be fully loaded
   document.addEventListener("DOMContentLoaded", function () {
-    // Get the contactUs form element
+    const aircraftTypeRadios = document.querySelectorAll('input[name="aircraft-type"]');
+    aircraftTypeRadios.forEach(radio => {
+      radio.addEventListener('change', (event) => {
+        updateProgramOptions(event.target.value);
+      });
+    });
+
+    const container = document.getElementById("program-options-container");
+    container.classList.add('hidden');
+
     const enrollmentForm = document.getElementById("enrollment-form");
+    const checkbox = document.getElementById("agree-data-collection");
+    const submitButton = document.getElementById("submit-button");
+    const yesVisit = document.getElementById("yes-visit");
+    const noVisit = document.getElementById("no-visit");
 
-    // Check if the contactUs form element exists
+    yesVisit.addEventListener("change", function () {
+      if (yesVisit.checked) {
+        document.getElementById("location-container").classList.remove("hidden");
+        document.getElementById("location-container").classList.add("flex");
+      }
+    });
+
+    noVisit.addEventListener("change", function () {
+      if (noVisit.checked) {
+        document.getElementById("location-container").classList.add("hidden");
+      }
+    });
+
+    checkbox.addEventListener("change", function () {
+      if (checkbox.checked) {
+        submitButton.disabled = false;
+        submitButton.classList.remove(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-500",
+          "bg-primary"
+        );
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.add(
+          "btn-primary",
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-500"
+        );
+      }
+    });
+
     if (enrollmentForm !== null) {
-      // Add submit event listener to the contactUs form
       enrollmentForm.addEventListener("submit", function (event) {
-        // Prevent the default form submission
         event.preventDefault();
-
-        // Serialize the form data
         const formData = new FormData(enrollmentForm);
 
-        // Check the value of the honeypot field
+        const aircraftType = formData.get("aircraft-type");
+        if (!aircraftType) {
+          alert("Please select an aircraft type");
+          return;
+        }
+
+        const programInterest = formData.get("interest");
+        if (!programInterest) {
+          alert("Please select a training program");
+          return;
+        }
+
         const confirmEmailValue = formData.get("confirm-email");
         if (confirmEmailValue === "" || confirmEmailValue === null) {
-          // If the honeypot field is empty, it's a human
-          // Set the form action to the URL for processing the form and redirecting to thank you
           enrollmentForm.action = ENROLLMENT_FORM_WEBHOOK_URL;
         }
 
-        // Convert FormData to URLSearchParams
         const urlSearchParams = new URLSearchParams();
         for (const pair of formData.entries()) {
           urlSearchParams.append(pair[0], pair[1]);
         }
 
-        // Send an AJAX request to submit the form
         const xhr = new XMLHttpRequest();
         xhr.open("POST", enrollmentForm.action);
         xhr.setRequestHeader(
@@ -413,23 +357,17 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
           "application/x-www-form-urlencoded"
         );
         xhr.onload = function () {
-          // Check if the request was successful (status 200)
           if (xhr.status === 200) {
-            // Redirect the user after a successful form submission
             window.location.href = "/enrollment-confirmation";
           } else {
-            // Handle errors if any
             console.error("Form submission failed:", xhr.statusText);
           }
         };
         xhr.onerror = function () {
-          // Handle network errors
           console.error("Network error occurred while submitting the form.");
         };
         xhr.send(urlSearchParams);
       });
-    } else {
-      console.error("Enrollment form element not found.");
     }
   });
 </script>

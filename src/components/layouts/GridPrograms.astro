@@ -4,7 +4,7 @@ import ProgramCard from "../../components/astro/ProgramCard.astro";
 const { content } = Astro.props;
 ---
 
-<section class="bg-black py-8 lg:py-16">
+<section id="grid-programs" class="bg-black py-8 lg:py-16">
   <div class="mx-auto max-w-9xl px-6 lg:px-8">
     <div class="text-center mb-12">
       {
@@ -36,6 +36,7 @@ const { content } = Astro.props;
           content.cards.map((program) => (
             <ProgramCard
               title={program.title}
+              badges={program.badges}
               imagePath={program.imagePath}
               imageAlt={program.imageAlt}
               link={program.link}

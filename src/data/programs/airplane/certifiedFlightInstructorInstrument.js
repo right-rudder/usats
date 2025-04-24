@@ -18,12 +18,12 @@ const certifiedFlightInstructorInstrument = {
       buttons: [
         {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
           primary: false,
         },
         {
           name: "Request Info",
-          link: "/contact",
+          link: "/contact-us",
           primary: false,
         },
       ],
@@ -97,7 +97,7 @@ const certifiedFlightInstructorInstrument = {
         },
       },
 
-      price: "$4,850",
+      price: "$4,850 (Alto-NG) <br> $5,600 (C-172S)",
 
       // FAQs
       faqs: [

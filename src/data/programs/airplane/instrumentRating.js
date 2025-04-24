@@ -18,12 +18,12 @@ const instrumentRating = {
       buttons: [
         {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
           primary: false,
         },
         {
           name: "Request Info",
-          link: "/contact",
+          link: "/contact-us",
           primary: false,
         },
       ],
@@ -99,7 +99,7 @@ const instrumentRating = {
         },
       },
 
-      price: "$13,034",
+      price: "$13,034 (Alto-NG) <br> $15,264 (C-172S)",
 
       // FAQs
       faqs: [

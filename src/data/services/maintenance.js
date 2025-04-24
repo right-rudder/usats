@@ -17,7 +17,7 @@ const maintenanceServices = {
     buttons: [
       {
         name: "Contact Us",
-        link: "/#",
+        link: "/contact-us",
         primary: true,
       },
     ],

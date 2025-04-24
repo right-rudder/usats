@@ -22,7 +22,7 @@ const militaryTraining = {
         },
         {
           name: "Mission Briefing",
-          link: "/contact",
+          link: "/contact-us",
           primary: false,
         },
       ],

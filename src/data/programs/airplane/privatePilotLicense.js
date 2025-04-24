@@ -18,12 +18,12 @@ const privatePilotLicense = {
       buttons: [
         {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
           primary: false,
         },
         {
           name: "Request Info",
-          link: "/contact",
+          link: "/contact-us",
           primary: false,
         },
       ],
@@ -101,7 +101,7 @@ const privatePilotLicense = {
         },
       },
 
-      price: "$11,263",
+      price: "$11,263 (Alto-NG) <br> $13,013 (C-172S)",
 
 
       // FAQs

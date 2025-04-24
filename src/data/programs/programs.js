@@ -8,17 +8,8 @@ const programs = {
       `Whether you're starting your aviation journey, advancing your skills, or pursuing a career in aviation, ${COMPANY_NAME} offers tailored programs for all experience levels.`,
       cards: [
         {
-          title: "Professional Pilot Program",
-          badgets: ['Part 141/61','PPP'],
-          imagePath: "/src/assets/USATS_banner_Application.webp",
-          imageAlt: "",
-          description:
-            "Take the first step toward becoming a pilot with our comprehensive Professional Pilot Course.",
-          link: "/airplane-training/professional-pilot-program",
-        },
-        {
           title: "Private Pilot License",
-          badgets: [' 141', 'PPL'],
+          badges: ['Part 141', 'PPL'],
           imagePath: "/src/assets/USATS_Plane_N3544W.webp",
           imageAlt: "",
           description:
@@ -27,7 +18,7 @@ const programs = {
         },
         {
           title: "Instrument Rating (IR)",
-          badgets: [' 141', 'IR'],
+          badges: ['Part 141', 'IR'],
           imagePath: "/src/assets/ALO_NG_INTERIOR.webp",
           imageAlt: "",
           description:
@@ -36,7 +27,7 @@ const programs = {
         },
         {
           title: "Commercial Pilot License (CPL)",
-          badgets: [' 141', 'CPL'],
+          badges: ['Part 141', 'CPL'],
           imagePath: "/src/assets/ALTO_NG_Panel.jpg",
           imageAlt: "",
           description:
@@ -45,7 +36,7 @@ const programs = {
         },
         {
           title: "Certified Flight Instructor (CFI)",
-          badgets: [' 61', 'CFI'],
+          badges: ['Part 61', 'CFI'],
           imagePath: "/src/assets/Happy_Landings_ALO_NG.webp",
           imageAlt: "",
           description:
@@ -54,12 +45,21 @@ const programs = {
         },
         {
           title: "Certified Flight Instructor Instrument (CFII)",
-          badgets: [' 61', 'CFII'],
+          badges: ['Part 61', 'CFII'],
           imagePath: "/src/assets/placeholder.webp",
           imageAlt: "",
           description:
             "Specialize in instrument flight instruction and train students to navigate and fly safely in low-visibility conditions.",
           link: "/airplane-training/certified-flight-instructor-instrument",
+        },
+        {
+          title: "Professional Pilot Program",
+          badges: ['Part 141/61','PPL','IR','CPL','CFI','CFII'],
+          imagePath: "/src/assets/USATS_banner_Application.webp",
+          imageAlt: "",
+          description:
+            "Take the first step toward becoming a pilot with our comprehensive Professional Pilot Course.",
+          link: "/airplane-training/professional-pilot-program",
         },
       ],
       

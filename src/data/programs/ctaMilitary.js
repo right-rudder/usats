@@ -9,7 +9,7 @@ const militaryCta = {
   buttons: [
     {
       name: "Enroll Now",
-      link: "/#",
+      link: "/enroll-now",
       primary: true,
     },
   ],

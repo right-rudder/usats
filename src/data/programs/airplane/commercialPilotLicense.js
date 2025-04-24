@@ -18,12 +18,12 @@ const commercialPilotLicense = {
       buttons: [
         {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
           primary: false,
         },
         {
           name: "Request Info",
-          link: "/contact",
+          link: "/contact-us",
           primary: false,
         },
       ],
@@ -88,7 +88,7 @@ const commercialPilotLicense = {
         ],
       },
 
-      price: "$25,508",
+      price: "$25,508 (Alto-NG) <br> $31,508 (C-172S)",
 
 
       cta: {

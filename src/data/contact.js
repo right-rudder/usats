@@ -1,4 +1,4 @@
-import { COMPANY_NAME } from "../consts";
+import { COMPANY_NAME, ADDRESS, ADDRESS_STATE,ADDRESS_CITY, ADDRESS_ZIP  } from "../consts";
 
 const contact = {
     data: {
@@ -31,13 +31,13 @@ const contact = {
   
       locations: [
         {
-          title: "title1",
-          address: "address1",
-          city: "city1",
-          state: "state1",
-          zip: "zip1",
+          title: `${COMPANY_NAME}`,
+          address: `${ADDRESS}`,
+          city: `${ADDRESS_CITY}`,
+          state: ``,
+          zip: `${ADDRESS_STATE}`,
           gMaps: "gmaps1",
-          phone: "phone1",
+          phone: "(321) 529-0795",
         },
         {
           title: "title2",

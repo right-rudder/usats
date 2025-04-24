@@ -7,7 +7,7 @@ const CTAFlight = {
     buttons: [
       {
         name: "Book Now",
-        link: "/#",
+        link: "/discovery-flight",
         primary: true,
       },
     ],

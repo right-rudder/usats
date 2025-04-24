@@ -17,7 +17,7 @@ const underHeaderHeli = {
         buttons: [
           {
             text: "Enroll Now",
-            link: "/#",
+            link: "/enroll-now",
           },
         ],
       },

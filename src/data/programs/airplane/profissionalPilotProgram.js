@@ -18,12 +18,12 @@ const professionalPilotProgram = {
       buttons: [
         {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
           primary: false,
         },
         {
           name: "Request Info",
-          link: "/contact",
+          link: "/contact-us",
           primary: false,
         },
       ],
@@ -116,7 +116,7 @@ const professionalPilotProgram = {
       },
 
 
-      price: "$62,143 - $74,123*",
+      price: "$62,143 (Alto-NG) <br> $74,123 (C-172S)",
 
       // FAQs
       faqs: [

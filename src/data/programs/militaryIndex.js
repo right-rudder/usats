@@ -35,7 +35,7 @@ const militaryPage = {
         buttons: [
           {
             text: "About Us",
-            link: "/#",
+            link: "/about-us",
           },
         ],
       },

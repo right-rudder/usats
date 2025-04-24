@@ -18,12 +18,12 @@ const cfiCourse = {
       buttons: [
         {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
           primary: false,
         },
         {
           name: "Request Info",
-          link: "/contact",
+          link: "/contact-us",
           primary: false,
         },
       ],
@@ -91,7 +91,7 @@ const cfiCourse = {
           "Our Certified Flight Instructor course gives you the tools to succeed as a teacher, mentor, and professional pilot. Get started on the path to becoming a respected aviation leader.",
         button: {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
         },
       },
 
