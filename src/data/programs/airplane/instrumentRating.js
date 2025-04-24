@@ -99,7 +99,7 @@ const instrumentRating = {
         },
       },
 
-      price: "$13,034",
+      price: "$13,034 (Alto-NG) <br> $15,264 (C-172S)",
 
       // FAQs
       faqs: [

@@ -101,7 +101,7 @@ const privatePilotLicense = {
         },
       },
 
-      price: "$11,263",
+      price: "$11,263 (Alto-NG) <br> $13,013 (C-172S)",
 
 
       // FAQs

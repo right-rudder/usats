@@ -85,7 +85,7 @@ const certifiedFlightInstructor = {
         ],
       },
 
-      price: "$7,488",
+      price: `$7,488 (Alto-NG) <br> $8,738 (C-172S)`,
 
       cta: {
         imagePath: "/src/assets/placeholder.webp",
