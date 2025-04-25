@@ -93,7 +93,7 @@ export const mobileNavbarLinks = [
     submenu: [
       {
         name: "Alto Planes",
-        link: "#",
+        link: "/services/alto-planes",
       },
       {
         name: "Maintenance",
@@ -101,11 +101,11 @@ export const mobileNavbarLinks = [
       },
       {
         name: "CATS Testing Center",
-        link: "#",
+        link: "/services/cats-testing-center",
       },
       {
         name: "TSA Fingerprinting",
-        link: "#",
+        link: "/services/tsa-fingerprinting",
       },
       {
         name: "Air Tours",
