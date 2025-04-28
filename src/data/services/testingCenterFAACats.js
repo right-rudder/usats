@@ -30,12 +30,12 @@ data: {
         ],
         loginLink: "https://faa.psiexams.com/faa/login ",
         list: [
-            `Log in in https://faa.psiexams.com/faa/login`,
+            `<a href="https://faa.psiexams.com/faa/login" target="_blank">Log-in in : <br> https://faa.psiexams.com/faa/login </a>`,
             "Select the exam you would like to take",
             "Enter our zipcode 32780",
             "Select the option",
-            `US Aviation Jet Center <br> 355 Golden Knights Blvd <br> Titusville, FL, 32780`
         ],
+        location: `US Aviation Jet Center <br> 355 Golden Knights Blvd <br> Titusville, FL, 32780`, 
         buttons: [
             {
               name: "Directions",
@@ -45,20 +45,15 @@ data: {
           ],
     },
 
-    headerSmall: {
-      
-      imagePath: "/src/assets/placeholder.webp",
-      headerH1: "Discovery Flights</br>at USATS",
-      imageAlt: "Speedway Flight Training instructors and staff in front of a Cessna at KHMP",
-      paragraph:
-          "Ready to take the controls? A discovery flight is the perfect first step. Fly with a certified instructor.",
-      buttons: [
-          {
-          name: "Schedule a Flight",
-          link: "#contact",
-          primary: true,
-          },
-      ],
+    underHeader: {
+      title: "YOUR CATS TEST at USATS",
+      paragraphs: [
+        "Here at USATS we make sure you have all you need to make it.",],
+      image: {
+        imagePath: "/src/assets/ALTO_NG.webp",
+        imageAlt: "AirPlane Panel",
+      },
+      buttons: [],
     },
 }
 };
