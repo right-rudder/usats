@@ -2,22 +2,23 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeaderScreen from "../../components/astro/HeaderScreen.astro";
 import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astro";
-
-import testingCenterFAACats from "../../data/services/testingCenterFAACats";
+import { FaPlaneDeparture } from "react-icons/fa";
+import ImageComp from "../../components/ImageComp.astro";
+import directFly from "../../data/services/directfly";
 import { COMPANY_NAME } from "../../consts";
 
-const { data } = testingCenterFAACats;
+const { data } = directFly;
 
 const CTAFlight = {
     imagePath: "/src/assets/CTADiscFlights.png",
     imageAlt: "",
-    headerH1: `Still have questions?`,
+    headerH1: `Want to see how high it can fly?`,
     paragraph:
-      `Here in ${COMPANY_NAME} we can solve all your doubts`,
+      `Book a Discovery Flight here at ${COMPANY_NAME}`,
     buttons: [
       {
-        name: "Contact us",
-        link: "/contact-us",
+        name: "Book now ",
+        link: "/discovery-flight",
         primary: true,
       },
     ],
@@ -31,6 +32,110 @@ const CTAFlight = {
   
   <HeaderScreen content = {data.header} />
   
+  <section id="cats-testing-center">
+    <div class="relative isolate overflow-hidden bg-gradient-to-b from-primary-950 to-primary-800 px-6 pt-24 pb-8 sm:pt-32 lg:overflow-visible lg:px-0" >
+        <!-- Header -->
+        <div class="mx-auto max-w-6xl lg:pr-4 md:px-10 lg:px-20">
+          <div class="my-9">
+            <p class="text-base font-semibold leading-7 text-accent-700 uppercase">
+              {directFly.altoNGPitch.subtitle}
+            </p>
+            <h1
+              class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
+            >
+              {directFly.altoNGPitch.title}
+            </h1>
+            {
+              directFly.altoNGPitch.paragraphs.map((paragraph) => (
+              <p
+                class="mt-6 text-xl leading-8 text-muted-200"
+                set:html={paragraph}
+              />
+              ))
+            }
+          </div>
+        </div>
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+          <svg
+            class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-black [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+            aria-hidden="true"
+          >
+            <defs>
+              <pattern
+                id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+                width="200"
+                height="200"
+                x="50%"
+                y="-1"
+                patternUnits="userSpaceOnUse"
+              >
+                <path d="M100 200V.5M.5 .5H200" fill="none"></path>
+              </pattern>
+            </defs>
+            <svg x="50%" y="-1" class="overflow-visible fill-primary-950">
+              <path
+                d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                stroke-width="0"></path>
+            </svg>
+            <rect
+              width="100%"
+              height="100%"
+              stroke-width="0"
+              fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"></rect>
+          </svg>
+        </div>
+        <!-- Content -->
+        <div class="mt-12 flex justify-center align-middle">
+          <ul role="list" class="flex flex-wrap justify-center max-w-4xl divide-y-2">
+            <li class="group py-5 flex flex-wrap justify-center align-middle items-center">
+              <div
+                class="mx-auto w-full rounded-xl overflow-hidden h-96 md:w-1/3 ring-accent-600 group-hover:ring-2 group-hover:shadow-lg duration-200 ease-in-out"
+              >
+                <ImageComp
+                  imagePath={directFly.altoNGPitch.imagePath}
+                  imageAlt={directFly.altoNGPitch.imageAlt}
+                  styles="h-full object-cover group-hover:scale-110 group-hover:shadow-lg group-hover:brightness-110 duration-300 ease-in-out"
+                  quality={80}
+                  loading = "lazy",
+                />
+              </div>
+              <div class="w-full md:w-1/2">
+                <!-- <h3
+                  class="mt-6 mb-0 text-left text-4xl group-hover:text-accent-800 font-bold tracking-tight text-primary-600 duration-300 ease-in-out"
+                >
+                  {name}
+                </h3>
+                <p
+                  class="text-xl mt-0 text-left leading-6 font-sans text-muted-400 group-hover:text-accent-600 duration-200 delay-100 ease-in-out"
+                  set:html={models}
+                />
+                <div class="mt-2 flex justify-center align-middle text-muted-200 text-base">
+                  <p class="leading-relaxed text-justify" set:html={description} />
+                </div> -->
+                <ol class="space-y-3 py-3">
+                    {
+                    directFly.altoNGPitch.list.map((point) => (
+                      <div class="flex gap-5 items-center bg-accent-50/70 p-5 rounded-md shadow-sm hover:scale-105 hover:shadow-md transition-all duration-300">
+                          
+                          <FaPlaneDeparture className="text-accent-600 mr-2 size-8 flex-shrink-0"  />{" "}
+                          <div class="flex-col items-center gap-3">
+                            <li class="text-3xl" set:html={point.title}></li>
+                            <p class="" set:html={point.paragraph}></p>
+                          </div>
+                      </div>        
+                    ))
+                    }
+                </ol>
+                <div class="flex">
+                  <a target="_blank" href="/contact-us" class="text-base/7 font-semibold text-accent-600"> Want to buy? Contact-us <span aria-hidden="true">&rarr;</span></a>
+              </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>      
+  </section>
+
   <CTADiscoveryFlights content = {CTAFlight} />
 </BaseLayout>
 

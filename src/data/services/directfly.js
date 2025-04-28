@@ -2,9 +2,14 @@ import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
 
 const directFly = {
 
-    header: {    
+   data:{ 
+        header: {    
         title: "DirectFly - Alto NG",
         subtitle: "North American Dealer and Service Center for DirectFly Alto NG",
+        headerH1: `${COMPANY_NICKNAME} <br> DirectFly - Alto NG`,
+        paragraph: `North American Dealer and Service Center for DirectFly Alto NG`,
+        imagePath: "/src/assets/placeholder.webp",
+        imageAlt: "image alt",
         buttons: [
             {
               name: "Contact-us",
@@ -12,8 +17,8 @@ const directFly = {
               primary: true,
             },
           ],
+        },
     },
-
 
     lightPlaneExhibit: {
         title: "SUN'N FUN",
@@ -35,9 +40,12 @@ const directFly = {
 
     altoNGPitch: {
         title: "Experience the Future With DirectFly",
-        subtitle: "",
+        subtitle: "The Future is Here",
+        imagePath:"/src/assets/Happy_Landings_ALO_NG.webp",
+        imageAlt:"",
         paragraphs: [
-            "Elevate your flying experience with the DirectFly Alto NG, the pinnacle of modern aviation innovation. Designed for discerning pilots seeking performance, comfort, and cutting-edge technology, the Alto NG delivers unparalleled excellence in every flight. Its sleek aerodynamic design, coupled with a robust yet fuel-efficient engine, ensures smooth and efficient travel through the skies. Step into the spacious and ergonomically designed cockpit, where intuitive controls and advanced avionics systems put you in command with confidence. With its impressive range, versatile capabilities, and unmatched reliability, the DirectFly Alto NG redefines what it means to take flight. Experience the future of aviation today.",
+            "Elevate your flying experience with the DirectFly Alto NG, the pinnacle of modern aviation innovation. Designed for discerning pilots seeking performance, comfort, and cutting-edge technology, the Alto NG delivers unparalleled excellence in every flight.",
+            "Its sleek aerodynamic design, coupled with a robust yet fuel-efficient engine, ensures smooth and efficient travel through the skies. Step into the spacious and ergonomically designed cockpit, where intuitive controls and advanced avionics systems put you in command with confidence. With its impressive range, versatile capabilities, and unmatched reliability, the DirectFly Alto NG redefines what it means to take flight. Experience the future of aviation today.",
             "We are thrilled to partner with Direct Fly to bring the Alto NG to the North American market. This aircraft offers a unique combination of performance, comfort, and affordability that will appeal to a wide range of pilots. As the dealer and service center for the Alto NG, we are committed to providing our customers with the best possible experience and support.",
         ],
         bulletTitle: "Highlights of the Alto NG",
