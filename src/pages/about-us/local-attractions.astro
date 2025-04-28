@@ -7,7 +7,7 @@ import localAttractions from "../../data/about-us/localAttractions";
 import testingCenterFAACats from "../../data/services/testingCenterFAACats";
 import { COMPANY_NAME } from "../../consts";
 
-import CardAttractions from "../../components/astro/CardAttractions.astro";
+import CardsAttractions from "../../components/astro/CardsAttractions.astro";
 
 const { data } =  localAttractions;
 
@@ -34,7 +34,7 @@ const CTAFlight = {
   
   <HeaderScreen content = {data.header} />
   <UnderHeader content ={data.underHeader} />
-  <CardAttractions />
+  <CardsAttractions />
 
   <CTADiscoveryFlights content = {CTAFlight} />
 </BaseLayout>
