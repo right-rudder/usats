@@ -1,16 +1,37 @@
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
 
 const fingerprintingTSA = {
-
+  data: {
     title: "Onsite fingerprinting for all your TSA needs",
     subtitle: "Including Flight Training Security Program (formerly AFSP)",
 
     paragraphs: "Start the process at https://secure.natacs.aero/ftsp/registration/index.asp, then reach out to us at fingerprinting@usatsolutions.com to set up your appointment time.",
 
+    header: {
+      stars: true,
+      imagePath: "/src/assets/placeholder.webp",
+      imageAlt:
+      "image alt",
+      headerH1: `${COMPANY_NICKNAME} <br> TSA Fingerprinting Service`,
+      paragraph: ``,
+      buttons: [
+      {
+          name: "Learn more",
+          link: "#services",
+          primary: true,
+      },
+      ],
+    },
+
+  },
 
     fingerPrintingSteps: {
-        title: "Alien Flight School Fingerprinting",
+        title: "Flight School Fingerprinting",
         subtitle: "Flight school candidates -- The following steps are required PRIOR to scheduling your fingerprint appointment:",
+        heather2: "Flight School Fingerprinting",
+        description: [
+          "Onsite fingerprinting for all your TSA needs, including Flight Training Security Program (formerly AFSP)!"
+        ],
         loginLink: "https://secure.natacs.aero/ftsp/registration/index.asp ",
         email: "fingerprinting@usatsolutions.com",
         list: [
@@ -29,7 +50,23 @@ const fingerprintingTSA = {
               primary: true,
             },
           ],
-    }
+    },
+
+    headerSmall: {
+      
+      imagePath: "/src/assets/placeholder.webp",
+      headerH1: "Discovery Flights</br>at USATS",
+      imageAlt: "Speedway Flight Training instructors and staff in front of a Cessna at KHMP",
+      paragraph:
+          "Ready to take the controls? A discovery flight is the perfect first step. Fly with a certified instructor.",
+      buttons: [
+          {
+          name: "Schedule a Flight",
+          link: "#contact",
+          primary: true,
+          },
+      ],
+    },
 
 
 };
