@@ -9,7 +9,7 @@ const fingerprintingTSA = {
 
     header: {
       stars: true,
-      imagePath: "/src/assets/placeholder.webp",
+      imagePath: "/src/assets/fingerprinting.webp",
       imageAlt:
       "image alt",
       headerH1: `${COMPANY_NICKNAME} <br> TSA Fingerprinting Service`,
@@ -27,6 +27,8 @@ const fingerprintingTSA = {
 
     fingerPrintingSteps: {
         title: "Flight School Fingerprinting",
+        imagePath: "/src/assets/fingerprintingTSAchatgpt.png",
+        imageAlt: "",
         subtitle: "Flight school candidates -- The following steps are required PRIOR to scheduling your fingerprint appointment:",
         heather2: "Flight School Fingerprinting",
         description: [
@@ -52,20 +54,16 @@ const fingerprintingTSA = {
           ],
     },
 
-    headerSmall: {
-      
-      imagePath: "/src/assets/placeholder.webp",
-      headerH1: "Discovery Flights</br>at USATS",
-      imageAlt: "Speedway Flight Training instructors and staff in front of a Cessna at KHMP",
-      paragraph:
-          "Ready to take the controls? A discovery flight is the perfect first step. Fly with a certified instructor.",
-      buttons: [
-          {
-          name: "Schedule a Flight",
-          link: "#contact",
-          primary: true,
-          },
+    underHeader: {
+      title: "FINGER PRINTING TODAY AT USATS",
+      paragraphs: [
+        "Here at USATS we make sure you have all you need to make it.",
       ],
+      image: {
+        imagePath: "/src/assets/ALTO_NG.webp",
+        imageAlt: "AirPlane Panel",
+      },
+      buttons: [],
     },
 
 
