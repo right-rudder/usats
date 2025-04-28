@@ -45,14 +45,14 @@ const CTAFlight = {
             >
               {directFly.altoNGPitch.title}
             </h1>
-            {
-              directFly.altoNGPitch.paragraphs.map((paragraph) => (
-              <p
+            <p
                 class="mt-6 text-xl leading-8 text-muted-200"
-                set:html={paragraph}
-              />
-              ))
-            }
+                set:html={directFly.altoNGPitch.paragraphs[0]}
+            />
+            <p
+                class="mt-6 text-xl leading-8 text-muted-200"
+                set:html={directFly.altoNGPitch.paragraphs[1]}
+            />
           </div>
         </div>
         <div class="absolute inset-0 -z-10 overflow-hidden">
@@ -126,11 +126,17 @@ const CTAFlight = {
                     ))
                     }
                 </ol>
-                <div class="flex">
-                  <a target="_blank" href="/contact-us" class="text-base/7 font-semibold text-accent-600"> Want to buy? Contact-us <span aria-hidden="true">&rarr;</span></a>
-              </div>
               </div>
             </li>
+            <div class="py-5">
+              <p
+                class="mt-6 text-xl leading-8 text-muted-200"
+                set:html={directFly.altoNGPitch.paragraphs[2]}
+              />
+              <div class="flex py-5">
+                <a target="_blank" href="/contact-us" class="text-base/7 font-semibold text-accent-600"> Want to buy? Contact-us <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            </div>
           </ul>
         </div>
       </div>      

@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../components/astro/HeaderScreen.astro";
+import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astro";
+import { FaCheck } from "react-icons/fa";
+import { FaPlane } from "react-icons/fa";
+
+
+import testingCenterFAACats from "../../data/services/testingCenterFAACats";
+import { COMPANY_NAME } from "../../consts";
+
+const { data } = testingCenterFAACats;
+
+import ImageComp from "../../components/ImageComp.astro";
+import UnderHeader from "../../components/astro/UnderHeader.astro";
+
+const CTAFlight = {
+    imagePath: "/src/assets/CTADiscFlights.png",
+    imageAlt: "",
+    headerH1: `Still have questions?`,
+    paragraph:
+      `Here in ${COMPANY_NAME} we can solve all your doubts`,
+    buttons: [
+      {
+        name: "Contact us",
+        link: "/contact-us",
+        primary: true,
+      },
+    ],
+  };
+
+const catsTestingCenterImg = {
+  imagePath:"/src/assets/programmer-focused-on-code.webp",
+  imageAlt: "",
+};
+---
+<BaseLayout
+  siteTitle={data.title}
+  siteDescription={data.paragraph}
+  keywords={data.pageKeywords}
+  >
+  
+  <HeaderScreen content = {data.header} />
+
+  <UnderHeader content = {testingCenterFAACats.data.underHeader} />
+  
+ 
+  <CTADiscoveryFlights content = {CTAFlight} />
+</BaseLayout>
+
