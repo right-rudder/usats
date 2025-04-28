@@ -2,16 +2,32 @@ import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
 
 const localAttractions = {
 
-    header: {    
+    data: {
         title: "Discover Florida's Space Coast",
-        subtitle: "North American Dealer and Service Center for DirectFly Alto NG",
-        buttons: [
-            {
-              name: "Contact-us",
-              link: "",
-              primary: true,
-            },
+        subtitle: "",
+        header: {    
+          
+          headerH1: `Discover Florida's Space Coast`,
+          imagePath: "/src/assets/placeholder.webp",
+          imageAlt: "",
+          buttons: [],
+        },
+        
+
+        underHeader: {
+          title: `Space Coast`,
+          paragraph: "",
+          image: {
+            imagePath: "/src/assets/placeholder.webp",
+            imageAlt: "",
+          },
+          paragraphs: [
+            "Check out all the attractions That Florida's Space Coast has to offer.",
+            "Kennedy Space Center, Disney World, Orlando, Cocoa Beach, and Port Canaveral are just some of the experiences you would find here.",
+          
           ],
+          buttons: [],
+        },
     },
 
 
@@ -23,27 +39,48 @@ const localAttractions = {
             {
               name: "Kennedy Space Center",
               paragraph: "Kennedy Space Center, situated on Merritt Island, Florida, is NASA's primary launch site for human spaceflight. It offers visitors a unique opportunity to witness the awe-inspiring spectacle of a rocket launch. It's a short 15 minute drive to Kennedy Space Center. Alongside interactive exhibits and iconic attractions like the Rocket Garden and Space Shuttle Atlantis exhibit, the chance to experience a live rocket launch makes a visit to Kennedy Space Center an unforgettable adventure.",
-              imagePath: "",
+              imagePath: "/src/assets/NASA_Rocket_Launch.webp",
+              imageAlt: "",
+              otherInfo: [
+                {name: "Founded", value:"1963"}, 
+                {name: "Distance", value:"15min"} 
+              ]
             },
             {
               name: "Disney World",
               paragraph: "Disney World Orlando, one of the most renowned theme parks and resorts in the world, is nestled in the heart of Orlando, Florida. This enchanting destination is celebrated for its immersive experiences, captivating attractions, and four iconic theme parks. Located approximately 45 minutes away by car, allowing aspiring aviators and aviation enthusiasts to indulge in the wonders of the park during their leisure time.",
-              imagePath: "",
+              imagePath: "/src/assets/Disney_World.webp",
+              imageAlt: "",
+              otherInfo: [ 
+                {name: "Distance", value:"45min"} 
+              ]
             },
             {
               name: "Orlando",
               paragraph: "With its sunny weather and a wide array of attractions, Orlando offers something for everyone. From world-class theme parks like Universal Orlando Resort to vibrant arts and cultural scenes, Orlando captivates visitors with its enchanting atmosphere. The city also boasts beautiful natural spaces, including gardens, lakes, and nature preserves, providing ample opportunities for outdoor activities. With its warm hospitality and a variety of accommodations, Orlando is a destination that guarantees an unforgettable experience for all. Located approximately 45 minutes from our location.",
-              imagePath: "",
+              imagePath: "/src/assets/orlando.webp",
+              imageAlt: "",
+              otherInfo: [
+                {name: "Distance", value:"25min"}  
+              ]
             },
             {
               name: "Cocoa Beach",
               paragraph: `Cocoa Beach is a stunning coastal city on Florida's east coast. Just a 25 minute drive from USATS. Known as the "Surfing Capital of the East Coast," it offers miles of golden beaches, perfect waves for surfers, and a vibrant beachside boardwalk. Visitors can enjoy water activities, explore nearby wildlife refuges, and immerse themselves in the area's rich space exploration history at the Kennedy Space Center. Cocoa Beach is a captivating destination that combines natural beauty, recreational opportunities, and a laid-back beach atmosphere.`,
-              imagePath: "",
+              imagePath: "/src/assets/cocoa_beach_pier.webp",
+              imageAlt: "",
+              otherInfo: [ 
+                {name: "Distance", value:"25min"} 
+              ]
             },
             {
               name: "Port Canaveral",
               paragraph: `Port Canaveral is a bustling and convenient port just 20 minutes away from USATS. It is one of the busiest cruise ports globally and offers a seamless embarkation process. With diverse cruise itineraries, ranging from short getaways to extended trips to the Caribbean and beyond, Port Canaveral is a gateway to adventure.`,
-              imagePath: "",
+              imagePath: "/src/assets/Cruise_Ship.webp",
+              imageAlt: "",
+              otherInfo: [
+                {name: "Distance", value:"20min"} 
+              ]
             },
           ],
     },

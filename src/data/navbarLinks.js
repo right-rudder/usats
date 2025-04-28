@@ -131,11 +131,11 @@ export const navbarLinks = [
       },
       {
         name: "Careers",
-        link: "/careers",
+        link: "/about-us/careers",
       },
       {
         name: "Local Attractions",
-        link: "/local-attractions",
+        link: "/about-us/local-attractions",
       },
       {
         name: "Blog",

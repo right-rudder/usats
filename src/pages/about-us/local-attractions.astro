@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../components/astro/HeaderScreen.astro";
+import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astro";
+import UnderHeader from "../../components/astro/UnderHeader.astro";
+import localAttractions from "../../data/about-us/localAttractions";
+import testingCenterFAACats from "../../data/services/testingCenterFAACats";
+import { COMPANY_NAME } from "../../consts";
+
+import CardAttractions from "../../components/astro/CardAttractions.astro";
+
+const { data } =  localAttractions;
+
+const CTAFlight = {
+    imagePath: "/src/assets/CTADiscFlights.png",
+    imageAlt: "",
+    headerH1: `Still have questions?`,
+    paragraph:
+      `Here in ${COMPANY_NAME} we can solve all your doubts`,
+    buttons: [
+      {
+        name: "Contact us",
+        link: "/contact-us",
+        primary: true,
+      },
+    ],
+  };
+---
+<BaseLayout
+  siteTitle={data.title}
+  siteDescription={data.paragraph}
+  keywords={data.pageKeywords} 
+  >
+  
+  <HeaderScreen content = {data.header} />
+  <UnderHeader content ={data.underHeader} />
+  <CardAttractions />
+
+  <CTADiscoveryFlights content = {CTAFlight} />
+</BaseLayout>
+
