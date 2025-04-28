@@ -2,24 +2,22 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeaderScreen from "../../components/astro/HeaderScreen.astro";
 import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astro";
-import { FaCheck } from "react-icons/fa";
-import { FaPlane } from "react-icons/fa";
+import GridPrograms from "../../components/layouts/GridPrograms.astro";
 
-
+import careers from "../../data/services/career";
 import testingCenterFAACats from "../../data/services/testingCenterFAACats";
 import { COMPANY_NAME } from "../../consts";
 
-const { data } = testingCenterFAACats;
+const { data } = careers;
 
-import ImageComp from "../../components/ImageComp.astro";
 import UnderHeader from "../../components/astro/UnderHeader.astro";
 
 const CTAFlight = {
     imagePath: "/src/assets/CTADiscFlights.png",
     imageAlt: "",
-    headerH1: `Still have questions?`,
+    headerH1: `Want to know more about the company?`,
     paragraph:
-      `Here in ${COMPANY_NAME} we can solve all your doubts`,
+      `In ${COMPANY_NAME} we value your insights, send us a message!`,
     buttons: [
       {
         name: "Contact us",
@@ -29,22 +27,24 @@ const CTAFlight = {
     ],
   };
 
-const catsTestingCenterImg = {
-  imagePath:"/src/assets/programmer-focused-on-code.webp",
-  imageAlt: "",
-};
 ---
 <BaseLayout
-  siteTitle={data.title}
-  siteDescription={data.paragraph}
-  keywords={data.pageKeywords}
+  siteTitle={careers.title}
+  siteDescription={careers.paragraph}
+  keywords={careers.pageKeywords}
   >
   
-  <HeaderScreen content = {data.header} />
+  <HeaderScreen content = {careers.header} />
 
-  <UnderHeader content = {testingCenterFAACats.data.underHeader} />
+  <UnderHeader content = {careers.underHeader} />
   
- 
+  
+  <GridPrograms content={careers.gridPrograms} />
+
+  <div class="flex-col justify-center items-center text-center gap-10 pb-20 bg-black">
+    <p class="text-muted-400 pb-10 text-2xl  ">EMAIL US AT:</p>
+    <a href="mailto:HR@usatsolutions.com" class="button btn-accent px-6 py-2 text-muted-100 ">HR@usatsolutions.com</a>
+  </div>
   <CTADiscoveryFlights content = {CTAFlight} />
 </BaseLayout>
 

@@ -5,8 +5,24 @@ const careers = {
     title: "Work with us!",
     subtitle: "Careers",
 
-    paragraphs: "",
+    paragraph: "",
 
+    
+    header: {
+        stars: true,
+        imagePath: "/src/assets/placeholder.webp",
+        imageAlt:
+        "image alt",
+        headerH1: `${COMPANY_NICKNAME} | Careers`,
+        paragraph: `Come work with us!`,
+        buttons: [
+        {
+            name: "Learn more",
+            link: "#services",
+            primary: true,
+        },
+        ],
+      },
 
     openPositions: {
         title: "Open Positions",
@@ -42,7 +58,37 @@ const careers = {
               primary: true,
             },
         ],
-    }
+    },
+
+    underHeader: {
+      title: "Start Your Journey Here",
+      paragraphs: [
+        "Check our latest opportunities and come make the sky brighter with USATS!",
+        ""],
+      image: {
+        imagePath: "/src/assets/ALTO_NG.webp",
+        imageAlt: "AirPlane Panel",
+      },
+      buttons: [],
+    },
+
+    gridPrograms: {
+        upperHeading: "Open Positions",
+        heading: "How to apply",
+        description: "Send your resume to the email listed below and please make sure to include the job position you are applying for. For employment verification please email us.",
+        email: "HR@usatsolutions.com",
+        cards: [
+          {
+            title: "Maintenance Technician",
+            imagePath: "/src/assets/maintenanceHeli4.png",
+            imageAlt:
+              "USATS Mechanic working on an Helicopter",
+            description:
+              "The incumbent in this position shall be an aircraft maintenance professional that shares our passion for safety and excellence in operations. ",
+            link: "https://cdn.shopify.com/s/files/1/0783/7207/7845/files/Maintenance_Technician_-_FL_2.pdf?v=1695128138",
+          },
+        ],
+      },
 };
 
 export default careers;
