@@ -1,15 +1,36 @@
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
 
 const testingCenterFAACats = {
-
-    title: "FAA CATS Testing Center",
+data: {
+    title: `FAA CATS Testing Center | ${COMPANY_NICKNAME}`,
     paragraph: "Our center offers a professional environment with modern computer workstations and secure internet access. Our dedicated staff ensures a secure and distraction-free testing experience.",
+    tags: [""],
+
+    header: {
+      stars: true,
+      imagePath: "/src/assets/placeholder.webp",
+      imageAlt:
+      "image alt",
+      headerH1: `${COMPANY_NICKNAME} <br> FAA Cats Testing Center`,
+      paragraph: ``,
+      buttons: [
+      {
+          name: "Learn more",
+          link: "#services",
+          primary: true,
+      },
+      ],
+    },
 
     schedule: {
         title: "How to Schedule Your Test Here",
+        heather2: "FAA CATS Testing Center",
+        description: [
+          "Our center offers a professional environment with modern computer workstations and secure internet access. Our dedicated staff ensures a secure and distraction-free testing experience."
+        ],
         loginLink: "https://faa.psiexams.com/faa/login ",
         list: [
-            `Log in in ${loginLink}`,
+            `Log in in https://faa.psiexams.com/faa/login`,
             "Select the exam you would like to take",
             "Enter our zipcode 32780",
             "Select the option",
@@ -22,9 +43,24 @@ const testingCenterFAACats = {
               primary: true,
             },
           ],
-    }
+    },
 
-
+    headerSmall: {
+      
+      imagePath: "/src/assets/placeholder.webp",
+      headerH1: "Discovery Flights</br>at USATS",
+      imageAlt: "Speedway Flight Training instructors and staff in front of a Cessna at KHMP",
+      paragraph:
+          "Ready to take the controls? A discovery flight is the perfect first step. Fly with a certified instructor.",
+      buttons: [
+          {
+          name: "Schedule a Flight",
+          link: "#contact",
+          primary: true,
+          },
+      ],
+    },
+}
 };
 
 export default testingCenterFAACats;
