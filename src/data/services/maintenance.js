@@ -49,16 +49,19 @@ const maintenanceServices = {
     bullets: [
       {
         title: "145 Maintenance Capabilities",
+        link: "#145-maintenance-capabilities",
         descriptions: ["USATS repair station is certified to maintain various airframes and engines using approved tools, training, and procedures per regulations and their RSM."],
         icon: "M9 12.75 11.25 15 15 9.75...",
       },
       {
         title: "Authorized Robinson Service Center",
+        link: "#robinson-service-center",
         descriptions: ["USATS is an authorized Robinson Helicopter service center for R22 and R44 models, performing maintenance per RCH guidelines as recommended for all owners."],
         icon: "M9 12.75 11.25 15 15 9.75...",
       },
       {
         title: "Part 43 Maintenance",
+        link: "#part-43-maintenance",
         descriptions: ["USATS offers limited Part 43 maintenance for aircraft not on its Repair Station list, with work signed off by individual A&P mechanics, primarily servicing small GA aircraft and reciprocating helicopters on a case-by-case basis."],
         icon: "M9 12.75 11.25 15 15 9.75...",
       },

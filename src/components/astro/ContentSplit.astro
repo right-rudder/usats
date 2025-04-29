@@ -37,30 +37,32 @@ const { content } = Astro.props;
             class="space-y-4 text-muted-600 mx-0 lg:mx-3 bg-primary-800 ring-2 ring-accent-800 py-9 px-6 rounded-lg"
           >
             {content.bullets.map((bullet) => (
-              <li class="flex gap-x-3 text-accent-400">
-                <svg
-                  class="mt-1 size-8 flex-none text-accent"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d={bullet.icon}
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <span class="leading-snug">
-                  <strong class="font-bold text-muted-100 tracking-tight uppercase">
-                    {bullet.title}
-                  </strong>{" "}
-                  {bullet.descriptions.map((dec) => (
-                    <p class="mb-2 text-muted-400" set:html={dec} />
-                  ))}
-                </span>
-              </li>
+              <a href={bullet.link} class="group p-5">
+                <li class="flex gap-x-3 text-accent-400 group-hover:scale-110 group-hover:shadow-lg group-hover:brightness-110 duration-300 ease-in-out">
+                  <svg
+                    class="mt-1 size-8 flex-none text-accent"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d={bullet.icon}
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span class="leading-snug">
+                    <strong class="font-bold text-muted-100 tracking-tight uppercase">
+                      {bullet.title}
+                    </strong>{" "}
+                    {bullet.descriptions.map((dec) => (
+                      <p class="mb-2 text-muted-400" set:html={dec} />
+                    ))}
+                  </span>
+                </li>
+              </a>
             ))}
           </ul>
         </div>
