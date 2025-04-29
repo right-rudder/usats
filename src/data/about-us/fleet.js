@@ -55,32 +55,6 @@ export const airplaneFleet = [
 
 export const helicopterFleet = [
   {
-    name: "UH-60 Black Hawk",
-    slug: "uh60blackhawk",
-    rentalPrice: "1",
-    usableFuel: "",
-    model: "UH-60",
-    equipment: [
-      "Transport",
-      "Search & Rescue",
-      "External Load",
-      "Medevac",
-      "Fire Fighting",
-      "Executive Transport Missions",
-    ],
-    imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
-    imagesArray: [
-      "/src/assets/placeholder.webp",
-      "/src/assets/placeholder.webp",
-      "/src/assets/placeholder.webp",
-      "/src/assets/placeholder.webp",
-    ],
-    description: [
-      "The Best Multi-Mission Helicopter",
-      ""
-    ],
-  },
-  {
     name: "Robinson R44 Fleet",
     slug: "robinsonr44fleet",
     rentalPrice: "1",
@@ -130,6 +104,35 @@ export const helicopterFleet = [
   },
 ];
 
-export const fleet = [...airplaneFleet, ...helicopterFleet];
+export const militaryFleet = [
+  {
+    name: "UH-60 Black Hawk",
+    slug: "uh60blackhawk",
+    rentalPrice: "1",
+    usableFuel: "",
+    model: "UH-60",
+    equipment: [
+      "Transport",
+      "Search & Rescue",
+      "External Load",
+      "Medevac",
+      "Fire Fighting",
+      "Executive Transport Missions",
+    ],
+    imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
+    imagesArray: [
+      "/src/assets/placeholder.webp",
+      "/src/assets/placeholder.webp",
+      "/src/assets/placeholder.webp",
+      "/src/assets/placeholder.webp",
+    ],
+    description: [
+      "The Best Multi-Mission Helicopter",
+      ""
+    ],
+  },
+];
+
+export const fleet = [...airplaneFleet, ...helicopterFleet, ...militaryFleet];
 
 // 2 alto NG: dynon hdx1200 dual displays, garmin 175s (lower operating cost)

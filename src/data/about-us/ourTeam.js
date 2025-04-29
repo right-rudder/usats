@@ -16,7 +16,7 @@ const ourTeam = {
         rank: "Managing Director",
       },
       {
-        name: "Rey Deptula",
+        name: "Ray Deptula",
         imagePath:
           "/src/assets/placeholder-person.jpg",
         imageAlt:

@@ -8,7 +8,7 @@ import PlaneCard from "../../../components/astro/PlaneCard.astro";
 import PageSummary from "../../../components/astro/PageSummary.astro";
 import HeaderSmall from "../../../components/astro/HeaderSmall.astro";
 
-import { airplaneFleet, helicopterFleet } from "../../../data/about-us/fleet";
+import { airplaneFleet, helicopterFleet, militaryFleet } from "../../../data/about-us/fleet";
 
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../../consts";
 
@@ -131,6 +131,36 @@ const header = {
       </div>
     </div>
   </section>
+
+  <section id="military-fleet" class="py-12 px-5 scroll-my-20 bg-gradient-to-b from-black to-primary-900">
+
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center pt-20 lg:pt-30">
+      <!-- <h2 class="uppercase text-accent-800 font-bold tracking-widest">
+        Our Airplanes
+      </h2> -->
+      <h2 class="text-5xl text-accent-600 font-bold leading-tight mb-5">
+        Our Military Fleet
+      </h2>
+      <div class="grid gap-4 mt-5 lg:grid-cols-2">
+        {
+          militaryFleet
+            .filter((plane) => !plane.advancedOnly)
+            .map((plane) => (
+              <PlaneCard
+                name={plane.name}
+                rentalPrice={plane.rentalPrice}
+                imagePath={plane.imagePath}
+                slug={plane.slug}
+                model={plane.model}
+                hasRibbon={plane.hasRibbon}
+                ribbonTitle={plane.ribbonTitle}
+                specialUrl={plane.specialUrl}
+              />
+            ))
+        }
+      </div>
+    </div>
+  </section>
         
   <section class="py-12 px-5 bg-primary-900">
     <div
@@ -143,7 +173,7 @@ const header = {
           Reach out to fly with {COMPANY_NICKNAME}
         </h3>
       </div>
-      <a href="#" class="flex-shrink-0 btn-primary"> Submit Rental Inquiry </a>
+      <a href="/enroll-now" class="flex-shrink-0 btn-accent"> Enroll now </a>
 
     </div>
   </section>

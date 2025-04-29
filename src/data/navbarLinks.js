@@ -42,7 +42,7 @@ export const navbarLinks = [
             link: "/airplane-training/certified-flight-instructor-instrument",
           },
           {
-            name: "Private Pilot Program",
+            name: "Professional Pilot Program",
             link: "/airplane-training/professional-pilot-program",
           },
         ],

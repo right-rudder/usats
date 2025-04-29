@@ -20,11 +20,7 @@ export const mobileNavbarLinks = [
       {
         name: "Airplane Training",
         link: "/airplane-training",
-        subsubmenu: [
-          {
-            name: "Private Pilot Program",
-            link: "/airplane-training/professional-pilot-program",
-          },
+        subsubmenu: [,
           {
             name: "Private Pilot License",
             link: "/airplane-training/professional-pilot-program",
@@ -45,20 +41,16 @@ export const mobileNavbarLinks = [
             name: "Certified FLight Instructor Instrument",
             link: "/airplane-training/certified-flight-instructor-instrument",
           },
+          {
+            name: "Professional Pilot Program",
+            link: "/airplane-training/professional-pilot-program",
+          }
         ],
       },
       {
         name: "Helicopter Training",
         link: "/helicopter-training",
         subsubmenu: [
-          {
-            name: "Military Training",
-            link: "/military-training",
-          },
-          {
-            name: "Professional Pilot Program",
-            link: "/helicopter-training/professional-pilot-program",
-          },
           {
             name: "Private Pilot License",
             link: "/helicopter-training/professional-pilot-program",
@@ -80,8 +72,16 @@ export const mobileNavbarLinks = [
             link: "/helicopter-training/certified-flight-instructor-instrument",
           },
           {
+            name: "Professional Pilot Program",
+            link: "/helicopter-training/professional-pilot-program",
+          },
+          {
             name: "Airline Transport Pilot License",
             link: "/helicopter-training/airline-transport-pilot-license",
+          },
+          {
+            name: "Military Training",
+            link: "/military-training",
           },
         ],
       },
