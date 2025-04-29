@@ -266,7 +266,7 @@ const PUBLIC_DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.PUBLIC_DISCOVERY_FORM_
         );
         xhr.onload = function () {
           if (xhr.status >= 200 && xhr.status < 300) { 
-            window.location.href = "/contact-confirmation";
+            window.location.href = "/discovery-flight-confirmation";
           } else {
             console.error("Form submission failed:", xhr.status, xhr.statusText, xhr.responseText); 
             alert(`There was an error submitting the form (Status: ${xhr.status}). Please try again later or contact support.`);

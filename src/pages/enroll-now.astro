@@ -358,7 +358,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
         );
         xhr.onload = function () {
           if (xhr.status === 200) {
-            window.location.href = "/enrollment-confirmation";
+            window.location.href = "/enroll-now-confirmation";
           } else {
             console.error("Form submission failed:", xhr.statusText);
           }
