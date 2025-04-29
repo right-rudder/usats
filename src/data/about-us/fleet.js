@@ -66,7 +66,7 @@ export const helicopterFleet = [
       "G500H EFIS",
       "GPS WAAS 430",
     ],
-    imagePath: "/src/assets/White_blue_Robinson_R44_USATS_Ramp.JPEG",
+    imagePath: "/src/assets/White_blue_Robinson_R44_USATS_Ramp.webp",
     imagesArray: [
       "/src/assets/placeholder.webp",
       "/src/assets/placeholder.webp",
@@ -90,7 +90,7 @@ export const helicopterFleet = [
       "GI 275 Attitude Indicator & HSI",
       "GPS WAAS G430 & GTN 650",
     ],
-    imagePath: "/src/assets/White_Schweizer_S300_Usats_Ramp_USATS.JPEG",
+    imagePath: "/src/assets/White_Schweizer_S300_Usats_Ramp_USATS.webp",
     imagesArray: [
       "/src/assets/placeholder.webp",
       "/src/assets/placeholder.webp",
