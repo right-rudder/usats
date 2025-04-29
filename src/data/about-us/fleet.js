@@ -39,7 +39,7 @@ export const airplaneFleet = [
         "Dedicated Maintenance facility",
         "Germin 175s",
       ],
-      imagePath: "/src/assets/placeholder.webp",
+      imagePath: "/src/assets/directFly_altong_red_flying_over_city_USATS.jpg",
       imagesArray: [
         "/src/assets/placeholder.webp",
         "/src/assets/placeholder.webp",
@@ -66,7 +66,7 @@ export const helicopterFleet = [
       "G500H EFIS",
       "GPS WAAS 430",
     ],
-    imagePath: "/src/assets/Robinson_R44_USATS_Ramp_ee7c0db4-345b-4afc-ad3d-dadee593e801.jpg",
+    imagePath: "/src/assets/White_blue_Robinson_R44_USATS_Ramp.JPEG",
     imagesArray: [
       "/src/assets/placeholder.webp",
       "/src/assets/placeholder.webp",
@@ -90,7 +90,7 @@ export const helicopterFleet = [
       "GI 275 Attitude Indicator & HSI",
       "GPS WAAS G430 & GTN 650",
     ],
-    imagePath: "/src/assets/Robinson_R44_USATS_Ramp_ee7c0db4-345b-4afc-ad3d-dadee593e801.jpg",
+    imagePath: "/src/assets/White_Schweizer_S300_Usats_Ramp_USATS.JPEG",
     imagesArray: [
       "/src/assets/placeholder.webp",
       "/src/assets/placeholder.webp",
