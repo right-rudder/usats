@@ -238,16 +238,20 @@ const maintenanceServices = {
         "Currently, we service about half of the tango ramp tenants. Their aircraft include Piper PA-28, Vans RV-6 &amp; RV-12, Cessna 150, and Grumman Tiger . We are best equipped to handle airplanes similar in size to the Cessna 172 and reciprocating helicopters. Most of this maintenance is considered on a case-by-case basis.",
       ],
 
-      current_serviced_aircraft: [
+      current_serviced_aircraft: {
+        name: "Current Serviced Aircraft",
+        models:[
         "Piper PA-28",
         "Vans RV-6",
         "Vans RV-12",
         "Cessna 150",
         "Grumman Tiger",
         "Other case-by-case maintenance"
-      ],
+        ],
+      },
 
       services: {
+        name: "Services",
         description: "With our current tooling we can offer a variety of services. Typically, someone presents us with a discrepancy, and we suggest what service they would need based from that. These “services” are charged as labor hours. This is just a very general list; we can do more complex inspections and maintenance.",
         generalServices: [
         "Borescope Inspection",
