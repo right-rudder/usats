@@ -17,8 +17,9 @@ import Maintenance from "../../../components/astro/Maintenance.astro";
 >
   <!-- HEADER -->
   <HeaderScreen content={maintenanceServices.header} />
-  <PageSumarry content={maintenanceServices.pageSummary} />
   <ContentSplit content={maintenanceServices.contentSplit} />
+  <Maintenance data={maintenanceServices.repairStationCapabilities} />
+  <PageSumarry content={maintenanceServices.pageSummary} />
   <Maintenance data={maintenanceServices.repairStationCapabilities} />
   <CTADiscoveryFlights content={maintenanceServices.ctaMaintenance} />
 </BaseLayout>

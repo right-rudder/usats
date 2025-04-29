@@ -130,7 +130,7 @@ const maintenanceServices = {
         name: "Schweizer Helicopters",
         models: "269/300 Series",
         manufacturer: "Schwiezer",
-        imagePath: "/src/assets/ALTO_NG_Panel.jpg",
+        imagePath: "/src/assets/White_Schweizer_S300_Usats_Ramp_USATS.webp",
         imageAlt: "",
         description: "Labore reprehenderit laborum dolore ut aliqua proident laboris duis nisi quis aliquip aliquip nostrud.",
         bullets: [
@@ -145,7 +145,7 @@ const maintenanceServices = {
         name: "Robinson Helicopters",
         models: "R22 & R44 Series",
         manufacturer: "Robinson",
-        imagePath: "/src/assets/ALTO_NG_Panel.jpg",
+        imagePath: "/src/assets/White_blue_Robinson_R44_USATS_Ramp.webp",
         imageAlt: "",
         description: "Labore reprehenderit laborum dolore ut aliqua proident laboris duis nisi quis aliquip aliquip nostrud.", 
         bullets: [
@@ -164,7 +164,7 @@ const maintenanceServices = {
        name: "Cessna", 
        models: "172 Series",
        manufacturer: "Cessna",
-       imagePath: "/src/assets/ALTO_NG_Panel.jpg",
+       imagePath: "/src/assets/cessna_172_USATS_Ramp.webp",
        imageAlt: "",
        description: "Labore reprehenderit laborum dolore ut aliqua proident laboris duis nisi quis aliquip aliquip nostrud.",
        bullets: [
@@ -176,12 +176,10 @@ const maintenanceServices = {
        name: "Bell", 
        models: "206 Series",
        manufacturer: "Bell",
-       imagePath: "/src/assets/ALTO_NG_Panel.jpg",
+       imagePath: "/src/assets/maintenanceHeli2.png",
        imageAlt: "",
-       description: "Labore reprehenderit laborum dolore ut aliqua proident laboris duis nisi quis aliquip aliquip nostrud.",
-       bullets: [
-          "",
-        ]
+       description: "",
+       bullets: []
       },
     ],
 
@@ -223,7 +221,7 @@ const maintenanceServices = {
     robinson_service_center: {
       name: "Robinson Authorized Service Center",
       description: "USATS is an authorized service center for Robinson Helicopters. Under our current agreement we can service R22 and R44 helicopters. Service will be completed in accordance with RCH recommended and required maintenance procedures. Robinson suggests all owners have their aircraft service completed at a Robinson authorized facility",
-      models: ["R22", "R44"],
+      models: "R22 & R44",
       benefits: [
         "Ability to buy parts from Robinson",
         "Ability to sell Robinson parts to customers",
