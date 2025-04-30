@@ -3,11 +3,12 @@ import Discovery from "../components/layouts/Discovery.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Location from "../components/astro/Location.astro";
 import HeaderSmall from "../components/astro/HeaderSmall.astro";
+import { COMPANY_NICKNAME } from "../consts";
 
 const header = {
     imagePath: "/src/assets/placeholder.webp",
-    headerH1: "Discovery Flights</br>at USATS",
-    imageAlt: "Speedway Flight Training instructors and staff in front of a Cessna at KHMP",
+    headerH1: `Discovery Flights</br>at ${COMPANY_NICKNAME}`,
+    imageAlt: `${COMPANY_NICKNAME}`,
     paragraph:
         "Ready to take the controls? A discovery flight is the perfect first step. Fly with a certified instructor.",
     buttons: [
@@ -21,9 +22,9 @@ const header = {
 ---
 
 <BaseLayout
-  siteTitle="Discovery Flights | Speedway Flight Training"
-  siteDescription="Book a discovery flight with Speedway Flight Training in Hampton, GA. Take the controls and experience what it’s like to become a pilot!"
-  keywords="discovery flight Georgia, intro flight Hampton GA, first flight experience, flight school near Atlanta, learn to fly"
+  siteTitle=`Discovery Flights | ${COMPANY_NICKNAME}`
+  siteDescription=`Book a discovery flight with USATS in Titusville, FL. Take the controls and experience the thrill of flight as you explore what it’s like to become a pilot!`
+  keywords=""
 >
   <HeaderSmall content={header} />
 
