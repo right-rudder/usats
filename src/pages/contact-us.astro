@@ -106,55 +106,6 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
             class="px-5 py-4 outline-1 border-primary-100border outline-gray-500 min-h-48 placeholder:text-primary/60"
           ></textarea>
 
-          <div class="">
-            <div class="mt-10 space-y-10"></div>
-            <fieldset
-              class="flex flex-col justify-center items-center align-middle mt-4"
-            >
-              <legend class="mb-2 text-muted-200 text-center w-full">
-                Would you like schedule a visit to {COMPANY_NAME} ?
-              </legend>
-
-              <div>
-                <div>
-                  <input
-                    type="radio"
-                    class="mx-2"
-                    id="yes-visit"
-                    name="visit-{COMPANY_NAME}"
-                    value="yes-visit"
-                    required
-                  />
-                  <label for="yes-visit" class="text-muted-200">Yes</label>
-                </div>
-                <input
-                  type="radio"
-                  class="mx-2"
-                  id="no-visit"
-                  name="visit-{COMPANY_NAME}"
-                  value="no-visit"
-                  required
-                />
-                <label for="no-visit" class="text-muted-200">No</label>
-              </div>
-            </fieldset>
-            <div
-              id="location-container"
-              class="hidden flex-col justify-center items-center align-middle"
-            >
-              <label for="visit-location">Choose a location:</label>
-
-              <select
-                name="visit-location"
-                id="visit-location"
-                class="w-36 px-3 py-2 border border-gray-400 text-center"
-              >
-                <option value="location-placeholder">location placeholder</option>
-                <option value="location-placeholder">location placeholder</option>
-              </select>
-            </div>
-          </div>
-
           <div class="flex gap-3">
             <input
               type="checkbox"
@@ -178,33 +129,7 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
             >Send message</button
           >
         </form>
-        <!-- Location 2 -->
-        <!-- <div class="w-full lg:w-1/4 px-8 text-left mt-16">
-          <h3 class="text-primary-100 text-2xl font-semibold mt-10">
-            {data.locations[1].title}
-          </h3>
-          <a href={data.locations[1].gMaps}>
-            <div class="flex justify-start gap-3 mt-5 hover:underline">
-              <IoLocationOutline
-                className="lg:size-8 size-6 text-primary-100"
-              />
-              <p class="text-gray-50">
-                {data.locations[1].address}<br />{data.locations[1].city}, {
-                  data.locations[1].state
-                }
-                {data.locations[1].zip}
-              </p>
-            </div>
-          </a>
-          <a href={`tel:${data.locations[1].phone}`}>
-            <div class="flex justify-start gap-3 mt-5 hover:underline">
-              <IoPhonePortraitOutline
-                className="lg:size-8 size-6 text-primary-100"
-              />
-              <p class="text-gray-50">{data.locations[1].phone}</p>
-            </div>
-          </a>
-        </div> -->
+
       </div>
     </div>
   </section>
