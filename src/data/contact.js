@@ -28,7 +28,9 @@ const contact = {
             "",
         },
       ],
-  
+      
+      email: "info@usatsolutions.com",
+
       locations: [
         {
           title: `${COMPANY_NAME}`,
@@ -38,15 +40,7 @@ const contact = {
           zip: `${ADDRESS_STATE}`,
           gMaps: "gmaps1",
           phone: "(321) 529-0795",
-        },
-        {
-          title: "title2",
-          address: "address2",
-          city: "city2",
-          state: "state2",
-          zip: "zip2",
-          gMaps: "gmaps2",
-          phone: "phone2",
+          email: "info@usatsolutions.com",
         },
       ],
 

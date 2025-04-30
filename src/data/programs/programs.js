@@ -18,7 +18,7 @@ const programs = {
     {
       title: "Instrument Rating",
       badges: ["Part 141", "IR"],
-      imagePath: "/src/assets/ALO_NG_INTERIOR.webp",
+      imagePath: "/src/assets/ALTO_NG_Panel.jpg",
       imageAlt: "",
       description:
         "Enhance your skills by learning to fly solely using instruments, preparing you for complex weather conditions.",
@@ -27,7 +27,7 @@ const programs = {
     {
       title: "Commercial Pilot License",
       badges: ["Part 141", "CPL"],
-      imagePath: "/src/assets/ALTO_NG_Panel.jpg",
+      imagePath: "/src/assets/directFly_altong_red_flying_departing_USATS.jpg",
       imageAlt: "",
       description:
         "Advance your career with professional training that prepares you to fly commercially and meet industry standards.",
@@ -36,7 +36,7 @@ const programs = {
     {
       title: "Certified Flight Instructor",
       badges: ["Part 61", "CFI"],
-      imagePath: "/src/assets/Happy_Landings_ALO_NG.webp",
+      imagePath: "/src/assets/directFly_altong_red_flying_over_city_USATS.jpg",
       imageAlt: "",
       description:
         "Become a flight instructor and start teaching others to fly while gaining valuable experience and flight hours.",
@@ -45,7 +45,7 @@ const programs = {
     {
       title: "Certified Flight Instructor Instrument",
       badges: ["Part 61", "CFII"],
-      imagePath: "/src/assets/placeholder.webp",
+      imagePath: "/src/assets/directFly_altong_panel_USATS.jpg",
       imageAlt: "",
       description:
         "Specialize in instrument flight instruction and train students to navigate and fly safely in low-visibility conditions.",

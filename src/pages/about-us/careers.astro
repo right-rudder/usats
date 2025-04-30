@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../components/astro/HeaderScreen.astro";
+import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astro";
+import GridPrograms from "../../components/layouts/GridPrograms.astro";
+
+import careers from "../../data/services/career";
+import testingCenterFAACats from "../../data/services/testingCenterFAACats";
+import { COMPANY_NAME } from "../../consts";
+
+const { data } = careers;
+
+import UnderHeader from "../../components/astro/UnderHeader.astro";
+
+const CTAFlight = {
+    imagePath: "/src/assets/CTADiscFlights.png",
+    imageAlt: "",
+    headerH1: `Want to know more about the company?`,
+    paragraph:
+      `In ${COMPANY_NAME} we value your insights, send us a message!`,
+    buttons: [
+      {
+        name: "Contact us",
+        link: "/contact-us",
+        primary: true,
+      },
+    ],
+  };
+
+---
+<BaseLayout
+  siteTitle={careers.title}
+  siteDescription={careers.paragraph}
+  keywords={careers.pageKeywords}
+  >
+  
+  <HeaderScreen content = {careers.header} />
+
+  <UnderHeader content = {careers.underHeader} />
+  
+  
+  <GridPrograms content={careers.gridPrograms} />
+
+  <div class="flex-col justify-center items-center text-center gap-10 pb-20 bg-black">
+    <p class="text-muted-400 pb-10 text-2xl  ">EMAIL US AT:</p>
+    <a href="mailto:HR@usatsolutions.com" class="button btn-accent px-6 py-2 text-muted-100 ">HR@usatsolutions.com</a>
+  </div>
+  <CTADiscoveryFlights content = {CTAFlight} />
+</BaseLayout>
+

@@ -42,7 +42,7 @@ export const navbarLinks = [
             link: "/airplane-training/certified-flight-instructor-instrument",
           },
           {
-            name: "Private Pilot Program",
+            name: "Professional Pilot Program",
             link: "/airplane-training/professional-pilot-program",
           },
         ],
@@ -93,7 +93,7 @@ export const navbarLinks = [
     submenu: [
       {
         name: "Alto Planes",
-        link: "#",
+        link: "/services/alto-planes",
       },
       {
         name: "Maintenance",
@@ -101,11 +101,11 @@ export const navbarLinks = [
       },
       {
         name: "CATS Testing Center",
-        link: "#",
+        link: "/services/cats-testing-center",
       },
       {
         name: "TSA Fingerprinting",
-        link: "#",
+        link: "/services/tsa-fingerprinting",
       },
       {
         name: "Air Tours",
@@ -131,11 +131,11 @@ export const navbarLinks = [
       },
       {
         name: "Careers",
-        link: "/careers",
+        link: "/about-us/careers",
       },
       {
         name: "Local Attractions",
-        link: "/local-attractions",
+        link: "/about-us/local-attractions",
       },
       {
         name: "Blog",

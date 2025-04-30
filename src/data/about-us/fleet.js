@@ -39,7 +39,7 @@ export const airplaneFleet = [
         "Dedicated Maintenance facility",
         "Germin 175s",
       ],
-      imagePath: "/src/assets/placeholder.webp",
+      imagePath: "/src/assets/directFly_altong_red_flying_over_city_USATS.jpg",
       imagesArray: [
         "/src/assets/placeholder.webp",
         "/src/assets/placeholder.webp",
@@ -54,6 +54,57 @@ export const airplaneFleet = [
   ];
 
 export const helicopterFleet = [
+  {
+    name: "Robinson R44 Fleet",
+    slug: "robinsonr44fleet",
+    rentalPrice: "1",
+    usableFuel: "",
+    model: "R44",
+    equipment: [
+      "Semi-Rigid",
+      "IFR equipped",
+      "G500H EFIS",
+      "GPS WAAS 430",
+    ],
+    imagePath: "/src/assets/White_blue_Robinson_R44_USATS_Ramp.webp",
+    imagesArray: [
+      "/src/assets/placeholder.webp",
+      "/src/assets/placeholder.webp",
+      "/src/assets/placeholder.webp",
+      "/src/assets/placeholder.webp",
+    ],
+    description: [
+      "The Best Multi-Mission Helicopter",
+      ""
+    ],
+  },
+  {
+    name: "Schweizer S-300",
+    slug: "schweizers300",
+    rentalPrice: "2",
+    usableFuel: "",
+    model: "S-300",
+    equipment: [
+      "Fully Articulated",
+      "IFR Equipped",
+      "GI 275 Attitude Indicator & HSI",
+      "GPS WAAS G430 & GTN 650",
+    ],
+    imagePath: "/src/assets/White_Schweizer_S300_Usats_Ramp_USATS.webp",
+    imagesArray: [
+      "/src/assets/placeholder.webp",
+      "/src/assets/placeholder.webp",
+      "/src/assets/placeholder.webp",
+      "/src/assets/placeholder.webp",
+    ],
+    description: [
+      "The Best Multi-Mission Helicopter",
+      ""
+    ],
+  },
+];
+
+export const militaryFleet = [
   {
     name: "UH-60 Black Hawk",
     slug: "uh60blackhawk",
@@ -80,56 +131,8 @@ export const helicopterFleet = [
       ""
     ],
   },
-  {
-    name: "Robinson R44 Fleet",
-    slug: "robinsonr44fleet",
-    rentalPrice: "1",
-    usableFuel: "",
-    model: "R44",
-    equipment: [
-      "Semi-Rigid",
-      "IFR equipped",
-      "G500H EFIS",
-      "GPS WAAS 430",
-    ],
-    imagePath: "/src/assets/Robinson_R44_USATS_Ramp_ee7c0db4-345b-4afc-ad3d-dadee593e801.jpg",
-    imagesArray: [
-      "/src/assets/placeholder.webp",
-      "/src/assets/placeholder.webp",
-      "/src/assets/placeholder.webp",
-      "/src/assets/placeholder.webp",
-    ],
-    description: [
-      "The Best Multi-Mission Helicopter",
-      ""
-    ],
-  },
-  {
-    name: "Schweizer S-300",
-    slug: "schweizers300",
-    rentalPrice: "2",
-    usableFuel: "",
-    model: "S-300",
-    equipment: [
-      "Fully Articulated",
-      "IFR Equipped",
-      "GI 275 Attitude Indicator & HSI",
-      "GPS WAAS G430 & GTN 650",
-    ],
-    imagePath: "/src/assets/Robinson_R44_USATS_Ramp_ee7c0db4-345b-4afc-ad3d-dadee593e801.jpg",
-    imagesArray: [
-      "/src/assets/placeholder.webp",
-      "/src/assets/placeholder.webp",
-      "/src/assets/placeholder.webp",
-      "/src/assets/placeholder.webp",
-    ],
-    description: [
-      "The Best Multi-Mission Helicopter",
-      ""
-    ],
-  },
 ];
 
-export const fleet = [...airplaneFleet, ...helicopterFleet];
+export const fleet = [...airplaneFleet, ...helicopterFleet, ...militaryFleet];
 
 // 2 alto NG: dynon hdx1200 dual displays, garmin 175s (lower operating cost)

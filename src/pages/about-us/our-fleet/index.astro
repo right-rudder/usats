@@ -2,18 +2,18 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 // import HeaderSmall from "../../../components/HeaderSmall.astro";
 import { Image } from "astro:assets";
-import Intro from "../../../assets/placeholder.webp";
+import Intro from "../../../assets/directFly_altong_red_flying_over_city_USATS_2.jpg";
 import ourFleet from "../../../data/about-us/ourFleet";
 import PlaneCard from "../../../components/astro/PlaneCard.astro";
 import PageSummary from "../../../components/astro/PageSummary.astro";
 import HeaderSmall from "../../../components/astro/HeaderSmall.astro";
 
-import { airplaneFleet, helicopterFleet } from "../../../data/about-us/fleet";
+import { airplaneFleet, helicopterFleet, militaryFleet } from "../../../data/about-us/fleet";
 
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../../consts";
 
 const header = {
-  imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
+  imagePath: "/src/assets/placeholder.webp",
   headerH1: "Our Fleet",
   imageAlt: "",
   paragraph: "",
@@ -28,7 +28,7 @@ const header = {
 ---
 
 <BaseLayout
-  siteTitle=`Fleet and Rentals | ${COMPANY_NAME}`
+  siteTitle=`Fleet | ${COMPANY_NAME}`
   siteDescription=`Explore ${COMPANY_NAME}'s modern aircraft available for training and time building in Hampton, GA. Our fleet includes Cessna 172s equipped for both VFR and IFR operations.`
   siteKeywords=""
 >
@@ -62,7 +62,7 @@ const header = {
           At {COMPANY_NICKNAME}, our fleet consists of IFR-equipped Cessna 172s,
           including technically advanced aircraft (TAA) with Garmin G5 and GFC
           500 avionics. All aircraft are kept in top condition and ready for
-          flight training, time building, or rental by qualified pilots. Explore
+          flight training, time building. Explore
           the details below.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-5">
@@ -131,6 +131,36 @@ const header = {
       </div>
     </div>
   </section>
+
+  <section id="military-fleet" class="py-12 px-5 scroll-my-20 bg-gradient-to-b from-black to-primary-900">
+
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center pt-20 lg:pt-30">
+      <!-- <h2 class="uppercase text-accent-800 font-bold tracking-widest">
+        Our Airplanes
+      </h2> -->
+      <h2 class="text-5xl text-accent-600 font-bold leading-tight mb-5">
+        Our Military Fleet
+      </h2>
+      <div class="grid gap-4 mt-5 lg:grid-cols-2">
+        {
+          militaryFleet
+            .filter((plane) => !plane.advancedOnly)
+            .map((plane) => (
+              <PlaneCard
+                name={plane.name}
+                rentalPrice={plane.rentalPrice}
+                imagePath={plane.imagePath}
+                slug={plane.slug}
+                model={plane.model}
+                hasRibbon={plane.hasRibbon}
+                ribbonTitle={plane.ribbonTitle}
+                specialUrl={plane.specialUrl}
+              />
+            ))
+        }
+      </div>
+    </div>
+  </section>
         
   <section class="py-12 px-5 bg-primary-900">
     <div
@@ -143,7 +173,7 @@ const header = {
           Reach out to fly with {COMPANY_NICKNAME}
         </h3>
       </div>
-      <a href="#" class="flex-shrink-0 btn-primary"> Submit Rental Inquiry </a>
+      <a href="/enroll-now" class="flex-shrink-0 btn-accent"> Enroll now </a>
 
     </div>
   </section>

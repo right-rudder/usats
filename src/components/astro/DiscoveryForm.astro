@@ -85,7 +85,7 @@ const PUBLIC_DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.PUBLIC_DISCOVERY_FORM_
                         type="radio"
                         value="Airplane"
                         required
-                        class="h-4 w-4 border-gray-300 text-primary-600 focus:ring-primary-600"
+                        class="h-4 w-4 border-gray-300 text-accent-800 focus:ring-accent-900"
                     />
                     <label for="airship-type-airplane" class="block text-sm font-medium leading-6 text-muted-100">
                         Airplane
@@ -98,7 +98,7 @@ const PUBLIC_DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.PUBLIC_DISCOVERY_FORM_
                         type="radio"
                         value="Helicopter"
                         required
-                        class="h-4 w-4 border-gray-300 text-primary-600 focus:ring-primary-600"
+                        class="h-4 w-4 border-gray-300 text-accent-800 focus:ring-accent-900"
                     />
                     <label for="airship-type-helicopter" class="block text-sm font-medium leading-6 text-muted-100">
                         Helicopter
@@ -266,7 +266,7 @@ const PUBLIC_DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.PUBLIC_DISCOVERY_FORM_
         );
         xhr.onload = function () {
           if (xhr.status >= 200 && xhr.status < 300) { 
-            window.location.href = "/contact-confirmation";
+            window.location.href = "/discovery-flight-confirmation";
           } else {
             console.error("Form submission failed:", xhr.status, xhr.statusText, xhr.responseText); 
             alert(`There was an error submitting the form (Status: ${xhr.status}). Please try again later or contact support.`);

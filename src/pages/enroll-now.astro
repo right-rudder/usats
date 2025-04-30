@@ -1,7 +1,7 @@
 ---
 import Header from "../components/astro/Header.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { COMPANY_NAME } from "../consts";
+import { COMPANY_NAME, COMPANY_NICKNAME } from "../consts";
 const headerData = {
   headerH1: "START TODAY",
   imagePath: "/src/assets/placeholder.webp",
@@ -16,7 +16,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
 
 <BaseLayout
   siteTitle=`Enrollment Form | ${COMPANY_NAME}`
-  siteDescription=`${COMPANY_NAME} offers career-track, zero-to-hero pilot training programs at Riverside Municipal Airport (RAL) and Redlands Municipal Airport (REI). With 320 flying days a year and an FAA-approved Gleim syllabus, our academy provides top-tier education and flexible scheduling options to meet the needs of aspiring pilots. Our programs are designed to ensure high-quality instruction and extensive flying lessons, helping students achieve their goals in flight training efficiently and effectively.`
+  siteDescription=`${COMPANY_NAME} USATS offers career-track, zero-to-hero pilot training programs at Space Coast Regional Airport (KTIX) in Titusville, Florida. With over 320 flying days per year, state-of-the-art facilities, and FAA-approved Part 141 and 61 programs, we provide top-tier education with flexible scheduling to fit the needs of aspiring airplane and helicopter pilots. Our comprehensive training, experienced instructors, and efficient course structure ensure students receive the highest quality instruction and flight experience to launch successful aviation careers`
   keywords=""
 >
   <Header data={headerData} />
@@ -33,9 +33,9 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
       <h3
         class="font-medium mt-4 mb-12 font-sans1 leading-tight text-muted-200 text-center mx-auto text-xl"
       >
-        Fill out the form below and let's start flying! A NextGen team member
+        {`Fill out the form below and let's start flying! A ${COMPANY_NICKNAME} team member
         will get in touch with you and walk you through the next steps on
-        getting you in the air.
+        getting you in the air.`}
       </h3>
       <form
         id="enrollment-form"
@@ -93,7 +93,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
                 name="aircraft-type"
                 value="Airplane"
                 required
-                class="w-4 h-4 text-primary-600 focus:ring-primary-600"
+                class="w-4 h-4 text-accent-800 focus:ring-accent-900"
               />
               <label for="airplane-type" class="text-muted-300">Airplane</label>
             </div>
@@ -104,10 +104,21 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
                 name="aircraft-type"
                 value="Helicopter"
                 required
-                class="w-4 h-4 text-primary-600 focus:ring-primary-600"
+                class="w-4 h-4 text-accent-800 focus:ring-accent-900"
               />
               <label for="helicopter-type" class="text-muted-300">Helicopter</label>
             </div>
+          </div>
+        </fieldset>
+
+
+        <!-- Dynamic Program Options -->
+        <fieldset class="flex flex-col justify-center items-center align-middle mt-4">
+          <legend class="mb-2 text-muted-300 text-xl font-semibold text-center w-full">
+            Primary Training Program Interest? <span class="text-red-500">*</span>
+          </legend>
+          <div id="program-options-container" class="hidden flex flex-col gap-2">
+            <!-- Options will be populated by JavaScript -->
           </div>
         </fieldset>
 
@@ -123,16 +134,6 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
           required
         />
 
-        <!-- Dynamic Program Options -->
-        <fieldset class="flex flex-col justify-center items-center align-middle mt-4">
-          <legend class="mb-2 text-muted-300 text-xl font-semibold text-center w-full">
-            Primary Training Program Interest? <span class="text-red-500">*</span>
-          </legend>
-          <div id="program-options-container" class="hidden flex flex-col gap-2">
-            <!-- Options will be populated by JavaScript -->
-          </div>
-        </fieldset>
-
         <label
           for="extra-information"
           class="mt-6 text-xl text-center font-semibold text-muted-300"
@@ -146,57 +147,6 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
           rows="5"
           class="px-5 py-4 outline-1 border-gray-400 border outline-gray-500"
         ></textarea>
-
-        <fieldset
-          class="flex flex-col justify-center items-center align-middle mt-6"
-        >
-          <legend
-            class="mb-2 text-xl font-semibold text-muted-300 text-center w-full"
-          >
-            Would you like schedule a visit to {COMPANY_NAME}?
-          </legend>
-
-          <div>
-            <div>
-              <input
-                type="radio"
-                class="mx-2"
-                id="yes-visit"
-                name="visit-nextgen"
-                value="yes-visit"
-                required
-              />
-              <label class="text-muted-300" for="yes-visit">Yes</label>
-            </div>
-            <input
-              type="radio"
-              class="mx-2"
-              id="no-visit"
-              name="visit-nextgen"
-              value="no-visit"
-              required
-            />
-            <label class="text-muted-300" for="no-visit">No</label>
-          </div>
-        </fieldset>
-
-        <div
-          id="location-container"
-          class="hidden flex-col justify-center items-center align-middle"
-        >
-          <label for="visit-location" class="text-xl font-semibold text-muted-300"
-            >Choose a location:</label
-          >
-
-          <select
-            name="visit-location"
-            id="visit-location"
-            class="w-36 px-3 py-2 border border-gray-400 text-center"
-          >
-            <option value="location1">Location 1</option>
-            <option value="location2">Location 2</option>
-          </select>
-        </div>
 
         <div class="">
           <label
@@ -257,7 +207,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
         wrapper.innerHTML = `
           <input
             type="radio"
-            class="mx-2 text-muted-300"
+            class="mx-2 text-accent-800 focus:ring-accent-900"
             id="${program.value}"
             name="interest"
             value="${program.value}"
@@ -358,7 +308,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
         );
         xhr.onload = function () {
           if (xhr.status === 200) {
-            window.location.href = "/enrollment-confirmation";
+            window.location.href = "/enroll-now-confirmation";
           } else {
             console.error("Form submission failed:", xhr.statusText);
           }

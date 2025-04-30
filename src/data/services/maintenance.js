@@ -17,7 +17,7 @@ const maintenanceServices = {
     buttons: [
       {
         name: "Contact Us",
-        link: "/contact-us",
+        link: "/maintenance-contact",
         primary: true,
       },
     ],
@@ -47,6 +47,27 @@ const maintenanceServices = {
     ],
     bulletsTitle: "Repair Station Capabilities",
     bullets: [
+      {
+        title: "145 Maintenance Capabilities",
+        link: "#145-maintenance-capabilities",
+        descriptions: ["USATS repair station is certified to maintain various airframes and engines using approved tools, training, and procedures per regulations and their RSM."],
+        icon: "M9 12.75 11.25 15 15 9.75...",
+      },
+      {
+        title: "Authorized Robinson Service Center",
+        link: "#robinson-service-center",
+        descriptions: ["USATS is an authorized Robinson Helicopter service center for R22 and R44 models, performing maintenance per RCH guidelines as recommended for all owners."],
+        icon: "M9 12.75 11.25 15 15 9.75...",
+      },
+      {
+        title: "Part 43 Maintenance",
+        link: "#part-43-maintenance",
+        descriptions: ["USATS offers limited Part 43 maintenance for aircraft not on its Repair Station list, with work signed off by individual A&P mechanics, primarily servicing small GA aircraft and reciprocating helicopters on a case-by-case basis."],
+        icon: "M9 12.75 11.25 15 15 9.75...",
+      },
+
+    ],
+    oldBullets: [
       {
         title: "Sikorsky UH-60 Black Hawk",
         descriptions: [""],
@@ -101,47 +122,77 @@ const maintenanceServices = {
   },
 
   repairStationCapabilities: {
-    title: "US Aviation Training Solutions Maintenance Capabilities",
+    title: "USATS Maintenance Capabilities",
     heather2: "145 Repair Station Capabilities",
     description: [
       "USATS repair station #HA4R295X has capabilities on a variety of airframes and engines. When these aircraft are serviced, all work is completed in accordance with the current regulations and our RSM (Repair station manual). Maintenance is signed off under our repair station number. Having these airframes/engines on our capabilities list shows we have the required training, tooling and manuals to perform the required maintenance."
     ],
-    airframes:[
+    
+    airframes: [
       {
-        "manufacturer": "Schwiezer",
-        "models": ["269/300 Series"]
+        name: "Schweizer Helicopters",
+        models: "269/300 Series",
+        manufacturer: "Schwiezer",
+        imagePath: "/src/assets/White_Schweizer_S300_Usats_Ramp_USATS.webp",
+        imageAlt: "",
+        description: "Labore reprehenderit laborum dolore ut aliqua proident laboris duis nisi quis aliquip aliquip nostrud.",
+        bullets: [
+          "Scheduled Inspections",
+          "Un-Scheduled Maintenance",
+          "Component maintenance excluding Schweizer restricted parts",
+          "Refurbishment: complete tear down and re-build",
+          "Large stock of new, serviceable and repairable Schweizer specific parts"
+        ],
       },
       {
-        "manufacturer": "Robinson",
-        "models": ["R22", "R44 Series"]
+        name: "Robinson Helicopters",
+        models: "R22 & R44 Series",
+        manufacturer: "Robinson",
+        imagePath: "/src/assets/White_blue_Robinson_R44_USATS_Ramp.webp",
+        imageAlt: "",
+        description: "Labore reprehenderit laborum dolore ut aliqua proident laboris duis nisi quis aliquip aliquip nostrud.", 
+        bullets: [
+          "Authorized Service Center for R22 & R44",
+          "Scheduled, Inspection, Un-Scheduled Maintenance"
+        ],
+        buttons: [
+          {
+            name: "Check Out More",
+            link: "#robinson-authorized",
+            primary: true,
+          },
+        ],
       },
       {
-        "manufacturer": "Bell",
-        "models": ["206 Series"]
+       name: "Cessna", 
+       models: "172 Series",
+       manufacturer: "Cessna",
+       imagePath: "/src/assets/cessna_172_USATS_Ramp.webp",
+       imageAlt: "",
+       description: "Labore reprehenderit laborum dolore ut aliqua proident laboris duis nisi quis aliquip aliquip nostrud.",
+       bullets: [
+          "Scheduled Inspections",
+          "Un-Scheduled Maintenance"
+        ]
       },
       {
-        "manufacturer": "Cessna",
-        "models": ["172 Series"]
+       name: "Bell", 
+       models: "206 Series",
+       manufacturer: "Bell",
+       imagePath: "/src/assets/maintenanceHeli2.png",
+       imageAlt: "",
+       description: "",
+       bullets: []
       },
     ],
-    
-    capabilities: {
-      "Schweizer Helicopters": [
-        "Scheduled Inspections",
-        "Un-Scheduled Maintenance",
-        "Component maintenance excluding Schweizer restricted parts",
-        "Refurbishment: complete tear down and re-build",
-        "Large stock of new, serviceable and repairable Schweizer specific parts"
-      ],
-      "Robinson Helicopters": [
-        "Authorized Service Center for R22 & R44",
-        "Scheduled, Inspection, Un-Scheduled Maintenance"
-      ],
-      "Cessna": [
-        "Scheduled Inspections",
-        "Un-Scheduled Maintenance"
-      ],
-      "Parts Sales": [
+
+    partSales: {
+      name: "Parts Sales", 
+      subtitle: "Shop",
+      imagePath: "/src/assets/ALTO_NG_Panel.jpg",
+      imageAlt: "",
+      description: "",
+      bullets: [
         "Schweizer, Robinson and limited Cessna Parts",
         "Lycoming, standard hardware, Instruments",
         "Large stock of Bell 206 parts",
@@ -149,25 +200,32 @@ const maintenanceServices = {
       ]
     },
 
-    engines: [
-      {
-      "Lycoming" :
-        [
-          "HIO-360-G1A","O-36C1A", "O-360-J2A", "O-540-F1BS", "IO-360L2A", "IO-540-AE1A5", "HIO-360-D1A",
-        ]
-      },
-      {
-        "Rolls Royce" :
+    engines: {
+      name: "Engines",
+      description: "",
+      engines: [
+        {
+          name: "Lycoming",
+          models :
+          [
+            "HIO-360-G1A","O-36C1A", "O-360-J2A", "O-540-F1BS", "IO-360L2A", "IO-540-AE1A5", "HIO-360-D1A",
+          ],
+        },
+        {
+          name: "Rolls Royce",
+          models :
           [
             "250-C20B","250-C30P",
           ]
         }
-    ],
+      ]
+    },
 
     robinson_service_center: {
-      "description": "USATS is an authorized service center for Robinson Helicopters. Under our current agreement we can service R22 and R44 helicopters. Service will be completed in accordance with RCH recommended and required maintenance procedures. Robinson suggests all owners have their aircraft service completed at a Robinson authorized facility",
-      "models": ["R22", "R44"],
-      "benefits": [
+      name: "Robinson Authorized Service Center",
+      description: "USATS is an authorized service center for Robinson Helicopters. Under our current agreement we can service R22 and R44 helicopters. Service will be completed in accordance with RCH recommended and required maintenance procedures. Robinson suggests all owners have their aircraft service completed at a Robinson authorized facility",
+      models: "R22 & R44",
+      benefits: [
         "Ability to buy parts from Robinson",
         "Ability to sell Robinson parts to customers",
         "Receive up to 25% discount on parts",
@@ -176,21 +234,27 @@ const maintenanceServices = {
     },
 
     part_43_maintenance: {
-      "description": "Maintenance performed and signed off under an individual's A&P license",
-      "fullDescription": [
+      name: "Maintenance Part 43",
+      description: "Maintenance performed and signed off under an individual's A&P license",
+      paragraphs: [
         "We offer limited maintenance under part 43. This would include any aircraft that are not listed on our Repair Station. Maintenance is performed and signed off under an individual's A&P license. Essentially, the mechanic taking responsibility for the work they did instead of that liability being on the repair station.",
         "Currently, we service about half of the tango ramp tenants. Their aircraft include Piper PA-28, Vans RV-6 &amp; RV-12, Cessna 150, and Grumman Tiger . We are best equipped to handle airplanes similar in size to the Cessna 172 and reciprocating helicopters. Most of this maintenance is considered on a case-by-case basis.",
       ],
-      "current_serviced_aircraft": [
+
+      current_serviced_aircraft: {
+        name: "Current Serviced Aircraft",
+        models:[
         "Piper PA-28",
         "Vans RV-6",
         "Vans RV-12",
         "Cessna 150",
         "Grumman Tiger",
         "Other case-by-case maintenance"
-      ],
+        ],
+      },
 
       services: {
+        name: "Services",
         description: "With our current tooling we can offer a variety of services. Typically, someone presents us with a discrepancy, and we suggest what service they would need based from that. These “services” are charged as labor hours. This is just a very general list; we can do more complex inspections and maintenance.",
         generalServices: [
         "Borescope Inspection",
