@@ -137,25 +137,25 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
   <script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL }}>
     const checkbox = document.getElementById("agree-data-collection");
     const submitButton = document.getElementById("submit-button");
-    const yesVisit = document.getElementById("yes-visit");
-    const noVisit = document.getElementById("no-visit");
+    // const yesVisit = document.getElementById("yes-visit");
+    // const noVisit = document.getElementById("no-visit");
 
-    yesVisit.addEventListener("change", function () {
-      if (yesVisit.checked) {
-        document
-          .getElementById("location-container")
-          .classList.remove("hidden");
-        document.getElementById("location-container").classList.add("flex");
-      } else {
-        document.getElementById("location-container").classList.add("hidden");
-      }
-    });
+    // yesVisit.addEventListener("change", function () {
+    //   if (yesVisit.checked) {
+    //     document
+    //       .getElementById("location-container")
+    //       .classList.remove("hidden");
+    //     document.getElementById("location-container").classList.add("flex");
+    //   } else {
+    //     document.getElementById("location-container").classList.add("hidden");
+    //   }
+    // });
 
-    noVisit.addEventListener("change", function () {
-      if (noVisit.checked) {
-        document.getElementById("location-container").classList.add("hidden");
-      }
-    });
+    // noVisit.addEventListener("change", function () {
+    //   if (noVisit.checked) {
+    //     document.getElementById("location-container").classList.add("hidden");
+    //   }
+    // });
 
     checkbox.addEventListener("change", function () {
       if (checkbox.checked) {
