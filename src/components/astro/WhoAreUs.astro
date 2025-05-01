@@ -1,5 +1,6 @@
 ---
 import ImageComp from "../ImageComp.astro";
+import { IMG_2891 as imgCard4 } from "../../constsImages";
 
 const { content } = Astro.props;
 ---
@@ -46,8 +47,8 @@ const { content } = Astro.props;
             </div>
             <div class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
                 <ImageComp
-                    imagePath={content.images.cesna172.imagePath}
-                    imageAlt={content.images.cesna172.imageAlt}
+                    imagePath= {imgCard4.imagePath}
+                    imageAlt={imgCard4.imageAlt}
                     loading={"lazy"}
                     styles="block size-full object-cover"
                 />
