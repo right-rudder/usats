@@ -65,11 +65,11 @@ const certifiedFlightInstructorInstrument = {
       additionalCosts: {
         heading: "What’s Not Included (Additional Student Costs)?",
         items: [
-          "Aviation Headset (Recommended: Bose, Lightspeed, David Clark)",
-          "iPad with GPS (Cellular model preferred for ForeFlight compatibility)",
-          "ForeFlight Subscription",
-          "FAA Medical Exam (Class 2 required)",
-          "Training materials and FAA written/oral test fees",
+          "Flight Gears (Headset,kneeboard,etc...)",
+          "Teaching material, book, POH/RFM",
+          "Ipad with EFB (Foreflight recommended)",
+          "FAA Medical Exam (Class 2 or higher required)",
+          "FAA written test & checkride fees",
         ],
       },
 

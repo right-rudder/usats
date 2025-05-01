@@ -60,14 +60,15 @@ const cfiiCourse = {
         ],
       },
 
+      // Additional Costs
       additionalCosts: {
         heading: "What’s Not Included (Additional Student Costs)?",
         items: [
-          "FAA Written Exam (if required)",
-          "Checkride with FAA Examiner",
-          "iPad with EFB (ForeFlight Recommended)",
-          "Medical Exam (Second Class or higher)",
-          "Any additional training hours needed beyond estimate",
+          "Flight Gears (Headset,kneeboard,etc...)",
+          "Teaching material, book, POH/RFM",
+          "Ipad with EFB (Foreflight recommended)",
+          "FAA Medical Exam (Class 2 or higher required)",
+          "FAA written test & checkride fees",
         ],
       },
 

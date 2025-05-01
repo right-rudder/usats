@@ -65,14 +65,15 @@ const professionalPilotProgram = {
         ],
       },
 
+      // Additional Costs
       additionalCosts: {
         heading: "What’s Not Included (Additional Student Costs)?",
         items: [
-          "FAA Written Exams",
-          "FAA Checkrides with Designated Examiners",
-          "iPad with EFB (ForeFlight Recommended)",
-          "Medical Exam (Second Class or higher)",
-          "Flight gear (headset, kneeboard, etc.)",
+          "Flight Gears (Headset,kneeboard,etc...)",
+          "Teaching material, book, POH/RFM",
+          "Ipad with EFB (Foreflight recommended)",
+          "FAA Medical Exam (Class 2 or higher required)",
+          "FAA written test & checkride fees",
         ],
       },
 

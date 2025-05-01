@@ -85,9 +85,11 @@ const professionalPilotProgram = {
       additionalCosts: {
         heading: "What’s Not Included (Additional Student Costs)?",
         items: [
-          "Onboarding Items (Required): Kneeboard ($41) + iPad/Tablet ($590) + ForeFlight Subscription ($125) = ~$756",
-          "Optional: Aviation Headset ($250; Can be purchased later)",
-          "Enrollment or logistics fees for foreign students (if applicable)",
+          "Flight Gears (Headset,kneeboard,etc...)",
+          "Teaching material, book, POH/RFM",
+          "Ipad with EFB (Foreflight recommended)",
+          "FAA Medical Exam (Class 2 or higher required)",
+          "FAA written test & checkride fees",
         ],
       },
 

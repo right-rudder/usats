@@ -61,14 +61,15 @@ const militaryTraining = {
         ],
       },
 
+      // Additional Costs
       additionalCosts: {
-        heading: "Operational Expenses (Client Responsibility)",
+        heading: "What’s Not Included (Additional Student Costs)?",
         items: [
-          "FAA Written/Practical Exams",
-          "Class 2 Medical Certification",
-          "NVG-Compatible Flight Gear",
-          "Tactical Mission Planning Materials",
-          "International Trainee Visas (M1)",
+          "Flight Gears (Headset,kneeboard,etc...)",
+          "Teaching material, book, POH/RFM",
+          "Ipad with EFB (Foreflight recommended)",
+          "FAA Medical Exam (Class 2 or higher required)",
+          "FAA written test & checkride fees",
         ],
       },
 
