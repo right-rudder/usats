@@ -9,7 +9,9 @@ const headerData = {
 };
 
 const checkboxText =
-  `By providing my email and phone number, I agree to receive email and text messages from ${COMPANY_NAME} and understand I can opt-out anytime.`;
+  `I agree to the Privacy Policy and Terms of Service provided by the company.
+        By providing my phone number, I agree to receive text messages from the business. I also agree that I may be contacted via messaging apps such as WhatsApp or Signal
+      `;
 
 const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
 ---
@@ -179,18 +181,22 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
 <script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL }}>
   const trainingPrograms = {
     Airplane: [
-      { value: "private-pilot", text: "Private Pilot Certificate" },
+      { value: "private-pilot-license", text: "Private Pilot License" },
       { value: "instrument-rating", text: "Instrument Rating" },
-      { value: "commercial-pilot", text: "Commercial Pilot Certificate" },
+      { value: "instrument-proficiency-check", text: "Instrument Proficiency Check" },
+      { value: "commercial-pilot-license", text: "Commercial Pilot License" },
       { value: "cfi", text: "Flight Instructor (CFI)" },
       { value: "cfii", text: "Flight Instructor Instrument (CFII)" },
+      { value: "professional-pilot-program", text: "Professional Pilot Program" },
     ],
     Helicopter: [
-      { value: "private-pilot-h", text: "Private Pilot - Helicopter" },
+      { value: "private-pilot-license-h", text: "Private Pilot License- Helicopter" },
       { value: "instrument-rating-h", text: "Instrument Rating - Helicopter" },
-      { value: "commercial-pilot-h", text: "Commercial Pilot - Helicopter" },
+      { value: "instrument-proficiency-check-h", text: "Instrument Proficiency Check- Helicopter" },
+      { value: "commercial-pilot-license-h", text: "Commercial Pilot License - Helicopter" },
       { value: "cfi-h", text: "Flight Instructor - Helicopter" },
       { value: "cfii-h", text: "Flight Instructor Instrument - Helicopter" },
+      { value: "professional-pilot-program-h", text: "Professional Pilot Program - Helicopter" },
       { value: "military-transition", text: "Military Transition Training" },
     ]
   };
