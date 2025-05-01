@@ -1,4 +1,5 @@
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
+import { ALTO_5A as imgHeader } from "../../constsImages";
 
 const localAttractions = {
 
@@ -8,8 +9,8 @@ const localAttractions = {
         header: {    
           
           headerH1: `Discover Florida's Space Coast`,
-          imagePath: "/src/assets/placeholder.webp",
-          imageAlt: "",
+          imagePath: imgHeader.imagePath,
+          imageAlt: imgHeader.imageAlt,
           buttons: [],
         },
         

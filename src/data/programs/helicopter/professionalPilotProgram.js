@@ -97,7 +97,7 @@ const professionalPilotProgram = {
           "Launch your aviation career with our structured PPP course. From first flight to your first job, we’ll guide you every step of the way.",
         button: {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
         },
       },
 

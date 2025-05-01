@@ -90,7 +90,7 @@ const cfiiCourse = {
           "With your CFII rating, you’ll be able to help students master one of the most critical skills in aviation—instrument flight. Start your upgrade today.",
         button: {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
         },
       },
 

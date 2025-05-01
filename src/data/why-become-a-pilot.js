@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../consts";
+import { ALTO_8A as imgHeader, HUFFSTETTER_PIC as imgPilot } from "../constsImages";
 
 const whyBecomePilot = {
   data: {
@@ -11,8 +12,8 @@ const whyBecomePilot = {
     //top header
     header: {
       stars: true,
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt: `${COMPANY_NAME} airplane flying`,
+      imagePath: imgHeader.imagePath,
+      imageAlt: imgHeader.imageAlt,
       headerH1: `Become a </br>Pilot`,
       paragraph:
         "Becoming a pilot is a thrilling journey that opens up a world of possibilities and adventure. Being a pilot is a lifestyle.",
@@ -31,9 +32,8 @@ const whyBecomePilot = {
     },
 
     shouldBePilot: {
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt:
-        "${ COMPANY_NAME } student student pilot and instructor shaking hands",
+      imagePath: imgPilot.imagePath,
+      imageAlt: imgPilot.imageAlt,
       heading: "Should You Become A Pilot?",
       upperHeading: "More Than Just A Career",
       description: `At ${COMPANY_NAME}, we understand the allure of aviation and are here to guide you every step of the way. Our experienced instructors are passionate about sharing their love for flying and will provide you with the knowledge and skills needed to navigate the skies safely. From the thrill of your first solo flight to starting your pilot career, our flight school is your place to a rewarding and fulfilling aviation journey.`,

@@ -97,7 +97,7 @@ const privatePilotLicense = {
           "Whether you're pursuing flying as a passion or a career, our Private Pilot License program sets a strong foundation for your future in aviation.",
         button: {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
         },
       },
 

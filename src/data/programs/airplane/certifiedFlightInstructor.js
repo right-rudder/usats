@@ -95,7 +95,7 @@ const certifiedFlightInstructor = {
           "Take the next step in your aviation journey and help others begin theirs. Our CFI program equips you to teach, lead, and thrive as a professional flight instructor.",
         button: {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
         },
       },
 

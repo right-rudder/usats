@@ -1,3 +1,5 @@
+import { ALTO_4A as imgAirplaneCard } from "../constsImages";
+
 const programsSwiper = {
     upperHeading: "Explore",
     heading: "Our Programs",
@@ -5,16 +7,15 @@ const programsSwiper = {
       "Your aviation dreams take center stage here. Whether pursuing a professional career, building flight hours, or seeking leisurely adventure, we have the perfect path for you.",
     cards: [
       {
-        title: "Professional Airplane Pilot Programs",
-        imagePath: "/src/assets/ALTO_NG_Panel.jpg",
-        imageAlt:
-          "USATS  airline plane landing view from below",
+        title: "Airplane Pilot Training Programs",
+        imagePath: imgAirplaneCard.imagePath,
+        imageAlt: imgAirplaneCard.imageAlt,
         description:
           "This program is designed for students with zero flying experience. You will obtain your FAA Private, Instrument, Commercial license, CFI, and CFII licenses.",
         link: "/airplane-training",
       },
       {
-        title: "Helicopter Pilot Traning Programs",
+        title: "Helicopter Pilot Training Programs",
         imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
         imageAlt:
           "USATS  airline plane landing view from below",

@@ -1,4 +1,5 @@
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
+import { USATS_BASE_COVER as imgHeader, ALTO_4A as imgCard1 } from "../../constsImages";
 
 const testingCenterFAACats = {
 data: {
@@ -8,9 +9,8 @@ data: {
 
     header: {
       stars: true,
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt:
-      "image alt",
+      imagePath: imgHeader.imagePath,
+      imageAlt:imgHeader.imageAlt,
       headerH1: `${COMPANY_NICKNAME} <br> FAA Cats Testing Center`,
       paragraph: ``,
       buttons: [

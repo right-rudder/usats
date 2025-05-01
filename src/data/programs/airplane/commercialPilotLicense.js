@@ -98,7 +98,7 @@ const commercialPilotLicense = {
           "Start your professional journey in aviation with our Commercial Pilot License course. Learn from the best, fly confidently, and open doors to the skies.",
         button: {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
         },
       },
 

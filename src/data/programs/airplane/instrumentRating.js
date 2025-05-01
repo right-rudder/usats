@@ -95,7 +95,7 @@ const instrumentRating = {
           "Master the skills to fly in a wider range of conditions with our Instrument Rating program. Take your next step toward becoming a safer and more capable pilot.",
         button: {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
         },
       },
 

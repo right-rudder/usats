@@ -7,14 +7,15 @@ import GridPrograms from "../../components/layouts/GridPrograms.astro";
 import careers from "../../data/services/career";
 import testingCenterFAACats from "../../data/services/testingCenterFAACats";
 import { COMPANY_NAME } from "../../consts";
+import { USATS_BASE_COVER as imgCTA } from "../../constsImages";
 
 const { data } = careers;
 
 import UnderHeader from "../../components/astro/UnderHeader.astro";
 
 const CTAFlight = {
-    imagePath: "/src/assets/CTADiscFlights.png",
-    imageAlt: "",
+    imagePath: imgCTA.imagePath,
+    imageAlt: imgCTA.imageAlt,
     headerH1: `Want to know more about the company?`,
     paragraph:
       `In ${COMPANY_NAME} we value your insights, send us a message!`,

@@ -93,7 +93,7 @@ const instrumentRating = {
           "Gain the precision, judgment, and skill to fly safely in IMC. Whether you're aiming for a professional career or simply want to fly smarter, this course will set you apart.",
         button: {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
         },
       },
 
