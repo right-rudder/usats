@@ -7,7 +7,7 @@ const programsSwiper = {
       "Your aviation dreams take center stage here. Whether pursuing a professional career, building flight hours, or seeking leisurely adventure, we have the perfect path for you.",
     cards: [
       {
-        title: "Professional Airplane Pilot Programs",
+        title: "Airplane Pilot Training Programs",
         imagePath: imgAirplaneCard.imagePath,
         imageAlt: imgAirplaneCard.imageAlt,
         description:
@@ -15,7 +15,7 @@ const programsSwiper = {
         link: "/airplane-training",
       },
       {
-        title: "Helicopter Pilot Traning Programs",
+        title: "Helicopter Pilot Training Programs",
         imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
         imageAlt:
           "USATS  airline plane landing view from below",

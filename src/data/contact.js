@@ -11,7 +11,7 @@ const contact = {
   
       checkboxText:
       `I agree to the Privacy Policy and Terms of Service provided by the company.
-      By providing my phone number, I agree to receive text messages from the business. I also agree that I may be contacted via messaging apps such as WhatsApp or Signal
+      By providing my phone number, I agree to receive text messages from the business. I also agree that I may be contacted via messaging apps such as WhatsApp or Signal.
     `,
   
       gMaps: [
