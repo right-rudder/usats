@@ -92,7 +92,7 @@ const commercialPilotLicense = {
           "Our commercial training program gives you the experience, credentials, and confidence to pursue a paid career in aviation. Let’s build your future in the sky—starting today.",
         button: {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
         },
       },
 

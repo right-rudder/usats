@@ -92,7 +92,7 @@ const privatePilotLicense = {
           "The PPL course prepares you for safe and confident helicopter operations, both for fun and future flight opportunities.",
         button: {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
         },
       },
 

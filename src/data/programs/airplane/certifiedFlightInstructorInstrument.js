@@ -93,7 +93,7 @@ const certifiedFlightInstructorInstrument = {
           "Help students safely navigate the skies in low visibility and complex weather. The CFII program trains you to lead them there with confidence.",
         button: {
           name: "Apply Now",
-          link: "/enroll",
+          link: "/enroll-now",
         },
       },
 
