@@ -4,11 +4,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Location from "../components/astro/Location.astro";
 import HeaderSmall from "../components/astro/HeaderSmall.astro";
 import { COMPANY_NICKNAME } from "../consts";
+import { CESSNA_AND_ALTO as imgHeader } from "../constsImages";
 
 const header = {
-    imagePath: "/src/assets/placeholder.webp",
-    headerH1: `Discovery Flights</br>at ${COMPANY_NICKNAME}`,
-    imageAlt: `${COMPANY_NICKNAME}`,
+    imagePath: imgHeader.imagePath,
+    imageAlt: imgHeader.imageAlt,
+    headerH1: `Discovery Flights at ${COMPANY_NICKNAME}`,
     paragraph:
         "Ready to take the controls? A discovery flight is the perfect first step. Fly with a certified instructor.",
     buttons: [

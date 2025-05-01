@@ -1,4 +1,5 @@
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
+import { DIRECTFLY_ALTONG_PANEL_USATS as imgHeader } from "../../constsImages";
 
 const careers = {
 
@@ -10,9 +11,8 @@ const careers = {
     
     header: {
         stars: true,
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt:
-        "image alt",
+        imagePath: imgHeader.imagePath,
+        imageAlt: imgHeader.imageAlt,
         headerH1: `${COMPANY_NICKNAME} | Careers`,
         paragraph: `Come work with us!`,
         buttons: [

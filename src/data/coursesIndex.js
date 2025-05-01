@@ -1,3 +1,5 @@
+import { ALTO_5A as imgHeader } from "../constsImages";
+
 const coursesIndex = {
     data: {
       // SEO Header Stuff
@@ -10,9 +12,8 @@ const coursesIndex = {
       // Top Header
       header: {
         stars: true,
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt:
-          "image alt",
+        imagePath: imgHeader.imagePath,
+        imageAlt: imgHeader.imageAlt,
         headerH1: `FLIGHT TRAINING<br>PROGRAMS</span>`,
         paragraph: ``,
         buttons: [

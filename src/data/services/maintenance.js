@@ -1,4 +1,5 @@
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
+import { MILITARY_TRAINING_BH9 as imgCTA } from "../../constsImages";
 
 const maintenanceServices = {
   pageTitle: `Why Choose USATS? | ${COMPANY_NAME}`,
@@ -274,15 +275,15 @@ const maintenanceServices = {
   },
 
   ctaMaintenance: {
-    imagePath: "/src/assets/placeholder.webp",
-    imageAlt: "",
+    imagePath: imgCTA.imagePath,
+    imageAlt: imgCTA.imageAlt,
     headerH1: `<span class="text-accent-700">Get in Touch</span>`,
     paragraph:
     `${COMPANY_NAME} can help you with Airplane and Helicopter Maintenance. And if you need any parts just give us a call.`,
     buttons: [
       {
         name: "Ask us anything",
-        link: "/#",
+        link: "/maintenance-contact",
         primary: true,
       },
     ],
