@@ -11,7 +11,7 @@ export const SITE_DESCRIPTION = "";
 // CHANGE default keywords -> should only be used in homepage technically, but is there for a fallback in case a page is missed
 export const KEYWORDS = "";
 
-export const OG_IMAGE = "";
+export const OG_IMAGE = "/USATS-OG-image.jpg";
 
 export const GEO_LATITUDE = 28.51012890041488;
 export const GEO_LONGITUDE = -80.79335517556147;
@@ -41,14 +41,13 @@ export const YOUTUBE_URL = null;
 export const TWITTER_URL = null;
 export const EMAIL_ADDRESS = "info@usatsolutions.com";
 
-
-export const COMPANY_NICKNAME = "USATS"
-export const ADDRESS = "355 Golden Knight Blvd"
-export const ADDRESS_STATE = "FL"
-export const ADDRESS_CITY = "Titusville"
-export const ADDRESS_ZIP = "32780"
-export const AIRPORT = "Titusville Cocoa Airport"
-export const AIRPORT_CODE = "TCA"
+export const COMPANY_NICKNAME = "USATS";
+export const ADDRESS = "355 Golden Knight Blvd";
+export const ADDRESS_STATE = "FL";
+export const ADDRESS_CITY = "Titusville";
+export const ADDRESS_ZIP = "32780";
+export const AIRPORT = "Titusville Cocoa Airport";
+export const AIRPORT_CODE = "TCA";
 
 // Pages Data
 
