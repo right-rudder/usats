@@ -1,3 +1,5 @@
+import { ALTO_4A as imgAirplaneCard } from "../constsImages";
+
 const programsSwiper = {
     upperHeading: "Explore",
     heading: "Our Programs",
@@ -6,9 +8,8 @@ const programsSwiper = {
     cards: [
       {
         title: "Professional Airplane Pilot Programs",
-        imagePath: "/src/assets/ALTO_NG_Panel.jpg",
-        imageAlt:
-          "USATS  airline plane landing view from below",
+        imagePath: imgAirplaneCard.imagePath,
+        imageAlt: imgAirplaneCard.imageAlt,
         description:
           "This program is designed for students with zero flying experience. You will obtain your FAA Private, Instrument, Commercial license, CFI, and CFII licenses.",
         link: "/airplane-training",
