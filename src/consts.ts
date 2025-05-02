@@ -24,13 +24,13 @@ export const LOCATIONS = [
     state: "FL",
     zip: "32780",
     gMaps: "https://maps.app.goo.gl/z2VA7VfGiLaBnUCMA",
-    phone: "3215296243",
+    phone: "3215290795",
   },
 ];
 
 // CHANGE client business info
 export const COMPANY_NAME = "US Aviation Training Solutions";
-export const PHONE_NUMBER = "3215296243";
+export const PHONE_NUMBER = "(321) 529-0795";
 export const ADDRESS_LINE_1 = "355 Golden Knights Blvd";
 export const ADDRESS_LINE_2 = "Titusville, FL 32780";
 export const FACEBOOK_URL = "https://www.facebook.com/USATSolutions/";
@@ -46,8 +46,8 @@ export const ADDRESS = "355 Golden Knight Blvd";
 export const ADDRESS_STATE = "FL";
 export const ADDRESS_CITY = "Titusville";
 export const ADDRESS_ZIP = "32780";
-export const AIRPORT = "Titusville Cocoa Airport";
-export const AIRPORT_CODE = "TCA";
+export const AIRPORT = "Space Coast regional";
+export const AIRPORT_CODE = "KTIX";
 
 // Pages Data
 

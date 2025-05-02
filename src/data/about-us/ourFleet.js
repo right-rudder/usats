@@ -41,44 +41,43 @@ const ourFleet = {
         ],
       },
   
-      fleetGrid: {
-        upperHeading: "Explore",
-        heading: "Our Aircraft",
-        description: `Our fleet of aircraft is designed to provide you with a diverse range of training options, from single-engine aircraft to multi-engine aircraft. Each aircraft is meticulously maintained to ensure your safety and comfort during your training. Explore our fleet below to learn more about each aircraft and its capabilities.`,
-        aircraft: [
-          {
-            title: "Cessna 172",
-            imagePath: "/src/assets/placeholder.webp",
-            imageAlt:
-              "Sun City Aviation Academy Cessna 172 parked at the airport",
-            description:
-              "Start your aviation adventure with our robust fleet of Cessna 172 aircraft. These reliable and versatile planes are perfectly suited for those taking their first steps into the world of flight. Our Cessna 172s provide an ideal learning environment for aspiring pilots.",
-            link: "/our-fleet/cessna-172",
-            linkText: "Details",
-          },
-          {
-            title: "Beechcraft Duchess",
-            imagePath:
-              "/src/assets/placeholder.webp",
-            imageAlt:
-              "Sun City Aviation Academy Beechcraft Duchess parked at the airport",
-            description:
-              "As you step into the cockpit of our Beechcraft Duchess, you'll discover a world of possibilities that extends beyond single engine flight. The Duchess is a testament to our commitment to providing you with the highest quality training resources.",
-            link: "/our-fleet/beechcraft-duchess",
-            linkText: "Details",
-          },
-          {
-            title: "Redbird Flight Simulator",
-            imagePath:
-              "/src/assets/placeholder.webp",
-            imageAlt: "Sun City Aviation Academy Redbird Simulator",
-            description:
-              "Using a simulator allows you to practice maneuvers, refine techniques, and master emergency procedures. You can pause mid flight and replay different scenarios and conditions which help solidify your training and make you a better and safer pilot.",
-            link: "/our-fleet/redbird-simulator",
-            linkText: "Details",
-          },
-        ],
-      },
+      // fleetGrid: {
+      //   upperHeading: "Explore",
+      //   heading: "Our Aircraft",
+      //   description: `Our fleet of aircraft is designed to provide you with a diverse range of training options, from single-engine aircraft to multi-engine aircraft. Each aircraft is meticulously maintained to ensure your safety and comfort during your training. Explore our fleet below to learn more about each aircraft and its capabilities.`,
+      //   aircraft: [
+      //     {
+      //       title: "Cessna 172",
+      //       imagePath: "/src/assets/placeholder.webp",
+      //       imageAlt: "Sun City Aviation Academy Cessna 172 parked at the airport",
+      //       description:
+      //         "Start your aviation adventure with our robust fleet of Cessna 172 aircraft. These reliable and versatile planes are perfectly suited for those taking their first steps into the world of flight. Our Cessna 172s provide an ideal learning environment for aspiring pilots.",
+      //       link: "/our-fleet/cessna-172",
+      //       linkText: "Details",
+      //     },
+      //     {
+      //       title: "Beechcraft Duchess",
+      //       imagePath:
+      //         "/src/assets/placeholder.webp",
+      //       imageAlt:
+      //         "Sun City Aviation Academy Beechcraft Duchess parked at the airport",
+      //       description:
+      //         "As you step into the cockpit of our Beechcraft Duchess, you'll discover a world of possibilities that extends beyond single engine flight. The Duchess is a testament to our commitment to providing you with the highest quality training resources.",
+      //       link: "/our-fleet/beechcraft-duchess",
+      //       linkText: "Details",
+      //     },
+      //     {
+      //       title: "Redbird Flight Simulator",
+      //       imagePath:
+      //         "/src/assets/placeholder.webp",
+      //       imageAlt: "Sun City Aviation Academy Redbird Simulator",
+      //       description:
+      //         "Using a simulator allows you to practice maneuvers, refine techniques, and master emergency procedures. You can pause mid flight and replay different scenarios and conditions which help solidify your training and make you a better and safer pilot.",
+      //       link: "/our-fleet/redbird-simulator",
+      //       linkText: "Details",
+      //     },
+      //   ],
+      // },
   
       bookCTA: {
         upperHeading: "Still looking for more information on pilot training?",

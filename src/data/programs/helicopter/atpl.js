@@ -62,7 +62,6 @@ const atpL = {
         ],
       },
 
-
       // Additional Costs
       additionalCosts: {
         heading: "What’s Not Included (Additional Student Costs)?",
