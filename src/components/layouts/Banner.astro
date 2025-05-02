@@ -8,7 +8,8 @@ import {
   YOUTUBE_URL,
   BANNER_TITLE,
 } from "../../consts";
-import { FaPhoneSquareAlt } from "react-icons/fa";
+import { FaPhoneSquareAlt, FaWhatsapp } from "react-icons/fa";
+import { FaSignalMessenger } from "react-icons/fa6";
 import formatPhoneNumber from "../../scripts/phone-format";
 ---
 
@@ -118,15 +119,24 @@ import formatPhoneNumber from "../../scripts/phone-format";
       class="font-thin text-base hidden lg:block text-center lg:w-1/2"
       set:html={BANNER_TITLE}
     />
-    <a
+    <div class="flex align-middle items-center justify-end p-5 lg:w-1/3 ">
+      <a aria-label="Chat on WhatsApp" href="https://wa.me/13215290795" target="_blank" class="hover:scale-125 transition-all cursor-pointer"> 
+        <FaWhatsapp className="mr-2 text-lg lg:text-xl hover:text-green-600 " />
+      <a /> 
+      <a aria-label="Chat on WhatsApp" href="https://signal.me/13215290795" target="_blank" class="hover:scale-125 cursor-pointer transition-all"> 
+        <FaSignalMessenger className="mr-2 text-lg lg:text-xl hover:text-blue-500" />
+      <a />        
+      <a
       href={`tel:${PHONE_NUMBER}`}
       aria-labelledby="Call Us Now"
       title="Call Us Now"
-      class="lg:w-1/4 flex align-middle items-center justify-end text-right text-base lg:text-lg font-sans font-bold hover:scale-110 cursor-pointer transition-all"
+      class="flex align-middle items-center justify-end text-right text-base lg:text-lg font-sans font-bold hover:scale-110 cursor-pointer transition-all"
       aria-label="Call telephone Link"
     >
       <FaPhoneSquareAlt className="mr-2 text-lg lg:text-xl" />
       {formatPhoneNumber(PHONE_NUMBER)}</a
     >
+    </div>
+    
   </div>
 </div>
