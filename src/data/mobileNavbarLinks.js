@@ -85,6 +85,29 @@ export const mobileNavbarLinks = [
           },
         ],
       },
+      {
+        name: "International Student Training",
+        link: "/international-student-training",
+
+      },
+    ],
+  },
+  {
+    name: "Maintenance",
+    link: "#",
+    submenu: [
+      {
+        name: "145 Repair Station",
+        link: "/services/maintenance#145-maintenance-capabilities",
+      },
+      {
+        name: "Authorized Robinson Service Center",
+        link: "/services/maintenance#robinson-service-center",
+      },
+      {
+        name: "Part 43 Maintenance",
+        link: "/services/maintenance#part-43-maintenance",
+      },
     ],
   },
   {
@@ -94,10 +117,6 @@ export const mobileNavbarLinks = [
       {
         name: "Alto Planes",
         link: "/services/alto-planes",
-      },
-      {
-        name: "Maintenance",
-        link: "/services/maintenance",
       },
       {
         name: "CATS Testing Center",
