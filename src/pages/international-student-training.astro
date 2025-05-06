@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeaderScreen from "../components/astro/HeaderScreen.astro";
+import internationalStudentsPage from "../data/internationalStudentsPage";
+import WhyUs from "../components/astro/WhyUs.astro";
+import Testimonials from "../components/astro/Testimonials.astro";
+import FreQuestions from "../components/astro/FreQuestions.astro";
+import "/src/styles/global.css";
+import UnderHeader from "../components/astro/UnderHeader.astro";
+import CTADiscoveryFlight from "../components/astro/CTADiscoveryFlights.astro";
+import programsSwiper from "../data/programsSwiper";
+import GridPrograms from "../components/layouts/GridPrograms.astro";
+import CTAFlight from "../data/ctaFlight";
+import ContentCTA from "../components/astro/ContentCTA.astro";
+
+const { data } = internationalStudentsPage;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+  <UnderHeader content={data.underHeader} />
+  <WhyUs content={data.whyUs} />
+  
+  <GridPrograms content={programsSwiper} />
+
+  <ContentCTA content={data.quizCTA} />
+  <!-- <Testimonials content={data.testimonials} /> -->
+
+  <FreQuestions content={data.frequentQuestions} />
+  <CTADiscoveryFlight content={CTAFlight} />
+</BaseLayout>
