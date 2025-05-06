@@ -18,6 +18,8 @@ import GridPrograms from "../components/layouts/GridPrograms.astro";
 import CTAMilitary from "../components/astro/CTAMilitary.astro";
 import militaryCta from "../data/programs/ctaMilitary";
 import CTAFlight from "../data/ctaFlight";
+import ContentCTA from "../components/astro/ContentCTA.astro";
+import Content from "../components/astro/Content.astro";
 
 const { data } = homePage;
 ---
@@ -35,6 +37,7 @@ const { data } = homePage;
   <!-- <OurAdvantages content={data.ourAdvantages} /> -->
   <!-- <Programs content={programsSwiper} /> -->
   <GridPrograms content={programsSwiper} />
+  <ContentCTA content={data.quizCTA} />
   <Testimonials content={data.testimonials} />
   <!-- <LetsFlyTogether /> -->
   <!-- <CTAMilitary content={militaryCta} /> -->
