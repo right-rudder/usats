@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { pplFw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const privatePilotLicense = {
   data: {
@@ -101,7 +102,7 @@ const privatePilotLicense = {
         },
       },
 
-      price: "$11,263 (Alto-NG) <br> $13,013 (C-172S)",
+      prices: programPrices,
 
       // FAQs
       faqs: [

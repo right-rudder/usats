@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { pppRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const professionalPilotProgram = {
   data: {
@@ -88,7 +89,7 @@ const professionalPilotProgram = {
         ],
       },
 
-      price: "$126,898",
+      prices: programPrices,
 
       cta: {
         imagePath: "/src/assets/placeholder.webp",

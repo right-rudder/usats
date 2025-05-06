@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { pppFw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const professionalPilotProgram = {
   data: {
@@ -118,7 +119,7 @@ const professionalPilotProgram = {
         },
       },
 
-      price: "$62,143 (Alto-NG) <br> $74,123 (C-172S)",
+      prices: programPrices,
 
       // FAQs
       faqs: [

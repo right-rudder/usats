@@ -95,7 +95,6 @@ const militaryTraining = {
         },
       },
 
-      price: "",
       priceNote: "*Base package. UH-60 modules priced separately.",
 
       faqs: [

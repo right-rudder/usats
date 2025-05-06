@@ -5,7 +5,6 @@ import commercialPilotLicense from "./airplane/commercialPilotLicense";
 import certifiedFlightInstructor from "./airplane/certifiedFlightInstructor";
 import certifiedFlightInstructorInstrument from "./airplane/certifiedFlightInstructorInstrument";
 
-
 const programs = [
   professionalPilotProgram,
   privatePilotLicense,

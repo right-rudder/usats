@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { irFw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const instrumentRating = {
   data: {
@@ -99,7 +100,7 @@ const instrumentRating = {
         },
       },
 
-      price: "$13,034 (Alto-NG) <br> $15,264 (C-172S)",
+      prices: programPrices,
 
       // FAQs
       faqs: [

@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { cfiFw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const certifiedFlightInstructor = {
   data: {
@@ -85,7 +86,7 @@ const certifiedFlightInstructor = {
         ],
       },
 
-      price: `$7,488 (Alto-NG) <br> $8,738 (C-172S)`,
+      prices: programPrices,
 
       cta: {
         imagePath: "/src/assets/placeholder.webp",

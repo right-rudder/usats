@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { cfiiRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const cfiiCourse = {
   data: {
@@ -95,7 +96,7 @@ const cfiiCourse = {
         },
       },
 
-      price: "$9,818",
+      prices: programPrices,
 
       faqs: [
         {

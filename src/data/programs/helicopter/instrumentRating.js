@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { irRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const instrumentRating = {
   data: {
@@ -97,7 +98,7 @@ const instrumentRating = {
         },
       },
 
-      price: "$30,865",
+      prices: programPrices,
 
       // FAQs
       faqs: [

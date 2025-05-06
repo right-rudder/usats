@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { atpRw as programPrices } from "../../../flightTrainingProgramsPrices";
 
 const atpL = {
   data: {
@@ -96,6 +97,8 @@ const atpL = {
           link: "/contact",
         },
       },
+      
+      prices: programPrices,
 
       faqs: [
         {

@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { pplRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const privatePilotLicense = {
   data: {
@@ -96,7 +97,7 @@ const privatePilotLicense = {
         },
       },
 
-      price: "$36,249",
+      prices: programPrices,
 
       // FAQs
       faqs: [

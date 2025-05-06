@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { cfiiFw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const certifiedFlightInstructorInstrument = {
   data: {
@@ -97,7 +98,7 @@ const certifiedFlightInstructorInstrument = {
         },
       },
 
-      price: "$4,850 (Alto-NG) <br> $5,600 (C-172S)",
+      prices: programPrices,
 
       // FAQs
       faqs: [

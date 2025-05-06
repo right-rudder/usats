@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { cplFw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const commercialPilotLicense = {
   data: {
@@ -88,7 +89,7 @@ const commercialPilotLicense = {
         ],
       },
 
-      price: "$25,508 (Alto-NG) <br> $31,508 (C-172S)",
+      prices: programPrices,
 
       cta: {
         imagePath: "/src/assets/placeholder.webp",
