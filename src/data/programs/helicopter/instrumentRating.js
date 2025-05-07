@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { irRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const instrumentRating = {
   data: {
@@ -65,11 +66,11 @@ const instrumentRating = {
       additionalCosts: {
         heading: "What’s Not Included (Additional Student Costs)?",
         items: [
-          "Aviation Headset (Bose, Lightspeed, David Clark recommended)",
-          "iPad with GPS for EFB use",
-          "ForeFlight Subscription",
-          "FAA Medical and Written Exam Fees",
-          "Charts and training materials",
+          "Flight Gears (Headset,kneeboard,etc...)",
+          "Teaching material, book, POH/RFM",
+          "Ipad with EFB (Foreflight recommended)",
+          "FAA Medical Exam (Class 3 or higher required)",
+          "FAA written test & checkride fees",
         ],
       },
 
@@ -97,7 +98,7 @@ const instrumentRating = {
         },
       },
 
-      price: "$30,865",
+      prices: programPrices,
 
       // FAQs
       faqs: [

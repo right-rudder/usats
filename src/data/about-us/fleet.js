@@ -1,10 +1,16 @@
+import { 
+  CESSNA_172_USATS_RAMP_WEBP as cessnaRamp,
+  CES
+
+ } from "../../constsImages";
+
 export const airplaneFleet = [
     {
       name: "Cessna 172",
       slug: "cessna172",
       rentalPrice: "1",
       usableFuel: "",
-      model: "N3544W",
+      model: "Cessna",
       equipment: [
         "G1000 Glass Cockpit",
         "TAA",
@@ -13,7 +19,8 @@ export const airplaneFleet = [
         "Lycoming IO-360-L2A 180 HP",
         "Dedicated Maintenance facility",
       ],
-      imagePath: "/src/assets/USATS_Plane_N3544W.webp",
+      imagePath: cessnaRamp.imagePath,
+      imageAlt: cessnaRamp.imageAlt,
       imagesArray: [
         "/src/assets/placeholder.webp",
         "/src/assets/placeholder.webp",
@@ -30,7 +37,7 @@ export const airplaneFleet = [
       slug: "altong",
       rentalPrice: "2",
       usableFuel: "",
-      model: "N3544W",
+      model: "DirectFly",
       equipment: [
         "Dynon hdx1200 dual displays",
         "TAA",
@@ -55,8 +62,8 @@ export const airplaneFleet = [
 
 export const helicopterFleet = [
   {
-    name: "Robinson R44 Fleet",
-    slug: "robinsonr44fleet",
+    name: "Robinson R44",
+    slug: "robinsonR44",
     rentalPrice: "1",
     usableFuel: "",
     model: "R44",

@@ -102,6 +102,7 @@ const Navbar = ({ pathname }) => {
 
   return (
     <nav className="w-full h-0 sticky inset-0 z-20 font-sans tracking-wider">
+      {/*  Desktop menu  */}
       <div
         className={`${
           navBar || openMobile
@@ -109,7 +110,7 @@ const Navbar = ({ pathname }) => {
             : "bg-transparent"
         } duration-500`}
       >
-        <div className="px-5 max-w-7xl mx-auto top-0">
+        <div className="px-5 max-w-8xl mx-auto top-0">
           <div
             className={`${navBar || openMobile ? "lg:h-20" : "lg:h-28"} relative flex h-20 align-middle justify-between transition-all`}
             id="navbar"
@@ -129,8 +130,8 @@ const Navbar = ({ pathname }) => {
                   className={`${navBar || openMobile ? "h-16 lg:h-24 lg:w-2/3" : "h-16 lg:h-24 w-full"} mx-auto object-contain duration-500`}
                 />
               </a>
-              <div className="hidden lg:flex justify-end w-full">
-                <ul className="flex justify-between align-middle w-3/4 items-center">
+              <div className="hidden lg:flex pl-10 lg:pl-20 w-full">
+                <ul className="flex justify-between align-middle w-3/4 items-center gap-2">
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}
@@ -259,6 +260,7 @@ const Navbar = ({ pathname }) => {
         </div>
       </div>
 
+      {/*  Mobile menu  */}
       <div
         className={`${
           openMobile ? "max-h-screen opacity-100" : "max-h-0 opacity-60"

@@ -16,7 +16,7 @@ data: {
       buttons: [
       {
           name: "Learn more",
-          link: "#services",
+          link: "#cats-testing-center",
           primary: true,
       },
       ],
@@ -35,11 +35,11 @@ data: {
             "Enter our zipcode 32780",
             "Select the option",
         ],
-        location: `US Aviation Jet Center <br> 355 Golden Knights Blvd <br> Titusville, FL, 32780`, 
+        location: `US Aviation Jet Center (US Aviation Training Solutions) <br> 355 Golden Knights Blvd <br> Titusville, FL, 32780`, 
         buttons: [
             {
               name: "Directions",
-              link: "https://www.google.com/maps/place/US+Aviation+Jet+Center/@28.5108366,-80.7935879,17z/data=!3m1!4b1!4m6!3m5!1s0x88e0ad45bfc65527:0x83a84771beabce22!8m2!3d28.5108366!4d-80.7935879!16s%2Fg%2F11fp5g3c02?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D",
+              link: "https://www.google.com/maps/place/Space+Coast+Regional+Airport/@28.5114085,-80.8059907,14.85z/data=!4m14!1m7!3m6!1s0x88e0ad45bfc65527:0x83a84771beabce22!2sUS+Aviation+Jet+Center!8m2!3d28.5108366!4d-80.7935879!16s%2Fg%2F11fp5g3c02!3m5!1s0x88e0ad2310d73cfb:0x4bcd770a5e53125e!8m2!3d28.5133625!4d-80.7988013!16zL20vMDNmZnAy?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D",
               primary: true,
             },
           ],
@@ -47,8 +47,7 @@ data: {
 
     underHeader: {
       title: "YOUR CATS TEST at USATS",
-      paragraphs: [
-        "Here at USATS we make sure you have all you need to make it.",],
+      paragraphs: ["Here at USATS we make sure you have all you need to make it.",],
       image: {
         imagePath: "/src/assets/ALTO_NG.webp",
         imageAlt: "AirPlane Panel",

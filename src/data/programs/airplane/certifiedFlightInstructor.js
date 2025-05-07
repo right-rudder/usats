@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { cfiFw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const certifiedFlightInstructor = {
   data: {
@@ -65,11 +66,11 @@ const certifiedFlightInstructor = {
       additionalCosts: {
         heading: "What’s Not Included (Additional Student Costs)?",
         items: [
-          "Aviation Headset (Recommended: Bose, Lightspeed, David Clark)",
-          "iPad with GPS (Cellular model preferred for ForeFlight compatibility)",
-          "ForeFlight Subscription (for lesson planning and briefings)",
-          "FAA Medical Exam (Class 2 required)",
-          "Training materials and FAA written/oral test fees",
+          "Flight Gears (Headset,kneeboard,etc...)",
+          "Teaching material, book, POH/RFM",
+          "Ipad with EFB (Foreflight recommended)",
+          "FAA Medical Exam (Class 2 or higher required)",
+          "FAA written test & checkride fees",
         ],
       },
 
@@ -85,7 +86,7 @@ const certifiedFlightInstructor = {
         ],
       },
 
-      price: `$7,488 (Alto-NG) <br> $8,738 (C-172S)`,
+      prices: programPrices,
 
       cta: {
         imagePath: "/src/assets/placeholder.webp",

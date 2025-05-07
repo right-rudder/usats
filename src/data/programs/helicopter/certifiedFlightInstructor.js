@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { cfiRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const cfiCourse = {
   data: {
@@ -65,11 +66,11 @@ const cfiCourse = {
       additionalCosts: {
         heading: "What’s Not Included (Additional Student Costs)?",
         items: [
-          "FAA Written Exams (FOI and CFI)",
-          "Checkride with FAA Examiner",
-          "iPad with EFB (ForeFlight Recommended)",
-          "Medical Exam (Second Class or higher)",
-          "Teaching materials, books, charts",
+          "Flight Gears (Headset,kneeboard,etc...)",
+          "Teaching material, book, POH/RFM",
+          "Ipad with EFB (Foreflight recommended)",
+          "FAA Medical Exam (Class 2 or higher required)",
+          "FAA written test & checkride fees",
         ],
       },
 
@@ -96,7 +97,7 @@ const cfiCourse = {
         },
       },
 
-      price: "$19,611",
+      prices: programPrices,
 
       faqs: [
         {

@@ -1,27 +1,35 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeaderScreen from "../components/astro/HeaderScreen.astro";
-import homePage from "../data/homePage";
+import internationalStudentsPage from "../data/internationalStudentsPage";
 import WhyUs from "../components/astro/WhyUs.astro";
 import Testimonials from "../components/astro/Testimonials.astro";
 import FreQuestions from "../components/astro/FreQuestions.astro";
 import "/src/styles/global.css";
-import OurAdvantages from "../components/astro/OurAdvantages.astro";
-import ElevateYourCarrer from "../components/astro/ElevateYourCarrer.astro";
-import LetsFlyTogether from "../components/astro/LetsFlyTogether.astro";
 import UnderHeader from "../components/astro/UnderHeader.astro";
 import CTADiscoveryFlight from "../components/astro/CTADiscoveryFlights.astro";
-import ctaFligth from "../data/ctaFlight";
-import Programs from "../components/layouts/ProgramsSwiper.astro";
 import programsSwiper from "../data/programsSwiper";
 import GridPrograms from "../components/layouts/GridPrograms.astro";
-import CTAMilitary from "../components/astro/CTAMilitary.astro";
-import militaryCta from "../data/programs/ctaMilitary";
-import CTAFlight from "../data/ctaFlight";
 import ContentCTA from "../components/astro/ContentCTA.astro";
-import Content from "../components/astro/Content.astro";
+import { CTADISC_FLIGHTS as imgCTA } from "../constsImages";
 
-const { data } = homePage;
+const { data } = internationalStudentsPage;
+
+const CTAFlight = {
+  imagePath: imgCTA.imagePath,
+  imageAlt: imgCTA.imageAlt,
+  headerH1: `Your Aviation Career e</br><span class="text-accent-700">Starts Her</span>`,
+  paragraph:
+    "Looking to train in the U.S.? At USATS, international students gain world-class experience flying over <strong>Florida’s stunning Space Coast</strong>—a global aviation hub near rocket launches, pristine beaches, and diverse airspace. Connect with our team to explore your options, from visa support to housing assistance.",
+  buttons: [
+    {
+      name: "Contact Us",
+      link: "/contact-us",
+      primary: true,
+    },
+  ],
+};
+
 ---
 
 <BaseLayout
@@ -32,17 +40,13 @@ const { data } = homePage;
   <!-- HEADER -->
   <HeaderScreen content={data.header} />
   <UnderHeader content={data.underHeader} />
-  <!-- <WhoAreUs content={data.whatWeOffer} /> -->
   <WhyUs content={data.whyUs} />
-  <!-- <OurAdvantages content={data.ourAdvantages} /> -->
-  <!-- <Programs content={programsSwiper} /> -->
+  
   <GridPrograms content={programsSwiper} />
+
   <ContentCTA content={data.quizCTA} />
-  <Testimonials content={data.testimonials} />
-  <!-- <LetsFlyTogether /> -->
-  <!-- <CTAMilitary content={militaryCta} /> -->
+  <!-- <Testimonials content={data.testimonials} /> -->
 
   <FreQuestions content={data.frequentQuestions} />
   <CTADiscoveryFlight content={CTAFlight} />
-  <!-- <script src="../scripts/creativeSwiper.js"></script> -->
 </BaseLayout>

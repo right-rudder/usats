@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { cplRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const commercialPilotLicense = {
   data: {
@@ -61,15 +62,15 @@ const commercialPilotLicense = {
         ],
       },
 
+      // Additional Costs
       additionalCosts: {
         heading: "What’s Not Included (Additional Student Costs)?",
         items: [
-          "FAA Written Exam Fees",
-          "Checkride Fees (Designated Pilot Examiner)",
-          "Aviation Headset",
-          "iPad with EFB (ForeFlight Recommended)",
-          "Medical Exam (FAA Second Class or higher)",
-          "Charts and additional training materials",
+          "Flight Gears (Headset,kneeboard,etc...)",
+          "Teaching material, book, POH/RFM",
+          "Ipad with EFB (Foreflight recommended)",
+          "FAA Medical Exam (Class 2 or higher required)",
+          "FAA written test & checkride fees",
         ],
       },
 
@@ -96,7 +97,7 @@ const commercialPilotLicense = {
         },
       },
 
-      price: "$22,906",
+      prices: programPrices,
 
       faqs: [
         {

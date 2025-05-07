@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { atpRw as programPrices } from "../../../flightTrainingProgramsPrices";
 
 const atpL = {
   data: {
@@ -62,13 +63,15 @@ const atpL = {
         ],
       },
 
+      // Additional Costs
       additionalCosts: {
         heading: "What’s Not Included (Additional Student Costs)?",
         items: [
-          "FAA ATP Knowledge Exam (if required)",
-          "FAA Checkride with Designated Examiner",
-          "FAA Medical Certificate (Minimum Class 3)",
-          "Flight gear (headset, kneeboard, etc.)",
+          "Flight Gears (Headset,kneeboard,etc...)",
+          "Teaching material, book, POH/RFM",
+          "Ipad with EFB (Foreflight recommended)",
+          "FAA Medical Exam (Class 2 or higher required)",
+          "FAA written test & checkride fees",
         ],
       },
 
@@ -94,6 +97,8 @@ const atpL = {
           link: "/contact",
         },
       },
+      
+      prices: programPrices,
 
       faqs: [
         {

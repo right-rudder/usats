@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { irFw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const instrumentRating = {
   data: {
@@ -66,11 +67,11 @@ const instrumentRating = {
       additionalCosts: {
         heading: "What’s Not Included (Additional Student Costs)?",
         items: [
-          "Aviation Headset (Recommended: Bose, Lightspeed, David Clark)",
-          "iPad with GPS (Cellular model preferred for ForeFlight compatibility)",
-          "ForeFlight Subscription (for flight planning & navigation)",
-          "FAA Medical Exam (if not already completed)",
-          "Training materials and FAA written test fees",
+          "Flight Gears (Headset,kneeboard,etc...)",
+          "Teaching material, book, POH/RFM",
+          "Ipad with EFB (Foreflight recommended)",
+          "FAA Medical Exam (Class 3 or higher required)",
+          "FAA written test & checkride fees",
         ],
       },
 
@@ -99,7 +100,7 @@ const instrumentRating = {
         },
       },
 
-      price: "$13,034 (Alto-NG) <br> $15,264 (C-172S)",
+      prices: programPrices,
 
       // FAQs
       faqs: [

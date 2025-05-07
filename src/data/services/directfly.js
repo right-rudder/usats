@@ -12,8 +12,8 @@ const directFly = {
         imageAlt: "image alt",
         buttons: [
             {
-              name: "Contact-us",
-              link: "",
+              name: "Contact us",
+              link: "/contact-us",
               primary: true,
             },
           ],
@@ -26,8 +26,8 @@ const directFly = {
         paragraph: "Come visit us at booth LP-062 in the Light Plane Exhibit at Sun 'n Fun! Don't miss the chance to check out the DirectFly Alto NG firsthand, See you there!",
         buttons: [
             {
-              name: "Contact-us",
-              link: "",
+              name: "Contact us",
+              link: "/contact-us",
               primary: true,
             },
           ],

@@ -1,4 +1,5 @@
 import { COMPANY_NAME } from "../../../consts";
+import { pplFw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 const privatePilotLicense = {
   data: {
@@ -68,11 +69,11 @@ const privatePilotLicense = {
       additionalCosts: {
         heading: "What’s Not Included (Additional Student Costs)?",
         items: [
-          "Aviation Headset (Recommended models: Bose, Lightspeed, David Clark)",
-          "iPad with GPS capability (Cellular model recommended, no data plan required)",
-          "ForeFlight subscription (for flight planning and navigation)",
-          "FAA Medical Exam (Required for pilot certification)",
-          "Training materials (Books, charts, etc.)",
+          "Flight Gears (Headset,kneeboard,etc...)",
+          "Teaching material, book, POH/RFM",
+          "Ipad with EFB (Foreflight recommended)",
+          "FAA Medical Exam (Class 3 or higher required)",
+          "FAA written test & checkride fees",
         ],
       },
 
@@ -101,7 +102,7 @@ const privatePilotLicense = {
         },
       },
 
-      price: "$11,263 (Alto-NG) <br> $13,013 (C-172S)",
+      prices: programPrices,
 
       // FAQs
       faqs: [

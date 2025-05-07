@@ -4,7 +4,7 @@ import ImageComp from "../ImageComp.astro";
 const { content } = Astro.props;
 ---
 
-<section class="grid grid-cols-1 lg:grid-cols-2 lg:py-20 h-full bg-primary-900">
+<section class="grid grid-cols-1 lg:grid-cols-2 lg:py-20 h-full bg-primary-950">
   <div class="px-4 lg:px-12 py-6 lg:py-0">
     {
       content.upperHeading && (
@@ -65,7 +65,7 @@ const { content } = Astro.props;
     <ImageComp
       imagePath={content.imagePath}
       imageAlt={content.imageAlt}
-      styles="object-cover w-full h-full"
+      styles="object-cover w-full "
       quality={100}
     />
     {

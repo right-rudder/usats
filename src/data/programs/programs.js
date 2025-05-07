@@ -1,5 +1,14 @@
 // transform this to get the info from data/programs/*.js and populate the cards
 import { COMPANY_NAME } from "../../consts";
+import { 
+  CESSNA_172_USATS_RAMP_WEBP as cessnaRamp,
+  ALTO_NG_PANEL as altoNGPanel,
+  DIRECTFLY_ALTONG_RED_FLYING_DEPARTING_USATS as altongRedDeparting,
+  DIRECTFLY_ALTONG_RED_FLYING_OVER_CITY_USATS as altongRedFlyingCity,
+  DIRECTFLY_ALTONG_PANEL_USATS as altongPanelUSATS,
+  USATS_BANNER_APPLICATION as usatsBannerApplication,
+
+} from "../../constsImages";
 
 const programs = {
   upperHeading: "Explore",
@@ -9,8 +18,8 @@ const programs = {
     {
       title: "Private Pilot License",
       badges: ["Part 141", "PPL"],
-      imagePath: "/src/assets/USATS_Plane_N3544W.webp",
-      imageAlt: "",
+      imagePath: cessnaRamp.imagePath,
+      imageAlt: cessnaRamp.imageAlt,
       description:
         "Start your aviation journey by learning to fly for recreation or as the first step toward a flying career.",
       link: "/airplane-training/private-pilot-license",
@@ -18,8 +27,8 @@ const programs = {
     {
       title: "Instrument Rating",
       badges: ["Part 141", "IR"],
-      imagePath: "/src/assets/ALTO_NG_Panel.jpg",
-      imageAlt: "",
+      imagePath: altoNGPanel.imagePath,
+      imageAlt: altoNGPanel.imageAlt,
       description:
         "Enhance your skills by learning to fly solely using instruments, preparing you for complex weather conditions.",
       link: "/airplane-training/instrument-rating",
@@ -27,8 +36,8 @@ const programs = {
     {
       title: "Commercial Pilot License",
       badges: ["Part 141", "CPL"],
-      imagePath: "/src/assets/directFly_altong_red_flying_departing_USATS.jpg",
-      imageAlt: "",
+      imagePath: altongRedDeparting.imagePath,
+      imageAlt: altongRedDeparting.imageAlt,
       description:
         "Advance your career with professional training that prepares you to fly commercially and meet industry standards.",
       link: "/airplane-training/commercial-pilot-license",
@@ -36,8 +45,8 @@ const programs = {
     {
       title: "Certified Flight Instructor",
       badges: ["Part 61", "CFI"],
-      imagePath: "/src/assets/directFly_altong_red_flying_over_city_USATS.jpg",
-      imageAlt: "",
+      imagePath: altongRedFlyingCity.imagePath,
+      imageAlt: altongRedFlyingCity.imageAlt,
       description:
         "Become a flight instructor and start teaching others to fly while gaining valuable experience and flight hours.",
       link: "/airplane-training/certified-flight-instructor",
@@ -45,8 +54,8 @@ const programs = {
     {
       title: "Certified Flight Instructor Instrument",
       badges: ["Part 61", "CFII"],
-      imagePath: "/src/assets/directFly_altong_panel_USATS.jpg",
-      imageAlt: "",
+      imagePath: altongPanelUSATS.imagePath,
+      imageAlt: altongPanelUSATS.imageAlt,
       description:
         "Specialize in instrument flight instruction and train students to navigate and fly safely in low-visibility conditions.",
       link: "/airplane-training/certified-flight-instructor-instrument",
@@ -54,8 +63,8 @@ const programs = {
     {
       title: "Professional Pilot Program",
       badges: ["Part 141/61", "PPL", "IR", "CPL", "CFI", "CFII"],
-      imagePath: "/src/assets/USATS_banner_Application.webp",
-      imageAlt: "",
+      imagePath: usatsBannerApplication.imagePath,
+      imageAlt: usatsBannerApplication.imageAlt,
       description:
         "Take the first step toward becoming a pilot with our comprehensive Professional Pilot Course.",
       link: "/airplane-training/professional-pilot-program",

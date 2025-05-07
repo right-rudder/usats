@@ -8,7 +8,7 @@ const faqs = program.faqs;
 const included = program.included;
 const additionalCosts = program.additionalCosts;
 const benefits = program.benefits;
-const price = program.price;
+const prices = program.prices;
 ---
 
 <section class="mx-auto md:px-8 py-12 bg-primary-800 bg-fixed">
@@ -101,12 +101,22 @@ const price = program.price;
       }
 
       {
-        price && (
-          <div class="mb-10 ">
-            <h3 class="text-3xl font-semibold mb-4 text-accent-700">Price</h3>
-            <p class="text-primary-100 leading-relaxed mb-10 text-2xl text-left" set:html={price}/>
-          </div>
+        prices && (
+          <h3 class="text-3xl font-semibold mb-4 text-accent-700">Prices:</h3>
         )
+      }
+      {
+        prices && prices.map( (price) => (
+          <div class="">
+            <div class="flex gap-2 items-baseline">
+              <p class="text-primary-100 leading-relaxed mb-10 text-2xl text-left" set:html={` ${price.price} `}/>
+              <p class="text-primary-100 leading-relaxed mb-10 text-2xl text-left" set:html={` ${price.aircraft} `}/>
+              <div class={` duration-200 ease-in opacity-80 hover:opacity-95 bg-accent-700 text-muted-100 rounded-md px-3 py-1 text-sm font-semibold`}>
+                <p class="">Part {price.part}</p>
+              </div>
+            </div>
+          </div>
+          ))
       }
     </div>
 
@@ -148,7 +158,6 @@ const price = program.price;
           }
         </ul>
       </div>
-
       <SmallCTA cta={cta} />
     </div>
   </div>
