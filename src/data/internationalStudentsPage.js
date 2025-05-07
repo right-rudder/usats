@@ -9,7 +9,7 @@ const internationalStudentsPage = {
       stars: true,
       imagePath: imgHeader.imagePath,
       imageAlt: imgHeader.imageAlt,
-      headerH1: `INTERNATIONAL STUDENTS <br> ${COMPANY_NICKNAME}`,
+      headerH1: `INTERNATIONAL STUDENTS <br> at ${COMPANY_NICKNAME}`,
       paragraph:
         "Start Your Pilot Career in the U.S. with Our International-Friendly Flight School. FAA-certified. Trusted by students from 30+ countries.",
       buttons: [

@@ -46,7 +46,7 @@ export const ADDRESS = "355 Golden Knight Blvd";
 export const ADDRESS_STATE = "FL";
 export const ADDRESS_CITY = "Titusville";
 export const ADDRESS_ZIP = "32780";
-export const AIRPORT = "Space Coast regional";
+export const AIRPORT = "SPACE COAST REGIONAL";
 export const AIRPORT_CODE = "KTIX";
 
 // Pages Data
