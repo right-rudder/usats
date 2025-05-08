@@ -25,24 +25,21 @@ const { content } = Astro.props;
   </div>
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-5xl text-center">
-      <h2 class="upperheading">THE USATS EXPERIENCE</h2>
-      <p class="heading">What Our Students Are Saying</p>
+      <h2 class="upperheading">{content.upperHeading}</h2>
+      <p class="heading">{content.heading}</p>
     </div>
     <div
       class="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm/6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4"
     >
+    <!-- Main Card -->
       <figure
-        class="rounded-sm bg-primary-600 ring-1 shadow-lg ring-gray-500/5 sm:col-span-2 xl:col-start-2 xl:row-end-1"
+        class="rounded-sm bg-primary-600 ring-1 shadow-lg ring-gray-500/5 hover:bg-accent-900 hover:scale-110 transition-all duration-500 sm:col-span-2 xl:col-start-2 xl:row-end-1 hover:bg-accent-900 hover:scale-110 transition-all duration-500"
       >
         <blockquote
           class="p-6 text-lg font-medium tracking-tight text-gray-300 sm:p-12 sm:text-xl/8"
         >
           <p>
-            "I came for a flight review and some flights for a few days.
-            Communication was straightforward and transparent. Relatively new
-            c172 with g1000 was available for all the times I requested. Flight
-            instructor Ethan was courteous and safe. Plane was well maintained
-            and I felt that I was in safe hands"
+            {content.mainReview.body}
           </p>
         </blockquote>
         <figcaption
@@ -50,63 +47,63 @@ const { content } = Astro.props;
         >
           <div class="flex-auto text-center">
             <div class="font-bold text-xl text-gray-200 uppercase font-title">
-              David H.
+              {content.mainReview.author}
             </div>
           </div>
         </figcaption>
       </figure>
+
+      <!-- Other Cards -->
       <div class="space-y-8 xl:contents xl:space-y-0">
+        <!-- Cards Left -->
         <div class="space-y-8 xl:row-span-2">
           <figure
-            class="rounded-sm p-6 bg-primary-500 ring-1 shadow-lg ring-gray-500/5"
+            class="rounded-sm p-6 bg-primary-500 ring-1 shadow-lg ring-gray-500/5 hover:bg-accent-900 hover:scale-110 transition-all duration-500 hover:bg-accent-900 hover:scale-110 transition-all duration-500"
           >
             <blockquote class="text-gray-300">
               <p>
-                "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam
-                delectus nihil. Aut enim doloremque et ipsam."
+                {content.reviews[0].body}
               </p>
             </blockquote>
             <figcaption class="mt-6 flex items-center gap-x-4">
               <div>
                 <div class="font-bold text-gray-200 uppercase font-title">
-                  Leslie A.
+                  {content.reviews[0].author}
                 </div>
               </div>
             </figcaption>
           </figure>
           <figure
-            class="rounded-sm p-6 bg-primary-500 ring-1 shadow-lg ring-gray-500/5"
+            class="rounded-sm p-6 bg-primary-500 ring-1 shadow-lg ring-gray-500/5 hover:bg-accent-900 hover:scale-110 transition-all duration-500"
           >
             <blockquote class="text-gray-300">
               <p>
-                "Aut reprehenderit voluptatem eum asperiores beatae id. Iure
-                molestiae ipsam ut officia rem nulla blanditiis."
+                {content.reviews[1].body}
               </p>
             </blockquote>
             <figcaption class="mt-6 flex items-center gap-x-4">
               <div>
                 <div class="font-bold text-gray-200 uppercase font-title">
-                  Lindsay W.
+                  {content.reviews[1].author}
                 </div>
               </div>
             </figcaption>
           </figure>
         </div>
+        <!-- Card Bottom 1 -->
         <div class="space-y-8 xl:row-start-1">
           <figure
-            class="rounded-sm p-6 bg-primary-500 ring-1 shadow-lg ring-gray-500/5"
+            class="rounded-sm p-6 bg-primary-500 ring-1 shadow-lg ring-gray-500/5 hover:bg-accent-900 hover:scale-110 transition-all duration-500"
           >
             <blockquote class="text-gray-300">
               <p>
-                "Voluptas quos itaque ipsam in voluptatem est. Iste eos
-                blanditiis repudiandae. Earum deserunt enim molestiae ipsum
-                perferendis recusandae saepe corrupti."
+                {content.reviews[4].body}
               </p>
             </blockquote>
             <figcaption class="mt-6 flex items-center gap-x-4">
               <div>
                 <div class="font-bold text-gray-200 uppercase font-title">
-                  Tom C.
+                  {content.reviews[4].author}
                 </div>
               </div>
             </figcaption>
@@ -115,22 +112,22 @@ const { content } = Astro.props;
           <!-- More testimonials... -->
         </div>
       </div>
+
+      <!-- Card Bottom 2 -->
       <div class="space-y-8 xl:contents xl:space-y-0">
         <div class="space-y-8 xl:row-start-1">
           <figure
-            class="rounded-sm p-6 bg-primary-500 ring-1 shadow-lg ring-gray-500/5"
+            class="rounded-sm p-6 bg-primary-500 ring-1 shadow-lg ring-gray-500/5 hover:bg-accent-900 hover:scale-110 transition-all duration-500"
           >
             <blockquote class="text-gray-300">
               <p>
-                "Voluptas quos itaque ipsam in voluptatem est. Iste eos
-                blanditiis repudiandae. Earum deserunt enim molestiae ipsum
-                perferendis recusandae saepe corrupti."
+                {content.reviews[5].body}
               </p>
             </blockquote>
             <figcaption class="mt-6 flex items-center gap-x-4">
               <div>
                 <div class="font-bold text-gray-200 uppercase font-title">
-                  Tom C.
+                  {content.reviews[5].author}
                 </div>
               </div>
             </figcaption>
@@ -138,43 +135,45 @@ const { content } = Astro.props;
 
           <!-- More testimonials... -->
         </div>
+
+        <!-- Cards Right -->
         <div class="space-y-8 xl:row-span-2">
+          <!-- Card Right  1 -->
           <figure
-            class="rounded-sm p-6 bg-primary-500 ring-1 shadow-lg ring-gray-500/5"
+            class="rounded-sm p-6 bg-primary-500 ring-1 shadow-lg ring-gray-500/5 hover:bg-accent-900 hover:scale-110 transition-all duration-500"
           >
             <blockquote class="text-gray-300">
               <p>
-                "Molestias ea earum quos nostrum doloremque sed. Quaerat quasi
-                aut velit incidunt excepturi rerum voluptatem minus harum."
+                {content.reviews[2].body}
               </p>
             </blockquote>
             <figcaption class="mt-6 flex items-center gap-x-4">
               <div>
                 <div class="font-bold text-gray-200 uppercase font-title">
-                  Leonard K.
+                  {content.reviews[2].author}
                 </div>
               </div>
             </figcaption>
           </figure>
+          
+        <!-- Card Right  2 -->
           <figure
-            class="rounded-sm p-6 bg-primary-500 ring-1 shadow-lg ring-gray-500/5"
+            class="rounded-sm p-6 bg-primary-500 ring-1 shadow-lg ring-gray-500/5 hover:bg-accent-900 hover:scale-110 transition-all duration-500"
           >
             <blockquote class="text-gray-300">
               <p>
-                "Molestias ea earum quos nostrum doloremque sed. Quaerat quasi
-                aut velit incidunt excepturi rerum voluptatem minus harum."
+                {content.reviews[3].body}
               </p>
             </blockquote>
             <figcaption class="mt-6 flex items-center gap-x-4">
               <div>
                 <div class="font-bold text-gray-200 uppercase font-title">
-                  Leonard K.
+                  {content.reviews[3].author}
                 </div>
               </div>
             </figcaption>
           </figure>
 
-          <!-- More testimonials... -->
         </div>
       </div>
     </div>

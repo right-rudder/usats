@@ -38,63 +38,6 @@ const homePage = {
       ],
     },
 
-    // ourAdvantages: {
-    //   images: {
-    //     panel: {
-    //       imagePath: "/src/assets/ALTO_NG_Panel.jpg",
-    //       imageAlt: "AirPlane Panel",
-    //     },
-    //     h60Repair: {
-    //       imagePath: "/src/assets/USATS_145_Repair_Station_UH-60.webp",
-    //       imageAlt: "Two mechanic reparing a UH-60 Helicopter",
-    //     },
-    //     base: {
-    //       imagePath: "/src/assets/USATS_base_Cover.webp",
-    //       imageAlt: "USATS base building",
-    //     },
-    //   },
-    //   buttons: [
-    //     {
-    //       name: "First Button",
-    //       link: "#",
-    //       primary: true,
-    //     },
-    //     {
-    //       name: "Second Button",
-    //       link: "#",
-    //       primary: false,
-    //     },
-    //   ],
-    // },
-
-    // yourCarrer: {
-    //   images: {
-    //     pilotSeat: {
-    //       imagePath: "/src/assets/ALO_NG_INTERIOR.webp",
-    //       imageAlt: "AirPlane Chair's",
-    //     },
-    //     planeFront: {
-    //       imagePath: "/src/assets/Happy_Landings_ALO_NG.webp",
-    //       imageAlt: "The front of an airplane",
-    //     },
-    //     dismantled: {
-    //       imagePath: "/src/assets/ALTO_NG_KIT.jpg",
-    //       imageAlt: "Dismantled airplane",
-    //     },
-    //   },
-    //   buttons: [
-    //     {
-    //       name: "First Button",
-    //       link: "#",
-    //       primary: true,
-    //     },
-    //     {
-    //       name: "Second Button",
-    //       link: "#",
-    //       primary: false,
-    //     },
-    //   ],
-    // },
 
     whatWeOffer: {
       images: {
@@ -231,35 +174,64 @@ const homePage = {
     },
 
     testimonials: {
-      upperHeading: "",
-      heading: "",
+      upperHeading: "THE USATS EXPERIENCE",
+      heading: "What Our Students Are Saying",
+      paragraphs:[
+        "I came for a flight review and some flights for a few days. Communication was straightforward and transparent. Relatively new c172 with g1000 was available for all the times I requested. Flight instructor Ethan was courteous and safe. Plane was well maintained and I felt that I was in safe hands",
+      ],
       headingText: ["", ""],
       buttonText: "",
       buttonLink: "",
+      mainReview: {
+          body: "We would like to address our appreciation to all the Schools (personnel), generally, and to the instructors specifically for their complex works and dedication, which has helped us grow our skill and knowledge significantly and provided us with all the ability to become professional pilots in the future.",
+          author: "ROYAL MALASIAN POLICE",
+          imagePath: "",
+          imageAlt: "",
+          stars: 5,
+      },
+
       reviews: [
         {
-          body: "",
-          author: "",
+          body: "Absolutely amazing. Stephane went out of his way to ensure that I was fully prepared for the check ride and provided the best test prep experience possible. Betsy and Kathy were great with assisting me to ensure I got all the required documents in place before my arrival. I would highly recommend USATS to a friend or colleague, and I look forward to returning for more training in the near future.",
+          author: "RUDI VALENTINE",
+          imagePath: "",
+          imageAlt: "",
+          stars: 5,
         },
         {
-          body: "",
-          author: "",
+          body: "The instructors were professional in all their activities. The instructors diligently discharged their duties. They assisted the struggling pilots and encouraged the sharp ones. The ultimate lesson they taught pilots were patience, planning and correct execution. The introduction of pilots to the glass cockpit has helped the Ghana Air Force pilots adjust to the glass cockpit of the aircraft they fly.",
+          author: "GHANA AIR FORCE",
+          imagePath: "",
+          imageAlt: "",
+          stars: 5,
         },
         {
-          body: "",
-          author: "",
+          body: "Best Flight School I’ve ever been to. Amicable staff instructors are all high-time and incredibly knowledgeable. Scheduling is consistent, and the school’s location makes flights unlikely to be cancelled for weather. The maintenance team is also brilliant and always answers any questions instructors and students may have.",
+          author: "JOB SAVAGE",
+          imagePath: "",
+          imageAlt: "",
+          stars: 5,
         },
         {
-          body: "",
-          author: "",
+          body: "My experience at the school was unique and rewarding. There are many schools available to obtain a pilot’s license, but only one gives you a holistic experience. From day one, I understood that my responsibility as a helicopter pilot goes above and beyond passing check rides. I would recommend this school to anyone serious about becoming a leader and a professional pilot.",
+          author: "M GOMES",
+          imagePath: "",
+          imageAlt: "",
+          stars: 5,
         },
         {
-          body: "",
-          author: "",
+          body: "USATS provided everything, from the ground school lessons to the flight instruction, with very experienced instructors and modern facilities that you cannot find in any other schools. A school that would equip me with real professional skills would help me be a leader in the aviation industry.",
+          author: "J HARAM",
+          imagePath: "",
+          imageAlt: "",
+          stars: 5,
         },
         {
-          body: "",
-          author: "",
+          body: "By far, the best helicopter training in Florida. The staff is not only patient but also extremely professional. The equipment is well maintained and a pleasure to fly. Factoring in how many flying days a year you have in Florida this is the place to come to get your ratings and qualifications at a affordable and expeditious manner.",
+          author: "Tim Green",
+          imagePath: "",
+          imageAlt: "",
+          stars: 5,
         },
       ],
     },
