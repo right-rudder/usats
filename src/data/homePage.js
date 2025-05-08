@@ -9,7 +9,7 @@ const homePage = {
       imageAlt: "Alto NG Air Plane",
       headerH1: `Become a pilot today`,
       paragraph:
-        "Launch your professional pilot career with USATS in Titusville, FL. </br>Our Professional Pilot Programs will get you airline ready, serving student pilots in Titusville, Cocoa Beach, Merritt Island.</br>Become a pilot at USATS today!",
+        "Launch your professional pilot career with USATS in Titusville, FL. </br>Our Professional Pilot Programs will get you airline ready, serving student pilots in Titusville, Cocoa Beach and Merritt Island, Viera and beyond. </br>Whether you're local or an international student, USATS is your destination to become a professional pilot. Apply today!",
       buttons: [
         {
           name: "Enroll Now",
@@ -34,6 +34,10 @@ const homePage = {
         {
           text: "About Us",
           link: "/about-us",
+        },
+        {
+          text: "Why Choose USATS?",
+          link: "#why-us",
         },
       ],
     },
@@ -248,8 +252,8 @@ const homePage = {
           answer: "Career-focused training: Master everything from private pilot basics to advanced instrument flying, with optional courses in leadership (CRM/TEM) honed from military programs. Enjoy small classes, 2:1 instructor ratios, and access to NASA-adjacent airspace for unparalleled training diversity.",
         },
         {
-          question: "Is there any requirements to join?",
-          answer: "No experience needed! Start with zero hours—just a passion to fly. Medical certification (Class 2+) and English proficiency required. Military veterans: leverage your background for accelerated pathways. International students: M1 visa eligibility, proof of funds, and academic transcripts. USATS assists with visa logistics, housing, and airport transfers!",
+          question: "Are there any requirements to join?",
+          answer: "No experience needed! Start with zero hours—just a passion to fly. Medical certification (Class 2+) and English proficiency are required. Military veterans: leverage your background for accelerated pathways. International students must be: M1 visa eligible and will need to provide proof of funds and academic transcripts. USATS assists with visa logistics, housing, and airport transfers!",
         },
       ],
       buttons: [

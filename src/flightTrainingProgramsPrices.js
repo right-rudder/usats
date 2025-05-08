@@ -90,20 +90,20 @@ export const pplFw = [
     lengthMonths: 2,
     price: "$15,493.00"
   },
-  {
-    aircraft: "Alto NG",
-    part: 61,
-    dual: 40.0,
-    solo: 10.0,
-    sim: 0,
-    ground: 35,
-    tutored: 0,
-    prePost: 9.5,
-    checkride: 1.5,
-    totalHours: 85,
-    lengthMonths: 2,
-    price: "$12,992.50"
-  }
+  // {
+  //   aircraft: "Alto NG",
+  //   part: 61,
+  //   dual: 40.0,
+  //   solo: 10.0,
+  //   sim: 0,
+  //   ground: 35,
+  //   tutored: 0,
+  //   prePost: 9.5,
+  //   checkride: 1.5,
+  //   totalHours: 85,
+  //   lengthMonths: 2,
+  //   price: "$12,992.50"
+  // }
 ];
 
 // IR (RW)
@@ -196,20 +196,20 @@ export const irFw = [
     lengthMonths: 2.0,
     price: "$15,980.00"
   },
-  {
-    aircraft: "Alto NG",
-    part: 61,
-    dual: 50,
-    solo: 0.0,
-    sim: 0,
-    ground: 30,
-    tutored: 0,
-    prePost: 12,
-    checkride: 1.5,
-    totalHours: 80,
-    lengthMonths: 2.0,
-    price: "$13,480.00"
-  }
+  // {
+  //   aircraft: "Alto NG",
+  //   part: 61,
+  //   dual: 50,
+  //   solo: 0.0,
+  //   sim: 0,
+  //   ground: 30,
+  //   tutored: 0,
+  //   prePost: 12,
+  //   checkride: 1.5,
+  //   totalHours: 80,
+  //   lengthMonths: 2.0,
+  //   price: "$13,480.00"
+  // }
 ];
 
 // CPL (RW)

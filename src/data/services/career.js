@@ -18,7 +18,7 @@ const careers = {
         buttons: [
         {
             name: "Learn more",
-            link: "#services",
+            link: "#grid-programs",
             primary: true,
         },
         ],

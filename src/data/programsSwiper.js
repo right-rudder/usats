@@ -1,4 +1,4 @@
-import { ALTO_4A as imgAirplaneCard } from "../constsImages";
+import { ALTO_4A as imgAirplaneCard, FLYING_WHITE_HELI9 as imgHelicopterCard } from "../constsImages";
 
 const programsSwiper = {
     upperHeading: "Explore",
@@ -16,9 +16,8 @@ const programsSwiper = {
       },
       {
         title: "Helicopter Pilot Training Programs",
-        imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
-        imageAlt:
-          "USATS  airline plane landing view from below",
+        imagePath: imgHelicopterCard.imagePath,
+        imageAlt: imgHelicopterCard.imageAlt,
         description:
           "With an average of 320 flying days per year, we can make sure your training will be done on time. Our practice areas are located within 10 nautical miles from our airport, limiting the transit time for your off-airport training.",
         link: "/helicopter-training",

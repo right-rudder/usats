@@ -21,7 +21,7 @@ const aboutUs = {
       },
       {
         name: "Join the Team",
-        link: "/career",
+        link: "/about-us/careers",
         primary: true,
       },
     ],
@@ -45,7 +45,7 @@ const aboutUs = {
   whatWeOffer: {
     title: `On a mission to train the best pilots in the world`,
     paragraph:
-      "Through our nearly 30-year history, we have helped thousands of students become professional pilots. In every corner of the globe, and every niche of the industry, you can find USATS graduates.",
+      "Through our nearly 30-year history, we have helped thousands of students graduated. In every corner of the globe, and every niche of the industry, you can find USATS graduates.",
     bullets: [
       {
         title: "Rich History & Alumni",
@@ -58,19 +58,13 @@ const aboutUs = {
         title: "The Early Years",
         description: [
           "The USATS story began in 1987, the year Helicopter Adventures Inc. (HAI) was founded by Mr. Patrick Corr in Concord, CA.",
-          "By 2000, the company had grown substantially and was relocated to Space Coast, FL (Titusville). In Titusville, HAI became a wholly-owned subsidiary of Bristow Group Inc. in 2007 and was rebranded as Bristow Academy.",
+          "By 2000, the company had grown substantially and was relocated to Space Coast, FL (Titusville). In Titusville 2007, HAI became a wholly-owned subsidiary of Bristow Group Inc. in 2007 and was rebranded as Bristow Academy.",
         ],
       },
       {
         title: "​Setting The Standard For Quality",
         description: [
-          "Since 2001, Our helicopter academy set the standard for quality helicopter pilot training. This was a time of development for our key training programs, which were geared toward a new breed of career-oriented student pilots.",
-        ],
-      },
-      {
-        title: "An Exciting Future",
-        description: [
-          "There has never been a better time to enter the aviation industry. Helicopter pilots have a wide range of exciting, challenging, and high-paying career options such as military, law enforcement, tour operators, and oil and gas. There are even opportunities to transition into the airlines with our Rotor Transition Program (RTP) as the airline industry is facing a crippling shortage of quality-trained entry-level pilots.",
+          "Since 2001, our helicopter academy has set the standard for further expanding the quality of helicopter pilot training. This was a time of development for our key training programs, which were geared toward a new breed of career-oriented student pilots",
         ],
       },
       {
