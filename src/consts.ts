@@ -35,11 +35,11 @@ export const ADDRESS_LINE_1 = "355 Golden Knights Blvd";
 export const ADDRESS_LINE_2 = "Titusville, FL 32780";
 export const FACEBOOK_URL = "https://www.facebook.com/USATSolutions/";
 export const INSTAGRAM_URL = "https://www.instagram.com/usatsolutions/";
-export const LINKEDIN_URL =
-  "https://www.linkedin.com/company/us-aviation-training-solutions";
+export const LINKEDIN_URL = "https://www.linkedin.com/company/us-aviation-training-solutions";
 export const YOUTUBE_URL = null;
 export const TWITTER_URL = null;
 export const EMAIL_ADDRESS = "info@usatsolutions.com";
+export const COMPANY_SITE_LINK="https://usatsflighttraining.com";
 
 export const COMPANY_NICKNAME = "USATS";
 export const ADDRESS = "355 Golden Knight Blvd";
@@ -55,15 +55,9 @@ export const BANNER_TITLE = `Experience flight like never before.`;
 
 // Video links
 
-export const VIDEOLINK_HOME =
-  "https://cdn.shopify.com/videos/c/o/v/f7fe5a4231a94c38a91db2db8280be4e.mp4";
-export const VIDEOLINK_AIRTOUR =
-  "https://cdn.shopify.com/videos/c/o/v/2e1eb45cc3e041bbb8f12d2b94d11067.mp4";
-export const VIDEOLINK_AIRPLANES =
-  "https://cdn.shopify.com/videos/c/o/v/6b057798c5be41b9865d7a4054736b45.mp4";
-export const VIDEO_HOME_HELICOPTER =
-  "https://cdn.shopify.com/videos/c/o/v/41e966eb47fa4d8eaad7f2b713b2459d.mp4";
-export const VIDEOLINK_MAINTENANCE =
-  "https://cdn.shopify.com/videos/c/o/v/40ea4b0895e0415fa098733bcf6e8ee4.mp4";
-export const VIDEOLINK_ABOUTUS =
-  "https://usatsflighttraining.com/cdn/shop/videos/c/vp/9cce912410e44240829a51b85a4ce623/9cce912410e44240829a51b85a4ce623.HD-1080p-2.5Mbps-42396578.mp4?v=0";
+export const VIDEOLINK_HOME = "https://cdn.shopify.com/videos/c/o/v/f7fe5a4231a94c38a91db2db8280be4e.mp4";
+export const VIDEOLINK_AIRTOUR = "https://cdn.shopify.com/videos/c/o/v/2e1eb45cc3e041bbb8f12d2b94d11067.mp4";
+export const VIDEOLINK_AIRPLANES = "https://cdn.shopify.com/videos/c/o/v/6b057798c5be41b9865d7a4054736b45.mp4";
+export const VIDEO_HOME_HELICOPTER = "https://cdn.shopify.com/videos/c/o/v/41e966eb47fa4d8eaad7f2b713b2459d.mp4";
+export const VIDEOLINK_MAINTENANCE = "https://cdn.shopify.com/videos/c/o/v/40ea4b0895e0415fa098733bcf6e8ee4.mp4";
+export const VIDEOLINK_ABOUTUS = "https://usatsflighttraining.com/cdn/shop/videos/c/vp/9cce912410e44240829a51b85a4ce623/9cce912410e44240829a51b85a4ce623.HD-1080p-2.5Mbps-42396578.mp4?v=0";

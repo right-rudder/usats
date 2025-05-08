@@ -20,6 +20,7 @@ import militaryCta from "../data/programs/ctaMilitary";
 import CTAFlight from "../data/ctaFlight";
 import ContentCTA from "../components/astro/ContentCTA.astro";
 import Content from "../components/astro/Content.astro";
+import { VIDEOLINK_HOME } from "../consts";
 
 const { data } = homePage;
 ---
@@ -30,7 +31,7 @@ const { data } = homePage;
   keywords={data.pageKeywords}
 >
   <!-- HEADER -->
-  <HeaderScreen content={data.header} />
+  <HeaderScreen content={data.header} headerVideo={VIDEOLINK_HOME} />
   <UnderHeader content={data.underHeader} />
   <!-- <WhoAreUs content={data.whatWeOffer} /> -->
   <WhyUs content={data.whyUs} />

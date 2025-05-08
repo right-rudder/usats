@@ -5,6 +5,7 @@ import WhoAreUs from "../../components/astro/WhoAreUs.astro";
 
 import aboutUs from "../../data/about-us/aboutUs";
 import PageSumarry from "../../components/astro/PageSummary.astro"
+import { VIDEOLINK_ABOUTUS } from "../../consts";
 
 ---
 
@@ -14,7 +15,7 @@ import PageSumarry from "../../components/astro/PageSummary.astro"
   keywords={aboutUs.pageKeywords}
 >
   <!-- HEADER -->
-  <HeaderScreen content={aboutUs.header} />
+  <HeaderScreen content={aboutUs.header} headerVideo={VIDEOLINK_ABOUTUS} />
   <PageSumarry content={aboutUs.pageSummary} />
   <WhoAreUs content={aboutUs.whatWeOffer} />
   <!-- Our Team? -->
