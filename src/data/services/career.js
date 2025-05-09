@@ -13,7 +13,7 @@ const careers = {
         stars: true,
         imagePath: imgHeader.imagePath,
         imageAlt: imgHeader.imageAlt,
-        headerH1: `${COMPANY_NICKNAME} | Careers`,
+        headerH1: `${COMPANY_NICKNAME} <br> Careers`,
         paragraph: `Come work with us!`,
         buttons: [
         {
