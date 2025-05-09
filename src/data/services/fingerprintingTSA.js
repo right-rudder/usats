@@ -10,8 +10,7 @@ const fingerprintingTSA = {
     header: {
       stars: true,
       imagePath: "/src/assets/fingerprinting.webp",
-      imageAlt:
-      "image alt",
+      imageAlt: "image alt",
       headerH1: `${COMPANY_NICKNAME} <br> TSA Fingerprinting Service`,
       paragraph: ``,
       buttons: [
@@ -32,7 +31,8 @@ const fingerprintingTSA = {
         subtitle: "Flight school candidates -- The following steps are required PRIOR to scheduling your fingerprint appointment:",
         heather2: "Flight School Fingerprinting",
         description: [
-          "Onsite fingerprinting for all your TSA needs, including Flight Training Security Program (formerly AFSP)!"
+          "Onsite fingerprinting for all your TSA needs, including Flight Training Security Program (formerly AFSP)! <br>",
+          `Start the process at <a href="https://secure.natacs.aero/ftsp/registration/index.asp" target="_blank"> <strong> link to NATA - FTSP </strong></a>, then reach out to us at <a href="mailto:fingerprinting@usatsolutions.com"><strong>fingerprinting@usatsolutions.com</strong></a> to set up your appointment time.`,
         ],
         loginLink: "https://secure.natacs.aero/ftsp/registration/index.asp ",
         email: "fingerprinting@usatsolutions.com",
@@ -55,7 +55,7 @@ const fingerprintingTSA = {
     },
 
     underHeader: {
-      title: "FINGER PRINTING TODAY AT USATS",
+      title: "FINGER- PRINTING TODAY AT USATS",
       paragraphs: [
         "Here at USATS we make sure you have all you need to make it.",
       ],
