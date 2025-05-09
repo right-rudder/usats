@@ -1,3 +1,4 @@
+export const DARK_BLUE_HELI_MAINTENANCE = { imagePath: "/src/assets/Dark_Blue_Heli_Maintenance.jpg", imageAlt: ""};
 export const STAFF_PHOTO_BRIAN_CRADDOCK = { imagePath: "/src/assets/staff_photo_Brian_Craddock.jpg", imageAlt: ""};
 export const STAFF_PHOTO_HESSE_HELICOPTER_INSTRUCTOR = { imagePath: "/src/assets/staff_photo_Iikka Hesse_Helicopter_Instructor.jpg", imageAlt: ""};
 export const STAFF_PHOTO_RAY_DEPTULA = { imagePath: "/src/assets/staff_photo_Ray_Deptula.jpg", imageAlt: "US Aviation Training Solutions Certified Flight Instructor Stephane Rebeix"};
