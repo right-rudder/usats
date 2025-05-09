@@ -6,7 +6,39 @@ import programs from "../../data/programs/programs.js";
 import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astro";
 import CTAFlight from "../../data/ctaFlight.js";
 
-import coursesIndex from "../../data/coursesIndex.js";
+import { ALTO_5A as imgHeader } from "../../constsImages";
+
+const coursesIndex = {
+    data: {
+      // SEO Header Stuff
+      pageTitle: "Training Courses | US Academy ",
+      pageDescription:
+        "",
+      pageKeywords:
+        "",
+  
+      // Top Header
+      header: {
+        stars: true,
+        imagePath: imgHeader.imagePath,
+        imageAlt: imgHeader.imageAlt,
+        headerH1: `AIRPLANE TRAINING<br>PROGRAMS</span>`,
+        paragraph: ``,
+        buttons: [
+          {
+            name: "Enroll Today",
+            link: "/enroll-now",
+            primary: true,
+          },
+          {
+            name: "Program Guide",
+            link: "#grid-programs",
+            primary: false,
+          },
+        ],
+      },
+    },
+  };
 
 const { data } = coursesIndex;
 
