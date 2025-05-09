@@ -1,5 +1,8 @@
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
-import { MILITARY_TRAINING_BH9 as imgCTA } from "../../constsImages";
+import {  MILITARY_TRAINING_BH9 as imgCTA,
+          DARK_BLUE_HELI_MAINTENANCE2 as imgHeader,
+          DIRECTFLY_ALTONG_PANEL_2 as imgMaintenance,
+ } from "../../constsImages";
 
 const maintenanceServices = {
   pageTitle: `Why Choose USATS? | ${COMPANY_NAME}`,
@@ -11,8 +14,8 @@ const maintenanceServices = {
   // Top Header
   header: {
     stars: true,
-    imagePath: "/src/assets/maintenanceHeli3.png",
-    imageAlt: "US Aviation Training Solutions mechanic performing maintenance on a helicopter",
+    imagePath: imgHeader.imagePath,
+    imageAlt: imgHeader.imageAlt,
     headerH1: `REPAIR TODAY <br> WITH ${COMPANY_NICKNAME}`,
     paragraph: `${COMPANY_NICKNAME} strives to meet our customers’ needs through the capabilities of our Certified Repair Station. With our strong attention to detail, we maintain high standards of safety and quality excellence. Our team of highly skilled mechanics are eager to provide both scheduled and unscheduled maintenance to meet your needs.`,
     buttons: [
@@ -42,7 +45,7 @@ const maintenanceServices = {
 
   contentSplit: {
     upperHeading: "USATS",
-    heading: `Maintenance Services ${COMPANY_NICKNAME}`,
+    heading: `Maintenance Services`,
     descriptions: [
       "",
     ],
@@ -117,9 +120,8 @@ const maintenanceServices = {
       link: "/enroll",
       primary: true,
     },
-    imagePath: "/src/assets/maintenanceHeli4.png",
-    imageAlt:
-      "",
+    imagePath: imgMaintenance.imagePath,
+    imageAlt: imgMaintenance.imageAlt,
   },
 
   repairStationCapabilities: {
@@ -136,10 +138,10 @@ const maintenanceServices = {
         manufacturer: "Schwiezer",
         imagePath: "/src/assets/White_Schweizer_S300_Usats_Ramp_USATS.webp",
         imageAlt: "",
-        description: "Labore reprehenderit laborum dolore ut aliqua proident laboris duis nisi quis aliquip aliquip nostrud.",
+        description: "",
         bullets: [
           "Scheduled Inspections",
-          "Un-Scheduled Maintenance",
+          "Airframe and engine maintenance and repair",
           "Component maintenance excluding Schweizer restricted parts",
           "Refurbishment: complete tear down and re-build",
           "Large stock of new, serviceable and repairable Schweizer specific parts"
@@ -151,10 +153,13 @@ const maintenanceServices = {
         manufacturer: "Robinson",
         imagePath: "/src/assets/White_blue_Robinson_R44_USATS_Ramp.webp",
         imageAlt: "",
-        description: "Labore reprehenderit laborum dolore ut aliqua proident laboris duis nisi quis aliquip aliquip nostrud.", 
+        description: "", 
         bullets: [
           "Authorized Service Center for R22 & R44",
-          "Scheduled, Inspection, Un-Scheduled Maintenance"
+          "Airframe and engine maintenance and repair",
+          "Component maintenance excluding Robinson restricted parts",
+          "Refurbishment: complete tear down and re-build",
+          "Large stock of new, serviceable and repairable Robinson specific parts",
         ],
         buttons: [
           {
@@ -170,20 +175,25 @@ const maintenanceServices = {
        manufacturer: "Cessna",
        imagePath: "/src/assets/cessna_172_USATS_Ramp.webp",
        imageAlt: "",
-       description: "Labore reprehenderit laborum dolore ut aliqua proident laboris duis nisi quis aliquip aliquip nostrud.",
+       description: "",
        bullets: [
-          "Scheduled Inspections",
-          "Un-Scheduled Maintenance"
+          "Scheduled inspections",
+          "Airframe and engine maintenance and repair",
         ]
       },
       {
-       name: "Bell", 
+       name: "Bell Helicopters", 
        models: "206 Series",
        manufacturer: "Bell",
        imagePath: "/src/assets/maintenanceHeli2.png",
        imageAlt: "",
        description: "",
-       bullets: []
+       bullets: [
+        "Scheduled inspections",
+        "Airframe and engine maintenance and repair",
+        "Component maintenance excluding Bell restricted parts",
+        "Large stock of new, serviceable and repairable Bell specific parts",
+       ]
       },
     ],
 
@@ -194,10 +204,11 @@ const maintenanceServices = {
       imageAlt: "",
       description: "",
       bullets: [
+        "Access to a wide range of parts beyond our own aircraft types, including components for popular rotorcraft and fixed-wing models",
         "Schweizer, Robinson and limited Cessna Parts",
         "Lycoming, standard hardware, Instruments",
         "Large stock of Bell 206 parts",
-        "Consumables: Oil, grease, chemicals"
+        "Large selection of Consumables available",
       ]
     },
 
@@ -224,7 +235,7 @@ const maintenanceServices = {
 
     robinson_service_center: {
       name: "Robinson Authorized Service Center",
-      description: "USATS is an authorized service center for Robinson Helicopters. Under our current agreement we can service R22 and R44 helicopters. Service will be completed in accordance with RCH recommended and required maintenance procedures. Robinson suggests all owners have their aircraft service completed at a Robinson authorized facility",
+      description: "“USATS is an authorized service center for Robinson Helicopters. Under our current agreement we can service R22 Beta and R44 Raven/Clipper 1 & 2 helicopters. Services are completed in accordance with RCH required maintenance procedures.",
       models: "R22 & R44",
       benefits: [
         "Ability to buy parts from Robinson",
@@ -238,7 +249,7 @@ const maintenanceServices = {
       name: "Maintenance Part 43",
       description: "Maintenance performed and signed off under an individual's A&P license",
       paragraphs: [
-        "We offer limited maintenance under part 43. This would include any aircraft that are not listed on our Repair Station. Maintenance is performed and signed off under an individual's A&P license. Essentially, the mechanic taking responsibility for the work they did instead of that liability being on the repair station.",
+        "“We offer limited inspection and maintenance services under Part 43, following the same standards and quality of our 145 Repair Station. This would include any aircraft that are not listed on our Repair Station capabilities list.",
         "Currently, we service about half of the tango ramp tenants. Their aircraft include Piper PA-28, Vans RV-6 &amp; RV-12, Cessna 150, and Grumman Tiger . We are best equipped to handle airplanes similar in size to the Cessna 172 and reciprocating helicopters. Most of this maintenance is considered on a case-by-case basis.",
       ],
 
@@ -256,7 +267,7 @@ const maintenanceServices = {
 
       services: {
         name: "Services",
-        description: "With our current tooling we can offer a variety of services. Typically, someone presents us with a discrepancy, and we suggest what service they would need based from that. These “services” are charged as labor hours. This is just a very general list; we can do more complex inspections and maintenance.",
+        description: "We are best equipped to handle airplanes similar in size to the Cessna 172 and single-engine helicopters. Most of this maintenance is considered on a case-by-case basis, and charged as a labor hour rate.”",
         generalServices: [
         "Borescope Inspection",
         "Facilitate outside repairs",
@@ -267,7 +278,7 @@ const maintenanceServices = {
         "Corrosion treatment",
         "Standard Replacement",
         "Troubleshooting",
-        "For more complex and maintenance contact us",
+        "For detailed inspection and maintenance needs please contact us”",
       ],
     },
     },
