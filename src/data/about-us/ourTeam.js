@@ -1,5 +1,22 @@
+import { ALTO_8A as imgHeader } from "../../constsImages"
 
 const ourTeam = { 
+    header: {
+      stars: true,
+      imagePath: imgHeader.imagePath,
+      imageAlt: imgHeader.imageAlt,
+      headerH1: `The USATS Team`,
+      paragraph:
+        "At USATS, our instructors are more than just experienced pilots — they’re passionate mentors, dedicated guides, and aviation professionals committed to your success. Discover the team that makes USATS a trusted, community-focused flight training center.",
+      buttons: [
+        {
+          name: "Meet our Team",
+          link: "#staff-grid",
+          primary: false,
+        },
+      ],
+    },
+
     staffGrid: {
     upperHeading: "Meet Our Team",
     heading: "Our Leadership Team",
