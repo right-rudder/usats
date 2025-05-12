@@ -3,7 +3,7 @@ const { content } = Astro.props;
 import ImageComp from "../ImageComp.astro";
 ---
 
-<section id={content.title} class="relative py-12 lg:py-20">
+<section id={content.title} class="relative py-12 lg:py-20 bg-primary-900">
   <div class="absolute -z-30 inset-0" aria-hidden="true">
     <ImageComp
       imagePath={content.image.imagePath}
