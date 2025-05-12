@@ -54,6 +54,17 @@ export const AIRPORT_GOOGLE_LOCATION = "https://www.google.com/maps/place/Space+
 
 export const BANNER_TITLE = `Experience flight like never before.`;
 
+
+// Financing 
+
+export const STUDENT_LOAN_APPLICATION = "https://apply.stratus.finance/usaviationtraining818394";
+
+// Application
+export const STUDENT_APPLICATION_CHECKLIST_PDF = "https://cdn.shopify.com/s/files/1/0783/7207/7845/files/US_STUDENT_REGISTRATION_CHECKLIST_40b3383e-b01b-47f1-8065-3f6ed1e8eb67.pdf?v=1740581271"
+export const STUDENT_APPLICATION_PDF = "https://cdn.shopify.com/s/files/1/0783/7207/7845/files/US_APPLICATION.pdf?v=1740583077";
+export const INTERNATIONAL_STUDENTS_CHECKLIST = "https://cdn.shopify.com/s/files/1/0783/7207/7845/files/INTERNATIONAL_REGISTRATION.pdf?v=1740583096"
+export const HOW_STUDY_IN_US = "https://studyinthestates.dhs.gov"
+
 // Video links
 
 export const VIDEOLINK_HOME = "https://cdn.shopify.com/videos/c/o/v/f7fe5a4231a94c38a91db2db8280be4e.mp4";

@@ -1,7 +1,7 @@
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../consts";
 import { DAVID_WELLS_PPL_RW_GRADUATE_2 as contentCTAimg } from "../constsImages";
 import { IMG_2891 as imgWhyUs } from "../constsImages";
-import { DIRECTFLY_ALTONG_RED_FLYING_OVER_CITY_USATS as imgHeader } from "../constsImages";
+import { ALTO_8A as imgHeader } from "../constsImages";
 
 const internationalStudentsPage = {
   data: {
@@ -196,6 +196,10 @@ const internationalStudentsPage = {
             question: "Are there any requirements to join?",
             answer:
               "You don’t need any flight experience to begin—just a strong desire to fly! A Class 2 (or higher) medical certificate and English proficiency are required. International students must also provide proof of funds, school transcripts, and meet M1 visa eligibility. USATS helps with visa support, housing arrangements, and airport pickup.",
+          },
+          {
+            question: "What Is Allowed With An M1 Student Visa?",
+            answer: `International students seeking a certificate/rating and training cannot train in the United States on a tourist visa and USATS strictly complies with the Department of Homeland Security and Transportation Safety Administration regulations. The M1 Student Visa allows an international student to participate in a full-time course of study at a SEVP-approved institution such as USATS, for the established duration of all our FAA-approved courses and up to 12-months duration, such as our full Professional Pilot Programs – helicopter and airplane – and all FAA courses offered by USATS. Please note, immigration and labor laws in the United States are very strictly enforced. In shopping for schools, be aware that students cannot train unless courses are FAA approved. USATS has many FAA approved courses including the full suite of Professional Pilot Program courses for helicopter and airplane!"`
           },
         ],
         buttons: [
