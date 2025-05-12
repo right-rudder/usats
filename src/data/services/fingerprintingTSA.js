@@ -10,8 +10,7 @@ const fingerprintingTSA = {
     header: {
       stars: true,
       imagePath: "/src/assets/fingerprinting.webp",
-      imageAlt:
-      "image alt",
+      imageAlt: "image alt",
       headerH1: `${COMPANY_NICKNAME} <br> TSA Fingerprinting Service`,
       paragraph: ``,
       buttons: [
@@ -32,16 +31,21 @@ const fingerprintingTSA = {
         subtitle: "Flight school candidates -- The following steps are required PRIOR to scheduling your fingerprint appointment:",
         heather2: "Flight School Fingerprinting",
         description: [
-          "Onsite fingerprinting for all your TSA needs, including Flight Training Security Program (formerly AFSP)!"
+          "Onsite fingerprinting for all your TSA needs, including Flight Training Security Program (formerly AFSP)! <br>",
+          `Start the process at <a href="https://secure.natacs.aero/ftsp/registration/index.asp" target="_blank" class="text-accent-700"> <strong> link to NATA - FTSP </strong></a>, then reach out to us at <a href="mailto:fingerprinting@usatsolutions.com" class="text-accent-700"><strong>fingerprinting@usatsolutions.com</strong></a> to set up your appointment time.`,
         ],
         loginLink: "https://secure.natacs.aero/ftsp/registration/index.asp ",
         email: "fingerprinting@usatsolutions.com",
         list: [
             `You must pay for the fingerprint in advance and print the following documents to bring with you to your appointment: `,
+            ` Payment Confirmation Receipt (from the NATACS site) <br> Fingerprinting Instructions Email (sent by FTSP after payment <br> Passport (or acceptable government-issued photo ID)<br> FTSP Confirmation Page or Training Request Status Page`,
+            `It's important to check your email after registration, because NATACS/FTSP often sends specific instructions and downloadable documents.`,
             "Once you have paid for and printed the above mentioned documents, you may email the Fingerprinting Office at fingerprinting@usatsolutions.com",
-            "In your appointment request email, please provide the following information:",
+            "In your appointment request email, please provide the following information: ",
+            `Full Name<br> Date of Birth<br> Training Request ID (from FTSP)<br> Contact Phone Number<br> Preferred Appointment Date and Time<br> Location Preference (USATS`,
+            "Important: The ID must be unexpired and match the name used during your FTSP registration.",
             "You will receive an email response with the date and time of your appointment. Please note: AFSP Fingerprint appointment are based on availability.",
-            `Please arrive on time for your appointment and provide the above mentioned printed documents along with the following forms of ID:`,
+            `Please arrive on time for your appointment and provide the above mentioned printed documents along with the following forms of ID: <br>Passport (U.S or Foreign), <br> U.S. Driver’s License or State ID, <br>Permanent Resident Card (Green Card),  <br> U.S. Military ID,  <br> Federal, State, or Local Government ID with photo `,
             "PLEASE NOTE: Failure to arrive to your appointment on time, failure to provide the required printed documents, and/or present the required identifications will result in your appointment being rescheduled for the next available fingerprinting day.",
             "Your appointment may take 15-30 minutes to be completed.",
         ],
@@ -55,7 +59,7 @@ const fingerprintingTSA = {
     },
 
     underHeader: {
-      title: "FINGER PRINTING TODAY AT USATS",
+      title: "FINGER- PRINTING TODAY AT USATS",
       paragraphs: [
         "Here at USATS we make sure you have all you need to make it.",
       ],

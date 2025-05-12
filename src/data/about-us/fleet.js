@@ -1,7 +1,6 @@
 import { 
   CESSNA_172_USATS_RAMP_WEBP as cessnaRamp,
-  CES
-
+  ALTO_7A as altoNG,
  } from "../../constsImages";
 
 export const airplaneFleet = [
@@ -46,7 +45,8 @@ export const airplaneFleet = [
         "Dedicated Maintenance facility",
         "Germin 175s",
       ],
-      imagePath: "/src/assets/directFly_altong_red_flying_over_city_USATS.jpg",
+      imagePath: altoNG.imagePath,
+      imageAlt: altoNG.imageAlt,
       imagesArray: [
         "/src/assets/placeholder.webp",
         "/src/assets/placeholder.webp",
@@ -88,7 +88,7 @@ export const helicopterFleet = [
   {
     name: "Schweizer S-300",
     slug: "schweizers300",
-    rentalPrice: "2",
+    rentalPrice: "6",
     usableFuel: "",
     model: "S-300",
     equipment: [

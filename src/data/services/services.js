@@ -1,4 +1,11 @@
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
+import { 
+  ALTO_NG_PANEL as imgMaintenance,
+  PROGRAMMER_FOCUSED_ON_CODE as imgCATS,
+  FINGERPRINTING as imgFingerprinting,
+  ALTO_NG as imgAltoNG,
+  ALTO_5A as imgAirTours,
+ } from "../../constsImages";
 
 const servicesIndex = {
     data: {
@@ -20,7 +27,7 @@ const servicesIndex = {
             buttons: [
             {
                 name: "Learn more",
-                link: "#services",
+                link: "#grid-programs",
                 primary: true,
             },
             ],
@@ -33,12 +40,43 @@ const servicesIndex = {
     cards: [
       {
         title: "Maintenance",
-        imagePath: "/src/assets/ALTO_NG_Panel.jpg",
-        imageAlt:
-          "",
+        imagePath: imgMaintenance.imagePath,
+        imageAlt: imgMaintenance.imageAlt,
         description:
           `${COMPANY_NICKNAME} strives to meet our customers’ needs through the capabilities of our Certified Repair Station. With our strong attention to detail, we maintain high standards of safety and quality excellence. Our team of highly skilled mechanics are eager to provide both scheduled and unscheduled maintenance to meet your needs.`,
         link: "/services/maintenance",
+      },
+      {
+        title: "Alto Planes",
+        imagePath: imgAltoNG.imagePath,
+        imageAlt: imgAltoNG.imageAlt,
+        description:
+          `North American Dealer and Service Center for DirectFly Alto NG`,
+        link: "/services/alto-planes",
+      },
+      {
+        title: "CATS Testing Center",
+        imagePath: imgCATS.imagePath,
+        imageAlt: imgCATS.imageAlt,
+        description:
+          `Our center offers a professional environment with modern computer workstations and secure internet access. Our dedicated staff ensures a secure and distraction-free testing experience.`,
+        link: "/services/cats-testing-center",
+      },
+      {
+        title: "TSA Fingerprinting",
+        imagePath: imgFingerprinting.imagePath,
+        imageAlt: imgFingerprinting.imageAlt,
+        description:
+          `Onsite fingerprinting for all your TSA needs, including Flight Training Security Program (formerly AFSP)!`,
+        link: "/services/tsa-fingerprinting",
+      },
+      {
+        title: "Air Tours",
+        imagePath: imgAirTours.imagePath,
+        imageAlt: imgAirTours.imageAlt,
+        description:
+          `Embark on an unforgettable adventure with our captivating air tours over Florida's renowned Space Coast. Discover the thrill of soaring through the skies while taking in breathtaking vistas of this iconic space exploration hub.`,
+        link: "https://airtoursusats.com",
       },
     ],
   };

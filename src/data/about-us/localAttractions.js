@@ -45,7 +45,8 @@ const localAttractions = {
               otherInfo: [
                 {name: "Founded", value:"1963"}, 
                 {name: "Distance", value:"15min"} 
-              ]
+              ],
+              link: "https://www.kennedyspacecenter-tickets.com",
             },
             {
               name: "Disney World",
@@ -54,7 +55,8 @@ const localAttractions = {
               imageAlt: "",
               otherInfo: [ 
                 {name: "Distance", value:"45min"} 
-              ]
+              ],
+              link: "https://disneyworld.disney.go.com/",
             },
             {
               name: "Orlando",
@@ -63,7 +65,8 @@ const localAttractions = {
               imageAlt: "",
               otherInfo: [
                 {name: "Distance", value:"25min"}  
-              ]
+              ],
+              link: "https://www.orlando.gov/",
             },
             {
               name: "Cocoa Beach",
@@ -72,7 +75,8 @@ const localAttractions = {
               imageAlt: "",
               otherInfo: [ 
                 {name: "Distance", value:"25min"} 
-              ]
+              ],
+              link: "https://www.cityofcocoabeach.com",
             },
             {
               name: "Port Canaveral",
@@ -81,7 +85,8 @@ const localAttractions = {
               imageAlt: "",
               otherInfo: [
                 {name: "Distance", value:"20min"} 
-              ]
+              ],
+              link: "https://www.portcanaveral.com",
             },
           ],
     },
@@ -124,16 +129,18 @@ const localAttractions = {
         ],
     },
 
-    discoveryFlightCTA: {
-        title: "Want to see how high it can fly?",
-        paragraph: "Book a Discovery Flight",
-        buttons: [
-            {
-              name: "Book now",
-              link: "/discovery-flight",
-              primary: true,
-            },
-          ],
+    cta: {
+      imagePath: "/src/assets/CTADiscFlights.png",
+      imageAlt: "",
+      headerH1: `Still have questions?`,
+      paragraph: ``,
+      buttons: [
+        {
+          name: "Contact us",
+          link: "/contact-us",
+          primary: true,
+        },
+      ],
     },
 
 };

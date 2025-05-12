@@ -35,11 +35,11 @@ export const ADDRESS_LINE_1 = "355 Golden Knights Blvd";
 export const ADDRESS_LINE_2 = "Titusville, FL 32780";
 export const FACEBOOK_URL = "https://www.facebook.com/USATSolutions/";
 export const INSTAGRAM_URL = "https://www.instagram.com/usatsolutions/";
-export const LINKEDIN_URL =
-  "https://www.linkedin.com/company/us-aviation-training-solutions";
+export const LINKEDIN_URL = "https://www.linkedin.com/company/us-aviation-training-solutions";
 export const YOUTUBE_URL = null;
 export const TWITTER_URL = null;
 export const EMAIL_ADDRESS = "info@usatsolutions.com";
+export const COMPANY_SITE_LINK="https://usatsflighttraining.com";
 
 export const COMPANY_NICKNAME = "USATS";
 export const ADDRESS = "355 Golden Knight Blvd";
@@ -48,22 +48,34 @@ export const ADDRESS_CITY = "Titusville";
 export const ADDRESS_ZIP = "32780";
 export const AIRPORT = "SPACE COAST REGIONAL";
 export const AIRPORT_CODE = "KTIX";
+export const AIRPORT_GOOGLE_LOCATION = "https://www.google.com/maps/place/Space+Coast+Regional+Airport/@28.5123353,-80.7997203,16.22z/data=!4m6!3m5!1s0x88e0ad2310d73cfb:0x4bcd770a5e53125e!8m2!3d28.5133625!4d-80.7988013!16zL20vMDNmZnAy?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D"
 
 // Pages Data
 
 export const BANNER_TITLE = `Experience flight like never before.`;
 
+
+// Financing 
+
+export const STUDENT_LOAN_APPLICATION = "https://apply.stratus.finance/usaviationtraining818394";
+export const STRATUS_FILES = 'https://stratusfinancial.egnyte.com/fl/tY9DWLsulT#folder-link/DIGITAL';
+export const STRATUS_ADVANTAGE = "https://stratusfinancial.egnyte.com/fl/tY9DWLsulT#folder-link/DIGITAL?p=d995ca1a-b9cb-4f2f-acfb-e31817dce5df";
+export const STRATUS_PAGE_FLYER = "https://stratusfinancial.egnyte.com/fl/tY9DWLsulT#folder-link/DIGITAL?p=13f2bdd3-cab1-45db-9965-003e4e34de03";
+export const STRATUS_QR_CODE = "https://stratusfinancial.egnyte.com/fl/tY9DWLsulT#folder-link/DIGITAL?p=454f0b87-bd29-452f-86b4-0638e0058349";
+export const STRATUS_TRIFOLD = "https://stratusfinancial.egnyte.com/fl/tY9DWLsulT#folder-link/DIGITAL?p=0a87f56f-8e7c-40a2-8d17-8826317aba39";
+
+
+// Application
+export const STUDENT_APPLICATION_CHECKLIST_PDF = "https://cdn.shopify.com/s/files/1/0783/7207/7845/files/US_STUDENT_REGISTRATION_CHECKLIST_40b3383e-b01b-47f1-8065-3f6ed1e8eb67.pdf?v=1740581271"
+export const STUDENT_APPLICATION_PDF = "https://cdn.shopify.com/s/files/1/0783/7207/7845/files/US_APPLICATION.pdf?v=1740583077";
+export const INTERNATIONAL_STUDENTS_CHECKLIST = "https://cdn.shopify.com/s/files/1/0783/7207/7845/files/INTERNATIONAL_REGISTRATION.pdf?v=1740583096"
+export const HOW_STUDY_IN_US = "https://studyinthestates.dhs.gov"
+
 // Video links
 
-export const VIDEOLINK_HOME =
-  "https://cdn.shopify.com/videos/c/o/v/f7fe5a4231a94c38a91db2db8280be4e.mp4";
-export const VIDEOLINK_AIRTOUR =
-  "https://cdn.shopify.com/videos/c/o/v/2e1eb45cc3e041bbb8f12d2b94d11067.mp4";
-export const VIDEOLINK_AIRPLANES =
-  "https://cdn.shopify.com/videos/c/o/v/6b057798c5be41b9865d7a4054736b45.mp4";
-export const VIDEO_HOME_HELICOPTER =
-  "https://cdn.shopify.com/videos/c/o/v/41e966eb47fa4d8eaad7f2b713b2459d.mp4";
-export const VIDEOLINK_MAINTENANCE =
-  "https://cdn.shopify.com/videos/c/o/v/40ea4b0895e0415fa098733bcf6e8ee4.mp4";
-export const VIDEOLINK_ABOUTUS =
-  "https://usatsflighttraining.com/cdn/shop/videos/c/vp/9cce912410e44240829a51b85a4ce623/9cce912410e44240829a51b85a4ce623.HD-1080p-2.5Mbps-42396578.mp4?v=0";
+export const VIDEOLINK_HOME = "https://cdn.shopify.com/videos/c/o/v/f7fe5a4231a94c38a91db2db8280be4e.mp4";
+export const VIDEOLINK_AIRTOUR = "https://cdn.shopify.com/videos/c/o/v/2e1eb45cc3e041bbb8f12d2b94d11067.mp4";
+export const VIDEOLINK_AIRPLANES = "https://cdn.shopify.com/videos/c/o/v/6b057798c5be41b9865d7a4054736b45.mp4";
+export const VIDEO_HOME_HELICOPTER = "https://cdn.shopify.com/videos/c/o/v/41e966eb47fa4d8eaad7f2b713b2459d.mp4";
+export const VIDEOLINK_MAINTENANCE = "https://cdn.shopify.com/videos/c/o/v/40ea4b0895e0415fa098733bcf6e8ee4.mp4";
+export const VIDEOLINK_ABOUTUS = "https://usatsflighttraining.com/cdn/shop/videos/c/vp/9cce912410e44240829a51b85a4ce623/9cce912410e44240829a51b85a4ce623.HD-1080p-2.5Mbps-42396578.mp4?v=0";

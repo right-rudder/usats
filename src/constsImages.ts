@@ -1,3 +1,9 @@
+export const DARK_BLUE_HELI_MAINTENANCE = { imagePath: "/src/assets/Dark_Blue_Heli_Maintenance.jpg", imageAlt: ""};
+export const DARK_BLUE_HELI_MAINTENANCE2 = { imagePath: "/src/assets/Dark_Blue_Heli_Maintenance2.jpg", imageAlt: ""};
+export const STAFF_PHOTO_BRIAN_CRADDOCK = { imagePath: "/src/assets/staff_photo_Brian_Craddock.jpg", imageAlt: ""};
+export const STAFF_PHOTO_HESSE_HELICOPTER_INSTRUCTOR = { imagePath: "/src/assets/staff_photo_Iikka Hesse_Helicopter_Instructor.jpg", imageAlt: ""};
+export const STAFF_PHOTO_RAY_DEPTULA = { imagePath: "/src/assets/staff_photo_Ray_Deptula.jpg", imageAlt: "US Aviation Training Solutions Certified Flight Instructor Stephane Rebeix"};
+export const STAFF_PHOTO_STEPHANE_REBEIX = { imagePath: "/src/assets/staff_photo_Stephane_Rebeix.jpg", imageAlt: ""};
 export const ALO_NG_INTERIOR = { imagePath: "/src/assets/ALO_NG_INTERIOR.webp", imageAlt: " ", };
 export const ALTO_1A = { imagePath: "/src/assets/alto_1a.jpg", imageAlt: " ", };
 export const ALTO_2A = { imagePath: "/src/assets/alto_2a.jpg", imageAlt: " ", };

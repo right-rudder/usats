@@ -1,7 +1,7 @@
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../consts";
 import { DAVID_WELLS_PPL_RW_GRADUATE_2 as contentCTAimg } from "../constsImages";
 import { IMG_2891 as imgWhyUs } from "../constsImages";
-import { DIRECTFLY_ALTONG_RED_FLYING_OVER_CITY_USATS as imgHeader } from "../constsImages";
+import { ALTO_8A as imgHeader } from "../constsImages";
 
 const internationalStudentsPage = {
   data: {
@@ -100,6 +100,13 @@ const internationalStudentsPage = {
           icon: "M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z",
         },
         {
+          title: "Logistics and Lodging",
+          descriptions: [
+            "USATS offers dedicated support with logistics and lodging to help international and domestic students transition smoothly into their pilot training experience.",
+          ],
+          icon: "M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z",
+        },
+        {
           title: "Begin Your Aviation Journey Today",
           descriptions: [],
           icon: "",
@@ -124,60 +131,6 @@ const internationalStudentsPage = {
         imageAlt: contentCTAimg.imageAlt,
     },
 
-    blogfeed: {
-      upperHeading: "",
-      heading: "",
-      description: "",
-    },
-
-    flyWithUsCTA: {
-      imagePath: "",
-      imageAlt: "",
-      headerH1: ``,
-      paragraph: "",
-      buttons: [
-        {
-          name: "",
-          link: "",
-          primary: true,
-        },
-      ],
-    },
-
-    testimonials: {
-      upperHeading: "",
-      heading: "",
-      headingText: ["", ""],
-      buttonText: "",
-      buttonLink: "",
-      reviews: [
-        {
-          body: "",
-          author: "",
-        },
-        {
-          body: "",
-          author: "",
-        },
-        {
-          body: "",
-          author: "",
-        },
-        {
-          body: "",
-          author: "",
-        },
-        {
-          body: "",
-          author: "",
-        },
-        {
-          body: "",
-          author: "",
-        },
-      ],
-    },
-
     frequentQuestions: {
         title: "Frequently Asked Questions",
         description: "Answers to common questions about training with USATS as an international student.",
@@ -196,6 +149,10 @@ const internationalStudentsPage = {
             question: "Are there any requirements to join?",
             answer:
               "You don’t need any flight experience to begin—just a strong desire to fly! A Class 2 (or higher) medical certificate and English proficiency are required. International students must also provide proof of funds, school transcripts, and meet M1 visa eligibility. USATS helps with visa support, housing arrangements, and airport pickup.",
+          },
+          {
+            question: "What Is Allowed With An M1 Student Visa?",
+            answer: `International students seeking a certificate/rating and training cannot train in the United States on a tourist visa and USATS strictly complies with the Department of Homeland Security and Transportation Safety Administration regulations. The M1 Student Visa allows an international student to participate in a full-time course of study at a SEVP-approved institution such as USATS, for the established duration of all our FAA-approved courses and up to 12-months duration, such as our full Professional Pilot Programs – helicopter and airplane – and all FAA courses offered by USATS. Please note, immigration and labor laws in the United States are very strictly enforced. In shopping for schools, be aware that students cannot train unless courses are FAA approved. USATS has many FAA approved courses including the full suite of Professional Pilot Program courses for helicopter and airplane!"`
           },
         ],
         buttons: [

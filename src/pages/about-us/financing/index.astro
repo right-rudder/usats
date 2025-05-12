@@ -6,6 +6,7 @@ import ImageComp from "../../../components/ImageComp.astro";
 
 import financingOptions from "../../../data/about-us/financing";
 import stratusInfo from "../../../data/about-us/stratuss-financing"
+import { STRATUS_ADVANTAGE } from "../../../consts";
 
 const stratusFinance = {
   upperHeading: "Stratus Financial",
@@ -51,7 +52,7 @@ const stratusFinance = {
     },
     {
       name: "Download Booklet",
-      link: "#",
+      link: STRATUS_ADVANTAGE,
       primary: true,
     },
   ],
@@ -75,7 +76,7 @@ const aopaFinance = {
         " Inquire online or by calling 1-800-627-5263",
     ],
     applyButton: {
-    name: "Visit Website",
+    name: "Visit AOPA Finance",
     link: "https://finance.aopa.org/flight-training-finance",
     primary: true,
   },
@@ -98,7 +99,7 @@ const weFloridaFinancial = {
         " Inquire online or by calling 1-800-230-0200",
     ],
     applyButton: {
-    name: "Visit Website",
+    name: "Visit We Florida Financial",
     link: "https://wefloridafinancial.com/flight-training",
     primary: true,
   },
@@ -119,7 +120,7 @@ const { data } = stratusInfo;
     class="bg-gradient-to-b from-primary-950 to-90% to-primary-800 px-6 py-24 sm:py-32 lg:px-20"
   >
   <!-- Stratus Financial -->
-    <div class="flex flex-col justify-center align-middle items-center">
+    <div class="flex flex-col justify-center align-middle items-center" id="stratus">
       <div class="text-center">
         <div class="max-w-4xl">
           <p
@@ -217,7 +218,7 @@ const { data } = stratusInfo;
     </div>
     
   <!-- AOPA Finance -->
-  <div class="flex flex-col justify-center align-middle items-center pt-20">
+  <div class="flex flex-col justify-center align-middle items-center pt-20" id="aopa">
     <div class="text-center">
       <div class="max-w-4xl">
         <p
@@ -271,7 +272,7 @@ const { data } = stratusInfo;
   </div>
   
   <!-- WeFly We FLorida Financial -->
-  <div class="flex flex-col justify-center align-middle items-center pt-20">
+  <div class="flex flex-col justify-center align-middle items-center pt-20" id="we-florida">
     <div class="text-center">
       <div class="max-w-4xl">
         <p

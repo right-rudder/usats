@@ -17,19 +17,8 @@ const stratusInfo = {
           "",
         headerH1: `<span class="text-accent-700">FINANCING</span>`,
         paragraph:
-          `At USATS, we understand that investing in your aviation career is a big decision. That's why we’ve partnered with trusted financing providers like <span class="text-accent-600">Stratus Financing</span>, <span class="text-accent-600">AOPA Financing</span>, and <span class="text-accent-600">We Florida Financial</span> to help make your goals more accessible. Whether you're starting from zero or advancing your certifications, these flexible loan options are designed to support your journey every step of the way.`,
-        buttons: [
-          {
-            name: "Apply Now",
-            link: "#",
-            primary: false,
-          },
-          {
-            name: "Download Booklet",
-            link: "#",
-            primary: false,
-          },
-        ],
+          `At USATS, we understand that investing in your aviation career is a big decision. That's why we’ve partnered with trusted financing providers like <a href="#stratus" class="text-accent-600">Stratus Financing</a>, <a href="#aopa" class="text-accent-600">AOPA Financing</a>, and <a href="#we-florida" class="text-accent-600">We Florida Financial</a> to help make your goals more accessible. Whether you're starting from zero or advancing your certifications, these flexible loan options are designed to support your journey every step of the way.`,
+        buttons: [],
       },
   
       flyWithUsCTA: {

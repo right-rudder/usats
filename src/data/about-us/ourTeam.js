@@ -1,5 +1,27 @@
+import {  ALTO_8A as imgHeader, 
+          STAFF_PHOTO_BRIAN_CRADDOCK as staffBrian, 
+          STAFF_PHOTO_HESSE_HELICOPTER_INSTRUCTOR as staffHessHeliInstructor, 
+          STAFF_PHOTO_RAY_DEPTULA as staffRay, 
+          STAFF_PHOTO_STEPHANE_REBEIX as staffStephane,
+         } from "../../constsImages"
 
 const ourTeam = { 
+    header: {
+      stars: true,
+      imagePath: imgHeader.imagePath,
+      imageAlt: imgHeader.imageAlt,
+      headerH1: `The USATS Team`,
+      paragraph:
+        "At USATS, our instructors are more than just experienced pilots — they’re passionate mentors, dedicated guides, and aviation professionals committed to your success. Discover the team that makes USATS a trusted, community-focused flight training center.",
+      buttons: [
+        {
+          name: "Meet our Team",
+          link: "#staff-grid",
+          primary: false,
+        },
+      ],
+    },
+
     staffGrid: {
     upperHeading: "Meet Our Team",
     heading: "Our Leadership Team",
@@ -8,27 +30,22 @@ const ourTeam = {
     members: [
       {
         name: "Brian Craddock",
-        imagePath:
-          "/src/assets/placeholder-person.jpg",
-        imageAlt:
-          "",
+        imagePath: staffBrian.imagePath,
+        imageAlt: staffBrian.imageAlt,
         bio: "Brian Craddock is an experienced aviation executive with extensive leadership experience in flight training, aviation program management, and government contracting. As Managing Director and CEO of US Aviation Training Solutions, he oversees flight training operations, aircraft maintenance, and FAA compliance, ensuring the success of both domestic and international aviation training programs. His expertise spans strategic planning, workforce optimization, and regulatory adherence, with a focus on delivering high-quality aviation solutions in challenging environments. Prior to his current role, Brian held key leadership positions within the U.S. Department of State and the U.S. Army, where he managed multi-billion-dollar aviation programs, oversaw aircraft operations across multiple countries, and led acquisition strategies for advanced aviation platforms.",
         rank: "Managing Director",
       },
       {
         name: "Ray Deptula",
-        imagePath:
-          "/src/assets/placeholder-person.jpg",
-        imageAlt:
-          "",
+        imagePath: staffRay.imagePath,
+        imageAlt: staffRay.imageAlt,
         bio: "Ray is a retired career naval officer and naval aviator with 3,200 flight hours and over 3,000 shipboard landings, flying mainly SH-60B Seahawk and UH-1N Huey helicopters. He was a flight instructor for SH-60Bs and managed the navy’s east coast shipboard landing instruction program. Ray also holds an FAA Airline Transport Pilot (ATP) Rotorcraft-Helicopter certification.",
         rank: "Business Development Manager",
       },
       {
         name: "Stephane Rebeix",
-        imagePath: "/src/assets/placeholder-person.jpg",
-        imageAlt:
-          "US Aviation Training Solutions Certified Flight Instructor Stephane Rebeix",
+        imagePath: staffStephane.imagePath,
+        imageAlt: staffStephane.imageAlt,
         bio: "Stephane Rebeix, USATS Chief Flight Instructor, is a master helicopter pilot with 9,000+ flight hours (4,200+ instructing) across offshore, military, and training operations. An FAA 141 VFR/IFR expert since 2018, he’s flown AS332L1/2, EC225, and S76C+/++ helicopters globally—from Nigeria’s oil fields to the North Sea. Holder of dual ATP (US/Europe), CFI/CFII, and business degrees, he merges technical precision with academic rigor to shape elite aviators.",
         rank: "Chief Flight Instructor",
       },
@@ -63,10 +80,9 @@ const ourTeam = {
         rank: "Airplane Instructor",
       },
       {
-        name: "Joe Doe",
-        imagePath: "/src/assets/placeholder-person.jpg",
-        imageAlt:
-        "",
+        name: "Iikka Hesse",
+        imagePath: staffHessHeliInstructor.imagePath,
+        imageAlt: staffHessHeliInstructor.imageAlt,
         rank: "Helicopter Instructor",
       },
       {

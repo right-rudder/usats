@@ -2,7 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 // import HeaderSmall from "../../../components/HeaderSmall.astro";
 import { Image } from "astro:assets";
-import Intro from "../../../assets/directFly_altong_red_flying_over_city_USATS_2.jpg";
+import Intro from "../../../assets/alto_5a.jpg";
 import ourFleet from "../../../data/about-us/ourFleet";
 import PlaneCard from "../../../components/astro/PlaneCard.astro";
 import PageSummary from "../../../components/astro/PageSummary.astro";
@@ -12,15 +12,17 @@ import { airplaneFleet, helicopterFleet, militaryFleet } from "../../../data/abo
 
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../../consts";
 
+import { ALTO_8A as imgHeader } from "../../../constsImages";
+
 const header = {
-  imagePath: "/src/assets/placeholder.webp",
+  imagePath: imgHeader.imagePath,
+  imageAlt: imgHeader.imageAlt,
   headerH1: "Our Fleet",
-  imageAlt: "",
   paragraph: "",
   buttons: [
     {
       name: "View Our Aircraft",
-      link: "#fleet",
+      link: "#airplane-fleet",
       primary: false, 
     },
   ],
@@ -35,12 +37,10 @@ const header = {
   <HeaderSmall content={header} />
 
   <section class="py-24 px-5 bg-primary-900">
-    <div
-      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
-    >
+    <div class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20">
       <div class="flex-1 relative">
         <Image
-          class="pr-6"
+          class="pr-6 animate-slow-zoom h-full object-cover group-hover:scale-110 delay-100 duration-500 ease-in-out -z-0"
           src={Intro}
           alt=`${COMPANY_NAME} tail view of a Cessna`
           widths={[240, 540, 720, 1080, 1440, 1980]}
@@ -59,14 +59,10 @@ const header = {
           Fly with Confidence
         </h3>
         <p class="text-muted-200 leading-relaxed my-5">
-          At {COMPANY_NICKNAME}, our fleet consists of IFR-equipped Cessna 172s,
-          including technically advanced aircraft (TAA) with Garmin G5 and GFC
-          500 avionics. All aircraft are kept in top condition and ready for
-          flight training, time building. Explore
-          the details below.
+          At {COMPANY_NICKNAME}, our diverse fleet supports a wide range of aviation training needs. Our fleet includes aircraft such as the Cessna 172s, Alto-NG, R44, S300, and even a UH-60 Black Hawk for advanced and military training.<strong>Additionally, USATS has the flexibility to acquire other aircraft types to meet specific training requirements, ensuring a fully customized training experience.</strong>  Explore the full fleet below.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-5">
-          <a href="#contact" class="btn-primary">Book a Flight</a>
+          <a href="/discovery-flight" class="btn-primary">Book a Flight</a>
         </div>
       </div>
     </div>
@@ -78,7 +74,7 @@ const header = {
         Our Airplanes
       </h2> -->
       <h2 class="text-5xl text-accent-600 font-bold leading-tight mb-5">
-        Our Airplanes Fleet
+        Our Airplane Fleet
       </h2>
 
       <div class="grid gap-8 mt-5 lg:grid-cols-2">

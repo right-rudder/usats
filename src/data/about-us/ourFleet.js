@@ -15,10 +15,10 @@ const ourFleet = {
         stars: true,
         imagePath: "/src/assets/placeholder.webp",
         imageAlt:
-          "sun city aviation academy trains professional pilots in south florida",
+          "",
         headerH1: `Our</br><span class="text-accent-300">Fleet</span>`,
         paragraph:
-          "We have a fleet of modern aircraft for your training needs. Our fleet includes Cessna 172s, Beechcraft Duchess, Cessna 182 Skylane Seaplane and Redbird Simulator.",
+          "",
         buttons: [
           {
             name: "Enroll Now",
@@ -35,10 +35,7 @@ const ourFleet = {
   
       pageSummary: {
         title: `Fly With Confidence`,
-        paragraphs: [
-          "At Sun City Aviation Academy, we take pride in our exceptional fleet of aircraft and our simulator, designed to provide you with the highest quality flight training experience. Whether you're just beginning your aviation journey or advancing your skills, our versatile aircraft and training tools are here to support your goals.",
-          "We offer a variety of aircraft for training, including the Cessna 172 and Beechcraft Duchess, as well as a Redbird Simulator and our Cessna 182 Skylane Seaplane. Our fleet is maintained to the highest standards, ensuring that you can train with confidence and peace of mind.",
-        ],
+        paragraphs: [],
       },
   
       // fleetGrid: {
@@ -114,7 +111,7 @@ const ourFleet = {
         imageAlt: "",
         headerH1: `<span class="text-primary-600">Start Your Aviation Journey</br></span>With a Discovery Flight`,
         paragraph:
-          "Doing a discovery flight is the best way to determine if being a pilot is right for you. Whether you're trying it out for fun or want to fly professionally, doing a discovery flight will allow you to see the Ft. Lauderdale and Hollywood from a new perspective.",
+          "Doing a discovery flight is the best way to determine if being a pilot is right for you.",
         buttons: [
           {
             name: "Schedule Today",

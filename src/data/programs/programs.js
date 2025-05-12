@@ -3,8 +3,8 @@ import { COMPANY_NAME } from "../../consts";
 import { 
   CESSNA_172_USATS_RAMP_WEBP as cessnaRamp,
   ALTO_NG_PANEL as altoNGPanel,
-  DIRECTFLY_ALTONG_RED_FLYING_DEPARTING_USATS as altongRedDeparting,
-  DIRECTFLY_ALTONG_RED_FLYING_OVER_CITY_USATS as altongRedFlyingCity,
+  DIRECTFLY_ALTONG_BLUE_USATS_RAMP_WEBP as altoNgRamp,
+  ALTO_8A as altoNGDeparting,
   DIRECTFLY_ALTONG_PANEL_USATS as altongPanelUSATS,
   USATS_BANNER_APPLICATION as usatsBannerApplication,
 
@@ -36,8 +36,8 @@ const programs = {
     {
       title: "Commercial Pilot License",
       badges: ["Part 141", "CPL"],
-      imagePath: altongRedDeparting.imagePath,
-      imageAlt: altongRedDeparting.imageAlt,
+      imagePath: altoNGDeparting.imagePath,
+      imageAlt: altoNGDeparting.imageAlt,
       description:
         "Advance your career with professional training that prepares you to fly commercially and meet industry standards.",
       link: "/airplane-training/commercial-pilot-license",
@@ -45,8 +45,8 @@ const programs = {
     {
       title: "Certified Flight Instructor",
       badges: ["Part 61", "CFI"],
-      imagePath: altongRedFlyingCity.imagePath,
-      imageAlt: altongRedFlyingCity.imageAlt,
+      imagePath: altoNgRamp.imagePath,
+      imageAlt: altoNgRamp.imageAlt,
       description:
         "Become a flight instructor and start teaching others to fly while gaining valuable experience and flight hours.",
       link: "/airplane-training/certified-flight-instructor",
