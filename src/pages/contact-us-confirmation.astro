@@ -5,6 +5,8 @@ import {
     COMPANY_NAME,
     KEYWORDS,
   } from "../consts";
+
+import { ALTO_6A as imgHeader } from "../constsImages";
   
 const contactConfirmation = {
     data: {
@@ -16,9 +18,8 @@ const contactConfirmation = {
         `discovery flight, contact us, enroll at ${COMPANY_NAME}, discovery flight training, discovery flight school, aviation academy, ${COMPANY_NAME}, flight training programs, aviation goals, ${KEYWORDS}`,
   
       header: {
-        imagePath:
-          "/src/assets/directFly_altong_red_flying_departing_USATS.jpg",
-        imageAlt: `${COMPANY_NAME} crew pulling plane from hangar`,
+        imagePath: imgHeader.imagePath,
+        imageAlt: imgHeader.imageAlt,
         headerH1: "THANK YOU",
         paragraph:
           `Thank for your interest in ${COMPANY_NAME}. This is the first step to achieving your aviation goals!<br>Please allow 1-2 business days for one of our Training Support Specialists to get in touch with you`,
