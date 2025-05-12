@@ -6,6 +6,7 @@ import ImageComp from "../../../components/ImageComp.astro";
 
 import financingOptions from "../../../data/about-us/financing";
 import stratusInfo from "../../../data/about-us/stratuss-financing"
+import { STRATUS_ADVANTAGE } from "../../../consts";
 
 const stratusFinance = {
   upperHeading: "Stratus Financial",
@@ -47,6 +48,11 @@ const stratusFinance = {
     {
       name: "Visit Stratus Financial",
       link: "https://stratus.finance/",
+      primary: true,
+    },
+    {
+      name: "Download Booklet",
+      link: STRATUS_ADVANTAGE,
       primary: true,
     },
   ],

@@ -58,6 +58,12 @@ export const BANNER_TITLE = `Experience flight like never before.`;
 // Financing 
 
 export const STUDENT_LOAN_APPLICATION = "https://apply.stratus.finance/usaviationtraining818394";
+export const STRATUS_FILES = 'https://stratusfinancial.egnyte.com/fl/tY9DWLsulT#folder-link/DIGITAL';
+export const STRATUS_ADVANTAGE = "https://stratusfinancial.egnyte.com/fl/tY9DWLsulT#folder-link/DIGITAL?p=d995ca1a-b9cb-4f2f-acfb-e31817dce5df";
+export const STRATUS_PAGE_FLYER = "https://stratusfinancial.egnyte.com/fl/tY9DWLsulT#folder-link/DIGITAL?p=13f2bdd3-cab1-45db-9965-003e4e34de03";
+export const STRATUS_QR_CODE = "https://stratusfinancial.egnyte.com/fl/tY9DWLsulT#folder-link/DIGITAL?p=454f0b87-bd29-452f-86b4-0638e0058349";
+export const STRATUS_TRIFOLD = "https://stratusfinancial.egnyte.com/fl/tY9DWLsulT#folder-link/DIGITAL?p=0a87f56f-8e7c-40a2-8d17-8826317aba39";
+
 
 // Application
 export const STUDENT_APPLICATION_CHECKLIST_PDF = "https://cdn.shopify.com/s/files/1/0783/7207/7845/files/US_STUDENT_REGISTRATION_CHECKLIST_40b3383e-b01b-47f1-8065-3f6ed1e8eb67.pdf?v=1740581271"
