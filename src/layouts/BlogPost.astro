@@ -6,8 +6,16 @@ import { COMPANY_NAME } from "../consts";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, author, description, pubDate, updatedDate, heroImage, tags } =
-  Astro.props;
+const {
+  title,
+  author,
+  category,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
+  tags,
+} = Astro.props;
 ---
 
 <BaseLayout
@@ -16,13 +24,13 @@ const { title, author, description, pubDate, updatedDate, heroImage, tags } =
   keywords={tags?.join(", ")}
   ogImage={heroImage}
 >
-  <div class="h-20 lg:h-28 w-full bg-primary-900/90"></div>
+  <div class="h-20 lg:h-28 w-full bg-primary-900"></div>
 
   <section
-    class="flex justify-center items-start align-top pt-4 pb-20 bg-gradient-to-b from-primary-950/10 to-primary-800/20"
+    class="flex justify-center items-start align-top pt-4 pb-20 bg-gradient-to-b from-primary-800 to-primary-950"
   >
     <article
-      class="max-w-4xl flex flex-col justify-center align-middle items-center bg-primary-900 rounded-md overflow-hidden"
+      class="max-w-4xl flex flex-col justify-center bg-white align-middle items-center rounded-md overflow-hidden"
     >
       <div class="w-full aspect-video">
         {
@@ -35,9 +43,9 @@ const { title, author, description, pubDate, updatedDate, heroImage, tags } =
           )
         }
       </div>
-      <div class="font-sans1 py-12 text-muted-100">
+      <div class="font-sans py-12">
         <div class="flex flex-col gap-6 px-6 lg:px-12">
-          <div class="font-light text-muted-300">
+          <div class="font-light text-muted-700">
             <FormattedDate date={pubDate} />
             {
               updatedDate && (
@@ -47,25 +55,32 @@ const { title, author, description, pubDate, updatedDate, heroImage, tags } =
               )
             }
           </div>
-          <h1 class="text-5xl font-sans leading-tight text-muted-400">
+          <h1 class="text-5xl font-sans leading-tight text-muted-600">
             {title}
           </h1>
-          <p class="-mt-3 text-muted-200">by <strong>{author}</strong></p>
-          {
-            tags && (
-              <div class="flex flex-wrap gap-2 w-full font-semibold font-sans2">
-                {tags.slice(0, 3).map((tag) => (
-                  <span class="bg-accent-800 py-1 px-2 rounded-sm capitalize text-xs">
+          <p class="-mt-3 text-muted-700">by <strong>{author}</strong></p>
+          <div class="md:flex gap-2 hidden">
+            <span
+              class="bg-accent-600 text-white inline-block px-3 py-1 rounded-md"
+            >
+              {category}
+            </span>
+            {
+              tags
+                .slice(0, 3)
+                .map((tag, index) => (
+                  <span
+                    class={`bg-primary-500 text-white capitalize inline-block px-3 py-1 rounded-md`}
+                  >
                     {tag}
                   </span>
-                ))}
-              </div>
-            )
-          }
+                ))
+            }
+          </div>
           <hr />
         </div>
         <div
-          class="mt-8 px-6 flex justify-center prose-p:text-muted-100 prose-a:text-muted-200 prose-li:text-muted-100 prose-img:aspect-square lg:prose-img:aspect-auto prose-img:object-cover lg:prose-img:object-contain"
+          class="prose mx-auto flex justify-center prose-h2:uppercase prose-p:text-muted-900 prose-a:text-muted-600 prose-li:text-muted-100 prose-img:aspect-square lg:prose-img:aspect-auto prose-img:object-cover lg:prose-img:object-contain"
         >
           <slot />
         </div>

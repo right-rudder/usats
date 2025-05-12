@@ -19,7 +19,7 @@ import Banner from "../components/layouts/Banner.astro";
       description={siteDescription || SITE_DESCRIPTION}
       keywords={keywords || KEYWORDS}
       image={ogImage || OG_IMAGE}
-    /> 
+    />
   </head>
   <body class="font-sans">
     <!-- Google Tag Manager (noscript) -->
@@ -33,7 +33,7 @@ import Banner from "../components/layouts/Banner.astro";
     <!-- End Google Tag Manager (noscript) -->
     <Banner />
     <Navbar pathname={pathname} client:load />
-    <main class="bg-primary-900">
+    <main class="bg-white dark:bg-primary-900/90">
       <slot />
     </main>
     <Footer />
