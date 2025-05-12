@@ -48,6 +48,7 @@ export const ADDRESS_CITY = "Titusville";
 export const ADDRESS_ZIP = "32780";
 export const AIRPORT = "SPACE COAST REGIONAL";
 export const AIRPORT_CODE = "KTIX";
+export const AIRPORT_GOOGLE_LOCATION = "https://www.google.com/maps/place/Space+Coast+Regional+Airport/@28.5123353,-80.7997203,16.22z/data=!4m6!3m5!1s0x88e0ad2310d73cfb:0x4bcd770a5e53125e!8m2!3d28.5133625!4d-80.7988013!16zL20vMDNmZnAy?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D"
 
 // Pages Data
 
