@@ -253,7 +253,7 @@ const homePage = {
         },
         {
           question: "Are there any requirements to join?",
-          answer: "No experience needed! Start with zero hours—just a passion to fly. Medical certification (Class 2+) and English proficiency are required. Military veterans: leverage your background for accelerated pathways. International students must be: M1 visa eligible and will need to provide proof of funds and academic transcripts. USATS assists with visa logistics, housing, and airport transfers!",
+          answer: "No experience needed! Start with zero hours—just a passion to fly. Medical certification (Class 2+) and English proficiency are required. Military veterans: leverage your background for accelerated pathways. International students must be: M1 visa eligible and will need to provide proof of funds and academic transcripts.",
         },
       ],
       buttons: [

@@ -64,7 +64,7 @@ const aboutUs = {
       {
         title: "​Setting The Standard For Quality",
         description: [
-          "Since 2001, our helicopter academy has set the standard for further expanding the quality of helicopter pilot training. This was a time of development for our key training programs, which were geared toward a new breed of career-oriented student pilots",
+          "Since 2001, our helicopter academy has further expanding the quality of helicopter pilot training. This was a time of development for our key training programs, which were geared toward a new breed of career-oriented student pilots",
         ],
       },
       {
