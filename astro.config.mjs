@@ -8,4 +8,9 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: "https://usatsflighttraining.com/",
   integrations: [tailwind(), partytown(), sitemap(), react()],
+  redirects: {
+    "/pages/about-our-flight-school": "/about-us",
+    "/pages/application-process-for-aspiring-pilots": "/enroll-now",
+    "/pages/flight-school-gallery": "/about-us",
+  },
 });
