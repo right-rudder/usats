@@ -279,21 +279,21 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
     const enrollmentForm = document.getElementById("enrollment-form");
     const checkbox = document.getElementById("agree-data-collection");
     const submitButton = document.getElementById("submit-button");
-    const yesVisit = document.getElementById("yes-visit");
-    const noVisit = document.getElementById("no-visit");
+    // const yesVisit = document.getElementById("yes-visit");
+    // const noVisit = document.getElementById("no-visit");
 
-    yesVisit.addEventListener("change", function () {
-      if (yesVisit.checked) {
-        document.getElementById("location-container").classList.remove("hidden");
-        document.getElementById("location-container").classList.add("flex");
-      }
-    });
+    // yesVisit.addEventListener("change", function () {
+    //   if (yesVisit.checked) {
+    //     document.getElementById("location-container").classList.remove("hidden");
+    //     document.getElementById("location-container").classList.add("flex");
+    //   }
+    // });
 
-    noVisit.addEventListener("change", function () {
-      if (noVisit.checked) {
-        document.getElementById("location-container").classList.add("hidden");
-      }
-    });
+    // noVisit.addEventListener("change", function () {
+    //   if (noVisit.checked) {
+    //     document.getElementById("location-container").classList.add("hidden");
+    //   }
+    // });
 
     checkbox.addEventListener("change", function () {
       if (checkbox.checked) {
