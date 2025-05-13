@@ -5,6 +5,13 @@ import { ALTO_8A as imgHeader } from "../constsImages";
 
 const internationalStudentsPage = {
   data: {
+    //SEO Header Stuff
+    pageTitle: `International Student Flight Training | ${COMPANY_NAME}`,
+    pageDescription:
+      "USATS welcomes international student pilots with specialized aviation training programs, visa assistance, and support. Train on Florida's Space Coast with our FAA-certified flight school.",
+    pageKeywords:
+      "international student pilot training, M1 visa flight school, foreign pilot training USA, international aviation students, flight school for foreigners, international pilot license US, aviation training international students, flight training visa, Titusville international flight school, flight training for non-US citizens, international student housing flight school, FAA certification international pilots",
+
     header: {
       stars: true,
       imagePath: imgHeader.imagePath,
@@ -40,14 +47,13 @@ const internationalStudentsPage = {
       ],
     },
 
-
     whyUs: {
       upperHeading: "Why International Students Choose Us",
       heading: "Your Global Aviation Career Starts Here",
       descriptions: [
-            "Students from over 60 countries have trusted us to launch their careers in the skies. Whether you're aiming to fly in your home country or build hours in the U.S., our Part 141-approved programs are designed to support international success.",
-            "We handle more than flight training — we guide you through visa applications, TSA clearance, medical exams, and FAA testing. With on-campus CATS testing and fingerprinting, our support starts from day one.",
-            "Take off with a clear path, a supportive team, and a fleet that prepares you for airline, charter, or private aviation roles across the globe.",
+        "Students from over 60 countries have trusted us to launch their careers in the skies. Whether you're aiming to fly in your home country or build hours in the U.S., our Part 141-approved programs are designed to support international success.",
+        "We handle more than flight training — we guide you through visa applications, TSA clearance, medical exams, and FAA testing. With on-campus CATS testing and fingerprinting, our support starts from day one.",
+        "Take off with a clear path, a supportive team, and a fleet that prepares you for airline, charter, or private aviation roles across the globe.",
       ],
       bullets: [
         {
@@ -118,52 +124,52 @@ const internationalStudentsPage = {
     },
 
     quizCTA: {
-        upperHeading: "CAREER",
-        heading: "Launch Your Global Aviation Career in a High-Demand Market",
-        descriptions: [
-            "The aviation world is facing a global pilot shortage. Airlines and helicopter operators across continents are urgently hiring. Boeing forecasts a need for *600,000 new pilots by 2042*, and rotorcraft demand is rising in emergency response, energy, tourism, and firefighting sectors.",
-            `At ${COMPANY_NAME}, we prepare international students for global success. Our FAA-approved Part 141 training accelerates your path to the cockpit with a structured program and fewer required hours. You'll train on modern aircraft—including the Cessna 172 and R44—equipped with glass cockpits to reflect real-world operations.`,
-            "Thanks to our strong network of FAA examiners (DPEs), you’ll complete checkrides efficiently and graduate ready to stand out to top employers around the world.",
-            "The sky isn’t the limit—it’s your new workplace.",
-        ],
-        imageLegend: "A proud USATS graduate receives their certificate",
-        imagePath: contentCTAimg.imagePath,
-        imageAlt: contentCTAimg.imageAlt,
+      upperHeading: "CAREER",
+      heading: "Launch Your Global Aviation Career in a High-Demand Market",
+      descriptions: [
+        "The aviation world is facing a global pilot shortage. Airlines and helicopter operators across continents are urgently hiring. Boeing forecasts a need for *600,000 new pilots by 2042*, and rotorcraft demand is rising in emergency response, energy, tourism, and firefighting sectors.",
+        `At ${COMPANY_NAME}, we prepare international students for global success. Our FAA-approved Part 141 training accelerates your path to the cockpit with a structured program and fewer required hours. You'll train on modern aircraft—including the Cessna 172 and R44—equipped with glass cockpits to reflect real-world operations.`,
+        "Thanks to our strong network of FAA examiners (DPEs), you’ll complete checkrides efficiently and graduate ready to stand out to top employers around the world.",
+        "The sky isn’t the limit—it’s your new workplace.",
+      ],
+      imageLegend: "A proud USATS graduate receives their certificate",
+      imagePath: contentCTAimg.imagePath,
+      imageAlt: contentCTAimg.imageAlt,
     },
 
     frequentQuestions: {
-        title: "Frequently Asked Questions",
-        description: "Answers to common questions about training with USATS as an international student.",
-        questions: [
-          {
-            question: "Why choose USATS?",
-            answer:
-              "USATS is a globally respected aviation academy with over 30 years of experience training elite pilots. Our programs are FAA- and NATO-certified, and our fleet includes combat-proven aircraft like the UH-60 Black Hawk. With over 320 flying days per year and a 38-acre tactical complex, we deliver world-class aviation training.",
-          },
-          {
-            question: "What can I expect from USATS training?",
-            answer:
-              "You’ll receive career-oriented training from day one—whether you’re starting with private pilot lessons or advancing to instrument ratings. Our small class sizes, 2:1 instructor ratio, and access to NASA-adjacent airspace ensure a rich and diverse learning environment. Leadership modules (CRM/TEM) derived from military practices are also available.",
-          },
-          {
-            question: "Are there any requirements to join?",
-            answer:
-              "You don’t need any flight experience to begin—just a strong desire to fly! A Class 2 (or higher) medical certificate and English proficiency are required. International students must also provide proof of funds, school transcripts, and meet M1 visa eligibility. USATS helps with visa support, housing arrangements, and airport pickup.",
-          },
-          {
-            question: "What Is Allowed With An M1 Student Visa?",
-            answer: `International students seeking a certificate/rating and training cannot train in the United States on a tourist visa and USATS strictly complies with the Department of Homeland Security and Transportation Safety Administration regulations. The M1 Student Visa allows an international student to participate in a full-time course of study at a SEVP-approved institution such as USATS, for the established duration of all our FAA-approved courses and up to 12-months duration, such as our full Professional Pilot Programs – helicopter and airplane – and all FAA courses offered by USATS. Please note, immigration and labor laws in the United States are very strictly enforced. In shopping for schools, be aware that students cannot train unless courses are FAA approved. USATS has many FAA approved courses including the full suite of Professional Pilot Program courses for helicopter and airplane!"`
-          },
-        ],
-        buttons: [
-          {
-            name: "Contact Us",
-            link: "contact-us",
-            primary: true,
-          },
-        ],
-      }
-      
+      title: "Frequently Asked Questions",
+      description:
+        "Answers to common questions about training with USATS as an international student.",
+      questions: [
+        {
+          question: "Why choose USATS?",
+          answer:
+            "USATS is a globally respected aviation academy with over 30 years of experience training elite pilots. Our programs are FAA- and NATO-certified, and our fleet includes combat-proven aircraft like the UH-60 Black Hawk. With over 320 flying days per year and a 38-acre tactical complex, we deliver world-class aviation training.",
+        },
+        {
+          question: "What can I expect from USATS training?",
+          answer:
+            "You’ll receive career-oriented training from day one—whether you’re starting with private pilot lessons or advancing to instrument ratings. Our small class sizes, 2:1 instructor ratio, and access to NASA-adjacent airspace ensure a rich and diverse learning environment. Leadership modules (CRM/TEM) derived from military practices are also available.",
+        },
+        {
+          question: "Are there any requirements to join?",
+          answer:
+            "You don’t need any flight experience to begin—just a strong desire to fly! A Class 2 (or higher) medical certificate and English proficiency are required. International students must also provide proof of funds, school transcripts, and meet M1 visa eligibility. USATS helps with visa support, housing arrangements, and airport pickup.",
+        },
+        {
+          question: "What Is Allowed With An M1 Student Visa?",
+          answer: `International students seeking a certificate/rating and training cannot train in the United States on a tourist visa and USATS strictly complies with the Department of Homeland Security and Transportation Safety Administration regulations. The M1 Student Visa allows an international student to participate in a full-time course of study at a SEVP-approved institution such as USATS, for the established duration of all our FAA-approved courses and up to 12-months duration, such as our full Professional Pilot Programs – helicopter and airplane – and all FAA courses offered by USATS. Please note, immigration and labor laws in the United States are very strictly enforced. In shopping for schools, be aware that students cannot train unless courses are FAA approved. USATS has many FAA approved courses including the full suite of Professional Pilot Program courses for helicopter and airplane!"`,
+        },
+      ],
+      buttons: [
+        {
+          name: "Contact Us",
+          link: "contact-us",
+          primary: true,
+        },
+      ],
+    },
   },
 };
 

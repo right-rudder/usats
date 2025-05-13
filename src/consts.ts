@@ -56,7 +56,7 @@ export const AIRPORT_GOOGLE_LOCATION =
 
 // Pages Data
 
-export const BANNER_TITLE = `Experience flight like never before.`;
+export const BANNER_TITLE = `Experience flight like never before`;
 
 // Financing
 

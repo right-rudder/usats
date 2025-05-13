@@ -1,18 +1,27 @@
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../consts";
-import { HUFFSTETTER_PIC as contentCTAimg } from "../constsImages";
+import { HUFFSTETTER_PIC } from "../constsImages";
 
 const homePage = {
   data: {
+    //SEO Header Stuff
+    pageTitle:
+      "Flight School Titusville FL | Airplane & Helicopter Training | USATS",
+    pageDescription:
+      "Top FAA-certified flight school in Titusville, FL. USATS offers airplane and helicopter pilot training, discovery flights, and international student programs. Start your aviation career today!",
+    pageKeywords:
+      "flight school Titusville, pilot training Florida, helicopter school FL, airplane training USATS, learn to fly Titusville, FAA pilot certification, USATS aviation, Brevard County flight school, Space Coast pilot training, Part 141 flight training, international student pilot program, aviation career Florida, discovery flights Titusville, Florida flight instruction",
+
     header: {
       stars: true,
       imagePath: "/src/assets/Direct_Fly_Alto_NG.jpg",
-      imageAlt: "Alto NG Air Plane",
+      imageAlt:
+        "Direct Fly Alto NG aircraft in flight over Florida's Space Coast - USATS training fleet",
       headerH1: `Become a pilot today`,
       paragraph:
         "Launch your professional pilot career with USATS in Titusville, FL. </br>Our Professional Pilot Programs will get you airline ready, serving student pilots in Titusville, Cocoa Beach and Merritt Island, Viera and beyond. </br>Whether you're local or an international student, USATS is your destination to become a professional pilot. Apply today!",
       buttons: [
         {
-          name: "Enroll Now",
+          name: "Start Your Pilot Training Journey",
           link: "/enroll-now",
           primary: false,
         },
@@ -28,56 +37,60 @@ const homePage = {
       ],
       image: {
         imagePath: "/src/assets/ALTO_NG.webp",
-        imageAlt: "AirPlane Panel",
+        imageAlt:
+          "ALTO NG training aircraft with glass cockpit avionics at USATS flight school in Titusville",
       },
       buttons: [
         {
-          text: "About Us",
+          text: "Learn About Our Flight School History",
           link: "/about-us",
         },
         {
-          text: "Why Choose USATS?",
+          text: "Discover the USATS Training Advantage",
           link: "#why-us",
         },
       ],
     },
 
-
     whatWeOffer: {
       images: {
         h60: {
           imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
-          imageAlt: "UH-60 Black Hawk Flying",
+          imageAlt:
+            "UH-60 Black Hawk helicopter at USATS military aviation training facility in Titusville FL",
         },
         hdx1200: {
           imagePath: "/src/assets/ALTO_NG.webp",
-          imageAlt: "Dynon hdx1200",
+          imageAlt:
+            "ALTO NG aircraft with Dynon HDX1200 glass cockpit avionics for modern flight training",
         },
         cesna172: {
           imagePath: "/src/assets/USATS_Plane_N3544W.webp",
-          imageAlt: "One CESNA 172 parked in a ramp",
+          imageAlt:
+            "Cessna 172 Skyhawk N3544W training aircraft at USATS flight school ramp in Titusville",
         },
         s300: {
           imagePath: "/src/assets/Schweizer_S300_Usats_Ramp.webp",
-          imageAlt: "Two S300 helicopters parked in a ramp",
+          imageAlt:
+            "Schweizer S300 training helicopters on USATS ramp at Space Coast Regional Airport in Florida",
         },
       },
       buttons: [
         {
-          name: "First Button",
-          link: "#",
+          name: "Explore Our Aircraft Fleet",
+          link: "/about-us#our-fleet",
           primary: true,
         },
         {
-          name: "Second Button",
-          link: "#",
+          name: "View Training Programs",
+          link: "/airplane-training",
           primary: false,
         },
       ],
     },
     whyUs: {
       upperHeading: "Why USATS",
-      heading: "Your Pilot Career Begins Here",
+      heading: "Your Professional Pilot Career Begins Here",
       descriptions: [
         "From guiding life-saving Search and Rescue missions along the Gulf of Mexico to navigating VIP charters above New York City’s skyline — our graduates excel worldwide. They pilot military operations over Colombia’s jungles, Peru’s peaks, and Africa’s deserts, or command helicopters and airplanes in recreational and commercial roles across every corner of the globe.",
         "At USATS, we don’t just train pilots — we launch careers that transcend borders and redefine possibilities. Join the ranks of aviators trusted in the world’s most demanding skies.",
@@ -134,27 +147,29 @@ const homePage = {
           icon: "M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z",
         },
         {
-          title: "Start your journey today—soar sooner with training designed for success!",
+          title:
+            "Start your journey today—soar sooner with training designed for success!",
           descriptions: [],
           icon: "",
         },
       ],
       imageLegend: "Become a Pilot with USATS",
       imagePath: "/src/assets/USATS_banner_Application.webp",
-      imageAlt: "",
+      imageAlt:
+        "USATS flight school application banner for prospective student pilots - start your aviation career",
     },
 
     quizCTA: {
       upperHeading: "CAREER",
       heading: "Elevate Your Career in a High-Demand Aviation Market",
       descriptions: [
-        "The aviation industry faces a critical shortage of pilots, with airlines and helicopter sectors racing to fill seats. Airline demand is skyrocketing—Boeing projects *600,000 new pilots needed by 2042*. Helicopter roles are equally urgent, with growth in EMS, energy, tourism, and firefighting. Whether you choose fixed-wing or rotorcraft, your skills will be in demand.", 
+        "The aviation industry faces a critical shortage of pilots, with airlines and helicopter sectors racing to fill seats. Airline demand is skyrocketing—Boeing projects *600,000 new pilots needed by 2042*. Helicopter roles are equally urgent, with growth in EMS, energy, tourism, and firefighting. Whether you choose fixed-wing or rotorcraft, your skills will be in demand.",
         `At ${COMPANY_NAME}, we fast-track your readiness. Part 141 training reduces required hours while meeting strict FAA standards, and our modern fleet (Cessna 172, R44, glass-cockpit aircraft) mirrors real-world operations. With strong DPE relationships ensuring smooth checkrides, you’ll graduate job-ready faster—and stand out to top employers.`,
         "The sky isn’t the limit — it’s your workplace. ",
       ],
       imageLegend: "Our satisfied student receiving a certificate",
-      imagePath: contentCTAimg.imagePath,
-      imageAlt: contentCTAimg.imageAlt,
+      imagePath: HUFFSTETTER_PIC.imagePath,
+      imageAlt: HUFFSTETTER_PIC.imageAlt,
     },
 
     blogfeed: {
@@ -179,19 +194,20 @@ const homePage = {
 
     testimonials: {
       upperHeading: "THE USATS EXPERIENCE",
-      heading: "What Our Students Are Saying",
-      paragraphs:[
+      heading: "What Our Students Are Saying About Our Flight School",
+      paragraphs: [
         "I came for a flight review and some flights for a few days. Communication was straightforward and transparent. Relatively new c172 with g1000 was available for all the times I requested. Flight instructor Ethan was courteous and safe. Plane was well maintained and I felt that I was in safe hands",
       ],
-      headingText: ["", ""],
-      buttonText: "",
-      buttonLink: "",
+      headingText: ["Student Success Stories", "Aviation Training Excellence"],
+      buttonText: "Read More Testimonials",
+      buttonLink: "/testimonials",
       mainReview: {
-          body: "We would like to address our appreciation to all the Schools (personnel), generally, and to the instructors specifically for their complex works and dedication, which has helped us grow our skill and knowledge significantly and provided us with all the ability to become professional pilots in the future.",
-          author: "ROYAL MALASIAN POLICE",
-          imagePath: "",
-          imageAlt: "",
-          stars: 5,
+        body: "We would like to address our appreciation to all the Schools (personnel), generally, and to the instructors specifically for their complex works and dedication, which has helped us grow our skill and knowledge significantly and provided us with all the ability to become professional pilots in the future.",
+        author: "ROYAL MALASIAN POLICE",
+        imagePath: "/src/assets/placeholder.webp",
+        imageAlt:
+          "Royal Malaysian Police aviation unit pilots trained at USATS flight school in Titusville Florida",
+        stars: 5,
       },
 
       reviews: [
@@ -240,27 +256,47 @@ const homePage = {
       ],
     },
     frequentQuestions: {
-      title: "",
-      description: "",
+      title: "Frequently Asked Questions About Flight Training",
+      description:
+        "Common questions about becoming a pilot at USATS flight school in Titusville, Florida",
       questions: [
         {
-          question: "Why choose USATS?",
-          answer: "USATS is a globally recognized military aviation leader with 30+ years of training elite pilots, offering FAA + NATO-certified programs on combat-proven platforms like the UH-60 Black Hawk—all with 320+ annual flying days and a 38-acre tactical training complex.",
+          question: "Why choose USATS for pilot training in Florida?",
+          answer:
+            "USATS is a globally recognized military aviation leader with 30+ years of training elite pilots, offering FAA + NATO-certified programs on combat-proven platforms like the UH-60 Black Hawk—all with 320+ annual flying days and a 38-acre tactical training complex. Our Titusville location provides ideal flying conditions year-round on Florida's Space Coast.",
         },
         {
-          question: "What I can Expect from USATS training?",
-          answer: "Career-focused training: Master everything from private pilot basics to advanced instrument flying, with optional courses in leadership (CRM/TEM) honed from military programs. Enjoy small classes, 2:1 instructor ratios, and access to NASA-adjacent airspace for unparalleled training diversity.",
+          question: "What can I expect from USATS flight training programs?",
+          answer:
+            "Career-focused training: Master everything from private pilot basics to advanced instrument flying, with optional courses in leadership (CRM/TEM) honed from military programs. Enjoy small classes, 2:1 instructor ratios, and access to NASA-adjacent airspace for unparalleled training diversity. Our Part 141 curriculum helps you progress faster with fewer required flight hours.",
         },
         {
-          question: "Are there any requirements to join?",
-          answer: "No experience needed! Start with zero hours—just a passion to fly. Medical certification (Class 2+) and English proficiency are required. Military veterans: leverage your background for accelerated pathways. International students must be: M1 visa eligible and will need to provide proof of funds and academic transcripts.",
+          question: "What are the requirements to join USATS flight school?",
+          answer:
+            "No experience needed! Start with zero hours—just a passion to fly. Medical certification (Class 2+) and English proficiency are required. Military veterans: leverage your background for accelerated pathways. International students must be: M1 visa eligible and will need to provide proof of funds and academic transcripts. Our admissions team can guide you through every step of the enrollment process.",
+        },
+        {
+          question: "Does USATS offer financing options for flight training?",
+          answer:
+            "Yes, we partner with several aviation financing specialists including AOPA Finance, Stratus Financial, and We-Fly to help you fund your flight training. Our flexible payment plans and financing options make aviation education more accessible. Military veterans can also use their VA benefits for qualifying programs.",
+        },
+        {
+          question:
+            "How long does it take to complete flight training at USATS?",
+          answer:
+            "Training duration varies by program and individual progress. Our Part 141 programs typically allow for faster completion with fewer required hours than Part 61 training. A Private Pilot License can be completed in as little as 2 months of dedicated training. Commercial and Instructor ratings generally require 3-6 months each. Our admissions counselors can provide a personalized timeline based on your goals.",
         },
       ],
       buttons: [
         {
-          name: "Contact Us",
-          link: "contact-us",
+          name: "Contact Our Flight School Admissions Team",
+          link: "/contact-us",
           primary: true,
+        },
+        {
+          name: "Schedule a Discovery Flight",
+          link: "/discovery-flight",
+          primary: false,
         },
       ],
     },

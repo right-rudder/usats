@@ -8,8 +8,7 @@ const headerData = {
   imageAlt: "",
 };
 
-const checkboxText =
-  `I agree to the Privacy Policy and Terms of Service provided by the company.
+const checkboxText = `I agree to the Privacy Policy and Terms of Service provided by the company.
         By providing my phone number, I agree to receive text messages from the business. I also agree that I may be contacted via messaging apps such as WhatsApp or Signal.
       `;
 
@@ -19,7 +18,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
 <BaseLayout
   siteTitle=`Enrollment Form | ${COMPANY_NAME}`
   siteDescription=`${COMPANY_NAME} USATS offers career-track, zero-to-hero pilot training programs at Space Coast Regional Airport (KTIX) in Titusville, Florida. With over 320 flying days per year, state-of-the-art facilities, and FAA-approved Part 141 and 61 programs, we provide top-tier education with flexible scheduling to fit the needs of aspiring airplane and helicopter pilots. Our comprehensive training, experienced instructors, and efficient course structure ensure students receive the highest quality instruction and flight experience to launch successful aviation careers`
-  keywords=""
+  keywords="flight school enrollment, pilot training enrollment, aviation school application, flight training registration, USATS enrollment process, become a pilot, aviation career start, flight school admission, pilot program application, flight training sign up, aviation academy enrollment, helicopter pilot training enrollment, airplane pilot training registration, pilot license program enrollment"
 >
   <Header data={headerData} />
 
@@ -35,9 +34,11 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
       <h3
         class="font-medium mt-4 mb-12 font-sans1 leading-tight text-muted-200 text-center mx-auto text-xl"
       >
-        {`Fill out the form below and let's start flying! A ${COMPANY_NICKNAME} team member
+        {
+          `Fill out the form below and let's start flying! A ${COMPANY_NICKNAME} team member
         will get in touch with you and walk you through the next steps on
-        getting you in the air.`}
+        getting you in the air.`
+        }
       </h3>
       <form
         id="enrollment-form"
@@ -83,9 +84,15 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
           />
         </div>
 
-        <fieldset class="flex flex-col justify-center items-center align-middle mt-6">
-          <legend class="mb-2 text-xl font-semibold text-muted-300 text-center w-full">
-            Which aircraft type are you interested in? <span class="text-red-500">*</span>
+        <fieldset
+          class="flex flex-col justify-center items-center align-middle mt-6"
+        >
+          <legend
+            class="mb-2 text-xl font-semibold text-muted-300 text-center w-full"
+          >
+            Which aircraft type are you interested in? <span
+              class="text-red-500">*</span
+            >
           </legend>
           <div class="flex gap-6">
             <div class="flex items-center gap-2">
@@ -108,23 +115,36 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
                 required
                 class="w-4 h-4 text-accent-800 focus:ring-accent-900"
               />
-              <label for="helicopter-type" class="text-muted-300">Helicopter</label>
+              <label for="helicopter-type" class="text-muted-300"
+                >Helicopter</label
+              >
             </div>
           </div>
         </fieldset>
-        
+
         <!-- Dynamic Program Options -->
-        <fieldset class="flex flex-col justify-center items-center align-middle mt-4">
-          <legend class="mb-2 text-muted-300 text-xl font-semibold text-center w-full">
-            Primary Training Program Interest? <span class="text-red-500">*</span>
+        <fieldset
+          class="flex flex-col justify-center items-center align-middle mt-4"
+        >
+          <legend
+            class="mb-2 text-muted-300 text-xl font-semibold text-center w-full"
+          >
+            Primary Training Program Interest? <span class="text-red-500"
+              >*</span
+            >
           </legend>
-          <div id="program-options-container" class="hidden flex flex-col gap-2">
+          <div
+            id="program-options-container"
+            class="hidden flex flex-col gap-2"
+          >
             <!-- Options will be populated by JavaScript -->
           </div>
         </fieldset>
 
-        <label class="text-muted-300" class="mt-4 text-xl text-center font-semibold text-muted-300" for="experience"
-          >How far along are you in pilot training?*</label
+        <label
+          class="text-muted-300"
+          class="mt-4 text-xl text-center font-semibold text-muted-300"
+          for="experience">How far along are you in pilot training?*</label
         >
         <input
           id="experience"
@@ -136,9 +156,14 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
         />
 
         <!-- International Student -->
-        <fieldset class="flex flex-col justify-center items-center align-middle mt-6">
-          <legend class="mb-2 text-xl font-semibold text-muted-300 text-center w-full">
-            Are you an International Student? <span class="text-red-500">*</span>
+        <fieldset
+          class="flex flex-col justify-center items-center align-middle mt-6"
+        >
+          <legend
+            class="mb-2 text-xl font-semibold text-muted-300 text-center w-full"
+          >
+            Are you an International Student? <span class="text-red-500">*</span
+            >
           </legend>
           <div class="flex gap-6">
             <div class="flex items-center gap-2">
@@ -166,12 +191,14 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
               <label for="regular-student" class="text-muted-300">
                 No, I'm an not
               </label>
-              
             </div>
           </div>
-          <span class="text-muted-400 text-sm pt-2 italic">By sumbiting this form you agree to receive information on WhatsApp or Signal*</span>
+          <span class="text-muted-400 text-sm pt-2 italic"
+            >By sumbiting this form you agree to receive information on WhatsApp
+            or Signal*</span
+          >
         </fieldset>
-                
+
         <label
           for="extra-information"
           class="mt-6 text-xl text-center font-semibold text-muted-300"
@@ -185,7 +212,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
           rows="5"
           class="px-5 py-4 outline-1 border-gray-400 border outline-gray-500"
         ></textarea>
-        
+
         <div class="">
           <label
             for="agree-data-collection"
@@ -219,33 +246,51 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
     Airplane: [
       { value: "private-pilot-license", text: "Private Pilot License" },
       { value: "instrument-rating", text: "Instrument Rating" },
-      { value: "instrument-proficiency-check", text: "Instrument Proficiency Check" },
+      {
+        value: "instrument-proficiency-check",
+        text: "Instrument Proficiency Check",
+      },
       { value: "commercial-pilot-license", text: "Commercial Pilot License" },
       { value: "cfi", text: "Flight Instructor (CFI)" },
       { value: "cfii", text: "Flight Instructor Instrument (CFII)" },
-      { value: "professional-pilot-program", text: "Professional Pilot Program" },
+      {
+        value: "professional-pilot-program",
+        text: "Professional Pilot Program",
+      },
     ],
     Helicopter: [
-      { value: "private-pilot-license-h", text: "Private Pilot License- Helicopter" },
+      {
+        value: "private-pilot-license-h",
+        text: "Private Pilot License- Helicopter",
+      },
       { value: "instrument-rating-h", text: "Instrument Rating - Helicopter" },
-      { value: "instrument-proficiency-check-h", text: "Instrument Proficiency Check- Helicopter" },
-      { value: "commercial-pilot-license-h", text: "Commercial Pilot License - Helicopter" },
+      {
+        value: "instrument-proficiency-check-h",
+        text: "Instrument Proficiency Check- Helicopter",
+      },
+      {
+        value: "commercial-pilot-license-h",
+        text: "Commercial Pilot License - Helicopter",
+      },
       { value: "cfi-h", text: "Flight Instructor - Helicopter" },
       { value: "cfii-h", text: "Flight Instructor Instrument - Helicopter" },
-      { value: "professional-pilot-program-h", text: "Professional Pilot Program - Helicopter" },
+      {
+        value: "professional-pilot-program-h",
+        text: "Professional Pilot Program - Helicopter",
+      },
       { value: "military-transition", text: "Military Transition Training" },
-    ]
+    ],
   };
 
   function updateProgramOptions(selectedType) {
     const container = document.getElementById("program-options-container");
-    container.innerHTML = '';
-    
+    container.innerHTML = "";
+
     const programs = trainingPrograms[selectedType];
     if (programs) {
-      programs.forEach(program => {
-        const wrapper = document.createElement('div');
-        wrapper.className = 'flex items-center gap-2';
+      programs.forEach((program) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "flex items-center gap-2";
         wrapper.innerHTML = `
           <input
             type="radio"
@@ -259,22 +304,24 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
         `;
         container.appendChild(wrapper);
       });
-      container.classList.remove('hidden');
+      container.classList.remove("hidden");
     } else {
-      container.classList.add('hidden');
+      container.classList.add("hidden");
     }
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    const aircraftTypeRadios = document.querySelectorAll('input[name="aircraft-type"]');
-    aircraftTypeRadios.forEach(radio => {
-      radio.addEventListener('change', (event) => {
+    const aircraftTypeRadios = document.querySelectorAll(
+      'input[name="aircraft-type"]'
+    );
+    aircraftTypeRadios.forEach((radio) => {
+      radio.addEventListener("change", (event) => {
         updateProgramOptions(event.target.value);
       });
     });
 
     const container = document.getElementById("program-options-container");
-    container.classList.add('hidden');
+    container.classList.add("hidden");
 
     const enrollmentForm = document.getElementById("enrollment-form");
     const checkbox = document.getElementById("agree-data-collection");

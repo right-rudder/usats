@@ -1,13 +1,17 @@
 import { COMPANY_NAME } from "../consts";
-import { ALTO_8A as imgHeader, HUFFSTETTER_PIC as imgPilot } from "../constsImages";
+import {
+  ALTO_8A as imgHeader,
+  HUFFSTETTER_PIC as imgPilot,
+} from "../constsImages";
 
 const whyBecomePilot = {
   data: {
     //SEO Header Stuff
-    pageTitle: `Why Become a Pilot | ${COMPANY_NAME}`,
+    pageTitle: `Why Become a Pilot | ${COMPANY_NAME}, Titusville, FL`,
     pageDescription:
       "Becoming a pilot is a thrilling journey that opens up a world of possibilities and adventure. It's not just a career choice - it's a lifestyle. Whether you've always dreamed of soaring through the clouds or are considering a pilot's license for the first time, the decision to become a pilot is a significant one.",
-    pageKeywords: "",
+    pageKeywords:
+      "pilot career benefits, why become a pilot, aviation career advantages, pilot job opportunities, pilot lifestyle, pilot career salary, how to start flying, pilot career outlook, pilot job market, aviation industry growth, flight training benefits, aviation career path, pilot career flexibility, commercial pilot advantages, professional pilot jobs",
 
     //top header
     header: {
