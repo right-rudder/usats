@@ -1,5 +1,25 @@
 ---
 import "/src/styles/global.css";
+import {
+  COMPANY_NAME,
+  SITE_DESCRIPTION,
+  KEYWORDS,
+  OG_IMAGE,
+  PHONE_NUMBER,
+  EMAIL_ADDRESS,
+  ADDRESS_LINE_1,
+  ADDRESS_CITY,
+  ADDRESS_STATE,
+  ADDRESS_ZIP,
+  GEO_LATITUDE,
+  GEO_LONGITUDE,
+  COMPANY_SITE_LINK,
+  LOCATIONS,
+  AIRPORT,
+  AIRPORT_CODE,
+  AIRPORT_GOOGLE_LOCATION,
+  COMPANY_NICKNAME,
+} from "../../consts"; // Adjusted import path
 
 interface Props {
   title: string;
@@ -10,7 +30,227 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, keywords, image = "" } = Astro.props;
+const {
+  title,
+  description,
+  keywords,
+  image = OG_IMAGE, // Use OG_IMAGE from consts as default
+} = Astro.props;
+
+const logoUrl = new URL("/USATS_Logo_White.webp", Astro.site).href; // Assuming logo is in public folder
+const siteImage = new URL(image, Astro.site).href;
+
+// Use the first location as the primary for schema, or adjust if needed
+const primaryLocation = LOCATIONS[0];
+const addressCountry = "US"; // Assuming US, add to consts if it can vary
+const geoRadius = "100000"; // Example radius in meters (100km), adjust as needed
+
+// Generate breadcrumbs for the current page path
+const pathSegments = Astro.url.pathname.split("/").filter(Boolean);
+const breadcrumbItems = [
+  {
+    "@type": "ListItem",
+    position: 1,
+    name: "Home",
+    item: Astro.site?.href || "https://usatsflighttraining.com",
+  },
+];
+
+pathSegments.forEach((segment, index) => {
+  // Capitalize and format the segment name for display
+  let name = segment
+    .replace(/-/g, " ")
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+  breadcrumbItems.push({
+    "@type": "ListItem",
+    position: index + 2,
+    name: name,
+    item: `${Astro.site?.href || "https://usatsflighttraining.com"}${pathSegments.slice(0, index + 1).join("/")}`,
+  });
+});
+
+// Construct the main schemas
+const localBusinessSchema = {
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `${COMPANY_SITE_LINK}#localbusiness`,
+  name: COMPANY_NAME,
+  alternateName: COMPANY_NICKNAME,
+  description: description || SITE_DESCRIPTION,
+  url: COMPANY_SITE_LINK,
+  logo: logoUrl,
+  image: siteImage,
+  telephone: PHONE_NUMBER,
+  email: EMAIL_ADDRESS,
+  foundingDate: "1993", // Add or adjust based on actual founding date
+  sameAs: [
+    "https://www.facebook.com/USATSolutions/",
+    "https://www.instagram.com/usatsolutions/",
+    "https://www.linkedin.com/company/us-aviation-training-solutions",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: primaryLocation.address,
+    addressLocality: primaryLocation.city,
+    addressRegion: primaryLocation.state,
+    addressCountry: addressCountry,
+    postalCode: primaryLocation.zip,
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: GEO_LATITUDE,
+    longitude: GEO_LONGITUDE,
+  },
+  hasMap: primaryLocation.gMaps,
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "17:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday"],
+      opens: "09:00",
+      closes: "15:00",
+    },
+  ],
+  paymentAccepted:
+    "Cash, Credit Card, Visa, Mastercard, American Express, Discover, Checks, Financing",
+  priceRange: "$$$",
+  currenciesAccepted: "USD",
+};
+
+const flightSchoolSchema = {
+  "@context": "http://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": `${COMPANY_SITE_LINK}#flightschool`,
+  name: COMPANY_NAME,
+  description: `${COMPANY_NAME} is an FAA-certified flight school located at ${AIRPORT} (${AIRPORT_CODE}) offering comprehensive airplane and helicopter pilot training programs. Our institution provides Part 141 and Part 61 training paths, serving students from over 120 countries.`,
+  url: COMPANY_SITE_LINK,
+  logo: logoUrl,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: primaryLocation.address,
+    addressLocality: primaryLocation.city,
+    addressRegion: primaryLocation.state,
+    addressCountry: addressCountry,
+    postalCode: primaryLocation.zip,
+  },
+  location: {
+    "@type": "Place",
+    name: AIRPORT,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: primaryLocation.address,
+      addressLocality: primaryLocation.city,
+      addressRegion: primaryLocation.state,
+      addressCountry: addressCountry,
+      postalCode: primaryLocation.zip,
+    },
+    hasMap: AIRPORT_GOOGLE_LOCATION,
+  },
+  email: EMAIL_ADDRESS,
+  telephone: PHONE_NUMBER,
+};
+
+// Course schema for key programs
+const courseSchemas = [
+  {
+    "@context": "http://schema.org",
+    "@type": "Course",
+    name: "Private Pilot License - Airplane",
+    description:
+      "Earn your FAA Private Pilot License (PPL) for airplanes and begin your journey in aviation with our comprehensive ground and flight training program.",
+    provider: {
+      "@type": "EducationalOrganization",
+      name: COMPANY_NAME,
+      sameAs: COMPANY_SITE_LINK,
+    },
+    educationalCredentialAwarded: "FAA Private Pilot License - Airplane",
+    occupationalCategory: "Pilot",
+    timeToComplete: "P2M", // ISO 8601 duration format - approximately 2 months
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Course",
+    name: "Private Pilot License - Helicopter",
+    description:
+      "Earn your FAA Private Pilot License (PPL) for helicopters with comprehensive ground training and hands-on flight experience in our modern rotorcraft fleet.",
+    provider: {
+      "@type": "EducationalOrganization",
+      name: COMPANY_NAME,
+      sameAs: COMPANY_SITE_LINK,
+    },
+    educationalCredentialAwarded: "FAA Private Pilot License - Helicopter",
+    occupationalCategory: "Helicopter Pilot",
+    timeToComplete: "P2M", // ISO 8601 duration format - approximately 2 months
+  },
+];
+
+// Breadcrumb schema
+const breadcrumbSchema = {
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: breadcrumbItems,
+};
+
+// FAQ Schema for structured data
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Why choose USATS for pilot training in Florida?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "USATS is a globally recognized military aviation leader with 30+ years of training elite pilots, offering FAA + NATO-certified programs on combat-proven platforms like the UH-60 Black Hawk—all with 320+ annual flying days and a 38-acre tactical training complex. Our Titusville location provides ideal flying conditions year-round on Florida's Space Coast.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What can I expect from USATS flight training programs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Career-focused training: Master everything from private pilot basics to advanced instrument flying, with optional courses in leadership (CRM/TEM) honed from military programs. Enjoy small classes, 2:1 instructor ratios, and access to NASA-adjacent airspace for unparalleled training diversity. Our Part 141 curriculum helps you progress faster with fewer required flight hours.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are the requirements to join USATS flight school?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No experience needed! Start with zero hours—just a passion to fly. Medical certification (Class 2+) and English proficiency are required. Military veterans: leverage your background for accelerated pathways. International students must be: M1 visa eligible and will need to provide proof of funds and academic transcripts.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to complete flight training at USATS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Training duration varies by program and individual progress. Our Part 141 programs typically allow for faster completion with fewer required hours than Part 61 training. A Private Pilot License can be completed in as little as 2 months of dedicated training. Commercial and Instructor ratings generally require 3-6 months each.",
+      },
+    },
+  ],
+};
+
+// Combine all schemas into a single array
+// Page-specific schemas can be added conditionally based on current URL
+const allSchemas = [
+  localBusinessSchema,
+  flightSchoolSchema,
+  ...courseSchemas,
+  breadcrumbSchema,
+  faqSchema,
+];
+
+// We'll use this variable to stringify all schemas for injection into the page
+const combinedSchemaData = JSON.stringify(allSchemas);
 ---
 
 <!-- Global Metadata -->
@@ -61,43 +301,20 @@ const { title, description, keywords, image = "" } = Astro.props;
 
 <link rel="sitemap" href="/sitemap-index.xml" />
 
-<!-- UPDATE GTAG PLEASE -->
-<!-- Google tag (gtag.js) -->
-<!-- <script
-  type="text/partytown"
-  async
-  src=""></script>
-<script type="text/partytown">
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", "");
-</script> -->
-
-<!-- Add tag manager pixels -->
-<!-- Google Tag Manager -->
-<!-- <script>(function(w,d,s,l,i){
-w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5WRX2TK6');
-</script> -->
-<!-- End Google Tag Manager -->
-
-<!-- Google Tag Manager Adds -->
-<script type="text/partytown"
-  async>(function(w,d,s,l,i){
-    w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5WRX2TK6');</script> 
+<!-- Google Tag Manager Adds - Assuming Partytown is configured -->
+<script type="text/partytown" async>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-5WRX2TK6");
+</script>
 <!-- End Google Tag Manager Adds -->
-
 
 <!-- Google Tag Manager Analytics  -->
 <script
@@ -112,108 +329,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag("js", new Date());
 
   gtag("config", "G-N6M443HSVW");
-</script> 
+</script>
 <!-- End Google Tag Manager Analytics -->
- 
 
-<!-- Google Tag Manager -->
-<!-- <script type="text/partytown"
-  async>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','');</script> -->
-<!-- End Google Tag Manager -->
-
-<!-- NEED TO UPDATE SCHEMA -->
-<!-- <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "LocalBusiness",
-    "name": "",
-    "description": "",
-    "keywords": "",
-    "image": "",
-    "logo": "",
-    "telephone": "",
-    "email": "",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "",
-      "addressLocality": "",
-      "addressRegion": "",
-      "addressCountry": "",
-      "postalCode": ""
-    },
-    "currenciesAccepted": "USD",
-    "paymentAccepted": "Cash, Credit Card, Visa, Mastercard, American Express, Discover, Checks",
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": ,
-        "longitude": 
-      },
-      "geoRadius": 
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "",
-      "reviewCount": ""
-    },
-    "url": "https://suncityaviation.com/",
-    "priceRange": "$",
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": ,
-      "longitude": 
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-          "Sunday"
-        ],
-        "opens": "",
-        "closes": ""
-      },
-    ],
-    "makesOffer": {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "serviceType": "Flight Instruction"
-      },
-      "priceCurrency": "USD",
-      "price": "Varies"
-    },
-    "memberOf": {
-      "@type": "Organization",
-      "name": ""
-    },
-    "identifier": [
-      {
-        "@type": "PropertyValue",
-        "name": "IATA Code",
-        "value": ""
-      },
-      {
-        "@type": "PropertyValue",
-        "name": "ICAO Code",
-        "value": ""
-      },
-      {
-        "@type": "PropertyValue",
-        "name": "Airport Code",
-        "value": ""
-      }
-    ],
-    "hasMap": "https://maps.app.goo.gl/"
-  }
-</script> -->
+<!-- Enhanced Schema.org Structured Data -->
+<script type="application/ld+json" set:html={combinedSchemaData} />

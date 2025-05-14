@@ -2,8 +2,10 @@ import { COMPANY_NAME } from "../../consts";
 
 const aboutUs = {
   pageTitle: `Why Choose USATS? | ${COMPANY_NAME}`,
-  pageDescription: "",
-  pageKeywords: "",
+  pageDescription:
+    "Discover why USATS is the premier flight school in Titusville, FL with 30+ years of experience training pilots from 120+ countries. Modern aircraft, expert instructors, and a perfect training environment.",
+  pageKeywords:
+    "USATS flight school, why choose USATS, aviation training Titusville, flight school benefits, pilot training advantages, aviation academy features, best flight school Florida, USATS instructor quality, Space Coast flight training, flight school facilities, aviation school reputation, pilot training campus, flight training equipment, 30 years flight training, international flight school",
 
   // Top Header
   header: {
