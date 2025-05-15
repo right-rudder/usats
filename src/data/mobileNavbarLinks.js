@@ -19,8 +19,12 @@ export const mobileNavbarLinks = [
     submenu: [
       {
         name: "Airplane Training",
-        link: "/airplane-training",
-        subsubmenu: [,
+        link: "#",
+        subsubmenu: [
+          {
+            name: "Airplane Training",
+            link: "/airplane-training",
+          },
           {
             name: "Private Pilot License",
             link: "/airplane-training/professional-pilot-program",
@@ -49,8 +53,12 @@ export const mobileNavbarLinks = [
       },
       {
         name: "Helicopter Training",
-        link: "/helicopter-training",
+        link: "#",
         subsubmenu: [
+          {
+            name: "Helicopter Training",
+            link: "/helicopter-training",
+          },
           {
             name: "Private Pilot License",
             link: "/helicopter-training/professional-pilot-program",
