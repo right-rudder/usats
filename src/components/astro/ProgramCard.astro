@@ -30,7 +30,7 @@ if (!images[imagePath])
     {
       badges && (
         <div
-          class={`flex z-10 gap-1 py-2 px-4 -translate-y-2 group-hover:translate-y-0 absolute top-2 ${badges.length > 1 ? "left-0 w-full justify-between" : "right-0"} lg:opacity-0 group-hover:opacity-90 duration-200 ease-in`}
+          class={`flex flex-wrap z-10 gap-1 py-2 px-4 -translate-y-2 group-hover:translate-y-0 absolute top-2 ${badges.length > 1 ? "left-0 w-full justify-center lg:justify-between" : "right-0"} lg:opacity-0 group-hover:opacity-90 duration-200 ease-in`}
         >
           {badges.map((badge) => (
             <div

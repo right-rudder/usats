@@ -237,12 +237,12 @@ const maintenanceServices = {
       name: "Robinson Authorized Service Center",
       description: "“USATS is an authorized service center for Robinson Helicopters. Under our current agreement we can service R22 Beta and R44 Raven/Clipper 1 & 2 helicopters. Services are completed in accordance with RCH required maintenance procedures.",
       models: "R22 & R44",
-      benefits: [
-        "Ability to buy parts from Robinson",
-        "Ability to sell Robinson parts to customers",
-        "Receive up to 25% discount on parts",
-        "Listed as a Service Center on RHC website"
-      ]
+      // benefits: [
+      //   "Ability to buy parts from Robinson",
+      //   "Ability to sell Robinson parts to customers",
+      //   "Receive up to 25% discount on parts",
+      //   "Listed as a Service Center on RHC website"
+      // ]
     },
 
     part_43_maintenance: {

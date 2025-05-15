@@ -93,11 +93,11 @@ const Navbar = ({ pathname }) => {
       url: LINKEDIN_URL,
       icon: <FaLinkedin className="size-6" />,
     },
-    {
-      name: "YouTube",
-      url: YOUTUBE_URL,
-      icon: <FaYoutube className="size-6" />,
-    },
+    // {
+    //   name: "YouTube",
+    //   url: YOUTUBE_URL,
+    //   icon: <FaYoutube className="size-6" />,
+    // },
   ];
 
   return (
