@@ -104,19 +104,49 @@ const PUBLIC_DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.PUBLIC_DISCOVERY_FORM_
                         Helicopter
                     </label>
                 </div>
+                <div class="flex items-center gap-x-2">
+                    <input
+                        id="airship-type-both"
+                        name="airship-type"
+                        type="radio"
+                        value="Both"
+                        required
+                        class="h-4 w-4 border-gray-300 text-accent-800 focus:ring-accent-900"
+                    />
+                    <label for="airship-type-helicopter" class="block text-sm font-medium leading-6 text-muted-100">
+                        Both
+                    </label>
+                </div>
             </div>
         </fieldset>
     </div>
 
-    <div class="sm:col-span-2">
+    <!-- Airplane Program Interest -->
+    <div id="airplane-program-container" class="sm:col-span-2 hidden">
       <div class="mt-2.5">
-        <label for="interest-program" class="block mb-0 font-extralight text-muted-100">
-          What is your aviation goal? <span class="text-red-500">*</span>
+        <label for="airplane-interest-program" class="block mb-0 font-extralight text-muted-100">
+          What is your Airplane aviation goal? <span class="text-red-500">*</span>
         </label>
         <select
-          required
-          id="interest-program"
-          name="interest-program"
+          id="airplane-interest-program"
+          name="airplane-interest-program"
+          class="block font-extralight w-full py-2 text-muted-200 shadow-sm ring-inset ring-gray-300 placeholder:text-gray-300 bg-transparent border-b-[1px] border-gray-300 sm:text-sm sm:leading-6 outline-none disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled
+        >
+          <option value="" disabled selected class="bg-accent-900">Select airship type first...</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Helicopter Program Interest -->
+    <div id="helicopter-program-container" class="sm:col-span-2 hidden">
+      <div class="mt-2.5">
+        <label for="helicopter-interest-program" class="block mb-0 font-extralight text-muted-100">
+          What is your Helicopter aviation goal? <span class="text-red-500">*</span>
+        </label>
+        <select
+          id="helicopter-interest-program"
+          name="helicopter-interest-program"
           class="block font-extralight w-full py-2 text-muted-200 shadow-sm ring-inset ring-gray-300 placeholder:text-gray-300 bg-transparent border-b-[1px] border-gray-300 sm:text-sm sm:leading-6 outline-none disabled:opacity-50 disabled:cursor-not-allowed"
           disabled
         >
@@ -192,7 +222,7 @@ const PUBLIC_DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.PUBLIC_DISCOVERY_FORM_
       { value: "CPL-H", text: "Commercial Pilot License - Helicopter (CPL-H)" },
       { value: "IR-H", text: "Instrument Rating - Helicopter (IR-H)" },
       { value: "CFI-H", text: "Certified Flight Instructor - Helicopter (CFI-H)" },
-      { value: "CFI-H", text: "Certified Flight Instructor Instrument - Helicopter (CFII-H)" },
+      { value: "CFII-H", text: "Certified Flight Instructor Instrument - Helicopter (CFII-H)" },
       { value: "Other-H", text: "Other Helicopter Goal" },
     ],
   };
@@ -205,7 +235,10 @@ const PUBLIC_DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.PUBLIC_DISCOVERY_FORM_
     const submitBtn = document.getElementById("submit-btn");
 
     const airshipTypeRadios = document.querySelectorAll('input[name="airship-type"]');
-    const interestProgramSelect = document.getElementById("interest-program");
+    const airplaneProgramContainer = document.getElementById("airplane-program-container");
+    const airplaneProgramSelect = document.getElementById("airplane-interest-program");
+    const helicopterProgramContainer = document.getElementById("helicopter-program-container");
+    const helicopterProgramSelect = document.getElementById("helicopter-interest-program");
 
     let isChecked = false;
 
@@ -236,14 +269,38 @@ const PUBLIC_DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.PUBLIC_DISCOVERY_FORM_
     if (contactForm !== null) {
       contactForm.addEventListener("submit", function (event) {
         event.preventDefault();
-
-        if (!interestProgramSelect.value || interestProgramSelect.value === "") {
-            alert("Please select your aviation goal.");
-            interestProgramSelect.focus();
-            return;
-        }
-
         const formData = new FormData(contactForm);
+        const selectedAirshipType = formData.get("airship-type");
+
+        // Validation for program interest based on airship type
+        if (selectedAirshipType === "Airplane") {
+            if (!formData.get("airplane-interest-program")) {
+                alert("Please select your Airplane aviation goal.");
+                airplaneProgramSelect.focus();
+                return;
+            }
+        } else if (selectedAirshipType === "Helicopter") {
+            if (!formData.get("helicopter-interest-program")) {
+                alert("Please select your Helicopter aviation goal.");
+                helicopterProgramSelect.focus();
+                return;
+            }
+        } else if (selectedAirshipType === "Both") {
+            if (!formData.get("airplane-interest-program")) {
+                alert("Please select your Airplane aviation goal.");
+                airplaneProgramSelect.focus();
+                return;
+            }
+            if (!formData.get("helicopter-interest-program")) {
+                alert("Please select your Helicopter aviation goal.");
+                helicopterProgramSelect.focus();
+                return;
+            }
+        } else if (!selectedAirshipType) { // Ensure an airship type is selected
+             alert("Please select an airship type.");
+             // Focus on the first radio button or a relevant element
+             return;
+        }
         const confirmEmailValue = formData.get("confirm-email");
         if (confirmEmailValue !== "" && confirmEmailValue !== null) {
             console.warn("Honeypot field filled. Preventing submission.");
@@ -280,35 +337,63 @@ const PUBLIC_DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.PUBLIC_DISCOVERY_FORM_
       });
     }
 
-    function updateInterestProgramOptions(selectedType) {
-        interestProgramSelect.innerHTML = '<option value="" disabled selected class="bg-accent-900">Select your goal...</option>';
+    // Helper to populate and configure a select dropdown
+    function configureSelect(selectElement, containerElement, goals, isEnabled, defaultLabel) {
+        selectElement.innerHTML = ''; // Clear existing options
 
-        const goals = aviationGoals[selectedType];
+        if (isEnabled && goals && goals.length > 0) {
+            const defaultOption = document.createElement('option');
+            defaultOption.value = "";
+            defaultOption.textContent = defaultLabel || "Select an option...";
+            defaultOption.disabled = true;
+            defaultOption.selected = true;
+            defaultOption.className = 'bg-accent-900';
+            selectElement.appendChild(defaultOption);
 
-        if (goals) {
             goals.forEach(goal => {
                 const option = document.createElement('option');
                 option.value = goal.value;
                 option.textContent = goal.text;
                 option.className = 'bg-accent-900';
-                interestProgramSelect.appendChild(option);
+                selectElement.appendChild(option);
             });
-            interestProgramSelect.disabled = false;
-            interestProgramSelect.classList.remove("disabled:opacity-50", "disabled:cursor-not-allowed");
-            interestProgramSelect.value = "";
-
+            selectElement.disabled = false;
+            selectElement.setAttribute('required', 'required');
+            selectElement.classList.remove("disabled:opacity-50", "disabled:cursor-not-allowed");
+            containerElement.classList.remove('hidden');
         } else {
-            interestProgramSelect.disabled = true;
-             interestProgramSelect.classList.add("disabled:opacity-50", "disabled:cursor-not-allowed");
+            const placeholderOption = document.createElement('option');
+            placeholderOption.value = "";
+            placeholderOption.textContent = "Select airship type first...";
+            placeholderOption.disabled = true;
+            placeholderOption.selected = true;
+            placeholderOption.className = 'bg-accent-900';
+            selectElement.appendChild(placeholderOption);
+
+            selectElement.disabled = true;
+            selectElement.removeAttribute('required');
+            selectElement.classList.add("disabled:opacity-50", "disabled:cursor-not-allowed");
+            containerElement.classList.add('hidden');
         }
+        selectElement.value = ""; // Ensure the placeholder/default is selected
     }
+
+    function updateInterestProgramOptions(selectedAirshipType) {
+        const showAirplane = selectedAirshipType === "Airplane" || selectedAirshipType === "Both";
+        const showHelicopter = selectedAirshipType === "Helicopter" || selectedAirshipType === "Both";
+
+        configureSelect(airplaneProgramSelect, airplaneProgramContainer, aviationGoals.Airplane, showAirplane, "Select Airplane goal...");
+        configureSelect(helicopterProgramSelect, helicopterProgramContainer, aviationGoals.Helicopter, showHelicopter, "Select Helicopter goal...");
+    }
+
+    // Initial setup for dropdowns to ensure they are correctly disabled and hidden
+    updateInterestProgramOptions(null);
 
     airshipTypeRadios.forEach(radio => {
         radio.addEventListener('change', (event) => {
             updateInterestProgramOptions(event.target.value);
         });
     });
-
   });
 </script>
 
