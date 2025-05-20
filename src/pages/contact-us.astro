@@ -59,6 +59,7 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
           <h2 class="text-accent-900 text-5xl font-extrabold mx-auto w-fit">
             Get in touch
           </h2>
+          <!-- Name -->
           <div class="flex flex-col lg:flex-row gap-5">
             <input
               type="text"
@@ -75,6 +76,7 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               required
             />
           </div>
+          <!-- Contact Info -->
           <div class="flex flex-col lg:flex-row gap-5">
             <input
               id="email"
@@ -98,7 +100,126 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               required
             />
           </div>
+          <!-- Interest -->
+          <fieldset id="flight-training-interest-fieldset" class="flex flex-col gap-3 mt-4">
+            <label
+              class="text-muted-300 text-xl font-semibold text-center w-full"
+            >
+              Are you interested in flight training at {COMPANY_NAME}? <span class="text-red-500">*</span>
+            </label>
+            <div class="flex gap-6 justify-center">
+              <div class="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="interest-flight-training"
+                  id="interest-flight-training-yes"
+                  value="yes"
+                  required
+                  class="w-4 h-4 text-accent-800 focus:ring-accent-900"
+                />
+                <label for="interest-flight-training-yes" class="text-muted-300">Yes</label>
+              </div>
+              <div class="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="interest-flight-training"
+                  id="interest-flight-training-no"
+                  value="no"
+                  required
+                  class="w-4 h-4 text-accent-800 focus:ring-accent-900"
+                />
+                <label for="interest-flight-training-no" class="text-muted-300">No</label>
+              </div>
+            </div>
+          </fieldset>
 
+        <!-- Aircraft type -->
+        <fieldset
+          id="aircraft-type-fieldset"
+          class="flex flex-col justify-center items-center align-middle mt-6 hidden"
+        >
+          <legend
+            class="mb-2 text-xl font-semibold text-muted-300 text-center w-full"
+          >
+            Which aircraft type are you interested in? <span
+              class="text-red-500">*</span
+            >
+          </legend>
+          <div class="flex gap-6">
+            <div class="flex items-center gap-2">
+              <input
+                type="radio"
+                id="airplane-type"
+                name="aircraft-type"
+                value="Airplane"
+                required
+                class="w-4 h-4 text-accent-800 focus:ring-accent-900"
+              />
+              <label for="airplane-type" class="text-muted-300">Airplane</label>
+            </div>
+            <div class="flex items-center gap-2">
+              <input
+                type="radio"
+                id="helicopter-type"
+                name="aircraft-type"
+                value="Helicopter"
+                required
+                class="w-4 h-4 text-accent-800 focus:ring-accent-900"
+              />
+              <label for="helicopter-type" class="text-muted-300"
+                >Helicopter</label
+              >
+            </div>
+            <div class="flex items-center gap-2">
+              <input
+                type="radio"
+                id="both-type"
+                name="aircraft-type"
+                value="Both"
+                class="w-4 h-4 text-accent-800 focus:ring-accent-900"
+              />
+              <label for="both-type" class="text-muted-300"
+                >Both</label
+              >
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Airplane Program Options (conditionally shown) -->
+        <fieldset
+          id="airplane-program-fieldset"
+          class="flex flex-col justify-center items-center align-middle mt-4"
+          style="display: none;"
+        >
+          <legend
+            class="mb-2 text-muted-300 text-xl font-semibold text-center w-full"
+          >
+            Airplane Program Interest? <span class="text-red-500"
+              >*</span
+            >
+          </legend>
+          <div
+            id="airplane-program-options-container"
+            class="hidden flex flex-col gap-2"
+          >
+            <!-- Options will be populated by JavaScript -->
+          </div>
+        </fieldset>
+        <!-- Helicopter Program Options (conditionally shown) -->
+        <fieldset
+          id="helicopter-program-fieldset"
+          class="flex flex-col justify-center items-center align-middle mt-4"
+          style="display: none;"
+        >
+          <legend class="mb-2 text-muted-300 text-xl font-semibold text-center w-full">
+            Helicopter Program Interest? <span class="text-red-500">*</span>
+          </legend>
+          <div id="helicopter-program-options-container" class="flex flex-col gap-2">
+            <!-- Options will be populated by JavaScript -->
+          </div>
+        </fieldset>
+
+          <!-- Message -->
           <textarea
             required
             name="message"
@@ -135,27 +256,74 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
   </section>
 
   <script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL }}>
+    const trainingPrograms = {
+      Airplane: [
+        { value: "private-pilot-license", text: "Private Pilot License" },
+        { value: "instrument-rating", text: "Instrument Rating" },
+        { value: "commercial-pilot-license", text: "Commercial Pilot License" },
+        { value: "cfi", text: "Flight Instructor (CFI)" },
+        { value: "cfii", text: "Flight Instructor Instrument (CFII)" },
+        { value: "professional-pilot-program", text: "Professional Pilot Program" },
+        { value: "other-airplane", text: "Other Airplane Interest" },
+      ],
+      Helicopter: [
+        { value: "private-pilot-license-h", text: "Private Pilot License- Helicopter" },
+        { value: "instrument-rating-h", text: "Instrument Rating - Helicopter" },
+        { value: "commercial-pilot-license-h", text: "Commercial Pilot License - Helicopter" },
+        { value: "cfi-h", text: "Flight Instructor - Helicopter" },
+        { value: "cfii-h", text: "Flight Instructor Instrument - Helicopter" },
+        { value: "professional-pilot-program-h", text: "Professional Pilot Program - Helicopter" },
+        { value: "military-transition", text: "Military Transition Training" },
+        { value: "other-helicopter", text: "Other Helicopter Interest" },
+      ],
+    };
+
     const checkbox = document.getElementById("agree-data-collection");
     const submitButton = document.getElementById("submit-button");
-    // const yesVisit = document.getElementById("yes-visit");
-    // const noVisit = document.getElementById("no-visit");
 
-    // yesVisit.addEventListener("change", function () {
-    //   if (yesVisit.checked) {
-    //     document
-    //       .getElementById("location-container")
-    //       .classList.remove("hidden");
-    //     document.getElementById("location-container").classList.add("flex");
-    //   } else {
-    //     document.getElementById("location-container").classList.add("hidden");
-    //   }
-    // });
+    const flightTrainingInterestRadios = document.querySelectorAll('input[name="interest-flight-training"]');
+    const aircraftTypeFieldset = document.getElementById("aircraft-type-fieldset");
+    const aircraftTypeRadios = document.querySelectorAll('input[name="aircraft-type"]');
 
-    // noVisit.addEventListener("change", function () {
-    //   if (noVisit.checked) {
-    //     document.getElementById("location-container").classList.add("hidden");
-    //   }
-    // });
+    const airplaneProgramFieldset = document.getElementById("airplane-program-fieldset");
+    const airplaneContainer = document.getElementById("airplane-program-options-container");
+    const helicopterProgramFieldset = document.getElementById("helicopter-program-fieldset");
+    const helicopterContainer = document.getElementById("helicopter-program-options-container");
+
+    function setRequiredForRadioGroup(groupName, isRequired) {
+        const radios = document.querySelectorAll(`input[name="${groupName}"]`);
+        radios.forEach(radio => {
+            if (isRequired) {
+                radio.setAttribute('required', 'required');
+            } else {
+                radio.removeAttribute('required');
+            }
+        });
+    }
+
+    function toggleFlightTrainingSpecificFields(show) {
+      if (show) {
+        aircraftTypeFieldset.style.display = "flex"; // Or 'block' or your preferred display type
+        setRequiredForRadioGroup("aircraft-type", true);
+        // Trigger update of program sections based on current aircraft type selection (if any)
+        const selectedAircraftType = document.querySelector('input[name="aircraft-type"]:checked');
+        updateDynamicProgramSections(selectedAircraftType ? selectedAircraftType.value : null);
+      } else {
+        aircraftTypeFieldset.style.display = "none";
+        setRequiredForRadioGroup("aircraft-type", false);
+        // Also hide and reset program sections
+        airplaneProgramFieldset.style.display = "none";
+        airplaneContainer.classList.add("hidden");
+        setRequiredForRadioGroup("airplane-interest", false);
+
+        helicopterProgramFieldset.style.display = "none";
+        helicopterContainer.classList.add("hidden");
+        setRequiredForRadioGroup("helicopter-interest", false);
+
+        // Clear any selected aircraft type
+        aircraftTypeRadios.forEach(radio => radio.checked = false);
+      }
+    }
 
     checkbox.addEventListener("change", function () {
       if (checkbox.checked) {
@@ -175,6 +343,73 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
       }
     });
 
+    flightTrainingInterestRadios.forEach(radio => {
+        radio.addEventListener('change', (event) => {
+            toggleFlightTrainingSpecificFields(event.target.value === 'yes');
+        });
+    });
+
+    aircraftTypeRadios.forEach(radio => {
+        radio.addEventListener('change', (event) => {
+            updateDynamicProgramSections(event.target.value);
+        });
+    });
+
+    function populateAndDisplayProgramOptions(
+        containerElement,
+        fieldsetElement,
+        programs,
+        radioGroupName,
+        isVisible
+    ) {
+        containerElement.innerHTML = ""; // Clear existing options
+
+        if (!isVisible || !programs || programs.length === 0) {
+            fieldsetElement.style.display = "none";
+            containerElement.classList.add("hidden");
+            setRequiredForRadioGroup(radioGroupName, false);
+            return;
+        }
+
+        fieldsetElement.style.display = "flex"; // Or 'block'
+        containerElement.classList.remove("hidden");
+        setRequiredForRadioGroup(radioGroupName, true);
+
+        programs.forEach((program) => {
+            const wrapper = document.createElement("div");
+            wrapper.className = "flex items-center gap-2";
+            const inputId = `${radioGroupName}-${program.value.replace(/[^a-zA-Z0-9]/g, '-')}`; // Sanitize value for ID
+
+            const input = document.createElement("input");
+            input.type = "radio";
+            input.className = "mx-2 text-accent-800 focus:ring-accent-900";
+            input.id = inputId;
+            input.name = radioGroupName;
+            input.value = program.value;
+            // 'required' is set on the group by setRequiredForRadioGroup
+
+            const label = document.createElement("label");
+            label.className = "text-muted-300";
+            label.htmlFor = inputId;
+            label.textContent = program.text;
+
+            wrapper.appendChild(input);
+            wrapper.appendChild(label);
+            containerElement.appendChild(wrapper);
+        });
+    }
+
+    function updateDynamicProgramSections(selectedAircraftType) {
+        const isInterestedInTraining = document.querySelector('input[name="interest-flight-training"]:checked')?.value === 'yes';
+        if (!isInterestedInTraining) return; // Don't show if not interested in training
+
+        const showAirplane = selectedAircraftType === "Airplane" || selectedAircraftType === "Both";
+        const showHelicopter = selectedAircraftType === "Helicopter" || selectedAircraftType === "Both";
+
+        populateAndDisplayProgramOptions(airplaneContainer, airplaneProgramFieldset, trainingPrograms.Airplane, "airplane-interest", showAirplane);
+        populateAndDisplayProgramOptions(helicopterContainer, helicopterProgramFieldset, trainingPrograms.Helicopter, "helicopter-interest", showHelicopter);
+    }
+
     // Wait for the DOM content to be fully loaded
     document.addEventListener("DOMContentLoaded", function () {
       // Get the contactUs form element
@@ -189,6 +424,38 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
 
           // Serialize the form data
           const formData = new FormData(contactForm);
+          const isInterestedInTraining = formData.get("interest-flight-training") === "yes";
+
+          if (isInterestedInTraining) {
+            const aircraftType = formData.get("aircraft-type");
+            if (!aircraftType) {
+              alert("Please select an aircraft type.");
+              document.getElementById("airplane-type")?.focus(); // Focus first aircraft type radio
+              return;
+            }
+
+            let programInterestValid = true;
+            if (aircraftType === "Airplane" || aircraftType === "Both") {
+              if (!formData.get("airplane-interest")) {
+                alert("Please select your Airplane program interest.");
+                document.querySelector('#airplane-program-options-container input[type="radio"]')?.focus();
+                programInterestValid = false;
+              }
+            }
+            if (aircraftType === "Helicopter" || aircraftType === "Both") {
+              if (!formData.get("helicopter-interest")) {
+                alert("Please select your Helicopter program interest.");
+                document.querySelector('#helicopter-program-options-container input[type="radio"]')?.focus();
+                programInterestValid = false;
+              }
+            }
+            if (!programInterestValid) {
+              return;
+            }
+          }
+
+
+
 
           // Check the value of the honeypot field
           const confirmEmailValue = formData.get("confirm-email");
@@ -218,18 +485,25 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               window.location.href = "/contact-us-confirmation";
             } else {
               // Handle errors if any
-              console.error("Form submission failed:", xhr.statusText);
+              console.error("Form submission failed:", xhr.status, xhr.statusText, xhr.responseText);
+              alert(`There was an error submitting the form (Status: ${xhr.status}). Please try again or contact support.`);
             }
           };
           xhr.onerror = function () {
             // Handle network errors
             console.error("Network error occurred while submitting the form.");
+            alert("A network error occurred. Please check your connection and try again.");
           };
           xhr.send(urlSearchParams);
         });
       } else {
         console.error("Contact us form element not found.");
       }
+
+      // Initial state: hide conditional fields
+      toggleFlightTrainingSpecificFields(false);
+      // Ensure submit button is disabled initially if checkbox isn't checked
+      submitButton.disabled = !checkbox.checked;
     });
   </script>
 

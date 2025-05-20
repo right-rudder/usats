@@ -44,6 +44,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
         id="enrollment-form"
         class="flex flex-col max-w-4xl mx-auto gap-3 my-5"
       >
+      <!-- Name -->
         <div class="flex flex-col lg:flex-row gap-5">
           <input
             type="text"
@@ -60,6 +61,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
             required
           />
         </div>
+        <!-- Contact Info -->
         <div class="flex flex-col lg:flex-row gap-5">
           <input
             type="email"
@@ -83,7 +85,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
             required
           />
         </div>
-
+        <!-- Aircraft type -->
         <fieldset
           class="flex flex-col justify-center items-center align-middle mt-6"
         >
@@ -119,24 +121,50 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
                 >Helicopter</label
               >
             </div>
+            <div class="flex items-center gap-2">
+              <input
+                type="radio"
+                id="both-type"
+                name="aircraft-type"
+                value="Both"
+                required
+                class="w-4 h-4 text-accent-800 focus:ring-accent-900"
+              />
+              <label for="both-type" class="text-muted-300"
+                >Both</label
+              >
+            </div>
           </div>
         </fieldset>
 
-        <!-- Dynamic Program Options -->
+        <!-- Airplane Program Options -->
         <fieldset
-          class="flex flex-col justify-center items-center align-middle mt-4"
+          id="airplane-program-fieldset"
+          class="hidden flex flex-col justify-center items-center align-middle mt-4"
         >
           <legend
             class="mb-2 text-muted-300 text-xl font-semibold text-center w-full"
           >
-            Primary Training Program Interest? <span class="text-red-500"
+            Airplane Program Interest? <span class="text-red-500"
               >*</span
             >
           </legend>
           <div
-            id="program-options-container"
+            id="airplane-program-options-container"
             class="hidden flex flex-col gap-2"
           >
+            <!-- Options will be populated by JavaScript -->
+          </div>
+        </fieldset>
+        <!-- Helicopter Program Options -->
+        <fieldset
+          id="helicopter-program-fieldset"
+          class="hidden flex flex-col justify-center items-center align-middle mt-4"
+        >
+          <legend class="mb-2 text-muted-300 text-xl font-semibold text-center w-full">
+            Helicopter Program Interest? <span class="text-red-500">*</span>
+          </legend>
+          <div id="helicopter-program-options-container" class="flex flex-col gap-2">
             <!-- Options will be populated by JavaScript -->
           </div>
         </fieldset>
@@ -202,10 +230,9 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
         <label
           for="extra-information"
           class="mt-6 text-xl text-center font-semibold text-muted-300"
-          >Anything else you want us to know about?*</label
+          >Anything else you want us to know about?</label
         >
         <textarea
-          required
           id="extra-information"
           name="extra-information"
           placeholder=""
@@ -282,79 +309,100 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
     ],
   };
 
-  function updateProgramOptions(selectedType) {
-    const container = document.getElementById("program-options-container");
-    container.innerHTML = "";
+  function populateAndDisplayProgramOptions(
+    containerElement,
+    fieldsetElement,
+    programs,
+    radioGroupName,
+    isVisible
+  ) {
+    containerElement.innerHTML = ""; // Clear existing options
 
-    const programs = trainingPrograms[selectedType];
-    if (programs) {
-      programs.forEach((program) => {
-        const wrapper = document.createElement("div");
-        wrapper.className = "flex items-center gap-2";
-        wrapper.innerHTML = `
-          <input
-            type="radio"
-            class="mx-2 text-accent-800 focus:ring-accent-900"
-            id="${program.value}"
-            name="interest"
-            value="${program.value}"
-            required
-          />
-          <label class="text-muted-300" for="${program.value}">${program.text}</label>
-        `;
-        container.appendChild(wrapper);
-      });
-      container.classList.remove("hidden");
-    } else {
-      container.classList.add("hidden");
+    if (!isVisible || !programs || programs.length === 0) {
+      fieldsetElement.classList.add("hidden");
+      // Clear any 'required' attributes from previously generated inputs if necessary
+      // This is generally handled by not adding them if not visible.
+      return;
     }
+
+    fieldsetElement.classList.remove("hidden");
+    containerElement.classList.remove("hidden"); // Ensure inner container is also visible
+
+    programs.forEach((program) => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "flex items-center gap-2";
+      const inputId = `${radioGroupName}-${program.value}`;
+
+      const input = document.createElement("input");
+      input.type = "radio";
+      input.className = "mx-2 text-accent-800 focus:ring-accent-900";
+      input.id = inputId;
+      input.name = radioGroupName;
+      input.value = program.value;
+      input.required = true; // Radios in a visible group are required
+
+      const label = document.createElement("label");
+      label.className = "text-muted-300";
+      label.htmlFor = inputId;
+      label.textContent = program.text;
+
+      wrapper.appendChild(input);
+      wrapper.appendChild(label);
+      containerElement.appendChild(wrapper);
+    });
+  }
+
+  function updateDynamicProgramSections(selectedAircraftType) {
+    const airplaneProgramFieldset = document.getElementById("airplane-program-fieldset");
+    const airplaneContainer = document.getElementById("airplane-program-options-container");
+    const helicopterProgramFieldset = document.getElementById("helicopter-program-fieldset");
+    const helicopterContainer = document.getElementById("helicopter-program-options-container");
+
+    const showAirplane = selectedAircraftType === "Airplane" || selectedAircraftType === "Both";
+    const showHelicopter = selectedAircraftType === "Helicopter" || selectedAircraftType === "Both";
+
+    populateAndDisplayProgramOptions(
+      airplaneContainer,
+      airplaneProgramFieldset,
+      trainingPrograms.Airplane,
+      "airplane-interest",
+      showAirplane
+    );
+    populateAndDisplayProgramOptions(
+      helicopterContainer,
+      helicopterProgramFieldset,
+      trainingPrograms.Helicopter,
+      "helicopter-interest",
+      showHelicopter
+    );
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    const aircraftTypeRadios = document.querySelectorAll(
-      'input[name="aircraft-type"]'
-    );
+    const aircraftTypeRadios = document.querySelectorAll('input[name="aircraft-type"]');
     aircraftTypeRadios.forEach((radio) => {
       radio.addEventListener("change", (event) => {
-        updateProgramOptions(event.target.value);
+        updateDynamicProgramSections(event.target.value);
       });
     });
 
-    const container = document.getElementById("program-options-container");
-    container.classList.add("hidden");
+    // Initial setup to hide program sections
+    updateDynamicProgramSections(null);
 
     const enrollmentForm = document.getElementById("enrollment-form");
     const checkbox = document.getElementById("agree-data-collection");
     const submitButton = document.getElementById("submit-button");
-    // const yesVisit = document.getElementById("yes-visit");
-    // const noVisit = document.getElementById("no-visit");
-
-    // yesVisit.addEventListener("change", function () {
-    //   if (yesVisit.checked) {
-    //     document.getElementById("location-container").classList.remove("hidden");
-    //     document.getElementById("location-container").classList.add("flex");
-    //   }
-    // });
-
-    // noVisit.addEventListener("change", function () {
-    //   if (noVisit.checked) {
-    //     document.getElementById("location-container").classList.add("hidden");
-    //   }
-    // });
 
     checkbox.addEventListener("change", function () {
       if (checkbox.checked) {
         submitButton.disabled = false;
         submitButton.classList.remove(
           "cursor-not-allowed",
-          "bg-gray-400",
-          "hover:bg-gray-500",
-          "bg-primary"
+          "bg-gray-400", // Assuming these are the disabled styles
+          "hover:bg-gray-500"
         );
       } else {
         submitButton.disabled = true;
         submitButton.classList.add(
-          "btn-primary",
           "cursor-not-allowed",
           "bg-gray-400",
           "hover:bg-gray-500"
@@ -366,23 +414,43 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
       enrollmentForm.addEventListener("submit", function (event) {
         event.preventDefault();
         const formData = new FormData(enrollmentForm);
-
         const aircraftType = formData.get("aircraft-type");
+
         if (!aircraftType) {
-          alert("Please select an aircraft type");
+          alert("Please select an aircraft type.");
+          // Focus the first aircraft type radio button
+          document.querySelector('input[name="aircraft-type"][type="radio"]')?.focus();
           return;
         }
 
-        const programInterest = formData.get("interest");
-        if (!programInterest) {
-          alert("Please select a training program");
+        let programInterestValid = true;
+        if (aircraftType === "Airplane" || aircraftType === "Both") {
+          if (!formData.get("airplane-interest")) {
+            alert("Please select your Airplane program interest.");
+            // Focus first radio in airplane interest if available
+            document.querySelector('#airplane-program-options-container input[type="radio"]')?.focus();
+            programInterestValid = false;
+          }
+        }
+        if (aircraftType === "Helicopter" || aircraftType === "Both") {
+          if (!formData.get("helicopter-interest")) {
+            alert("Please select your Helicopter program interest.");
+             document.querySelector('#helicopter-program-options-container input[type="radio"]')?.focus();
+            programInterestValid = false;
+          }
+        }
+
+        if (!programInterestValid) {
           return;
         }
 
         const confirmEmailValue = formData.get("confirm-email");
-        if (confirmEmailValue === "" || confirmEmailValue === null) {
-          enrollmentForm.action = ENROLLMENT_FORM_WEBHOOK_URL;
+        if (confirmEmailValue !== "" && confirmEmailValue !== null) {
+            console.warn("Honeypot field filled. Preventing submission.");
+            return;
         }
+
+        enrollmentForm.action = ENROLLMENT_FORM_WEBHOOK_URL;
 
         const urlSearchParams = new URLSearchParams();
         for (const pair of formData.entries()) {
@@ -396,14 +464,16 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
           "application/x-www-form-urlencoded"
         );
         xhr.onload = function () {
-          if (xhr.status === 200) {
+          if (xhr.status >= 200 && xhr.status < 300) {
             window.location.href = "/enroll-now-confirmation";
           } else {
-            console.error("Form submission failed:", xhr.statusText);
+            console.error("Form submission failed:", xhr.status, xhr.statusText, xhr.responseText);
+            alert(`There was an error submitting the form (Status: ${xhr.status}). Please try again or contact support.`);
           }
         };
         xhr.onerror = function () {
           console.error("Network error occurred while submitting the form.");
+          alert("A network error occurred. Please check your connection and try again.");
         };
         xhr.send(urlSearchParams);
       });
