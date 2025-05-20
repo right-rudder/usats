@@ -246,9 +246,9 @@ const PUBLIC_DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.PUBLIC_DISCOVERY_FORM_
       isChecked = !isChecked;
       hiddenInput.value = isChecked ? "yes" : "no";
       toggle.setAttribute("aria-checked", isChecked);
-      toggle.classList.toggle("bg-accent-950", isChecked);
-      toggle.classList.toggle("bg-muted-200", !isChecked);
-      thumb.classList.toggle("translate-x-3", isChecked);
+      toggle.classList.toggle("bg-green-600", isChecked); 
+      toggle.classList.toggle("bg-gray-200", !isChecked); 
+      thumb.classList.toggle("translate-x-3.5", isChecked); 
       thumb.classList.toggle("translate-x-0", !isChecked);
 
       submitBtn.disabled = !isChecked;
