@@ -418,8 +418,8 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
 
         if (!aircraftType) {
           alert("Please select an aircraft type.");
-          // Potentially focus the first aircraft type radio
-          document.getElementById("airplane-type")?.focus();
+          // Focus the first aircraft type radio button
+          document.querySelector('input[name="aircraft-type"][type="radio"]')?.focus();
           return;
         }
 
