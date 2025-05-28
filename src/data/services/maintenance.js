@@ -140,7 +140,6 @@ const maintenanceServices = {
         imageAlt: "",
         description: "",
         bullets: [
-          "Scheduled Inspections",
           "Airframe and engine maintenance and repair",
           "Component maintenance excluding Schweizer restricted parts",
           "Refurbishment: complete tear down and re-build",
@@ -205,9 +204,6 @@ const maintenanceServices = {
       description: "",
       bullets: [
         "Access to a wide range of parts beyond our own aircraft types, including components for popular rotorcraft and fixed-wing models",
-        "Schweizer, Robinson and limited Cessna Parts",
-        "Lycoming, standard hardware, Instruments",
-        "Large stock of Bell 206 parts",
         "Large selection of Consumables available",
       ]
     },
@@ -249,8 +245,7 @@ const maintenanceServices = {
       name: "Maintenance Part 43",
       description: "Maintenance performed and signed off under an individual's A&P license",
       paragraphs: [
-        "“We offer limited inspection and maintenance services under Part 43, following the same standards and quality of our 145 Repair Station. This would include any aircraft that are not listed on our Repair Station capabilities list.",
-        "Currently, we service about half of the tango ramp tenants. Their aircraft include Piper PA-28, Vans RV-6 &amp; RV-12, Cessna 150, and Grumman Tiger . We are best equipped to handle airplanes similar in size to the Cessna 172 and reciprocating helicopters. Most of this maintenance is considered on a case-by-case basis.",
+        "USATS offers limited inspection and maintenance services under Part 43, following the same standards and quality of our 145 Repair Station. This would include aircraft not listed on its Repair Station capabilities list. We are best equipped to handle airplanes similar in size to the Cessna 172 and single-engine helicopters on a case-by-case basis.",
       ],
 
       current_serviced_aircraft: {
