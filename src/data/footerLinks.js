@@ -17,6 +17,10 @@ export const footerLinks = {
         link: "https://airtoursusats.com",
       },
       {
+        name: "FAQ",
+        link: "/about-us/faq",
+      },
+      {
         name: "Contact",
         link: "/contact-us",
       },
