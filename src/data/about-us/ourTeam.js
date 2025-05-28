@@ -58,47 +58,47 @@ const ourTeam = {
     description:
       "USATS instructors are FAA-certified professionals with decades of real-world experience, including military and commercial aviation. Trained in advanced safety systems like CRM and TEM, our team provides personalized flight instruction using modern aircraft and a proven curriculum refined over 30 years.",
     members: [
-      {
-        name: "Joe Doe",
-        imagePath: "/src/assets/placeholder-person.jpg",
-        imageAlt:
-        "",
-        rank: "Airplane Instructor",
-      },
-      {
-        name: "Joe Doe",
-        imagePath: "/src/assets/placeholder-person.jpg",
-        imageAlt:
-        "",
-        rank: "Airplane Instructor",
-      },
-      {
-        name: "Joe Doe",
-        imagePath: "/src/assets/placeholder-person.jpg",
-        imageAlt:
-        "",
-        rank: "Airplane Instructor",
-      },
+      // {
+      //   name: "Joe Doe",
+      //   imagePath: "/src/assets/placeholder-person.jpg",
+      //   imageAlt:
+      //   "",
+      //   rank: "Airplane Instructor",
+      // },
+      // {
+      //   name: "Joe Doe",
+      //   imagePath: "/src/assets/placeholder-person.jpg",
+      //   imageAlt:
+      //   "",
+      //   rank: "Airplane Instructor",
+      // },
+      // {
+      //   name: "Joe Doe",
+      //   imagePath: "/src/assets/placeholder-person.jpg",
+      //   imageAlt:
+      //   "",
+      //   rank: "Airplane Instructor",
+      // },
       {
         name: "Iikka Hesse",
         imagePath: staffHessHeliInstructor.imagePath,
         imageAlt: staffHessHeliInstructor.imageAlt,
         rank: "Helicopter Instructor",
       },
-      {
-        name: "Joe Doe",
-        imagePath: "/src/assets/placeholder-person.jpg",
-        imageAlt:
-        "",
-        rank: "Helicopter Instructor",
-      },
-      {
-        name: "Joe Doe",
-        imagePath: "/src/assets/placeholder-person.jpg",
-        imageAlt:
-        "",
-        rank: "Helicopter Instructor",
-      },
+      // {
+      //   name: "Joe Doe",
+      //   imagePath: "/src/assets/placeholder-person.jpg",
+      //   imageAlt:
+      //   "",
+      //   rank: "Helicopter Instructor",
+      // },
+      // {
+      //   name: "Joe Doe",
+      //   imagePath: "/src/assets/placeholder-person.jpg",
+      //   imageAlt:
+      //   "",
+      //   rank: "Helicopter Instructor",
+      // },
     ],
   },
 }
