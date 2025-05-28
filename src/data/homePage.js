@@ -278,7 +278,7 @@ const homePage = {
         {
           question: "Does USATS offer financing options for flight training?",
           answer:
-            "Yes, we partner with several aviation financing specialists including AOPA Finance, Stratus Financial, and We-Fly to help you fund your flight training. Our flexible payment plans and financing options make aviation education more accessible. Military veterans can also use their VA benefits for qualifying programs.",
+            "Yes, we partner with several aviation financing specialists including AOPA Finance, Stratus Financial, and We-Fly to help you fund your flight training. Our flexible payment plans and financing options make aviation education more accessible.",
         },
         {
           question:
