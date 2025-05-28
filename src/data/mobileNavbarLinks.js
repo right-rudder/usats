@@ -153,16 +153,20 @@ export const mobileNavbarLinks = [
         link: "/about-us/our-fleet",
       },
       {
+        name: "FAQ",
+        link: "/about-us/faq",
+      },
+      {
         name: "Financing",
         link: "/about-us/financing",
       },
       {
         name: "Careers",
-        link: "/careers",
+        link: "/about-us/careers",
       },
       {
         name: "Local Attractions",
-        link: "/local-attractions",
+        link: "/about-us/local-attractions",
       },
       {
         name: "Blog",
