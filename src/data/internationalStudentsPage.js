@@ -16,9 +16,9 @@ const internationalStudentsPage = {
       stars: true,
       imagePath: imgHeader.imagePath,
       imageAlt: imgHeader.imageAlt,
-      headerH1: `INTERNATIONAL STUDENTS <br> at ${COMPANY_NICKNAME}`,
+      headerH1: `INTERNATIONAL STUDENTS`,
       paragraph:
-        "Start Your Pilot Career in the U.S. with Our International-Friendly Flight School. FAA-certified. Trusted by students from 30+ countries.",
+        "Start Your Pilot Career in the U.S. with our international-friendly flight school. FAA-certified. Trusted by students from 30+120 countries.",
       buttons: [
         {
           name: "Enroll Now",
@@ -49,10 +49,10 @@ const internationalStudentsPage = {
 
     whyUs: {
       upperHeading: "Why International Students Choose Us",
-      heading: "Your Global Aviation Career Starts Here",
+      heading: "Your Global Aviation Career Starts Here –",
       descriptions: [
-        "Students from over 60 countries have trusted us to launch their careers in the skies. Whether you're aiming to fly in your home country or build hours in the U.S., our Part 141-approved programs are designed to support international success.",
-        "We handle more than flight training — we guide you through visa applications, TSA clearance, medical exams, and FAA testing. With on-campus CATS testing and fingerprinting, our support starts from day one.",
+        "Students from all over 60 countries the world have trusted us to launch their careers in the skies. Whether you're aiming to fly in your home country or build hours in the U.S., our Part 141-approved programs are designed to support international success.",
+        "We handle more than flight training — we are here to help guide you through visa applications, TSA clearance, medical exams, and FAA testing, accommodation, and more. With on-campus CATS testing and fingerprinting, our support starts from day one.",
         "Take off with a clear path, a supportive team, and a fleet that prepares you for airline, charter, or private aviation roles across the globe.",
       ],
       bullets: [
