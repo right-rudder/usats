@@ -9,7 +9,7 @@ const privacyPolicies = {
       "USATS privacy policy, flight school data protection, aviation training privacy, pilot training data security, flight school personal information, aviation academy privacy terms, flight training data collection, student pilot privacy",
 
     heading: `Privacy Policy of <br> ${COMPANY_NAME}`,
-    subheading: `Last updated: 08/05/2025`,
+    subheading: `Last updated: 28 May 2025`,
     content: [
       {
         heading: "Introduction",
