@@ -15,7 +15,7 @@ const contact = {
     pageKeywords:
       "contact USATS, flight school contact Florida, aviation school contact, Titusville flight school phone number, pilot training contact, helicopter training inquiry, aviation academy contact, flight training questions, USATS contact details, flight instruction contact",
 
-    checkboxText: `I agree to the Privacy Policy and Terms of Service provided by the company.
+    checkboxText: `I agree to the <a href="/privacy-policy" target="_blank" class="text-muted-200 hover:text-accent-700 font-semibold">Privacy Policy</a> and <a href="/terms-of-service" target="_blank" class="text-muted-200 hover:text-accent-700 font-semibold">Terms of Service</a> provided by the company.
       By providing my phone number, I agree to receive text messages from the business. I also agree that I may be contacted via messaging apps such as WhatsApp or Signal.
     `,
 
