@@ -47,6 +47,7 @@ export const COMPANY_SITE_LINK = "https://usatsflighttraining.com";
 export const COMPANY_NICKNAME = "USATS";
 export const ADDRESS = "355 Golden Knight Blvd";
 export const ADDRESS_STATE = "FL";
+export const ADDRESS_STATE_FULL = "Florida";
 export const ADDRESS_CITY = "Titusville";
 export const ADDRESS_ZIP = "32780";
 export const AIRPORT = "SPACE COAST REGIONAL";

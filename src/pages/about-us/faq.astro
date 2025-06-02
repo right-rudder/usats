@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../components/astro/HeaderScreen.astro";
+import FreQuestions from "../../components/astro/FreQuestions.astro";
+import homePage from "../../data/homePage";
+import { VIDEOLINK_ABOUTUS } from "../../consts";
+import { COMPANY_NAME } from "../../consts";
+
+
+const faqData = {
+  pageTitle: `FAQ? | ${COMPANY_NAME}`,
+  pageDescription: 
+  "Find answers to the most common questions about USATS, a leading flight school in Titusville, FL. Learn about admissions, training programs, housing, international student support, and more.",
+  pageKeywords: 
+  "USATS FAQ, flight school questions, pilot training FAQ, aviation training info, flight school details, student housing flight school, USATS admissions, international flight students, flight school requirements, pilot license info, USATS curriculum, aviation academy support, learn to fly FAQ, USATS programs, flight school tuition",
+
+  // Top Header
+  header: {
+    stars: true,
+    imagePath: "/src/assets/maintenanceHeli2.png",
+    imageAlt: "US Aviation Training Solutions student pilot celebrating her first solo flight",
+    headerH1: `Frequently Asked<br>Questions`,
+    paragraph: `Got questions about flight training, admissions, or life at USATS? We've compiled answers to help you better understand what to expect. Whether you're just starting out or ready to take off, we’re here to provide clarity every step of the way.`,
+    buttons: [
+      {
+        name: "More",
+        link: "#faq",
+        primary: true,
+      },
+      {
+        name: "Contact Us",
+        link: "/contact-us",
+        primary: true,
+      },
+    ],
+  }
+};
+
+---
+
+<BaseLayout
+  siteTitle={faqData.pageTitle}
+  siteDescription={faqData.pageDescription}
+  keywords={faqData.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={faqData.header} headerVideo={VIDEOLINK_ABOUTUS} />
+  <FreQuestions content={homePage.data.frequentQuestions} />
+</BaseLayout>

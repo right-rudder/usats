@@ -50,11 +50,11 @@ const stratusFinance = {
       link: "https://stratus.finance/",
       primary: true,
     },
-    {
-      name: "Download Booklet",
-      link: STRATUS_ADVANTAGE,
-      primary: true,
-    },
+    // {
+    //   name: "Download Booklet",
+    //   link: STRATUS_ADVANTAGE,
+    //   primary: true,
+    // },
   ],
 };
 
@@ -174,7 +174,7 @@ const { data } = stratusInfo;
           class="font-sans2 mt-12 mb-6 text-xl text-muted-200"
           set:html={stratusFinance.paragraph3}
         />
-        <div class="flex">
+        <!-- <div class="flex">
           <a
             target="_blank"
             href={stratusFinance.applyButton.link}
@@ -182,7 +182,7 @@ const { data } = stratusInfo;
           >
             {stratusFinance.applyButton.name}
           </a>
-        </div>
+        </div> -->
         <p
           class="font-sans2 mt-12 mb-6 text-xl text-muted-200"
           set:html={stratusFinance.paragraph4}

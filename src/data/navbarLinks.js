@@ -145,6 +145,10 @@ export const navbarLinks = [
         link: "/about-us/our-fleet",
       },
       {
+        name: "FAQ",
+        link: "/about-us/faq",
+      },
+      {
         name: "Financing",
         link: "/about-us/financing",
       },

@@ -3,6 +3,7 @@ import {
   EMAIL_ADDRESS,
   COMPANY_SITE_LINK,
   COMPANY_NICKNAME,
+  ADDRESS_STATE_FULL,
 } from "../consts";
 const terms = {
   data: {
@@ -13,7 +14,7 @@ const terms = {
       "USATS terms of service, flight school terms, aviation training conditions, pilot training terms, flight instruction agreement, aviation school policies, flight training requirements, student pilot agreement, flight school contract terms",
 
     heading: `Terms of Service of<br /> ${COMPANY_NAME}`,
-    subheading: `Last updated: 08/05/2025`,
+    subheading: `Last updated: 28 May 2025`,
     content: [
       {
         heading: `Terms`,
@@ -72,7 +73,7 @@ const terms = {
       {
         heading: `Governing Law`,
         paragraphs: [
-          `Any claims related to ${COMPANY_NAME}’s website shall be governed by the laws of the State of Georgia, without regard to conflict of law provisions.`,
+          `Any claims related to ${COMPANY_NAME}’s website shall be governed by the laws of the State of ${ADDRESS_STATE_FULL}, without regard to conflict of law provisions.`,
         ],
       },
       {
