@@ -237,8 +237,8 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
             <label
               for="agree-data-collection"
               class="text-muted-300 text-sm lg:text-base"
+              set:html={data.checkboxText}
             >
-              {data.checkboxText}
             </label>
           </div>
           <button
