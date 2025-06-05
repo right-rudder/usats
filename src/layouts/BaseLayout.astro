@@ -9,6 +9,7 @@ const { pathname } = Astro.url;
 const { siteTitle, siteDescription, keywords, ogImage } = Astro.props; // this are local props (custom props for BaseHead one)
 //import ChatWidget from "../components/ChatWidget.astro";
 import Banner from "../components/layouts/Banner.astro";
+import ChatWidget from "../components/astro/ChatWidget.astro";
 ---
 
 <!doctype html>
@@ -37,6 +38,6 @@ import Banner from "../components/layouts/Banner.astro";
       <slot />
     </main>
     <Footer />
-    <!-- <ChatWidget /> -->
+    <ChatWidget />
   </body>
 </html>
