@@ -6,8 +6,9 @@ import contact from "../data/contact";
 import { COMPANY_NAME } from "../consts";
 import Header from "../components/astro/Header.astro";
 const { data } = contact;
-const MAINTENANCE_CONTACT_FORM_WEBHOOK_URL = import.meta.env.MAINTENANCE_CONTACT_FORM_WEBHOOK_URL;
-
+const MAINTENANCE_CONTACT_FORM_WEBHOOK_URL = import.meta.env
+  .MAINTENANCE_CONTACT_FORM_WEBHOOK_URL;
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 
 const headerData = {
   headerH1: "MAINTENANCE USATS",
@@ -16,26 +17,44 @@ const headerData = {
 };
 ---
 
-<BaseLayout siteTitle={data.pageTitle} siteDescription={data.pageDescription} keywords={data.pageKeywords}>
-  
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
   <Header data={headerData} />
-  <section class="py-30 relative isolate bg-gradient-to-b from-primary-950 to-primary-800" id="contact-us">
+  <section
+    class="py-30 relative isolate bg-gradient-to-b from-primary-950 to-primary-800"
+    id="contact-us"
+  >
     <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-      <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
+      <div
+        class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48"
+      >
         <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-          <h2 class="text-pretty text-4xl font-bold font-sans tracking-tight text-red-700 lg:text-6xl">Get in touch</h2>
+          <h2
+            class="text-pretty text-4xl font-bold font-sans tracking-tight text-red-700 lg:text-6xl"
+          >
+            Get in touch
+          </h2>
           <p class="mt-6 text-lg/8 text-muted-400 font-parag">
             {data.description}
           </p>
-          <dl class="mt-10 space-y-4 text-base/7 text-muted-400 font-bold font-sans2">
+          <dl
+            class="mt-10 space-y-4 text-base/7 text-muted-400 font-bold font-sans2"
+          >
             <div class="flex gap-x-4">
               <dt class="flex-none">
-                <IoLocationOutline  />
+                <IoLocationOutline />
               </dt>
               <dd>
-                <a class="hover:text-white hover:underline" href={data.locations[0].gMaps}>
+                <a
+                  class="hover:text-white hover:underline"
+                  href={data.locations[0].gMaps}
+                >
                   {data.locations[0].address}<br />
-                  {data.locations[0].city}, {data.locations[0].state} {data.locations[0].zip}
+                  {data.locations[0].city}, {data.locations[0].state}
+                  {data.locations[0].zip}
                 </a>
               </dd>
             </div>
@@ -44,7 +63,11 @@ const headerData = {
                 <IoPhonePortraitOutline />
               </dt>
               <dd>
-                <a class="hover:text-white hover:underline" href={`tel:${data.locations[0].phone}`}>{data.locations[0].phone}</a>
+                <a
+                  class="hover:text-white hover:underline"
+                  href={`tel:${data.locations[0].phone}`}
+                  >{data.locations[0].phone}</a
+                >
               </dd>
             </div>
             <!-- <div class="flex gap-x-4">
@@ -61,57 +84,141 @@ const headerData = {
       <div class="px-12 py-32 bg-primary-900">
         <form id="contact-form" class="w-full text-white">
           <div class="mb-4">
-            <label for="first-name" class="block font-semibold">First Name</label>
-            <input type="text" id="first-name" name="first-name" autocomplete="given-name" class="w-full h-9 p-2 border text-muted-900 bg-white border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50" required>
+            <label for="first-name" class="block font-semibold"
+              >First Name</label
+            >
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              autocomplete="given-name"
+              class="w-full h-9 p-2 border text-muted-900 bg-white border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50"
+              required
+            />
           </div>
           <div class="mb-4">
             <label for="last-name" class="block font-semibold">Last Name</label>
-            <input type="text" id="last-name" name="last-name" autocomplete="family-name" class="w-full h-9 p-2 border text-muted-900 bg-white border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50" required>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              autocomplete="family-name"
+              class="w-full h-9 p-2 border text-muted-900 bg-white border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50"
+              required
+            />
           </div>
           <div class="mb-4">
             <label for="phone" class="block font-semibold">Phone</label>
-            <input type="text" id="phone" name="phone" autocomplete="tel" class="w-full h-9 p-2 border text-muted-900 bg-white border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50" required>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              autocomplete="tel"
+              class="w-full h-9 p-2 border text-muted-900 bg-white border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50"
+              required
+            />
           </div>
           <div class="mb-4">
             <label for="email" class="block font-semibold">Email</label>
-            <input type="email" id="email" name="email" autocomplete="email" class="w-full h-9 p-2 border text-muted-900 bg-white border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50" required>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              class="w-full h-9 p-2 border text-muted-900 bg-white border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50"
+              required
+            />
           </div>
           <div class="mb-4">
-            <label for="aircraft-make" class="block font-semibold">Aircraft Manufacturer</label>
-            <input type="text" id="aircraft-make" name="aircraft-make" class="w-full h-9 p-2 border bg-white text-muted-900 border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50" required>
+            <label for="aircraft-make" class="block font-semibold"
+              >Aircraft Manufacturer</label
+            >
+            <input
+              type="text"
+              id="aircraft-make"
+              name="aircraft-make"
+              class="w-full h-9 p-2 border bg-white text-muted-900 border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50"
+              required
+            />
           </div>
           <div class="mb-4">
-            <label for="aircraft-model" class="block font-semibold">Aircraft Model</label>
-            <input type="text" id="aircraft-model" name="aircraft-model" class="w-full h-9 p-2 border bg-white text-muted-900 border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50" required>
+            <label for="aircraft-model" class="block font-semibold"
+              >Aircraft Model</label
+            >
+            <input
+              type="text"
+              id="aircraft-model"
+              name="aircraft-model"
+              class="w-full h-9 p-2 border bg-white text-muted-900 border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50"
+              required
+            />
           </div>
           <div class="mb-4">
-            <label for="n-number" class="block font-semibold">Aircraft N-Number</label>
-            <input type="text" id="n-number" name="n-number" class="w-full h-9 p-2 border bg-white text-muted-900 border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50" required>
+            <label for="n-number" class="block font-semibold"
+              >Aircraft N-Number</label
+            >
+            <input
+              type="text"
+              id="n-number"
+              name="n-number"
+              class="w-full h-9 p-2 border bg-white text-muted-900 border-gray-400 rounded-sm focus:outline focus:ring focus:border-primary-600/50"
+              required
+            />
           </div>
           <div class="mb-4">
-            <label for="message" class="block font-semibold">How can we help you?</label>
-            <textarea required name="message" id="message" rows="4" class="w-full p-2 border bg-white text-muted-900 border-accent-800 rounded-sm focus:outline focus:ring focus:border-primary-600/50"></textarea>
+            <label for="message" class="block font-semibold"
+              >How can we help you?</label
+            >
+            <textarea
+              required
+              name="message"
+              id="message"
+              rows="4"
+              class="w-full p-2 border bg-white text-muted-900 border-accent-800 rounded-sm focus:outline focus:ring focus:border-primary-600/50"
+            ></textarea>
           </div>
           <p class="hidden">
             <label>
               Don't fill this out if you're human:
-              <input name="confirm-email">
+              <input name="confirm-email" />
             </label>
           </p>
           <div class="mb-4">
-            <input type="checkbox" name="agree-data-collection" id="agree-data-collection" class="mr-2 size-5">
-            <label for="agree-data-collection" class="text-muted-400 text-sm lg:text-base">
-              I agree to <a href="/terms-of-service" class="font-semibold hover:underline" target="_blank">terms of service</a> & <a href="/privacy-policy" class="font-semibold hover:underline" target="_blank">privacy policy</a>. By providing my phone number, I agree to receive text messages from the business.
+            <input
+              type="checkbox"
+              name="agree-data-collection"
+              id="agree-data-collection"
+              class="mr-2 size-5"
+            />
+            <label
+              for="agree-data-collection"
+              class="text-muted-400 text-sm lg:text-base"
+            >
+              I agree to <a
+                href="/terms-of-service"
+                class="font-semibold hover:underline"
+                target="_blank">terms of service</a
+              > & <a
+                href="/privacy-policy"
+                class="font-semibold hover:underline"
+                target="_blank">privacy policy</a
+              >. By providing my phone number, I agree to receive text messages
+              from the business.
             </label>
           </div>
-          <button id="submit-button" form="contact-form" disabled type="submit" class="mx-auto mt-8 btn-primary cursor-not-allowed bg-gray-400 hover:bg-gray-800 hover:text-white">
+          <button
+            id="submit-button"
+            form="contact-form"
+            disabled
+            type="submit"
+            class="mx-auto mt-8 btn-primary cursor-not-allowed bg-gray-400 hover:bg-gray-800 hover:text-white"
+          >
             Send Message
           </button>
         </form>
       </div>
     </div>
 
-    
     <!-- Background Pattern -->
     <div class="absolute inset-0 -z-10 overflow-hidden">
       <svg
@@ -144,58 +251,108 @@ const headerData = {
     </div>
   </section>
 
-</BaseLayout>
+  <script define:vars={{ MAINTENANCE_CONTACT_FORM_WEBHOOK_URL, PORTAL_API_KEY }}
+  >
+    const checkbox = document.getElementById("agree-data-collection");
+    const submitButton = document.getElementById("submit-button");
 
+    checkbox.addEventListener("change", function () {
+      if (checkbox.checked) {
+        submitButton.disabled = false;
+        submitButton.classList.remove(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400",
+        );
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.add(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400",
+        );
+      }
+    });
 
-<script define:vars={{ MAINTENANCE_CONTACT_FORM_WEBHOOK_URL }}>
-  const checkbox = document.getElementById("agree-data-collection");
-  const submitButton = document.getElementById("submit-button");
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contact-form");
+      if (!form) {
+        console.error("Form element not found.");
+        return;
+      }
 
-  checkbox.addEventListener("change", function () {
-    if (checkbox.checked) {
-      submitButton.disabled = false;
-      submitButton.classList.remove("cursor-not-allowed", "bg-gray-400", "hover:bg-gray-400");
-    } else {
-      submitButton.disabled = true;
-      submitButton.classList.add("cursor-not-allowed", "bg-gray-400", "hover:bg-gray-400");
-    }
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const contactForm = document.getElementById("contact-form");
-    if (contactForm !== null) {
-      contactForm.addEventListener("submit", function (event) {
+      form.addEventListener("submit", async (event) => {
         event.preventDefault();
-        const formData = new FormData(contactForm);
-        const confirmEmailValue = formData.get("confirm-email");
-        if (confirmEmailValue === "" || confirmEmailValue === null) {
-          contactForm.action = MAINTENANCE_CONTACT_FORM_WEBHOOK_URL;
+
+        const formData = new FormData(form);
+        const confirmEmail = formData.get("confirm-email")?.trim();
+        if (confirmEmail) return;
+
+        const webhookURL = MAINTENANCE_CONTACT_FORM_WEBHOOK_URL;
+        const apiKey = PORTAL_API_KEY;
+
+        const urlEncodedBody = new URLSearchParams(formData).toString();
+
+        const excludedFields = [
+          "first-name",
+          "last-name",
+          "email",
+          "phone",
+          "confirm-email",
+          "agree-data-collection",
+        ];
+
+        const metadata = {};
+
+        for (const [key, value] of formData.entries()) {
+          if (!excludedFields.includes(key)) {
+            metadata[key] = value?.trim?.() ?? value;
+          }
         }
 
-        const urlSearchParams = new URLSearchParams();
-        for (const pair of formData.entries()) {
-          urlSearchParams.append(pair[0], pair[1]);
-        }
+        const jsonBody = {
+          first_name: formData.get("first-name")?.trim() || "",
+          last_name: formData.get("last-name")?.trim() || "",
+          email: formData.get("email")?.trim() || "",
+          phone: formData.get("phone")?.trim() || "",
+          campaign: "maintenance",
+          account_random_id: "ac_ad4sxcg0",
+          metadata: metadata,
+        };
 
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", contactForm.action);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onload = function () {
-          if (xhr.status === 200) {
+        try {
+          const [ghlRes, portalRes] = await Promise.all([
+            fetch(webhookURL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: urlEncodedBody,
+            }),
+            fetch("https://portal.rightruddermarketing.com/api/leads", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "x-api-key": apiKey,
+              },
+              body: JSON.stringify(jsonBody),
+            }),
+          ]);
+
+          if (ghlRes.ok && portalRes.ok) {
             window.location.href = "/contact-us-confirmation";
           } else {
-            console.error("Form submission failed:", xhr.statusText);
+            console.error("Submission failed", {
+              ghlStatus: ghlRes.status,
+              portalStatus: portalRes.status,
+            });
           }
-        };
-        xhr.onerror = function () {
-          console.error("Network error occurred while submitting the form.");
-        };
-        xhr.send(urlSearchParams);
+        } catch (err) {
+          console.error("Submission error:", err);
+        }
       });
-    } else {
-      console.error("Contact form not found.");
-    }
-  });
-</script>
-
-<script src="../scripts/emailValidation.js"></script>
+    });
+  </script>
+  <script src="../scripts/emailValidation.js"></script>
+</BaseLayout>
