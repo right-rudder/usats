@@ -33,11 +33,11 @@ import ImageComp from "../ImageComp.astro";
       }
     </div>
   </div>
-  <div class="w-full flex justify-center gap-16 pt-8">
+  <div class="w-full flex justify-center gap-4 md:gap-16 pt-8 px-2 md:px-6 lg:px-12">
     {
       content.buttons &&
         content.buttons.map((button) => (
-          <a href={button.link} class="btn-black text-2xl">
+          <a href={button.link} class="btn-black text-xl md:text-2xl">
             {button.text}
           </a>
         ))
