@@ -20,8 +20,8 @@ const { pathname } = Astro.url;
 <footer class="bg-black">
     
     <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
-      <!-- Logo, Description and Terms -->
-      <div class="lg:col-span-2 -mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6">
+      <div class="lg:col-span-2 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6">
+        <!-- Logo -->
         <a
             href="/"
             aria-label="Go home"
@@ -34,19 +34,27 @@ const { pathname } = Astro.url;
             class="object-contain h-24 w-auto px-5 lg:px-0 drop-shadow-lg"
             />
         </a>
-
-        
+        <!-- Location -->
+        <a href="https://maps.app.goo.gl/n6NQdhpcmoU3vJrZ9" target="_blank" class="py-2 flex gap-2 items-baseline justify-center transition-colors duration-300 text-white hover:text-accent-600">
+            <span class="text-sm">355 Golden Knights Blvd</span> 
+              <span class="text-accent-200 text-sm pt-3"> &#x2022; </span>
+            <span class="text-sm"> Titusville, FL 32780​ </span>
+        </a>
+      </div>
+       <!-- Footer Links -->
+        <nav class=" flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6 py-6" aria-label="Footer">
+          <hr class="py-2"></hr>
+          {
+            footerLinks.links.map(( link ) => (
+                <a href={link.link} class="text-primary-400 hover:text-white">{link.name}</a>
+            ))
+          }
+        </nav>
+      <!-- Logo, Description and Terms -->
+      <div class="lg:col-span-2 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6 items-center justify-center">
         <div class="lg:max-w-sm font-sans2">
-          
-            <hr class="py-2"></hr>
 
-            <a href="https://maps.app.goo.gl/n6NQdhpcmoU3vJrZ9" target="_blank" class="py-2 flex gap-2 items-baseline justify-center transition-colors duration-300 text-white hover:text-accent-600">
-                <span class="text-sm">355 Golden Knights Blvd</span> 
-                  <span class="text-accent-200 text-sm pt-3"> &#x2022; </span>
-                <span class="text-sm"> Titusville, FL 32780​ </span>
-            </a>
-            
-
+       
             <p
             class="text-sm text-white px-3 lg:px-0 text-center lg:text-center"
             >
@@ -70,18 +78,9 @@ const { pathname } = Astro.url;
         </div>
       </div>
 
-      <!-- Footer Links -->
-      <nav class="-mb-6 mt-2 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6 py-12" aria-label="Footer">
-        <hr class="py-2"></hr>
-        {
-          footerLinks.links.map(( link ) => (
-              <a href={link.link} class="text-primary-400 hover:text-white">{link.name}</a>
-          ))
-        }
-      </nav>
 
       <!-- Social Links -->
-      <div class="mt-2 flex justify-center gap-x-10">
+      <div class="pt-10 flex justify-center gap-x-10">
         {FACEBOOK_URL && (<a href={FACEBOOK_URL} target="_blank" class="text-gray-400 hover:text-gray-300">
           <span class="sr-only">Facebook</span>
           <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
