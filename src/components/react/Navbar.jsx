@@ -110,12 +110,12 @@ const Navbar = ({ pathname }) => {
             : "bg-transparent"
         } duration-500`}
       >
-        <div className="px-5 max-w-8xl mx-auto top-0">
+        <div className="px-5 lg:px-0 max-w-8xl mx-auto top-0">
           <div
             className={`${navBar || openMobile ? "lg:h-20" : "lg:h-28"} relative flex h-20 align-middle justify-between transition-all`}
             id="navbar"
           >
-            <div className="flex w-full items-center justify-between">
+            <div className="flex w-full items-center justify-between mx-auto">
               <a
                 href="/"
                 title=" "
@@ -130,8 +130,8 @@ const Navbar = ({ pathname }) => {
                   className={`${navBar || openMobile ? "h-16 lg:h-24 lg:w-2/3" : "h-16 lg:h-24 w-full"} mx-auto object-contain duration-500`}
                 />
               </a>
-              <div className="hidden lg:flex pl-10 lg:pl-20 w-full">
-                <ul className="flex justify-between align-middle w-3/4 items-center gap-2">
+              <div className="hidden lg:flex w-3/4 justify-between">
+                <ul className="flex justify-between align-middle w-full items-center gap-2 pr-10">
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}
