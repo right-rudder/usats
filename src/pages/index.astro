@@ -21,6 +21,7 @@ import CTAFlight from "../data/ctaFlight";
 import ContentCTA from "../components/astro/ContentCTA.astro";
 import Content from "../components/astro/Content.astro";
 import { VIDEOLINK_HOME } from "../consts";
+import Location from "../components/astro/Location.astro";
 
 const { data } = homePage;
 ---
@@ -44,6 +45,7 @@ const { data } = homePage;
   <!-- <CTAMilitary content={militaryCta} /> -->
 
   <FreQuestions content={data.frequentQuestions} />
+  <Location />
   <CTADiscoveryFlight content={CTAFlight} />
   <!-- <script src="../scripts/creativeSwiper.js"></script> -->
 </BaseLayout>
