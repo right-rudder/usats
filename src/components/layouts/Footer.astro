@@ -43,7 +43,7 @@ const { pathname } = Astro.url;
       </div>
        <!-- Footer Links -->
         <nav class=" flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6 py-6" aria-label="Footer">
-          <hr class="py-2"></hr>
+          <hr class="py-2" />
           {
             footerLinks.links.map(( link ) => (
                 <a key={link.name} href={link.link} class="text-primary-400 hover:text-white">{link.name}</a>
