@@ -29,18 +29,11 @@ const ourTeam = {
       "The leadership team at USATS brings decades of aviation expertise from military, commercial, and FAA training backgrounds. With 30+ years of shaping pilots from 120+ countries—and a fleet spanning Cessna 172s to UH-60 Black Hawks—we’re committed to delivering world-class flight education with precision, safety, and a focus on your success",
     members: [
       {
-        name: "Brian Craddock",
-        imagePath: staffBrian.imagePath,
-        imageAlt: staffBrian.imageAlt,
-        bio: "Brian Craddock is an experienced aviation executive with extensive leadership experience in flight training, aviation program management, and government contracting. As Managing Director and CEO of US Aviation Training Solutions, he oversees flight training operations, aircraft maintenance, and FAA compliance, ensuring the success of both domestic and international aviation training programs. His expertise spans strategic planning, workforce optimization, and regulatory adherence, with a focus on delivering high-quality aviation solutions in challenging environments. Prior to his current role, Brian held key leadership positions within the U.S. Department of State and the U.S. Army, where he managed multi-billion-dollar aviation programs, oversaw aircraft operations across multiple countries, and led acquisition strategies for advanced aviation platforms.",
-        rank: "Managing Director",
-      },
-      {
         name: "Ray Deptula",
         imagePath: staffRay.imagePath,
         imageAlt: staffRay.imageAlt,
         bio: "Ray is a retired career naval officer and naval aviator with 3,200 flight hours and over 3,000 shipboard landings, flying mainly SH-60B Seahawk and UH-1N Huey helicopters. He was a flight instructor for SH-60Bs and managed the navy’s east coast shipboard landing instruction program. Ray also holds an FAA Airline Transport Pilot (ATP) Rotorcraft-Helicopter certification.",
-        rank: "Business Development Manager",
+        rank: "Business Development Manager & Managing Director",
       },
       {
         name: "Stephane Rebeix",
@@ -58,47 +51,24 @@ const ourTeam = {
     description:
       "USATS instructors are FAA-certified professionals with decades of real-world experience, including military and commercial aviation. Trained in advanced safety systems like CRM and TEM, our team provides personalized flight instruction using modern aircraft and a proven curriculum refined over 30 years.",
     members: [
-      // {
-      //   name: "Joe Doe",
-      //   imagePath: "/src/assets/placeholder-person.jpg",
-      //   imageAlt:
-      //   "",
-      //   rank: "Airplane Instructor",
-      // },
-      // {
-      //   name: "Joe Doe",
-      //   imagePath: "/src/assets/placeholder-person.jpg",
-      //   imageAlt:
-      //   "",
-      //   rank: "Airplane Instructor",
-      // },
-      // {
-      //   name: "Joe Doe",
-      //   imagePath: "/src/assets/placeholder-person.jpg",
-      //   imageAlt:
-      //   "",
-      //   rank: "Airplane Instructor",
-      // },
       {
         name: "Iikka Hesse",
         imagePath: staffHessHeliInstructor.imagePath,
         imageAlt: staffHessHeliInstructor.imageAlt,
         rank: "Helicopter Instructor",
       },
-      // {
-      //   name: "Joe Doe",
-      //   imagePath: "/src/assets/placeholder-person.jpg",
-      //   imageAlt:
-      //   "",
-      //   rank: "Helicopter Instructor",
-      // },
-      // {
-      //   name: "Joe Doe",
-      //   imagePath: "/src/assets/placeholder-person.jpg",
-      //   imageAlt:
-      //   "",
-      //   rank: "Helicopter Instructor",
-      // },
+      {
+        name: "Stephane Rebeix",
+        imagePath: staffStephane.imagePath,
+        imageAlt: staffStephane.imageAlt,
+        rank: "Chief Flight Instructor",
+      },
+      {
+        name: "Ray Deptula",
+        imagePath: staffRay.imagePath,
+        imageAlt: staffRay.imageAlt,
+        rank: "Helicopter Instructor",
+      },
     ],
   },
 }
