@@ -105,6 +105,10 @@ export const mobileNavbarLinks = [
     link: "#",
     submenu: [
       {
+        name: "Maintenance",
+        link: "/services/maintenance",
+      },
+      {
         name: "145 Repair Station",
         link: "/services/maintenance#145-maintenance-capabilities",
       },
@@ -122,6 +126,14 @@ export const mobileNavbarLinks = [
     name: "Services",
     link: "#",
     submenu: [
+      {
+        name: "Services",
+        link: "/services",
+      },
+      {
+        name: "TAA Time Building",
+        link: "/services/taa-time-building",
+      },
       {
         name: "Alto Planes",
         link: "/services/alto-planes",
@@ -144,6 +156,10 @@ export const mobileNavbarLinks = [
     name: "About",
     link: "#",
     submenu: [
+      {
+        name: "About",
+        link: "/about-us",
+      },
       {
         name: "Our Team",
         link: "/about-us/our-team",
