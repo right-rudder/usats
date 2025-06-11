@@ -1,11 +1,15 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeaderScreen from "../../components/astro/HeaderScreen.astro";
-import CTAColor from "../../components/astro/CTADiscoveryFlights.astro";
-import CTAFlight from "../../data/ctaFlight.js";
 import ProgramDetails from "../../components/layouts/ProgramDetails.astro";
 import taaTimeBuilding from "../../data/services/taaTimeBuilding";
-import { ALTO_5A as imgHeader } from "../../constsImages";
+import Table from "../../components/astro/Table.astro";
+
+import {    
+    ALTONG_FLYING_OVER_COAST as imgHeader,
+    ALTONG_MAINTENANCE as imgMaintenance,
+    ALTONG_PANEL as imgPanel,
+ } from "../../constsImages";
 
 const coursesIndex = {
   data: {
@@ -19,8 +23,8 @@ const coursesIndex = {
     // Top Header
     header: {
       stars: true,
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "",
+      imagePath: imgHeader.imagePath,
+      imageAlt: imgHeader.imageAlt,
       headerH1: `TAA Time Building in a 2024 Alto NG`,
       paragraph: `TAA time building starting at $50 per hour`,
       buttons: [
@@ -34,7 +38,7 @@ const coursesIndex = {
   },
 };
 
-const { data } = coursesIndex;
+const { data } = taaTimeBuilding;
 ---
 
 <BaseLayout
@@ -44,5 +48,5 @@ const { data } = coursesIndex;
 >
   <HeaderScreen content={data.header} />
   <ProgramDetails program={taaTimeBuilding.data.details} />
-  <CTAColor content={CTAFlight} />
+  <Table />
 </BaseLayout>

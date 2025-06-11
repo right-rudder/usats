@@ -1,6 +1,11 @@
 import { COMPANY_NAME } from "../../consts";
 import { irFw as programPrices } from "../../flightTrainingProgramsPrices";
 
+import { ALTONG_FLYING_OVER_COAST as imgHeader,
+    ALTONG_MAINTENANCE as imgMaintenance,
+    ALTONG_PANEL as imgPanel,
+ } from "../../constsImages";
+
 const taaTimeBuilding = {
   data: {
     pageTitle: "TAA Time Building in a 2024 Alto NG",
@@ -12,8 +17,8 @@ const taaTimeBuilding = {
     // Top Header
     header: {
       badges: ["FAA Compliant", "Modern TAA Aircraft"],
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "2024 Alto NG in flight",
+      imagePath: imgHeader.imagePath,
+      imageAlt: imgHeader.imageAlt,
       headerH1: "TAA Time Building in a 2024 Alto NG",
       paragraph:
         "Start logging your PIC time in a Technically Advanced Aircraft starting at just $50/hour. Packages are FAA-compliant and shareable!",
@@ -88,8 +93,8 @@ const taaTimeBuilding = {
       },
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "Pilot planning flight on a tablet",
+        imagePath: imgMaintenance.imagePath,
+        imageAlt: imgMaintenance.imageAlt,
         title: "Ready to Get Started?",
         description:
           "Contact us to schedule your checkout and begin logging your TAA hours toward your commercial license today!",
