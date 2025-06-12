@@ -22,6 +22,23 @@ import ContentCTA from "../components/astro/ContentCTA.astro";
 import Content from "../components/astro/Content.astro";
 import { VIDEOLINK_HOME } from "../consts";
 import Location from "../components/astro/Location.astro";
+import { ALTONG_FLYING_OVER_COAST as imgTAActa } from "../constsImages";
+import { COMPANY_NAME } from "../consts";
+
+const TAActa = {
+  imagePath: imgTAActa.imagePath,
+  imageAlt: imgTAActa.imageAlt,
+  headerH1: `Build <span class="text-accent-700">TAA Time Building</span> in a Modern Aircraft`,
+  paragraph: `Gain valuable Technically Advanced Aircraft (TAA) experience with our 2024 Alto NG. Affordable rates and flexible packages available.`,
+  buttons: [
+    {
+      name: "Learn more",
+      link: "/taa-time-building",
+      primary: false,
+    },
+  ],
+};
+
 
 const { data } = homePage;
 ---
@@ -36,6 +53,7 @@ const { data } = homePage;
   <UnderHeader content={data.underHeader} />
   <!-- <WhoAreUs content={data.whatWeOffer} /> -->
   <WhyUs content={data.whyUs} />
+  <CTADiscoveryFlight content={TAActa} />
   <!-- <OurAdvantages content={data.ourAdvantages} /> -->
   <!-- <Programs content={programsSwiper} /> -->
   <GridPrograms content={programsSwiper} />
