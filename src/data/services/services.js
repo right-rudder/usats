@@ -5,6 +5,7 @@ import {
   FINGERPRINTING as imgFingerprinting,
   ALTO_NG as imgAltoNG,
   ALTO_5A as imgAirTours,
+  ALTONG_MAINTENANCE as imgTaa,
 } from "../../constsImages";
 
 const servicesIndex = {
@@ -37,6 +38,13 @@ const servicesIndex = {
   description:
     "USATS offers top-tier airplane and helicopter flight training, aircraft maintenance, FAA testing, TSA fingerprinting, and scenic air tours. With expert instructors, modern facilities, and year-round flying weather, we prepare you for success in aviation. Train, test, fly, and maintain—all in one trusted place.",
   cards: [
+    {
+      title: "TAA Time Building",
+      imagePath: imgTaa.imagePath,
+      imageAlt: imgTaa.imageAlt,
+      description: `Build FAA-compliant TAA flight hours with USATS in a modern 2024 Alto NG aircraft. Packages start at $50/hour, sharable with another pilot!`,
+      link: "/services/taa-time-building",
+    },
     {
       title: "Maintenance",
       imagePath: imgMaintenance.imagePath,
