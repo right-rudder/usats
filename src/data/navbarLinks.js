@@ -115,6 +115,10 @@ export const navbarLinks = [
     link: "/services/",
     submenu: [
       {
+        name: "TAA Time Building",
+        link: "/services/taa-time-building",
+      },
+      {
         name: "Alto Planes",
         link: "/services/alto-planes",
       },

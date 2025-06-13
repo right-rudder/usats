@@ -1,3 +1,21 @@
+export const ALTONG_FLYING_OVER_COAST = {
+  imagePath: "/src/assets/altong_flying_over_coast.jpg",
+  imageAlt:
+    "Alto NG airplane flying over coast",
+};
+
+export const ALTONG_MAINTENANCE = {
+  imagePath: "/src/assets/altong_maintenance.png",
+  imageAlt:
+    "Alto NG airplane maintenance",
+};
+
+export const ALTONG_PANEL = {
+  imagePath: "/src/assets/altong_panel.png",
+  imageAlt:
+    "Alto NG airplane panel",
+};
+
 export const DARK_BLUE_HELI_MAINTENANCE = {
   imagePath: "/src/assets/Dark_Blue_Heli_Maintenance.jpg",
   imageAlt:

@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../components/astro/HeaderScreen.astro";
+import ProgramDetails from "../../components/layouts/ProgramDetails.astro";
+import taaTimeBuilding from "../../data/services/taaTimeBuilding";
+import Table from "../../components/astro/Table.astro";
+
+const { data } = taaTimeBuilding;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <HeaderScreen content={data.header} />
+  <ProgramDetails program={taaTimeBuilding.data.details} />
+  <Table />
+</BaseLayout>
