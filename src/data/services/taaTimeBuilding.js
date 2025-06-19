@@ -24,8 +24,8 @@ const taaTimeBuilding = {
         "Start logging your PIC time in a Technically Advanced Aircraft starting at just $100/hour. Packages are FAA-compliant and shareable!",
       buttons: [
         {
-          name: "Learn More",
-          link: "#programs",
+          name: "Fly Now",
+          link: "/enroll-now",
           primary: true,
         },
         {
