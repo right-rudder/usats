@@ -71,11 +71,10 @@ const taaTimeBuilding = {
       additionalCosts: {
         heading: "Additional Costs",
         items: [
-          "Checkout flight with a USATS instructor (if required)",
+          "Checkout flight with a USATS instructor (required)",
           "Optional instructor time",
           "Flight gear (if needed)",
           "Logbook (physical or digital)",
-          "Insurance surcharge for solo flight (if applicable)",
         ],
       },
 
