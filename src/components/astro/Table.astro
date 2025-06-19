@@ -5,7 +5,7 @@ import { ALTONG_PANEL as imgTable, } from "../../constsImages";
 
 
 <section id="pricing" class="mx-auto md:px-8 py-12 bg-fixed bg-primary-950">
-    <div class="w-full text-center pt-5">
+    <div class="w-full text-center pt-5 pb-20">
         <p class="mx-auto uppercase text-lg lg:text-xl max-w-3xl font-sans font-bold tracking-tight text-primary-300">
           Prices
         </p>
@@ -16,8 +16,8 @@ import { ALTONG_PANEL as imgTable, } from "../../constsImages";
           Check out our prices
         </p>
     </div>
-<div class="p-2 text-white text-center font-sans min-h-screen flex flex-col gap-5 items-center justify-center md:grid md:grid-cols-2">  
-    <div class="w-full h-full flex items-center justify-center p-3">   
+<div class="p-2 text-white text-center font-sans min-h-screen flex flex-col gap-5 items-center justify-center lg:grid lg:grid-cols-2">  
+    <div class="w-full h-full items-baseline justify-center p-3 hidden lg:flex">   
         <ImageComp
         imagePath={imgTable.imagePath}
         imageAlt={imgTable.imageAlt}
@@ -75,10 +75,8 @@ import { ALTONG_PANEL as imgTable, } from "../../constsImages";
           <div class="col-span-3 p-4 bg-primary-900 text-center">$50</div>
         </div>
       </div>
-
+      <p class="text-center py-5 text-primary-100 text-lg">Our TAA time-building packages are designed to offer you flexibility and value. The more hours you commit to, the lower your hourly rate becomes. Plus, with our shareable options, you can split the cost with another pilot, making your time-building even more affordable!</p>
       <p class="text-center mt-6 text-primary-400">Contact us for more information.*</p>
     </div>
   </div>
 </section>
-
-
