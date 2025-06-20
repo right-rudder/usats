@@ -10,7 +10,7 @@ const taaTimeBuilding = {
   data: {
     pageTitle: "TAA Time Building in a 2024 Alto NG",
     pageDescription:
-      "Build FAA-compliant TAA flight hours with USATS in a modern 2024 Alto NG aircraft. Packages start at $50/hour, sharable with another pilot!",
+      "Build FAA-compliant TAA flight hours with USATS in a modern 2024 Alto NG aircraft. Packages start at $100/hour, sharable with another pilot!",
     pageKeywords:
       "TAA time building, Alto NG, flight training, technically advanced aircraft, USATS, commercial pilot requirements, FAA, PIC time, time building packages",
 
@@ -21,11 +21,11 @@ const taaTimeBuilding = {
       imageAlt: imgHeader.imageAlt,
       headerH1: "TAA Time Building in a 2024 Alto NG",
       paragraph:
-        "Start logging your PIC time in a Technically Advanced Aircraft starting at just $50/hour. Packages are FAA-compliant and shareable!",
+        "Start logging your PIC time in a Technically Advanced Aircraft starting at just $100/hour. Packages are FAA-compliant and shareable!",
       buttons: [
         {
-          name: "Learn More",
-          link: "#programs",
+          name: "Fly Now",
+          link: "/enroll-now",
           primary: true,
         },
         {
@@ -50,7 +50,7 @@ const taaTimeBuilding = {
       keyPoints: [
         "2024 Alto NG with full glass cockpit",
         "FAA-compliant TAA setup",
-        "Packages starting at $50/hour",
+        "Packages starting at $100/hour",
         "Shareable hours between 2 pilots",
         "Ideal for Part 61 Commercial training",
         "Located in sunny Florida with year-round flying",
@@ -71,11 +71,10 @@ const taaTimeBuilding = {
       additionalCosts: {
         heading: "Additional Costs",
         items: [
-          "Checkout flight with a USATS instructor (if required)",
+          "Checkout flight with a USATS instructor (required)",
           "Optional instructor time",
           "Flight gear (if needed)",
           "Logbook (physical or digital)",
-          "Insurance surcharge for solo flight (if applicable)",
         ],
       },
 
