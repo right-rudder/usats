@@ -127,7 +127,7 @@ const Navbar = ({ pathname }) => {
                   aria-label="USATS Logo"
                   title="USATS Logo"
                   loading="eager"
-                  className={`${navBar || openMobile ? "h-16 lg:h-24 lg:w-2/3" : "h-16 lg:h-24 w-full"} mx-auto object-contain duration-500`}
+                  className={`${navBar || openMobile ? "h-16 lg:h-20 lg:w-2/3" : "h-16 lg:h-24 w-full"} mx-auto object-contain duration-500`}
                 />
               </a>
               <div className="hidden lg:flex w-3/4 justify-between">
