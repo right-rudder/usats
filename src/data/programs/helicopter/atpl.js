@@ -94,7 +94,7 @@ const atpL = {
           "Let’s sharpen your skills and get you certified as an Airline Transport Pilot. Reach out for a custom training assessment and course plan.",
         button: {
           name: "Request Info",
-          link: "/contact",
+          link: "/contact-us",
         },
       },
       
