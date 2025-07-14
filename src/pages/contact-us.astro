@@ -29,7 +29,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
           <h3 class="text-primary-100 text-2xl font-semibold mt-10">
             {data.locations[0].title}
           </h3>
-          <a href={data.locations[0].gMaps}>
+          <a href={data.locations[0].gMaps} target="_blank">
             <div class="flex justify-end gap-3 mt-5 hover:underline">
               <p class="text-gray-50">
                 {data.locations[0].address}<br />{data.locations[0].city}, {

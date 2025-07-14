@@ -43,7 +43,7 @@ const contact = {
         city: `${ADDRESS_CITY}`,
         state: ``,
         zip: `${ADDRESS_STATE}`,
-        gMaps: "gmaps1",
+        gMaps: "https://maps.app.goo.gl/aFvEQ1Dojjx8scB76",
         phone: "(321) 529-0795",
         email: "info@usatsolutions.com",
       },
