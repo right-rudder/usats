@@ -97,4 +97,4 @@ export const VIDEO_HOME_HELICOPTER =
 export const VIDEOLINK_MAINTENANCE =
   "https://cdn.shopify.com/videos/c/o/v/40ea4b0895e0415fa098733bcf6e8ee4.mp4";
 export const VIDEOLINK_ABOUTUS =
-  "https://usatsflighttraining.com/cdn/shop/videos/c/vp/9cce912410e44240829a51b85a4ce623/9cce912410e44240829a51b85a4ce623.HD-1080p-2.5Mbps-42396578.mp4?v=0";
+  "https://cdn.shopify.com//videos/c/vp/9cce912410e44240829a51b85a4ce623/9cce912410e44240829a51b85a4ce623.HD-1080p-2.5Mbps-42396578.mp4?v=0";
