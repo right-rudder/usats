@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/ui/FormattedDate.astro";
 import BaseLayout from "./BaseLayout.astro";
 import { COMPANY_NAME } from "../consts";
+import type { BreadcrumbItem } from "../utils/breadcrumbs";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -16,6 +17,12 @@ const {
   heroImage,
   tags,
 } = Astro.props;
+
+// Create custom breadcrumbs for blog posts
+const blogBreadcrumbs: BreadcrumbItem[] = [
+  { name: "Blog", url: "/blog" },
+  { name: title, url: Astro.url.pathname, isActive: true },
+];
 ---
 
 <BaseLayout
@@ -23,6 +30,8 @@ const {
   siteDescription={description}
   keywords={tags?.join(", ")}
   ogImage={heroImage}
+  customBreadcrumbs={blogBreadcrumbs}
+  breadcrumbTitle={title}
 >
   <div class="h-20 lg:h-28 w-full bg-primary-900"></div>
 

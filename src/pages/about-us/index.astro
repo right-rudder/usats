@@ -4,22 +4,22 @@ import HeaderScreen from "../../components/astro/HeaderScreen.astro";
 import WhoAreUs from "../../components/astro/WhoAreUs.astro";
 
 import aboutUs from "../../data/about-us/aboutUs";
-import PageSumarry from "../../components/astro/PageSummary.astro"
+import PageSumarry from "../../components/astro/PageSummary.astro";
 import { VIDEOLINK_ABOUTUS } from "../../consts";
-
 ---
 
 <BaseLayout
   siteTitle={aboutUs.pageTitle}
   siteDescription={aboutUs.pageDescription}
   keywords={aboutUs.pageKeywords}
+  breadcrumbTitle="About Us"
 >
   <!-- HEADER -->
   <HeaderScreen content={aboutUs.header} headerVideo={VIDEOLINK_ABOUTUS} />
   <PageSumarry content={aboutUs.pageSummary} />
   <WhoAreUs content={aboutUs.whatWeOffer} />
   <!-- Our Team? -->
-   <!-- quizCTA -->
+  <!-- quizCTA -->
   <!-- Testimonials? -->
-   <!-- bookCTA -->
+  <!-- bookCTA -->
 </BaseLayout>
