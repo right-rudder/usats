@@ -1,5 +1,6 @@
 ---
 import "/src/styles/global.css";
+import AdvancedSEO from "./AdvancedSEO.astro";
 import {
   COMPANY_NAME,
   SITE_DESCRIPTION,
@@ -19,6 +20,11 @@ import {
   AIRPORT_CODE,
   AIRPORT_GOOGLE_LOCATION,
   COMPANY_NICKNAME,
+  FOUNDING_DATE,
+  PRICE_RANGE,
+  PAYMENT_ACCEPTED,
+  CURRENCIES_ACCEPTED,
+  BUSINESS_HOURS,
 } from "../../consts"; // Adjusted import path
 
 interface Props {
@@ -85,7 +91,7 @@ const localBusinessSchema = {
   image: siteImage,
   telephone: PHONE_NUMBER,
   email: EMAIL_ADDRESS,
-  foundingDate: "1993", // Add or adjust based on actual founding date
+  foundingDate: FOUNDING_DATE,
   sameAs: [
     "https://www.facebook.com/USATSolutions/",
     "https://www.instagram.com/usatsolutions/",
@@ -109,20 +115,19 @@ const localBusinessSchema = {
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:00",
-      closes: "17:00",
+      opens: BUSINESS_HOURS.weekdays.opens,
+      closes: BUSINESS_HOURS.weekdays.closes,
     },
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Saturday"],
-      opens: "09:00",
-      closes: "15:00",
+      opens: BUSINESS_HOURS.saturday.opens,
+      closes: BUSINESS_HOURS.saturday.closes,
     },
   ],
-  paymentAccepted:
-    "Cash, Credit Card, Visa, Mastercard, American Express, Discover, Checks, Financing",
-  priceRange: "$$$",
-  currenciesAccepted: "USD",
+  paymentAccepted: PAYMENT_ACCEPTED,
+  priceRange: PRICE_RANGE,
+  currenciesAccepted: CURRENCIES_ACCEPTED,
 };
 
 const flightSchoolSchema = {
@@ -236,7 +241,82 @@ const faqSchema = {
         text: "Training duration varies by program and individual progress. Our Part 141 programs typically allow for faster completion with fewer required hours than Part 61 training. A Private Pilot License can be completed in as little as 2 months of dedicated training. Commercial and Instructor ratings generally require 3-6 months each.",
       },
     },
+    {
+      "@type": "Question",
+      name: "Does USATS offer financing options for flight training?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, USATS partners with multiple financing providers including Stratus Financial, AOPA Finance, and WeFloridaFinancial to offer flexible payment plans and loan options for qualified students. We also work with veterans' benefits and international student financing programs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What aircraft are used for training at USATS?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our modern fleet includes Cessna 172s for airplane training, Robinson R44 and Schweizer S300 helicopters for rotorcraft training, and DirectFly Alto NG aircraft for advanced TAA (Technically Advanced Aircraft) experience. All aircraft are maintained to the highest standards.",
+      },
+    },
   ],
+};
+
+// Service schema for aviation services
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${COMPANY_SITE_LINK}#service`,
+  name: "Professional Pilot Training Services",
+  description:
+    "Comprehensive flight training services including private pilot, commercial pilot, instrument rating, and certified flight instructor programs for both airplanes and helicopters.",
+  provider: {
+    "@type": "EducationalOrganization",
+    name: COMPANY_NAME,
+    sameAs: COMPANY_SITE_LINK,
+  },
+  serviceType: ["Flight Training", "Pilot Education", "Aviation Certification"],
+  areaServed: {
+    "@type": "State",
+    name: "Florida",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Flight Training Programs",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Course",
+          name: "Private Pilot License - Airplane",
+          description: "FAA Private Pilot certification for airplanes",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Course",
+          name: "Private Pilot License - Helicopter",
+          description: "FAA Private Pilot certification for helicopters",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Course",
+          name: "Commercial Pilot License",
+          description:
+            "Professional pilot certification for commercial operations",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Course",
+          name: "Certified Flight Instructor",
+          description: "Flight instructor certification program",
+        },
+      },
+    ],
+  },
 };
 
 // Combine all schemas into a single array
@@ -244,6 +324,7 @@ const faqSchema = {
 const allSchemas = [
   localBusinessSchema,
   flightSchoolSchema,
+  serviceSchema,
   ...courseSchemas,
   breadcrumbSchema,
   faqSchema,
@@ -274,6 +355,7 @@ const combinedSchemaData = JSON.stringify(allSchemas);
 
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="manifest" href="/manifest.json" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Canonical URL -->
@@ -285,12 +367,38 @@ const combinedSchemaData = JSON.stringify(allSchemas);
 <meta name="description" content={description} />
 <meta name="keywords" content={keywords} />
 
+<!-- SEO Meta Tags -->
+<meta
+  name="robots"
+  content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+/>
+<meta
+  name="googlebot"
+  content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+/>
+<meta name="author" content={COMPANY_NAME} />
+<meta name="theme-color" content="#1f2937" />
+
+<!-- Language and locale -->
+<meta name="language" content="en-US" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Geographic targeting -->
+<meta name="geo.region" content="US-FL" />
+<meta name="geo.placename" content="Titusville" />
+<meta name="geo.position" content={`${GEO_LATITUDE};${GEO_LONGITUDE}`} />
+<meta name="ICBM" content={`${GEO_LATITUDE}, ${GEO_LONGITUDE}`} />
+
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={title} />
+<meta property="og:site_name" content={COMPANY_NAME} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -298,8 +406,40 @@ const combinedSchemaData = JSON.stringify(allSchemas);
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image:alt" content={title} />
+<meta property="twitter:site" content="@usatsolutions" />
+<meta property="twitter:creator" content="@usatsolutions" />
 
 <link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- Preconnect to external domains for faster loading -->
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://www.google-analytics.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- DNS prefetch for external resources -->
+<link rel="dns-prefetch" href="//www.googletagmanager.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+
+<!-- Preload critical resources -->
+<link
+  rel="preload"
+  href="/USATS_Logo_White.webp"
+  as="image"
+  type="image/webp"
+/>
+
+<!-- Additional SEO Meta Tags -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta
+  name="apple-mobile-web-app-status-bar-style"
+  content="black-translucent"
+/>
+<meta name="apple-mobile-web-app-title" content={COMPANY_NICKNAME} />
+<meta name="application-name" content={COMPANY_NAME} />
+<meta name="msapplication-TileColor" content="#1f2937" />
+<meta name="msapplication-config" content="/browserconfig.xml" />
 
 <!-- Google Tag Manager Ads - (Need to configure Partytown later on) -->
 <script type="text/javascript" async>
@@ -334,3 +474,6 @@ const combinedSchemaData = JSON.stringify(allSchemas);
 
 <!-- Enhanced Schema.org Structured Data -->
 <script type="application/ld+json" set:html={combinedSchemaData} />
+
+<!-- Advanced SEO Component -->
+<AdvancedSEO url={canonicalURL} title={title} description={description} />

@@ -1,0 +1,22 @@
+{
+  "name": "USATS Flight Training",
+  "short_name": "USATS",
+  "description": "Launch your aviation career with USATS in Titusville, FL. Offering FAA-certified helicopter and airplane training, modern fleet, and international student support.",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1f2937",
+  "background_color": "#ffffff",
+  "categories": ["education", "business"]
+}

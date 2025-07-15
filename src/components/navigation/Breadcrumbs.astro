@@ -1,0 +1,145 @@
+---
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+  isActive?: boolean;
+}
+
+export interface Props {
+  items: BreadcrumbItem[];
+  separator?: string;
+  showHome?: boolean;
+  className?: string;
+}
+
+const {
+  items = [],
+  separator = ">",
+  showHome = true,
+  className = "",
+} = Astro.props;
+
+// Always include home as first item if showHome is true
+const breadcrumbItems: BreadcrumbItem[] = showHome
+  ? [{ name: "Home", url: "/" }, ...items]
+  : items;
+
+// Generate structured data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: breadcrumbItems.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    item:
+      item.url === "/"
+        ? "https://usatsflighttraining.com/"
+        : `https://usatsflighttraining.com${item.url}`,
+  })),
+};
+---
+
+<!-- Breadcrumbs Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+<!-- Breadcrumbs Navigation -->
+<nav
+  class={`py-3 px-4 md:px-8 lg:px-16 bg-gray-950 border-b border-slate-900 ${className}`}
+  aria-label="Breadcrumb navigation"
+>
+  <div class="mx-auto">
+    <!-- Desktop Breadcrumbs -->
+    <ol
+      class="hidden sm:flex items-center space-x-2 text-sm text-slate-100"
+      itemscope
+      itemtype="https://schema.org/BreadcrumbList"
+    >
+      {
+        breadcrumbItems.map((item, index) => {
+          const isLast = index === breadcrumbItems.length - 1;
+          const position = index + 1;
+
+          return (
+            <li
+              class="flex items-center"
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              {!isLast ? (
+                <>
+                  <a
+                    href={item.url}
+                    class="text-primary-200 hover:text-primary-300 hover:underline transition-colors duration-200 font-medium"
+                    itemprop="item"
+                    aria-label={`Navigate to ${item.name}`}
+                  >
+                    <span itemprop="name">{item.name}</span>
+                  </a>
+                  <meta itemprop="position" content={position.toString()} />
+                  <svg
+                    class="w-4 h-4 mx-2 text-slate-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </>
+              ) : (
+                <>
+                  <span
+                    class="text-slate-400 font-semibold cursor-default"
+                    itemprop="name"
+                    aria-current="page"
+                  >
+                    {item.name}
+                  </span>
+                  <meta itemprop="position" content={position.toString()} />
+                  <meta
+                    itemprop="item"
+                    content={
+                      item.url === "/"
+                        ? "https://usatsflighttraining.com/"
+                        : `https://usatsflighttraining.com${item.url}`
+                    }
+                  />
+                </>
+              )}
+            </li>
+          );
+        })
+      }
+    </ol>
+
+    <!-- Mobile Breadcrumbs (Simplified) -->
+    <div class="sm:hidden flex items-center justify-between">
+      {
+        breadcrumbItems.length > 1 && (
+          <a
+            href={breadcrumbItems[breadcrumbItems.length - 2].url}
+            class="flex items-center text-primary-200 hover:text-primary-300 transition-colors duration-200"
+            aria-label="Go back"
+          >
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span class="text-sm font-medium">Back</span>
+          </a>
+        )
+      }
+      <span class="text-sm text-slate-200 font-semibold truncate max-w-48">
+        {breadcrumbItems[breadcrumbItems.length - 1].name}
+      </span>
+    </div>
+  </div>
+</nav>

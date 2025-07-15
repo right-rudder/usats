@@ -1,13 +1,45 @@
 ---
 import BaseHead from "../components/layouts/BaseHead.astro";
 import Footer from "../components/layouts/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION, KEYWORDS, OG_IMAGE } from "../consts"; // first one to start, this are the default props for BaseHead
+import Breadcrumbs from "../components/navigation/Breadcrumbs.astro";
+import { SITE_TITLE, SITE_DESCRIPTION, KEYWORDS, OG_IMAGE } from "../consts";
+import { generateBreadcrumbs, getPageTitle } from "../utils/breadcrumbs";
+import type { BreadcrumbItem } from "../utils/breadcrumbs";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/montserrat";
 import Navbar from "../components/react/Navbar";
+
 const { pathname } = Astro.url;
-const { siteTitle, siteDescription, keywords, ogImage } = Astro.props; // this are local props (custom props for BaseHead one)
-//import ChatWidget from "../components/ChatWidget.astro";
+
+// Props interface for better type safety
+export interface Props {
+  siteTitle?: string;
+  siteDescription?: string;
+  keywords?: string;
+  ogImage?: string;
+  breadcrumbTitle?: string;
+  customBreadcrumbs?: BreadcrumbItem[];
+  showBreadcrumbs?: boolean;
+  breadcrumbClass?: string;
+}
+
+const {
+  siteTitle,
+  siteDescription,
+  keywords,
+  ogImage,
+  breadcrumbTitle,
+  customBreadcrumbs,
+  showBreadcrumbs = true,
+  breadcrumbClass = "",
+} = Astro.props;
+
+// Generate breadcrumbs automatically or use custom ones
+const breadcrumbItems =
+  customBreadcrumbs || generateBreadcrumbs(pathname, breadcrumbTitle);
+const shouldShowBreadcrumbs =
+  showBreadcrumbs && breadcrumbItems.length > 0 && pathname !== "/";
+
 import Banner from "../components/layouts/Banner.astro";
 import ChatWidget from "../components/astro/ChatWidget.astro";
 ---
@@ -34,8 +66,15 @@ import ChatWidget from "../components/astro/ChatWidget.astro";
     <!-- End Google Tag Manager (noscript) -->
     <Banner />
     <Navbar pathname={pathname} client:load />
+
     <main class="bg-white dark:bg-primary-900/90">
       <slot />
+      <!-- Breadcrumbs Navigation -->
+      {
+        shouldShowBreadcrumbs && (
+          <Breadcrumbs items={breadcrumbItems} className={breadcrumbClass} />
+        )
+      }
     </main>
     <Footer />
     <!-- <ChatWidget /> -->
