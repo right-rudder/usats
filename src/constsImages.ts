@@ -210,8 +210,8 @@ export const FLYING_BH = {
   imageAlt: " ",
 };
 export const FLYING_BH2 = {
-  imagePath: "/src/assets/flyingBH2.png",
-  imageAlt: " ",
+  imagePath: "/src/assets/heli-blackhawk-helicopter-flying-helicopter-training.png",
+  imageAlt: "USATS Black Hawk helicopter in flight during military training exercises",
 };
 export const FLYING_BLACK_HELI = {
   imagePath: "/src/assets/flyingBlackHeli.png",
