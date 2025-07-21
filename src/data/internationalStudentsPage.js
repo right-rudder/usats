@@ -1,7 +1,7 @@
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../consts";
 import { DAVID_WELLS_PPL_RW_GRADUATE_2 as contentCTAimg } from "../constsImages";
 import { IMG_2891 as imgWhyUs } from "../constsImages";
-import { ALTO_8A as imgHeader } from "../constsImages";
+import { FLYING_HELI } from "../constsImages";
 
 const internationalStudentsPage = {
   data: {
@@ -14,8 +14,8 @@ const internationalStudentsPage = {
 
     header: {
       stars: true,
-      imagePath: imgHeader.imagePath,
-      imageAlt: imgHeader.imageAlt,
+      imagePath: FLYING_HELI.imagePath,
+      imageAlt: FLYING_HELI.imageAlt,
       headerH1: `INTERNATIONAL STUDENTS`,
       paragraph:
         "Start Your Pilot Career in the U.S. with our international-friendly flight school. FAA-certified. Trusted by students from 30+120 countries.",
