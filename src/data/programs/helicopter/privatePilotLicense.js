@@ -2,8 +2,8 @@ import { COMPANY_NAME } from "../../../consts";
 import { pplRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
 import {
-  FLYING_BH2,
-  FLYING_WHITE_HELI8,
+  HELICOPTERS_FRAME,
+  FLYING_BLACK_HELI5,
 } from "../../../constsImages"
 
 const privatePilotLicense = {
@@ -17,8 +17,8 @@ const privatePilotLicense = {
     // Top Header
     header: {
       badges: ["PPL"],
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "Private pilot flying a helicopter in mountainous terrain",
+      imagePath: HELICOPTERS_FRAME.imagePath,
+      imageAlt: HELICOPTERS_FRAME.imageAlt,
       headerH1: `Private Pilot<br>License`,
       paragraph:
         "Whether you're flying for recreation or planning a professional career in aviation, the Private Pilot License course builds strong fundamentals in aeronautical decision-making, flight safety, and aircraft performance from day one.",
@@ -91,8 +91,8 @@ const privatePilotLicense = {
       },
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "Helicopter landing in a scenic remote location",
+        imagePath: FLYING_BLACK_HELI5.imagePath,
+        imageAlt: FLYING_BLACK_HELI5.imageAlt,
         title: "Start Your Helicopter Journey Today",
         description:
           "The PPL course prepares you for safe and confident helicopter operations, both for fun and future flight opportunities.",
