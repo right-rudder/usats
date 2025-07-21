@@ -247,8 +247,8 @@ export const FLYING_BLACK_HELI7 = {
   imageAlt: " ",
 };
 export const FLYING_HELI = {
-  imagePath: "/src/assets/flyingHeli.png",
-  imageAlt: " ",
+  imagePath: "/src/assets/heli-flying-over-florida-helicopter-training-florida.png",
+  imageAlt: "Helicopter in flight over Florida landscape during pilot training at USATS",
 };
 export const FLYING_WHITE_HELI = {
   imagePath: "/src/assets/flyingWhiteHeli.png",
