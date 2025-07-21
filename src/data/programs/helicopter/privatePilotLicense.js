@@ -1,6 +1,11 @@
 import { COMPANY_NAME } from "../../../consts";
 import { pplRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
+import {
+  FLYING_BH2,
+  FLYING_WHITE_HELI8,
+} from "../../../constsImages"
+
 const privatePilotLicense = {
   data: {
     slug: "private-pilot-license",
