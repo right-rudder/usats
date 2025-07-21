@@ -1,6 +1,11 @@
 import { COMPANY_NAME } from "../../../consts";
 import { cplRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
+import {
+  FLYING_WHITE_HELI6,
+  USATS_BANNER_APPLICATION,
+} from "../../../constsImages"
+
 const commercialPilotLicense = {
   data: {
     slug: "commercial-pilot-license",
@@ -12,8 +17,8 @@ const commercialPilotLicense = {
     // Top Header
     header: {
       badges: ["CPL"],
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "Commercial helicopter pilot flying over scenic terrain",
+      imagePath: FLYING_WHITE_HELI6.imagePath,
+      imageAlt: FLYING_WHITE_HELI6.imageAlt,
       headerH1: `Commercial Pilot<br>Certificate`,
       paragraph: `The Commercial Pilot Certificate is your next big step toward flying for a living. Whether you're looking to become an instructor, EMS pilot, or tour captain, this course will help turn your passion into a paying profession. Our personalized training adapts to your experience, helping you meet FAA requirements and career goals.`,
       buttons: [
@@ -86,8 +91,8 @@ const commercialPilotLicense = {
       },
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "",
+        imagePath: USATS_BANNER_APPLICATION.imagePath,
+        imageAlt: USATS_BANNER_APPLICATION.imageAlt,
         title: "Ready to Turn Passion into Profession?",
         description:
           "Our commercial training program gives you the experience, credentials, and confidence to pursue a paid career in aviation. Let’s build your future in the sky—starting today.",
