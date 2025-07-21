@@ -6,6 +6,7 @@ import {
   ALTO_NG as imgAltoNG,
   ALTO_5A as imgAirTours,
   ALTONG_MAINTENANCE as imgTaa,
+  DARK_BLUE_HELI_MAINTENANCE
 } from "../../constsImages";
 
 const servicesIndex = {
@@ -20,8 +21,8 @@ const servicesIndex = {
     // Top Header
     header: {
       stars: true,
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "image alt",
+      imagePath: DARK_BLUE_HELI_MAINTENANCE.imagePath,
+      imageAlt: DARK_BLUE_HELI_MAINTENANCE.imageAlt,
       headerH1: `${COMPANY_NICKNAME} <br> SERVICES`,
       paragraph: ``,
       buttons: [
