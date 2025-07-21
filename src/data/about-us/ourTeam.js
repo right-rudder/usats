@@ -63,12 +63,6 @@ const ourTeam = {
         imageAlt: staffStephane.imageAlt,
         rank: "Chief Flight Instructor",
       },
-      {
-        name: "Ray Deptula",
-        imagePath: staffRay.imagePath,
-        imageAlt: staffRay.imageAlt,
-        rank: "Helicopter Instructor",
-      },
     ],
   },
 }
