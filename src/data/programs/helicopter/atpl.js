@@ -1,6 +1,11 @@
 import { COMPANY_NAME } from "../../../consts";
 import { atpRw as programPrices } from "../../../flightTrainingProgramsPrices";
 
+import {
+  MILITARY_TRAINING_BH7,
+  MAINTENANCE_HELI1,
+} from "../../../constsImages"
+
 const atpL = {
   data: {
     slug: "airline-transport-pilot-license",
@@ -12,8 +17,8 @@ const atpL = {
     // Top Header
     header: {
       badges: ["ATP-L"],
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "Helicopter pilot preparing for ATP-L checkride",
+      imagePath: MILITARY_TRAINING_BH7.imagePath,
+      imageAlt: MILITARY_TRAINING_BH7.imageAlt,
       headerH1: `Airline Transport<br>Pilot`,
       paragraph: `The ATP-L is the highest certification you can achieve as a helicopter pilot. Required for acting as PIC in IFR two-crew operations, it’s primarily an advanced instrument checkride with elevated standards. We’ll help you refresh and sharpen your skills to pass with confidence.`,
       buttons: [
@@ -87,8 +92,8 @@ const atpL = {
       },
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "",
+        imagePath: MAINTENANCE_HELI1.imagePath,
+        imageAlt: MAINTENANCE_HELI1.imageAlt,
         title: "Ready for the Final Step in Your Certification?",
         description:
           "Let’s sharpen your skills and get you certified as an Airline Transport Pilot. Reach out for a custom training assessment and course plan.",
