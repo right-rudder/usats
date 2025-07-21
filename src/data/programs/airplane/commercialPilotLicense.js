@@ -1,6 +1,12 @@
 import { COMPANY_NAME } from "../../../consts";
 import { cplFw as programPrices} from "../../../flightTrainingProgramsPrices";
 
+import { 
+  ALTO_8A,
+  CESSNA_172_USATS_RAMP_WEBP,
+} from "../../../constsImages";
+
+
 const commercialPilotLicense = {
   data: {
     slug: "commercial-pilot-license",
@@ -12,8 +18,8 @@ const commercialPilotLicense = {
     // Top Header
     header: {
       badges: ["Part 141", "CPL"],
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "Commercial pilot training in a modern aircraft cockpit",
+      imagePath: ALTO_8A.imagePath,
+      imageAlt: ALTO_8A.imageAlt,
       headerH1: `Commercial <br>PILOT LICENSE</span>`,
       paragraph: `Step into the world of professional aviation with the Commercial Pilot License (CPL) program. Build your aeronautical experience and take your skills to a career-ready level in a Part 141 certified environment.`,
       buttons: [
@@ -92,8 +98,8 @@ const commercialPilotLicense = {
       prices: programPrices,
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "",
+        imagePath: CESSNA_172_USATS_RAMP_WEBP.imagePath,
+        imageAlt: CESSNA_172_USATS_RAMP_WEBP.imageAlt,
         title: "Make Flying Your Full-Time Career",
         description:
           "Start your professional journey in aviation with our Commercial Pilot License course. Learn from the best, fly confidently, and open doors to the skies.",
