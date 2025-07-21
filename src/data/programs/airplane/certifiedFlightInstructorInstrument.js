@@ -1,6 +1,12 @@
 import { COMPANY_NAME } from "../../../consts";
 import { cfiiFw as programPrices} from "../../../flightTrainingProgramsPrices";
 
+import { 
+  ALTO_NG_PANEL,
+  DIRECTFLY_ALTONG_PANEL_USATS,
+} from "../../../constsImages";
+
+
 const certifiedFlightInstructorInstrument = {
   data: {
     slug: "certified-flight-instructor-instrument",
@@ -12,8 +18,8 @@ const certifiedFlightInstructorInstrument = {
     // Top Header
     header: {
       badges: ["Part 61", "CFII"],
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "CFII Instructor teaching in-flight instrument techniques",
+      imagePath: ALTO_NG_PANEL.imagePath,
+      imageAlt: ALTO_NG_PANEL.imageAlt,
       headerH1: `Certified Flight Instructor<br><span>INSTRUMENT</span>`,
       paragraph: `Take your instructional skills to the next level by becoming a Certified Flight Instructor Instrument (CFII). This course prepares you to provide comprehensive instrument flight training and mentor aspiring instrument-rated pilots.`,
       buttons: [
@@ -87,8 +93,8 @@ const certifiedFlightInstructorInstrument = {
       },
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "",
+        imagePath: DIRECTFLY_ALTONG_PANEL_USATS.imagePath,
+        imageAlt: DIRECTFLY_ALTONG_PANEL_USATS.imageAlt,
         title: "Start Training the Next Generation of Instrument Pilots",
         description:
           "Help students safely navigate the skies in low visibility and complex weather. The CFII program trains you to lead them there with confidence.",
