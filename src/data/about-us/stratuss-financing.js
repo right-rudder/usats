@@ -1,5 +1,7 @@
 import { COMPANY_NAME } from "../../consts";
 
+import { DIRECT_FLY_ALTO_NG } from "../../constsImages";
+
 const stratusInfo = {
     data: {
       //SEO Header Stuff
@@ -12,9 +14,8 @@ const stratusInfo = {
       //top header
       header: {
         stars: true,
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt:
-          "",
+        imagePath: DIRECT_FLY_ALTO_NG.imagePath,
+        imageAlt: DIRECT_FLY_ALTO_NG.imageAlt,
         headerH1: `<span class="text-accent-700">FINANCING</span>`,
         paragraph:
           `At USATS, we understand that investing in your aviation career is a big decision. That's why we’ve partnered with trusted financing providers like <a href="#stratus" class="text-accent-600">Stratus Financing</a>, <a href="#aopa" class="text-accent-600">AOPA Financing</a>, and <a href="#we-florida" class="text-accent-600">We Florida Financial</a> to help make your goals more accessible. Whether you're starting from zero or advancing your certifications, these flexible loan options are designed to support your journey every step of the way.`,

@@ -1,5 +1,7 @@
 import { COMPANY_NAME } from "../../consts";
 
+import { HELICOPTERS_FRAME } from "../../constsImages";
+
 const militaryInstructorRoadmap = {
   upperHeading: "Battlefield Readiness Pathway",
   heading: "Tactical Flight Instructor Qualification",
@@ -54,8 +56,8 @@ const militaryInstructorRoadmap = {
         "Final phase certifies you to lead mobile training teams (MTT) using client-provided aircraft. Learn to adapt curricula for foreign airframes while maintaining FAA/ICAO standards.",
         "Includes train-the-trainer modules and 12 months of post-graduation mentorship for real-world mission debriefing."
       ],
-      imagePath: "/src/assets/helicoptersFrame.png",
-      imageAlt: "USATS instructors conducting field training on foreign helicopter"
+      imagePath: HELICOPTERS_FRAME.imagePath,
+      imageAlt: HELICOPTERS_FRAME.imageAlt
     }
   ],
   finalParagraph:

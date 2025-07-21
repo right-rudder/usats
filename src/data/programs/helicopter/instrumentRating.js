@@ -1,6 +1,11 @@
 import { COMPANY_NAME } from "../../../consts";
 import { irRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
+import {
+  HELICOPTER_INSTRUMENTS,
+  HELICOPTER_INSTRUMENTS2,
+} from "../../../constsImages"
+
 const instrumentRating = {
   data: {
     slug: "instrument-rating",
@@ -12,8 +17,8 @@ const instrumentRating = {
     // Top Header
     header: {
       badges: ["IR"],
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "Helicopter pilot flying in IMC with advanced cockpit display",
+      imagePath: HELICOPTER_INSTRUMENTS.imagePath,
+      imageAlt: HELICOPTER_INSTRUMENTS.imageAlt,
       headerH1: `Instrument Rating<br><span>(IR)</span>`,
       paragraph: `An Instrument Rating is no longer optional for today’s helicopter pilots—it’s essential. Improve your safety, expand your employment opportunities, and build confidence flying in low-visibility conditions with real-world IFR training from our experienced team.`,
       buttons: [
@@ -87,8 +92,8 @@ const instrumentRating = {
       },
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "",
+        imagePath: HELICOPTER_INSTRUMENTS2.imagePath,
+        imageAlt: HELICOPTER_INSTRUMENTS2.imageAlt,
         title: "Add Confidence and Capability to Every Flight",
         description:
           "Gain the precision, judgment, and skill to fly safely in IMC. Whether you're aiming for a professional career or simply want to fly smarter, this course will set you apart.",

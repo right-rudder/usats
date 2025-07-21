@@ -1,6 +1,11 @@
 import { COMPANY_NAME } from "../../../consts";
 import { pppRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
+import {
+  FLYING_BH2,
+  FLYING_WHITE_HELI8,
+} from "../../../constsImages"
+
 const professionalPilotProgram = {
   data: {
     slug: "professional-pilot-program",
@@ -12,8 +17,8 @@ const professionalPilotProgram = {
     // Top Header
     header: {
       badges: ["PPL", "IR", "CPL", "CFI", "CFII"],
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "Professional helicopter pilot flying training mission",
+      imagePath: FLYING_BH2.imagePath,
+      imageAlt: FLYING_BH2.imageAlt,
       headerH1: `Professional Pilot<br>Program`,
       paragraph: `This all-in-one training program is designed for students with no prior aviation experience. In just 10 months, you’ll earn all the certificates and ratings you need to start your career as a professional helicopter pilot.`,
       buttons: [
@@ -92,8 +97,8 @@ const professionalPilotProgram = {
       prices: programPrices,
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "",
+        imagePath: FLYING_WHITE_HELI8.imagePath,
+        imageAlt: FLYING_WHITE_HELI8.imageAlt,
         title: "Train from Zero to Career-Ready Pilot",
         description:
           "Launch your aviation career with our structured PPP course. From first flight to your first job, we’ll guide you every step of the way.",

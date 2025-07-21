@@ -1,6 +1,11 @@
 import { COMPANY_NAME } from "../../../consts";
 import { cfiiRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
+import {
+  HELICOPTER_INSTRUMENTS,
+  HELICOPTER_INSTRUMENTS2,
+} from "../../../constsImages"
+
 const cfiiCourse = {
   data: {
     slug: "certified-flight-instructor-instrument",
@@ -12,9 +17,8 @@ const cfiiCourse = {
     // Top Header
     header: {
       badges: ["CFII"],
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt:
-        "Flight instructor training a student in helicopter IFR procedures",
+      imagePath: HELICOPTER_INSTRUMENTS2.imagePath,
+      imageAlt: HELICOPTER_INSTRUMENTS2.imageAlt,
       headerH1: `Certified Flight Instructor<br>Instrument`,
       paragraph: `Take the next step in your instructional career by adding an Instrument Instructor rating to your credentials. Our CFII course prepares you to teach instrument flying in helicopters, increasing your employability and deepening your technical skillset.`,
       buttons: [
@@ -85,8 +89,8 @@ const cfiiCourse = {
       },
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "",
+        imagePath: HELICOPTER_INSTRUMENTS.imagePath,
+        imageAlt: HELICOPTER_INSTRUMENTS.imageAlt,
         title: "Elevate Your Teaching and Career",
         description:
           "With your CFII rating, you’ll be able to help students master one of the most critical skills in aviation—instrument flight. Start your upgrade today.",

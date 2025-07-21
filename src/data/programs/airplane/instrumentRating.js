@@ -1,6 +1,12 @@
 import { COMPANY_NAME } from "../../../consts";
 import { irFw as programPrices} from "../../../flightTrainingProgramsPrices";
 
+import { 
+  ALTO_NG_PANEL,
+  DIRECTFLY_ALTONG_PANEL_USATS,
+} from "../../../constsImages";
+
+
 const instrumentRating = {
   data: {
     slug: "instrument-rating",
@@ -12,8 +18,8 @@ const instrumentRating = {
     // Top Header
     header: {
       badges: ["Part 141", "IR"],
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "Pilot training with flight instruments in a Cessna cockpit",
+      imagePath: DIRECTFLY_ALTONG_PANEL_USATS.imagePath,
+      imageAlt: DIRECTFLY_ALTONG_PANEL_USATS.imageAlt,
       headerH1: `Instrument <br>RATING</span>`,
       paragraph: `Elevate your piloting skills with the Instrument Rating (IR) program. Learn to navigate and fly in reduced visibility using advanced instrument techniques in a structured Part 141 environment.`,
       buttons: [
@@ -89,8 +95,8 @@ const instrumentRating = {
       },
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "",
+        imagePath: ALTO_NG_PANEL.imagePath,
+        imageAlt: ALTO_NG_PANEL.imageAlt,
         title: "Expand Your Flight Horizon",
         description:
           "Master the skills to fly in a wider range of conditions with our Instrument Rating program. Take your next step toward becoming a safer and more capable pilot.",

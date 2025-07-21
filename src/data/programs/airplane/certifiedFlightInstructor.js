@@ -1,6 +1,12 @@
 import { COMPANY_NAME } from "../../../consts";
 import { cfiFw as programPrices} from "../../../flightTrainingProgramsPrices";
 
+import { 
+  DIRECTFLY_ALTONG_BLUE_USATS_RAMP_WEBP,
+  CESSNA_AND_ALTO,
+} from "../../../constsImages";
+
+
 const certifiedFlightInstructor = {
   data: {
     slug: "certified-flight-instructor",
@@ -12,8 +18,8 @@ const certifiedFlightInstructor = {
     // Top Header
     header: {
       badges: ["Part 61", "CFI"],
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt: "Certified Flight Instructor in a training aircraft",
+      imagePath: DIRECTFLY_ALTONG_BLUE_USATS_RAMP_WEBP.imagePath,
+      imageAlt: DIRECTFLY_ALTONG_BLUE_USATS_RAMP_WEBP.imageAlt,
       headerH1: `Certified <br>FLIGHT INSTRUCTOR</span>`,
       paragraph: `Turn your flight experience into a teaching career with our Certified Flight Instructor (CFI) course. Learn how to train and inspire the next generation of pilots in a Part 61 setting.`,
       buttons: [
@@ -89,8 +95,8 @@ const certifiedFlightInstructor = {
       prices: programPrices,
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "",
+        imagePath: CESSNA_AND_ALTO.imagePath,
+        imageAlt: CESSNA_AND_ALTO.imageAlt,
         title: "Start Instructing the Future of Aviation",
         description:
           "Take the next step in your aviation journey and help others begin theirs. Our CFI program equips you to teach, lead, and thrive as a professional flight instructor.",
