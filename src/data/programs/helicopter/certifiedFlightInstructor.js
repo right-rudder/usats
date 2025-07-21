@@ -1,6 +1,11 @@
 import { COMPANY_NAME } from "../../../consts";
 import { cfiRw as programPrices} from "../../../flightTrainingProgramsPrices";
 
+import {
+  WHITE_BLUE_ROBINSON_R44_USATS_RAMP,
+  USATS_BANNER_APPLICATION,
+} from "../../../constsImages"
+
 const cfiCourse = {
   data: {
     slug: "certified-flight-instructor",
@@ -12,9 +17,8 @@ const cfiCourse = {
     // Top Header
     header: {
       badges: ["CFI"],
-      imagePath: "/src/assets/placeholder.webp",
-      imageAlt:
-        "Certified flight instructor guiding a student in helicopter controls",
+      imagePath: WHITE_BLUE_ROBINSON_R44_USATS_RAMP.imagePath,
+      imageAlt: WHITE_BLUE_ROBINSON_R44_USATS_RAMP.imageAlt,
       headerH1: `Certified Flight<br>Instructor`,
       paragraph: `The most common path to a commercial flying career starts with becoming a Certified Flight Instructor. Build flight time, refine your skills, and pass on your knowledge in a rewarding and challenging role. Our CFI program is designed to turn experienced pilots into excellent teachers and mentors.`,
       buttons: [
@@ -86,8 +90,8 @@ const cfiCourse = {
       },
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "",
+        imagePath: USATS_BANNER_APPLICATION.imagePath,
+        imageAlt: USATS_BANNER_APPLICATION.imageAlt,
         title: "Ready to Launch Your Flying Career?",
         description:
           "Our Certified Flight Instructor course gives you the tools to succeed as a teacher, mentor, and professional pilot. Get started on the path to becoming a respected aviation leader.",
