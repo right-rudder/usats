@@ -277,7 +277,7 @@ export const FLYING_WHITE_HELI5 = {
 };
 export const FLYING_WHITE_HELI6 = {
   imagePath: "/src/assets/flyingWhiteHeli6.png",
-  imageAlt: " ",
+  imageAlt: "Black helicopter in flight over Florida landscape during pilot training at USATS",
 };
 export const FLYING_WHITE_HELI7 = {
   imagePath: "/src/assets/flyingWhiteHeli7.png",
@@ -296,8 +296,8 @@ export const HAPPY_LANDINGS_ALO_NG = {
   imageAlt: " ",
 };
 export const HELICOPTERS_FRAME = {
-  imagePath: "/src/assets/helicoptersFrame.png",
-  imageAlt: " ",
+  imagePath: "/src/assets/heli-helicopter-training-florida.png",
+  imageAlt: "Helicopters frame showcasing various helicopter models used for training at USATS",
 };
 export const HUFFSTETTER_PIC = {
   imagePath: "/src/assets/Huffstetter-pic.webp",
@@ -455,4 +455,12 @@ export const WHITE_BLUE_ROBINSON_R44_USATS_RAMP = {
 export const WHITE_SCHWEIZER_S300_USATS_RAMP_USATS = {
   imagePath: "/src/assets/White_Schweizer_S300_Usats_Ramp_USATS.webp",
   imageAlt: " ",
+};
+export const HELICOPTER_INSTRUMENTS = {
+  imagePath: "/src/assets/heli-instruments-helicopter-training-florida.jpg",
+  imageAlt: "Helicopter instruments panel used for flight training at USATS",
+};
+export const HELICOPTER_INSTRUMENTS2 = {
+  imagePath: "/src/assets/heli-instruments-helicopter-training-titusville-florida-2.jpg",
+  imageAlt: "Helicopter instruments panel with advanced avionics for pilot training at USATS",
 };
