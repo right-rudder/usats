@@ -1,5 +1,9 @@
 import { COMPANY_NAME } from "../../../consts";
 import { pppFw as programPrices} from "../../../flightTrainingProgramsPrices";
+import { 
+  CESSNA_172_USATS_RAMP_WEBP as cessnaRamp,
+  DIRECTFLY_ALTONG_RED_FLYING_OVER_CITY_USATS,
+} from "../../../constsImages";
 
 const professionalPilotProgram = {
   data: {
@@ -12,7 +16,7 @@ const professionalPilotProgram = {
     // Top Header
     header: {
       badges: ["Part 141/61", "PPL", "IR", "CPL", "CFI", "CFII"],
-      imagePath: "/src/assets/placeholder.webp",
+      imagePath: DIRECTFLY_ALTONG_RED_FLYING_OVER_CITY_USATS.imagePath,
       imageAlt:
         "Students training under sunny Florida skies at US Aviation Training Solutions",
       headerH1: `Professional Pilot <br>PROGRAM</span>`,
@@ -108,8 +112,8 @@ const professionalPilotProgram = {
       },
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
-        imageAlt: "",
+        imagePath: cessnaRamp.imagePath,
+        imageAlt: cessnaRamp.imageAlt,
         title: "Launch Your Aviation Career in Just 12 Months",
         description:
           "Whether you're pursuing a career as a commercial pilot or flight instructor, our Professional Pilot Program gives you the training, credentials, and confidence to take off.",
