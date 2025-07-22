@@ -64,14 +64,14 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
               type="text"
               name="first-name"
               placeholder="Your first name"
-              class="px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60"
+              class="px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60 text-black"
               required
             />
             <input
               type="text"
               name="last-name"
               placeholder="Your last name"
-              class="px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60"
+              class="px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60 text-black"
               required
             />
           </div>
@@ -82,20 +82,20 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
               type="email"
               name="email"
               placeholder="Your email"
-              class="px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60"
+              class="px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60 text-black"
               required
             />
             <input
               type="email"
               name="confirm-email"
               placeholder="Confirm email"
-              class="hidden px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60"
+              class="hidden px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60 text-black"
             />
             <input
               type="tel"
               name="phone"
               placeholder="Your phone number"
-              class="px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60"
+              class="px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60 text-black"
               required
             />
           </div>
@@ -235,7 +235,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
             required
             name="message"
             placeholder="Your message"
-            class="px-5 py-4 outline-1 border-primary-100border outline-gray-500 min-h-48 placeholder:text-primary/60"
+            class="px-5 py-4 outline-1 border-primary-100border outline-gray-500 min-h-48 placeholder:text-primary/60 text-black text-black"
           ></textarea>
 
           <div class="flex gap-3">
@@ -594,6 +594,22 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
       });
     });
   </script>
-
+  <!-- Prevent Multiple Submissions  -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          const submitBtn = form.querySelector<HTMLButtonElement>(
+            "button[type='submit']",
+          );
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Submitting...";
+          }
+        });
+      }
+    });
+  </script>
   <script src="../scripts/emailValidation.js"></script>
 </BaseLayout>
