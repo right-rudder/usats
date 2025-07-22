@@ -507,6 +507,23 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
     });
   });
 </script>
+<!-- Prevent Multiple Submissions  -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        const submitBtn = form.querySelector<HTMLButtonElement>(
+          "button[type='submit']",
+        );
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerText = "Submitting...";
+        }
+      });
+    }
+  });
+</script>
 
 <style>
   .ohno {
