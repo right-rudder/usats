@@ -44,6 +44,18 @@ if (!images[content.imagePath]) {
         </div>
       )
     }
+    {
+      content.logo && (
+        <div>
+          <Image
+            src={images[content.logo]()}
+            alt={content.logoAlt}
+            width={250}
+            class=""
+          />
+        </div>
+      )
+    }
     <h1
       class="text-4xl md:text-5xl lg:text-6xl max-w-6xl drop-shadow-lg xl:text-7xl text-center font-bold uppercase tracking-wide text-gray-100 animate-slow-fade"
       set:html={content.headerH1}
