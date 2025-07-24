@@ -464,3 +464,7 @@ export const HELICOPTER_INSTRUMENTS2 = {
   imagePath: "/src/assets/heli-instruments-helicopter-training-titusville-florida-2.jpg",
   imageAlt: "Helicopter instruments panel with advanced avionics for pilot training at USATS",
 };
+export const MAINTENANCE_LOGO_141 = {
+  imagePath: "/src/assets/Part-145-Repair-Station-Logo.webp",
+  imageAlt: "Part 141 Repair Station logo for USATS maintenance services",
+};
