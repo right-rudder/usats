@@ -2,18 +2,21 @@ import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
 import {  MILITARY_TRAINING_BH9 as imgCTA,
           DARK_BLUE_HELI_MAINTENANCE2 as imgHeader,
           DIRECTFLY_ALTONG_PANEL_2 as imgMaintenance,
+          MAINTENANCE_LOGO_141
  } from "../../constsImages";
 
 const maintenanceServices = {
-  pageTitle: `Why Choose USATS? | ${COMPANY_NAME}`,
+  pageTitle: `Helicopter & Airplane Maintenance Services | ${COMPANY_NAME}`,
   pageDescription:
-    "",
+    "Explore expert aircraft maintenance services at USATS, an FAA-certified 145 Repair Station and Authorized Robinson Service Center. We offer scheduled and unscheduled maintenance for Robinson, Schweizer, Bell, Cessna, and more. Contact us for aircraft repairs, parts, and inspections.",
   pageKeywords:
-    "",
+    "USATS maintenance, aircraft maintenance, Robinson service center, FAA repair station, helicopter maintenance, airplane inspections, 145 maintenance, Part 43 maintenance, aviation repair Titusville, helicopter repair Florida, Cessna 172 maintenance, Schweizer repair, UH-60 maintenance, Bell 206 repairs",
 
   // Top Header
   header: {
     stars: true,
+    logo: MAINTENANCE_LOGO_141.imagePath,
+    logoAlt: MAINTENANCE_LOGO_141.imageAlt,
     imagePath: imgHeader.imagePath,
     imageAlt: imgHeader.imageAlt,
     headerH1: `REPAIR TODAY <br> WITH ${COMPANY_NICKNAME}`,
