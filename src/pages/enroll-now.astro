@@ -78,13 +78,23 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
             placeholder="Confirm email"
             class="hidden px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 text-black"
           />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Your phone number"
-            class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 text-black"
-            required
-          />
+          <div class="flex w-full">
+            <select
+              id="country-code-select"
+              name="country-code"
+              class="bg-gray-50 border border-r-0 border-gray-400 text-gray-900 text-sm focus:ring-accent-500 focus:border-accent-500 block p-2.5 outline-gray-500"
+            >
+              <!-- Options populated by JS -->
+            </select>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Your phone number"
+              class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 text-black"
+              required
+            />
+          </div>
         </div>
         <!-- Aircraft type -->
         <fieldset
@@ -269,6 +279,29 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
   </section>
 
   <script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
+    const countryCodes = [
+      { name: "USA (+1)", value: "+1" },
+      { name: "UK (+44)", value: "+44" },
+      { name: "Canada (+1)", value: "+1" },
+      { name: "Australia (+61)", value: "+61" },
+      { name: "Germany (+49)", value: "+49" },
+      { name: "France (+33)", value: "+33" },
+      { name: "India (+91)", value: "+91" },
+      { name: "Brazil (+55)", value: "+55" },
+      // Add more countries as needed. A comprehensive list can be sourced from a JSON file for better maintainability.
+    ];
+
+    function populateCountryCodes() {
+      const select = document.getElementById("country-code-select");
+      if (!select) return;
+      countryCodes.forEach((country) => {
+        const option = document.createElement("option");
+        option.value = country.value;
+        option.textContent = country.name;
+        select.appendChild(option);
+      });
+      select.value = "+1"; // Default to USA
+    }
     const trainingPrograms = {
       Airplane: [
         { value: "private-pilot-license", text: "Private Pilot License" },
@@ -395,6 +428,8 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
       );
     }
     document.addEventListener("DOMContentLoaded", () => {
+      populateCountryCodes();
+
       const aircraftTypeRadios = document.querySelectorAll(
         'input[name="aircraft-type"]',
       );
@@ -433,6 +468,23 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
         enrollmentForm.addEventListener("submit", async (event) => {
           event.preventDefault();
           const formData = new FormData(enrollmentForm);
+
+          // Phone number validation
+          const countryCode = formData.get("country-code");
+          const phoneInput = formData.get("phone");
+          // This regex checks for a sequence of 7 to 15 digits, allowing for common phone number lengths internationally.
+          // It strips out common characters like spaces, dashes, and parentheses before validation.
+          const phoneRegex = /^\d{7,15}$/;
+          const sanitizedPhone = phoneInput.replace(/[\s-()]/g, "");
+
+          if (!phoneInput || !phoneRegex.test(sanitizedPhone)) {
+            alert(
+              "Please enter a valid phone number (7-15 digits). Do not include the country code in this field.",
+            );
+            document.getElementById("phone")?.focus();
+            return;
+          }
+
           const aircraftType = formData.get("aircraft-type");
 
           if (!aircraftType) {
@@ -481,33 +533,44 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 
           enrollmentForm.action = ENROLLMENT_FORM_WEBHOOK_URL;
 
+          const fullPhoneNumber = `${countryCode}${sanitizedPhone}`;
           const webhookURL = ENROLLMENT_FORM_WEBHOOK_URL;
           const apiKey = PORTAL_API_KEY;
 
-          const urlEncodedBody = new URLSearchParams(formData).toString();
+          // Build body for GHL webhook
+          const ghlFormData = new URLSearchParams();
+          for (const [key, value] of formData.entries()) {
+            if (key !== "country-code" && key !== "phone") {
+              ghlFormData.append(key, value);
+            }
+          }
+          ghlFormData.append("phone", fullPhoneNumber);
+          const urlEncodedBody = ghlFormData.toString();
 
+          // Build body for Portal API
           const excludedFields = [
             "first-name",
             "last-name",
             "email",
             "phone",
+            "country-code",
             "confirm-email",
             "agree-data-collection",
           ];
 
           const metadata = {};
-
           for (const [key, value] of formData.entries()) {
             if (!excludedFields.includes(key)) {
               metadata[key] = value?.trim?.() ?? value;
             }
           }
+          metadata["country-code"] = countryCode; // Keep country code in metadata
 
           const jsonBody = {
             first_name: formData.get("first-name")?.trim() || "",
             last_name: formData.get("last-name")?.trim() || "",
             email: formData.get("email")?.trim() || "",
-            phone: formData.get("phone")?.trim() || "",
+            phone: fullPhoneNumber,
             campaign: "enrollment",
             account_random_id: "ac_ad4sxcg0",
             metadata: metadata,
