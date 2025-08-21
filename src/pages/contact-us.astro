@@ -5,6 +5,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { TfiEmail } from "react-icons/tfi";
 import contact from "../data/contact";
 import { COMPANY_NAME } from "../consts";
+import { countryPhoneCodes } from "../data/countriesPhone.js";
 
 const { data } = contact;
 
@@ -91,9 +92,25 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
               placeholder="Confirm email"
               class="hidden px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60 text-black"
             />
+          </div>
+          <div class="flex w-full">
+            <select
+              id="country-code"
+              name="country-code"
+              autocomplete="tel-country-code"
+              class="w-1/3 px-2 py-4 outline-1 border-primary-100border outline-gray-500 text-black bg-white"
+            >
+              {
+                countryPhoneCodes.map((country) => (
+                  <option value={country.value}>{country.name}</option>
+                ))
+              }
+            </select>
             <input
               type="tel"
-              name="phone"
+              name="phone-number"
+              id="phone-number"
+              autocomplete="tel-national"
               placeholder="Your phone number"
               class="px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60 text-black"
               required
@@ -529,11 +546,16 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 
         const urlEncodedBody = new URLSearchParams(formData).toString();
 
+        const countryCode = formData.get("country-code");
+        const phoneNumber = formData.get("phone-number");
+        const fullPhoneNumber = `${countryCode}${phoneNumber?.trim() || ""}`;
+
         const excludedFields = [
           "first-name",
           "last-name",
           "email",
-          "phone",
+          "phone-number",
+          "country-code",
           "confirm-email",
           "agree-data-collection",
         ];
@@ -550,7 +572,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
           first_name: formData.get("first-name")?.trim() || "",
           last_name: formData.get("last-name")?.trim() || "",
           email: formData.get("email")?.trim() || "",
-          phone: formData.get("phone")?.trim() || "",
+          phone: fullPhoneNumber,
           campaign: "contact_us",
           account_random_id: "ac_ad4sxcg0",
           metadata: metadata,
