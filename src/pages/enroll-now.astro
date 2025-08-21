@@ -79,23 +79,26 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
             placeholder="Confirm email"
             class="hidden px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 text-black"
           />
-          <div class="flex w-full">
-            <select
-              id="country-code-select"
-              name="country-code"
-              class="bg-gray-50 border border-r-0 border-gray-400 text-gray-900 text-sm focus:ring-accent-500 focus:border-accent-500 block p-2.5 outline-gray-500"
-            >
-              <!-- Options populated by JS -->
-            </select>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Your phone number"
-              class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 text-black"
-              required
-            />
-          </div>
+        </div>
+
+        <!-- International Phone -->
+
+        <div class="flex w-full">
+          <select
+            id="country-code-select"
+            name="country-code"
+            class="bg-gray-50 border border-r-0 border-gray-400 text-gray-900 text-sm focus:ring-accent-500 focus:border-accent-500 block p-2.5 outline-gray-500"
+          >
+            <!-- Options populated by JS -->
+          </select>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Your phone number"
+            class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 text-black"
+            required
+          />
         </div>
         <!-- Aircraft type -->
         <fieldset
