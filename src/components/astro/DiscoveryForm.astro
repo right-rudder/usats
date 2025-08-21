@@ -1,4 +1,5 @@
 ---
+import { countryPhoneCodes } from "../../data/countriesPhone.js";
 const PUBLIC_DISCOVERY_FORM_WEBHOOK_URL = import.meta.env
   .PUBLIC_DISCOVERY_FORM_WEBHOOK_URL;
 const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
@@ -57,16 +58,36 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
       </label>
     </p>
     <div class="sm:col-span-2">
-      <div class="relative mt-2.5">
-        <input
-          type="tel"
-          name="phone-number"
-          id="phone-number"
-          autocomplete="tel"
-          placeholder="Phone Number"
-          required
-          class="block w-full py-2 text-muted-200 shadow-sm ring-inset ring-gray-300 placeholder:text-gray-300 bg-transparent border-b-[1px] border-gray-300 sm:text-sm sm:leading-6 outline-none"
-        />
+      <div class="mt-2.5 flex items-end">
+        <div class="mr-4">
+          <label for="country-code" class="sr-only">Country Code</label>
+          <select
+            id="country-code"
+            name="country-code"
+            autocomplete="tel-country-code"
+            class="block py-2 text-muted-200 shadow-sm ring-inset ring-gray-300 placeholder:text-gray-300 bg-transparent border-b-[1px] border-gray-300 sm:text-sm sm:leading-6 outline-none"
+          >
+            {
+              countryPhoneCodes.map((country) => (
+                <option class="bg-accent-900" value={country.value}>
+                  {country.name}
+                </option>
+              ))
+            }
+          </select>
+        </div>
+        <div class="relative w-full">
+          <label for="phone-number" class="sr-only">Phone Number</label>
+          <input
+            type="tel"
+            name="phone-number"
+            id="phone-number"
+            autocomplete="tel-national"
+            placeholder="Phone Number"
+            required
+            class="block w-full py-2 text-muted-200 shadow-sm ring-inset ring-gray-300 placeholder:text-gray-300 bg-transparent border-b-[1px] border-gray-300 sm:text-sm sm:leading-6 outline-none"
+          />
+        </div>
       </div>
     </div>
 
@@ -361,13 +382,18 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 
         const urlEncodedBody = new URLSearchParams(formData).toString();
 
+        const countryCode = formData.get("country-code");
+        const phoneNumber = formData.get("phone-number");
+        const fullPhoneNumber = `${countryCode}${phoneNumber?.trim() || ""}`;
+
         const excludedFields = [
           "first-name",
           "last-name",
           "email",
-          "phone",
+          "phone-number",
+          "country-code",
           "confirm-email",
-          "agree-data-collection",
+          "agree-terms",
         ];
 
         const metadata = {};
@@ -382,7 +408,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
           first_name: formData.get("first-name")?.trim() || "",
           last_name: formData.get("last-name")?.trim() || "",
           email: formData.get("email")?.trim() || "",
-          phone: formData.get("phone")?.trim() || "",
+          phone: fullPhoneNumber,
           campaign: "discovery-flight",
           account_random_id: "ac_ad4sxcg0",
           metadata: metadata,
