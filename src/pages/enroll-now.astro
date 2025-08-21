@@ -2,6 +2,7 @@
 import Header from "../components/astro/Header.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../consts";
+import { countryPhoneCodes } from "../data/countriesPhone.js";
 const headerData = {
   headerH1: "START TODAY",
   imagePath: "/src/assets/placeholder.webp",
@@ -278,17 +279,15 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
     </div>
   </section>
 
-  <script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
-    const countryCodes = [
+  <script
+    define:vars={{
+      ENROLLMENT_FORM_WEBHOOK_URL,
+      PORTAL_API_KEY,
+      countryPhoneCodes,
+    }}
+  >
+    const countryCodes = countryPhoneCodes || [
       { name: "USA (+1)", value: "+1" },
-      { name: "UK (+44)", value: "+44" },
-      { name: "Canada (+1)", value: "+1" },
-      { name: "Australia (+61)", value: "+61" },
-      { name: "Germany (+49)", value: "+49" },
-      { name: "France (+33)", value: "+33" },
-      { name: "India (+91)", value: "+91" },
-      { name: "Brazil (+55)", value: "+55" },
-      // Add more countries as needed. A comprehensive list can be sourced from a JSON file for better maintainability.
     ];
 
     function populateCountryCodes() {
