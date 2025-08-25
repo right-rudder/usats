@@ -78,7 +78,7 @@ const aboutUs = {
     ],
     images: {
       h60: {
-        imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
+        imagePath: "/src/assets/UH-60_Black_Hawk_1.webp", // change-black-hawk-image
         imageAlt: "UH-60 Black Hawk Flying",
       },
       hdx1200: {

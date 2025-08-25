@@ -1,32 +1,33 @@
-import {  ALTO_8A as imgHeader, 
-          STAFF_PHOTO_BRIAN_CRADDOCK as staffBrian, 
-          STAFF_PHOTO_HESSE_HELICOPTER_INSTRUCTOR as staffHessHeliInstructor, 
-          STAFF_PHOTO_RAY_DEPTULA as staffRay, 
-          STAFF_PHOTO_STEPHANE_REBEIX as staffStephane,
-         } from "../../constsImages"
+import {
+  ALTO_8A as imgHeader,
+  STAFF_PHOTO_BRIAN_CRADDOCK as staffBrian,
+  STAFF_PHOTO_HESSE_HELICOPTER_INSTRUCTOR as staffHessHeliInstructor,
+  STAFF_PHOTO_RAY_DEPTULA as staffRay,
+  STAFF_PHOTO_STEPHANE_REBEIX as staffStephane,
+} from "../../constsImages";
 
-const ourTeam = { 
-    header: {
-      stars: true,
-      imagePath: imgHeader.imagePath,
-      imageAlt: imgHeader.imageAlt,
-      headerH1: `The USATS Team`,
-      paragraph:
-        "At USATS, our instructors are more than just experienced pilots — they’re passionate mentors, dedicated guides, and aviation professionals committed to your success. Discover the team that makes USATS a trusted, community-focused flight training center.",
-      buttons: [
-        {
-          name: "Meet our Team",
-          link: "#staff-grid",
-          primary: false,
-        },
-      ],
-    },
+const ourTeam = {
+  header: {
+    stars: true,
+    imagePath: imgHeader.imagePath,
+    imageAlt: imgHeader.imageAlt,
+    headerH1: `The USATS Team`,
+    paragraph:
+      "At USATS, our instructors are more than just experienced pilots — they’re passionate mentors, dedicated guides, and aviation professionals committed to your success. Discover the team that makes USATS a trusted, community-focused flight training center.",
+    buttons: [
+      {
+        name: "Meet our Team",
+        link: "#staff-grid",
+        primary: false,
+      },
+    ],
+  },
 
-    staffGrid: {
+  staffGrid: {
     upperHeading: "Meet Our Team",
     heading: "Our Leadership Team",
     description:
-      "The leadership team at USATS brings decades of aviation expertise from military, commercial, and FAA training backgrounds. With 30+ years of shaping pilots from 120+ countries—and a fleet spanning Cessna 172s to UH-60 Black Hawks—we’re committed to delivering world-class flight education with precision, safety, and a focus on your success",
+      "The leadership team at USATS brings decades of aviation expertise from military, commercial, and FAA training backgrounds. With 30+ years of shaping pilots from 120+ countries—and a fleet spanning Cessna 172s to helicopters. We’re committed to delivering world-class flight education with precision, safety, and a focus on your success",
     members: [
       {
         name: "Ray Deptula",
@@ -65,6 +66,6 @@ const ourTeam = {
       },
     ],
   },
-}
+};
 
-export default ourTeam
+export default ourTeam;

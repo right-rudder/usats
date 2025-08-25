@@ -145,7 +145,7 @@ const internationalStudentsPage = {
         {
           question: "Why choose USATS for pilot training in Florida?",
           answer:
-            "USATS is a globally recognized military aviation leader with 30+ years of training elite pilots, offering FAA + NATO-certified programs on combat-proven platforms like the UH-60 Black Hawk—all with 320+ annual flying days and a 38-acre tactical training complex. Our Titusville location provides ideal flying conditions year-round on Florida's Space Coast.",
+            "USATS is a globally recognized military aviation leader with 30+ years of training elite pilots, offering FAA + NATO-certified programs on combat-proven platforms with 320+ annual flying days and a 38-acre tactical training complex. Our Titusville location provides ideal flying conditions year-round on Florida's Space Coast.",
         },
         {
           question: "What can I expect from USATS flight training programs?",
