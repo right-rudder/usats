@@ -500,73 +500,25 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
         event.preventDefault();
 
         const formData = new FormData(form);
-        const isInterestedInTraining =
-          formData.get("interest-flight-training") === "yes";
 
-        if (isInterestedInTraining) {
-          const aircraftType = formData.get("aircraft-type");
-          if (!aircraftType) {
-            alert("Please select an aircraft type.");
-            document.getElementById("airplane-type")?.focus(); // Focus first aircraft type radio
-            return;
-          }
+        // combine phone
+        const countryCode = formData.get("country-code")?.trim() || "";
+        const phoneNumber = formData.get("phone-number")?.trim() || "";
+        const fullPhoneNumber = `${countryCode}${phoneNumber}`;
 
-          let programInterestValid = true;
-          if (aircraftType === "Airplane" || aircraftType === "Both") {
-            if (!formData.get("airplane-interest")) {
-              alert("Please select your Airplane program interest.");
-              document
-                .querySelector(
-                  '#airplane-program-options-container input[type="radio"]',
-                )
-                ?.focus();
-              programInterestValid = false;
-            }
-          }
-          if (aircraftType === "Helicopter" || aircraftType === "Both") {
-            if (!formData.get("helicopter-interest")) {
-              alert("Please select your Helicopter program interest.");
-              document
-                .querySelector(
-                  '#helicopter-program-options-container input[type="radio"]',
-                )
-                ?.focus();
-              programInterestValid = false;
-            }
-          }
-          if (!programInterestValid) {
-            return;
-          }
-        }
+        // replace phone fields
+        formData.delete("country-code");
+        formData.delete("phone-number");
+        formData.append("phone", fullPhoneNumber);
+
         const confirmEmail = formData.get("confirm-email")?.trim();
-        if (confirmEmail) return;
+        if (confirmEmail) return; // honeypot check
 
         const webhookURL = CONTACT_US_FORM_WEBHOOK_URL;
         const apiKey = PORTAL_API_KEY;
 
+        // now the urlencoded body contains `phone` only
         const urlEncodedBody = new URLSearchParams(formData).toString();
-
-        const countryCode = formData.get("country-code");
-        const phoneNumber = formData.get("phone-number");
-        const fullPhoneNumber = `${countryCode}${phoneNumber?.trim() || ""}`;
-
-        const excludedFields = [
-          "first-name",
-          "last-name",
-          "email",
-          "phone-number",
-          "country-code",
-          "confirm-email",
-          "agree-data-collection",
-        ];
-
-        const metadata = {};
-
-        for (const [key, value] of formData.entries()) {
-          if (!excludedFields.includes(key)) {
-            metadata[key] = value?.trim?.() ?? value;
-          }
-        }
 
         const jsonBody = {
           first_name: formData.get("first-name")?.trim() || "",
@@ -575,16 +527,28 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
           phone: fullPhoneNumber,
           campaign: "contact_us",
           account_random_id: "ac_ad4sxcg0",
-          metadata: metadata,
+          metadata: {},
         };
+
+        const excludedFields = [
+          "first-name",
+          "last-name",
+          "email",
+          "phone",
+          "confirm-email",
+          "agree-data-collection",
+        ];
+        for (const [key, value] of formData.entries()) {
+          if (!excludedFields.includes(key)) {
+            jsonBody.metadata[key] = value?.trim?.() ?? value;
+          }
+        }
 
         try {
           const [ghlRes, portalRes] = await Promise.all([
             fetch(webhookURL, {
               method: "POST",
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-              },
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
               body: urlEncodedBody,
             }),
             fetch("https://portal.rightruddermarketing.com/api/leads", {
@@ -609,10 +573,6 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
         } catch (err) {
           console.error("Submission error:", err);
         }
-        // Initial state: hide conditional fields
-        toggleFlightTrainingSpecificFields(false);
-        // Ensure submit button is disabled initially if checkbox isn't checked
-        submitButton.disabled = !checkbox.checked;
       });
     });
   </script>
