@@ -5,90 +5,146 @@ import { IMG_2891 as imgCard4 } from "../../constsImages";
 const { content } = Astro.props;
 ---
 
-<div class="overflow-hidden bg-primary-900 py-24 sm:py-32 px-10 md:px-20 lg:px-30">
-    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-      <div class="max-w-4xl">
-        <p class="text-base/7 font-semibold text-muted-900">About us</p>
-        <h1 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-accent-800 sm:text-5xl">{content.title}</h1>
-        <p class="mt-6 text-xl/8 text-balance text-muted-200">{content.paragraph}</p>
-      </div>
-      <section class="mt-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
-        
-        <!-- Text -->
-        <div class="lg:pr-8">
-          { content.bullets && content.bullets.map((bullet) => (
-            <div class="pb-10 last:pb-0">
-              <h2 class="text-2xl font-semibold tracking-tight text-pretty text-accent-600">{bullet.title}</h2>
-              {bullet.description.map((description) => (
+<div
+  class="overflow-hidden bg-primary-900 py-24 sm:py-32 px-10 md:px-20 lg:px-30"
+>
+  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    <div class="max-w-4xl">
+      <p class="text-base/7 font-semibold text-muted-900">About us</p>
+      <h1
+        class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-accent-800 sm:text-5xl"
+      >
+        {content.title}
+      </h1>
+      <p class="mt-6 text-xl/8 text-balance text-muted-200">
+        {content.paragraph}
+      </p>
+    </div>
+    <section
+      class="mt-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16"
+    >
+      <!-- Text -->
+      <div class="lg:pr-8">
+        {
+          content.bullets &&
+            content.bullets.map((bullet) => (
+              <div class="pb-10 last:pb-0">
+                <h2 class="text-2xl font-semibold tracking-tight text-pretty text-accent-600">
+                  {bullet.title}
+                </h2>
+                {bullet.description.map((description) => (
                   <p class="mt-6 text-base/7 text-muted-200">{description}</p>
-              ))}
-            </div>
-          ))}
-        </div>
-        
-        <!-- Image Grid -->
-        <div class="pt-32 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:-mr-16 xl:mr-auto">
-          <div class="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
-            <div class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 ">
-                <ImageComp
-                    imagePath={content.images.h60.imagePath}
-                    imageAlt={content.images.h60.imageAlt}
-                    loading={"lazy"}
-                    styles="w-full h-full object-cover object-top group-hover:scale-110 group-hover:shadow-lg group-hover:brightness-110 duration-300 ease-in-out"
-                />
-            </div>
-            <div class="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
-                <ImageComp
-                    imagePath={content.images.hdx1200.imagePath}
-                    imageAlt={content.images.hdx1200.imageAlt}
-                    loading={"lazy"}
-                    styles="block size-full object-cover"
-                />
-            </div>
-            <div class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-                <ImageComp
-                    imagePath= {imgCard4.imagePath}
-                    imageAlt={imgCard4.imageAlt}
-                    loading={"lazy"}
-                    styles="block size-full object-cover"
-                />
-            </div>
-            <div class="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
-                <ImageComp
-                    imagePath={content.images.s300.imagePath}
-                    imageAlt={content.images.s300.imageAlt}
-                    loading={"lazy"}
-                    styles="block size-full object-cover"
-                />
-            </div>
+                ))}
+              </div>
+            ))
+        }
+      </div>
+
+      <!-- Image Grid -->
+      <div
+        class="pt-32 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:-mr-16 xl:mr-auto"
+      >
+        <div
+          class="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8"
+        >
+          <div
+            class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10"
+          >
+            <ImageComp
+              imagePath={content.images.cesna172.imagePath}
+              imageAlt={content.images.cesna172.imageAlt}
+              loading={"lazy"}
+              styles="w-full h-full object-cover object-top group-hover:scale-110 group-hover:shadow-lg group-hover:brightness-110 duration-300 ease-in-out"
+            />
           </div>
+          <div
+            class="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-40"
+          >
+            <ImageComp
+              imagePath={content.images.hdx1200.imagePath}
+              imageAlt={content.images.hdx1200.imageAlt}
+              loading={"lazy"}
+              styles="block size-full object-cover"
+            />
+          </div>
+          <div
+            class="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10"
+          >
+            <ImageComp
+              imagePath={imgCard4.imagePath}
+              imageAlt={imgCard4.imageAlt}
+              loading={"lazy"}
+              styles="block size-full object-cover"
+            />
+          </div>
+          <div
+            class="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-40"
+          >
+            <ImageComp
+              imagePath={content.images.s300.imagePath}
+              imageAlt={content.images.s300.imageAlt}
+              loading={"lazy"}
+              styles="block size-full object-cover"
+            />
+          </div>
+        </div>
 
         <!-- Numbers -->
-          <div class="pt-20">
-            <p class="text-base/7 font-semibold text-muted-700">THE NUMBERS</p>
-            <hr class="mt-6 border-t border-primary-500">
-            <dl class="mt-1 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
-              <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
-                <dt class="text-sm/6 text-muted-200">Students from 120 countries</dt>
-                <dd class="order-first text-6xl font-semibold tracking-tight text-accent-700">+120</dd>
-              </div>
-              <div class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
-                <dt class="text-sm/6 text-muted-200">Thousands of students graduated</dt>
-                <dd class="order-first text-6xl font-semibold tracking-tight text-accent-700">+3000</dd>
-              </div>
-              <div class="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4">
-                <dt class="text-sm/6 text-muted-200">"A diverse fleet of airplanes and helicopters, with the capacity to expand based on demand.</dt>
-                <dd class="order-first text-6xl font-semibold tracking-tight text-accent-700">+12</dd>
-              </div>
-              <div class="flex flex-col gap-y-2">
-                <dt class="text-sm/6 text-muted-200">Accept M1 Students, FAA training (Gold Standard), Well-maintained fleet</dt>
-                <dd class="order-first text-6xl font-semibold tracking-tight text-accent-700"> + More</dd>
-              </div>
-            </dl>
-          </div>
+        <div class="pt-20">
+          <p class="text-base/7 font-semibold text-muted-700">THE NUMBERS</p>
+          <hr class="mt-6 border-t border-primary-500" />
+          <dl class="mt-1 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
+            <div
+              class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4"
+            >
+              <dt class="text-sm/6 text-muted-200">
+                Students from 120 countries
+              </dt>
+              <dd
+                class="order-first text-6xl font-semibold tracking-tight text-accent-700"
+              >
+                +120
+              </dd>
+            </div>
+            <div
+              class="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4"
+            >
+              <dt class="text-sm/6 text-muted-200">
+                Thousands of students graduated
+              </dt>
+              <dd
+                class="order-first text-6xl font-semibold tracking-tight text-accent-700"
+              >
+                +3000
+              </dd>
+            </div>
+            <div
+              class="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4"
+            >
+              <dt class="text-sm/6 text-muted-200">
+                "A diverse fleet of airplanes and helicopters, with the capacity
+                to expand based on demand.
+              </dt>
+              <dd
+                class="order-first text-6xl font-semibold tracking-tight text-accent-700"
+              >
+                +12
+              </dd>
+            </div>
+            <div class="flex flex-col gap-y-2">
+              <dt class="text-sm/6 text-muted-200">
+                Accept M1 Students, FAA training (Gold Standard),
+                Well-maintained fleet
+              </dt>
+              <dd
+                class="order-first text-6xl font-semibold tracking-tight text-accent-700"
+              >
+                + More
+              </dd>
+            </div>
+          </dl>
         </div>
-        
-      </section>`
-    </div>
+      </div>
+    </section>
   </div>
-  
+</div>

@@ -54,11 +54,11 @@ const homePage = {
 
     whatWeOffer: {
       images: {
-        h60: {
-          imagePath: "/src/assets/UH-60_Black_Hawk_1.webp", // change-black-hawk-image
-          imageAlt:
-            "UH-60 Black Hawk helicopter at USATS military aviation training facility in Titusville FL",
-        },
+        // h60: {
+        //   imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
+        //   imageAlt:
+        //     "UH-60 Black Hawk helicopter at USATS military aviation training facility in Titusville FL",
+        // },
         hdx1200: {
           imagePath: "/src/assets/ALTO_NG.webp",
           imageAlt:

@@ -10,7 +10,7 @@ const coursesIndex = {
     // Top Header
     header: {
       stars: true,
-      imagePath: "/src/assets/UH-60_Black_Hawk_1.webp", // change-black-hawk-image
+      imagePath: "/src/assets/Schweizer_S300_Usats_Ramp.webp",
       imageAlt: "image alt",
       headerH1: `HELICOPTER TRAINING <br>PROGRAMS</span>`,
       paragraph: ``,
