@@ -88,7 +88,6 @@ export const navbarLinks = [
       {
         name: "International Student Training",
         link: "/international-student-training",
-
       },
     ],
   },
@@ -118,10 +117,10 @@ export const navbarLinks = [
         name: "TAA Time Building",
         link: "/services/taa-time-building",
       },
-      {
-        name: "Alto Planes",
-        link: "/services/alto-planes",
-      },
+      // {
+      //   name: "Alto Planes",
+      //   link: "/services/alto-planes",
+      // },
       {
         name: "CATS Testing Center",
         link: "/services/cats-testing-center",

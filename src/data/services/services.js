@@ -6,7 +6,7 @@ import {
   ALTO_NG as imgAltoNG,
   ALTO_5A as imgAirTours,
   ALTONG_MAINTENANCE as imgTaa,
-  DARK_BLUE_HELI_MAINTENANCE
+  DARK_BLUE_HELI_MAINTENANCE,
 } from "../../constsImages";
 
 const servicesIndex = {
@@ -53,13 +53,13 @@ const servicesIndex = {
       description: `${COMPANY_NICKNAME} strives to meet our customers’ needs through the capabilities of our Certified Repair Station. With our strong attention to detail, we maintain high standards of safety and quality excellence. Our team of highly skilled mechanics are eager to provide both scheduled and unscheduled maintenance to meet your needs.`,
       link: "/services/maintenance",
     },
-    {
-      title: "Alto Planes",
-      imagePath: imgAltoNG.imagePath,
-      imageAlt: imgAltoNG.imageAlt,
-      description: `North American Dealer and Service Center for DirectFly Alto NG`,
-      link: "/services/alto-planes",
-    },
+    // {
+    //   title: "Alto Planes",
+    //   imagePath: imgAltoNG.imagePath,
+    //   imageAlt: imgAltoNG.imageAlt,
+    //   description: `North American Dealer and Service Center for DirectFly Alto NG`,
+    //   link: "/services/alto-planes",
+    // },
     {
       title: "CATS Testing Center",
       imagePath: imgCATS.imagePath,
