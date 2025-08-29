@@ -60,13 +60,13 @@ const aboutUs = {
         title: "The Early Years",
         description: [
           "The USATS story began in 1987, the year Helicopter Adventures Inc. (HAI) was founded by Mr. Patrick Corr in Concord, CA.",
-          "By 2000, the company had grown substantially and was relocated to Space Coast, FL. In Titusville, HAI became a wholly-owned subsidiary of Bristow Group Inc. in 2007 and was rebranded as Bristow Academy.",
+          "By 2000, the company had grown substantially and was relocated to Space Coast, FL (Titusville). In 2007, HAI became a wholly-owned subsidiary of Bristow Group Inc. and was rebranded as Bristow Academy.",
         ],
       },
       {
         title: "​Setting The Standard For Quality",
         description: [
-          "Since 2001, our helicopter academy has further expanding the quality of helicopter pilot training. This was a time of development for our key training programs, which were geared toward a new breed of career-oriented student pilots",
+          "Since 2001, our helicopter academy has further expanded the quality of helicopter pilot training. This was a time of development for our key training programs, which were geared toward a new breed of career-oriented student pilots.",
         ],
       },
       {
