@@ -1,6 +1,6 @@
 ---
 pubDate: "July 3, 2025"
-author: Brian Craddock
+author: Ray Deptula
 title: "Why Helicopter Pilots Are Soaring in Demand (And How You Can Join Their Ranks)"
 description: "Explore the growing demand for helicopter pilots and discover how you can start your journey in this exciting field. This guide from USATS covers the essential skills, training programs, and career opportunities available to aspiring rotorcraft aviators."
 heroImage: "/blog/USATS-Helicopter-Training.webp"

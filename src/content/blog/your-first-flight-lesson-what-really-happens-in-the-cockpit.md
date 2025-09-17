@@ -1,6 +1,6 @@
 ---
 pubDate: "2025-06-19"
-author: Brian Craddock
+author: Ray Deptula
 title: "Your First Flight Lesson: What Really Happens in the Cockpit"
 description: "Step inside a USATS training flight from preflight briefing to landing. Learn what student pilots experience, how each flight builds skill and confidence, and explore all available pilot training programs."
 heroImage: "/blog/USATS-classroom-cockpit.webp"
