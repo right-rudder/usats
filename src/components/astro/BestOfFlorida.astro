@@ -1,0 +1,103 @@
+---
+import { link } from "fs";
+import { COMPANY_NAME } from "../../consts";
+const example = {
+  title: "Best of Florida",
+  paragraphs: [
+    `USATS is proud to be Voted Best of Florida in 2023 & 2024 by <a href='https://guidetoflorida.com' target='_blank' rel='noopener noreferrer' class='underline'>Best of Florida</a>.`,
+    `Thank you to our amazing students and community for your support! We are honored to be recognized for our commitment to excellence in flight training and customer service. Here's to many more years of helping aspiring pilots achieve their dreams with ${COMPANY_NAME}.`,
+    `Click on the badges to learn more about the awards and vote for us again this year!`,
+  ],
+  images: [
+    {
+      imagePath: "/src/assets/BOFL-2023-Best-Web-1080x1080.jpg",
+      imageAlt: "Best of Florida 2023 badge",
+      link: "https://guidetoflorida.com/stories/taking-flight-with-usats-where-aviation-dreams-soar#:~:text=Petersburg/Clearwater%20Peninsula-,Taking%20Flight%20with%20USATS:%20Where%20Aviation%20Dreams%20Soar,the%20future%20leaders%20of%20aviation.",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+    {
+      imagePath: "/src/assets/BOFL-2024-Best-Web-1080x1080.jpg",
+      imageAlt: "Best of Florida 2024 badge",
+      link: "https://guidetoflorida.com/best-of/winners/2024/college-specialized-training#:~:text=Flight%20Instruction%20Schools,Training%20Solutions%20Inc.",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+  ],
+  link: "https://guidetoflorida.com",
+  target: "_blank",
+  rel: "noopener noreferrer",
+  buttons: [
+    {
+      name: "Vote for us!",
+      link: "https://guidetoflorida.com/titusville/college-specialized-training/u-s-aviation-training-solutions-inc",
+      primary: false,
+    },
+  ],
+};
+
+const { content = example } = Astro.props;
+import ImageComp from "../ImageComp.astro";
+---
+
+<section
+  id={content.title}
+  class="bg-primary-950 py-6 lg:py-12 flex items-center md:items-start flex-col-reverse md:flex-row justify-between gap-5 md:gap-0 text-white px-5 md:px-10"
+>
+  <div
+    class="flex flex-col gap-9 md:gap-12 w-1/2 justify-center items-center md:justify-end md:items-end px-6 md:px-16"
+  >
+    {
+      content.images &&
+        content.images.map((image, index) => (
+          <a
+            href={image.link}
+            target={image.target}
+            rel="noopener noreferrer"
+            class={`w-36 h-36 md:w-72 md:h-72 overflow-hidden ring-1 duration-300 hover:scale-110 transition-all hover:ring-accent-700 ${index % 2 === 1 ? "md:mr-12" : ""}`}
+          >
+            <ImageComp
+              imagePath={image.imagePath}
+              imageAlt={image.imageAlt}
+              styles="w-full h-full object-cover"
+            />
+          </a>
+        ))
+    }
+  </div>
+  <div class="flex flex-col gap-9 md:gap-12 md:w-1/2">
+    <div class="">
+      <h2
+        class="mt-2 text-4xl font-bold tracking-tight leading-tighter text-accent-800 md:text-5xl lg:text-6xl text-center lg:text-left"
+        set:html={content.title}
+      />
+    </div>
+    <div
+      class="font-light text-xl leading-tight text-white text-left md:text-left"
+    >
+      {
+        content.paragraphs &&
+          content.paragraphs.map((paragraph) => (
+            <p class="mb-2 md:mb-6" set:html={paragraph} />
+          ))
+      }
+    </div>
+
+    <div
+      class="md:mt-6 flex flex-wrap justify-center md:justify-start align-middle items-center gap-6 z-10 animate-slow-fade"
+    >
+      {
+        content.buttons.map((btn) => (
+          <a
+            href={btn.link}
+            class={`${btn.primary ? "btn-primary" : "btn-white"} w-full md:w-auto`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="drop-shadow-sm">{btn.name}</span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
