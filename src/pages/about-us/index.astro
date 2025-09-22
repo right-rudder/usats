@@ -6,6 +6,7 @@ import WhoAreUs from "../../components/astro/WhoAreUs.astro";
 import aboutUs from "../../data/about-us/aboutUs";
 import PageSummary from "../../components/astro/PageSummary.astro";
 import { VIDEOLINK_ABOUTUS } from "../../consts";
+import BestOfFlorida from "../../components/astro/BestOfFlorida.astro";
 ---
 
 <BaseLayout
@@ -18,6 +19,7 @@ import { VIDEOLINK_ABOUTUS } from "../../consts";
   <HeaderScreen content={aboutUs.header} headerVideo={VIDEOLINK_ABOUTUS} />
   <PageSummary content={aboutUs.pageSummary} />
   <WhoAreUs content={aboutUs.whatWeOffer} />
+  <BestOfFlorida />
   <!-- Our Team? -->
   <!-- quizCTA -->
   <!-- Testimonials? -->
