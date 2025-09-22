@@ -24,6 +24,7 @@ import { VIDEOLINK_HOME } from "../consts";
 import Location from "../components/astro/Location.astro";
 import { ALTONG_FLYING_OVER_COAST as imgTAActa } from "../constsImages";
 import { COMPANY_NAME } from "../consts";
+import BestOfFlorida from "../components/astro/BestOfFlorida.astro";
 
 const TAActa = {
   imagePath: imgTAActa.imagePath,
@@ -39,7 +40,6 @@ const TAActa = {
   ],
 };
 
-
 const { data } = homePage;
 ---
 
@@ -53,6 +53,7 @@ const { data } = homePage;
   <UnderHeader content={data.underHeader} />
   <!-- <WhoAreUs content={data.whatWeOffer} /> -->
   <WhyUs content={data.whyUs} />
+  <BestOfFlorida />
   <CTADiscoveryFlight content={TAActa} />
   <!-- <OurAdvantages content={data.ourAdvantages} /> -->
   <!-- <Programs content={programsSwiper} /> -->
