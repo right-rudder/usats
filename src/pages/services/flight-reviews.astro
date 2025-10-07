@@ -1,0 +1,499 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../components/astro/HeaderScreen.astro";
+import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astro";
+import { FaCheck } from "react-icons/fa";
+import { FaPlane } from "react-icons/fa";
+import { ALTO_2A as imgCTA } from "../../constsImages";
+import {
+  USATS_BASE_COVER as imgHeader,
+  ALTO_4A as imgCard1,
+} from "../../constsImages";
+
+import testingCenterFAACats from "../../data/services/testingCenterFAACats";
+import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
+
+import ImageComp from "../../components/ImageComp.astro";
+import UnderHeader from "../../components/astro/UnderHeader.astro";
+
+const data = {
+  data: {
+    upperHeading: "Flight Reviews",
+    title: `FAA Flight Reviews (BFR) | ${COMPANY_NICKNAME}`,
+    description:
+      "Every pilot knows that flying is a skill that must be sharpened regularly. That’s why the FAA requires a Flight Review (often called a Biennial Flight Review or BFR) every 24 calendar months. At US Aviation Training Solutions (USATS), we make this requirement more than a checkbox — we turn it into a valuable learning experience.",
+    pageKeywords:
+      "flight school Titusville, pilot training Florida, helicopter school FL, airplane training USATS, learn to fly Titusville, FAA pilot certification, USATS aviation, Brevard County flight school, Space Coast pilot training, Part 141 flight training, international student pilot program, aviation career Florida, discovery flights Titusville, Florida flight instruction",
+
+    header: {
+      stars: true,
+      imagePath: imgHeader.imagePath,
+      imageAlt: imgHeader.imageAlt,
+      headerH1: `${COMPANY_NICKNAME} <br> FAA Flight Reviews`,
+      description: ``,
+      buttons: [
+        {
+          name: "Learn more",
+          link: "#flight-reviews-intro",
+          primary: true,
+        },
+      ],
+    },
+
+    underHeader: {
+      title: "Your Flight Review, Elevated",
+      paragraphs: [
+        " At USATS, we turn the FAA's Flight Review requirement into an opportunity for growth. Our experienced instructors tailor each review to your unique needs, helping you sharpen your skills and boost your confidence in the cockpit.",
+        " Whether you're a private pilot or an ATP, our comprehensive reviews cover everything from regulations to real-world flying techniques. Don't just meet the requirement—exceed it with USATS.",
+      ],
+      image: {
+        imagePath: "/src/assets/ALTO_NG.webp",
+        imageAlt: "AirPlane Panel",
+      },
+      buttons: [],
+    },
+
+    sections: [
+      {
+        title: "Flight Reviews at USATS",
+        descriptions: [
+          "At USATS, our experienced flight instructors will work with you to tailor your Flight Review to your specific needs and goals. Whether you're looking to refresh your basic flying skills, learn new techniques, or simply gain more confidence in the cockpit, we can help.",
+          "During your Flight Review, you'll receive a comprehensive evaluation of your flying skills, including a review of FAA regulations and procedures. Our instructors will provide constructive feedback and guidance to help you improve your skills and become a safer, more confident pilot.",
+          "We understand that every pilot is unique, which is why we offer personalized Flight Reviews that are tailored to your individual needs. Whether you're a seasoned pilot or just starting out, we can help you achieve your goals and take your flying skills to the next level.",
+          "In addition to our Flight Review services, we also offer a range of other training programs and services to help you achieve your aviation goals. From private pilot training to advanced ratings and certifications, we have the expertise and resources to help you succeed.",
+          "At USATS, we're committed to providing our students with the highest quality training and support. Contact us today to learn more about our Flight Review services and how we can help you become a safer, more confident pilot.",
+        ],
+        bullets: [
+          {
+            name: "Our Flight Review Services Include:",
+            description:
+              "We offer a range of Flight Review services to meet your individual needs and goals, including:",
+          },
+        ],
+        image: {
+          imagePath: "/src/assets/USATS_banner_Application.webp",
+          imageAlt: "AirPlane Panel",
+        },
+      },
+      {
+        title: "Why Do Your Flight Review with USATS",
+        descriptions: [
+          "Many pilots actually look forward to their USATS Flight Review because it feels more like advanced coaching than a requirement.",
+        ],
+        bullets: [
+          {
+            name: "Helicopter & Airplane Options",
+            description:
+              "We specialize in both rotor-wing and fixed-wing training.",
+          },
+          {
+            name: "Expericend Instructors",
+            description:
+              "Learn from FAA-certified instructors who have trained pilots worldwide",
+          },
+          {
+            name: "Real-World Training Environment",
+            description:
+              "Our Titusville, FL location offers coastal, inland, and controlled airspace exposure.",
+          },
+          {
+            name: "Stress-Free Process",
+            description:
+              "We focus on making you a more confident, capable pilot, not just ticking a box",
+          },
+        ],
+        image: {
+          imagePath: "/src/assets/ALTO_NG.webp",
+          imageAlt: "AirPlane Panel",
+        },
+      },
+      {
+        title: "Who needs a Flight Review?",
+        descriptions: [
+          "Private, Commercial, and ATP Pilots who haven’t logged a review in the last 24 months.",
+          "Pilots returning to the cockpit after time away from flying.",
+          "Anyone who wants to sharpen their skills and increase their confidence.",
+          "Don’t let your privileges lapse. Book your Flight Review today at USATS and get back in the air with confidence.",
+        ],
+
+        image: {
+          imagePath: "/src/assets/ALTO_NG.webp",
+          imageAlt: "AirPlane Panel",
+        },
+      },
+    ],
+
+    schedule: {
+      title: "What is a Flight Review?",
+      heather2: "Flight Review Overview",
+      imagePath: "/src/assets/Dash_and_Nigerian_Army_2.jpg",
+      imageAlt: "",
+      description: [
+        "A Flight Review is not a test. Instead, it’s a chance to refresh your knowledge, practice your flying skills, and ensure you’re still operating to the highest safety standards.",
+        " According to FAA Part 61.56, a flight review must include:",
+      ],
+      list: [
+        "At least 1 hour of flight training",
+        "At least 1 hour of ground instruction",
+        "A review of current regulations and procedures",
+        "A review of your flying skills and knowledge",
+      ],
+      location: `US Aviation Jet Center (US Aviation Training Solutions) <br> 355 Golden Knights Blvd <br> Titusville, FL, 32780`,
+      buttons: [
+        {
+          name: "Directions",
+          link: "https://www.google.com/maps/place/Space+Coast+Regional+Airport/@28.5114085,-80.8059907,14.85z/data=!4m14!1m7!3m6!1s0x88e0ad45bfc65527:0x83a84771beabce22!2sUS+Aviation+Jet+Center!8m2!3d28.5108366!4d-80.7935879!16s%2Fg%2F11fp5g3c02!3m5!1s0x88e0ad2310d73cfb:0x4bcd770a5e53125e!8m2!3d28.5133625!4d-80.7988013!16zL20vMDNmZnAy?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D",
+          primary: true,
+        },
+      ],
+    },
+  },
+};
+
+const CTAFlight = {
+  imagePath: "/src/assets/cessna.jpg",
+  imageAlt: imgCTA.imageAlt,
+  headerH1: `Fly today with <span class="text-accent-600">USATS</span>`,
+  paragraph: `Airplane or Helicopter, the choice of how to fly the skies is yours! Book a discovery flight with USATS.`,
+  buttons: [
+    {
+      name: "Discovery Flight",
+      link: "/discovery-flight",
+      primary: true,
+    },
+  ],
+};
+
+const catsTestingCenterImg = {
+  imagePath: "/src/assets/programmer-focused-on-code.webp",
+  imageAlt: "",
+};
+---
+
+<BaseLayout
+  siteTitle={data.data.title}
+  siteDescription={data.data.description}
+  keywords={data.data.pageKeywords}
+>
+  <HeaderScreen content={data.data.header} />
+
+  <UnderHeader content={data.data.underHeader} />
+
+  <section id="flight-reviews-intro">
+    <div
+      class="relative isolate overflow-hidden bg-gradient-to-b from-primary-950 to-primary-800 px-6 pt-24 pb-8 sm:pt-32 lg:overflow-visible lg:px-0"
+    >
+      <!-- Header -->
+      <div class="mx-auto max-w-6xl lg:pr-4 md:px-10 lg:px-20">
+        <div class="my-9">
+          <p
+            class="text-base font-semibold leading-7 text-accent-700 uppercase"
+          >
+            {data.data.schedule.heather2}
+          </p>
+          <h1
+            class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
+          >
+            {data.data.schedule.title}
+          </h1>
+          <p
+            class="mt-6 text-xl leading-8 text-muted-200"
+            set:html={data.data.schedule.description[0]}
+          />
+        </div>
+      </div>
+      <div class="absolute inset-0 -z-10 overflow-hidden">
+        <svg
+          class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-black [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+          aria-hidden="true"
+        >
+          <defs>
+            <pattern
+              id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+              width="200"
+              height="200"
+              x="50%"
+              y="-1"
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none"></path>
+            </pattern>
+          </defs>
+          <svg x="50%" y="-1" class="overflow-visible fill-primary-950">
+            <path
+              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+              stroke-width="0"></path>
+          </svg>
+          <rect
+            width="100%"
+            height="100%"
+            stroke-width="0"
+            fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"></rect>
+        </svg>
+      </div>
+      <!-- Content -->
+      <div class="mt-12 flex justify-center align-middle">
+        <ul
+          role="list"
+          class="flex flex-wrap justify-between max-w-7xl divide-y-2"
+        >
+          <li
+            class="group py-5 flex flex-wrap justify-between align-middle items-center"
+          >
+            <div
+              class="mx-auto w-full rounded-xl overflow-hidden h-96 md:w-1/3 ring-primary-50 hover:ring-2 hover:shadow-lg duration-200 ease-in-out"
+            >
+              <ImageComp
+                imagePath={data.data.schedule.imagePath}
+                imageAlt={data.data.schedule.imageAlt}
+                styles="h-full object-cover hover:scale-110 hover:shadow-lg hover:brightness-110 duration-300 ease-in-out"
+                quality={80}
+                loading="lazy"
+                ,
+              />
+            </div>
+            <div class="w-full md:w-1/2">
+              <p
+                class="text-muted-200 py-3"
+                set:html={data.data.schedule.description[1]}
+              />
+              <ol class="space-y-3 py-3">
+                {
+                  data.data.schedule.list.map((point) => (
+                    <li
+                      class="flex text-lg items-center bg-accent-50/70 p-3 rounded-md shadow-sm hover:scale-105 hover:shadow-md transition-all duration-300"
+                      set:html={point}
+                    >
+                      <FaPlane className="text-accent-600 mr-2 w-4 flex-shrink-0" />{" "}
+                    </li>
+                  ))
+                }
+              </ol>
+              <div class="flex">
+                <a
+                  target="_self"
+                  href="#flight-reviews-services"
+                  class="text-base/7 font-semibold text-accent-600"
+                >
+                  Our Services <span aria-hidden="true">&rarr;</span></a
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="flight-reviews-services">
+    <div
+      class="relative isolate overflow-hidden bg-gradient-to-b from-primary-950 to-primary-800 px-6 pt-24 pb-8 sm:pt-32 lg:overflow-visible lg:px-0"
+    >
+      <div class="mx-auto max-w-6xl lg:pr-4 md:px-10 lg:px-20">
+        <div class="my-9">
+          <p
+            class="text-base font-semibold leading-7 text-accent-700 uppercase"
+          >
+            {data.data.upperHeading}
+          </p>
+          <h1
+            class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
+          >
+            {data.data.sections[0].title}
+          </h1>
+          {
+            data.data.sections[0].descriptions.map((paragraph, index) => (
+              <div>
+                <p
+                  class="mt-6 text-xl leading-8 text-muted-200"
+                  set:html={paragraph}
+                />
+                {index == 2 && (
+                  <div class="w-full flex justify-center items-center mx-auto py-6 rounded-xl">
+                    <ImageComp
+                      imagePath={data.data.sections[0].image.imagePath}
+                      imageAlt={data.data.sections[0].image.imageAlt}
+                      styles="rounded-xl h-full object-cover"
+                      quality={80}
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Card 1 -->
+      <div class="group mt-12 flex justify-center align-middle">
+        <ul
+          role="list"
+          class="flex flex-wrap justify-center max-w-4xl divide-y-2"
+        >
+          <div class="">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+              <div class="pb-10">
+                <h3
+                  id="tier-hobby"
+                  class="text-3xl font-semibold text-accent-600"
+                >
+                  {data.data.sections[0].bullets[0].name}
+                </h3>
+                <p class="mt-6 text-base/7 text-muted-200">
+                  {data.data.sections[0].bullets[0].description}
+                </p>
+              </div>
+
+              <div class="mx-auto grid grid-cols-1 gap-8">
+                <!-- Card 1  -->
+                <div
+                  class="flex flex-col justify-between rounded-3xl bg-primary-900 p-8 shadow-xl ring-1 ring-accent-900/60 sm:p-10"
+                >
+                  <div>
+                    <h3
+                      id="tier-hobby"
+                      class="text-base/7 font-semibold text-accent-600"
+                    >
+                      {data.data.sections[1].title}
+                    </h3>
+                    <ul
+                      role="list"
+                      class="mt-10 space-y-4 text-sm/6 text-muted-200"
+                    >
+                      {
+                        data.data.sections[1].bullets &&
+                          data.data.sections[1].bullets.map((bullet) => (
+                            <li class="flex gap-x-3 hover:scale-110 hover:shadow-lg hover:brightness-110 duration-500 ease-in-out">
+                              <svg
+                                class="h-6 w-5 flex-none text-accent-600"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true"
+                                data-slot="icon"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                                  clip-rule="evenodd"
+                                />
+                              </svg>
+                              {bullet.name} - {bullet.description}
+                            </li>
+                          ))
+                      }
+                    </ul>
+                  </div>
+                  <a
+                    href="/contact-us"
+                    aria-describedby="tier-hobby"
+                    class="mt-8 mx-auto block rounded-md bg-accent-600 px-6 py-2 text-center text-sm/6 font-semibold text-white shadow-xs hover:bg-accent-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600"
+                    >Get started today</a
+                  >
+                </div>
+
+                <!-- Card 2  -->
+                <!-- <div
+                  class="flex flex-col justify-between rounded-3xl bg-primary-900 p-8 shadow-xl ring-1 ring-accent-900/60 sm:p-10"
+                >
+                  <div>
+                    <h3
+                      id="tier-hobby"
+                      class="text-base/7 font-semibold text-accent-600"
+                    >
+                      {data.data.sections[1].title}
+                    </h3>
+                    <ul
+                      role="list"
+                      class="mt-10 space-y-4 text-sm/6 text-muted-200"
+                    >
+                      {
+                        data.data.sections[1].bullets &&
+                          data.data.sections[1].bullets.map((bullet) => (
+                            <li class="flex gap-x-3 hover:scale-110 hover:shadow-lg hover:brightness-110 duration-500 ease-in-out">
+                              <svg
+                                class="h-6 w-5 flex-none text-accent-600"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true"
+                                data-slot="icon"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                                  clip-rule="evenodd"
+                                />
+                              </svg>
+                              {bullet.name} - {bullet.description}
+                            </li>
+                          ))
+                      }
+                    </ul>
+                  </div>
+                  <a
+                    href="#"
+                    aria-describedby="tier-hobby"
+                    class="mt-8 block rounded-md bg-accent-600 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-xs hover:bg-accent-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600"
+                    >Get started today</a
+                  >
+                </div> -->
+                <!-- Contact-us Card  -->
+                <div
+                  class="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center"
+                >
+                  <div class="lg:min-w-0 lg:flex-1">
+                    <h3 class="text-base/7 font-semibold text-accent-600">
+                      Still have questions? Contact-us!
+                    </h3>
+                    <p class="mt-1 text-base/7 text-muted-200">
+                      Give us a call
+                    </p>
+                  </div>
+                  <a
+                    href="/contact-us"
+                    class="rounded-md px-3.5 py-2 text-sm/6 font-semibold text-accent-600 ring-1 ring-muted-200 ring-inset hover:ring-accent-600 hover:text-white hover:scale-110 hover:bg-accent-700 transition-all duration-500 ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600"
+                  >
+                    Contact-us <span aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 -z-10 overflow-hidden">
+        <svg
+          class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-black [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+          aria-hidden="true"
+        >
+          <defs>
+            <pattern
+              id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+              width="200"
+              height="200"
+              x="50%"
+              y="-1"
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none"></path>
+            </pattern>
+          </defs>
+          <svg x="50%" y="-1" class="overflow-visible fill-primary-950">
+            <path
+              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+              stroke-width="0"></path>
+          </svg>
+          <rect
+            width="100%"
+            height="100%"
+            stroke-width="0"
+            fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"></rect>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <CTADiscoveryFlights content={CTAFlight} />
+</BaseLayout>
