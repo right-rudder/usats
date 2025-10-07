@@ -158,8 +158,8 @@ export const mobileNavbarLinks = [
         link: "/services/foreign-license-conversions",
       },
       {
-        name: "ICAO",
-        link: "/services/icao",
+        name: "ICAO Services",
+        link: "/services/icao-services",
       },
     ],
   },
