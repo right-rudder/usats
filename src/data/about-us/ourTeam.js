@@ -114,7 +114,7 @@ const ourTeam = {
         name: "Jason Krum",
         imagePath: staffPlaceHolder.imagePath,
         imageAlt: staffPlaceHolder.imageAlt,
-        rank: "RW, CFI, CFII",
+        rank: "RW, CFI Gold Seal, CFII, ATP, Instrument Ground Instructor, SFAR",
       },
       {
         name: "Katie Dwyer",
@@ -126,7 +126,7 @@ const ourTeam = {
         name: "Nelson Hererra",
         imagePath: staffPlaceHolder.imagePath,
         imageAlt: staffPlaceHolder.imageAlt,
-        rank: "RW, CFI, CFII, ATP, Ground Instructor",
+        rank: "RW, CFI, CFII , ATP, Ground Instructor, SFAR, NVG Instructor",
       },
     ],
   },
