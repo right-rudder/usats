@@ -1,0 +1,429 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../components/astro/HeaderScreen.astro";
+import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astro";
+import { FaCheck } from "react-icons/fa";
+import { FaPlane } from "react-icons/fa";
+import { ALTO_2A as imgCTA } from "../../constsImages";
+import {
+  USATS_BASE_COVER as imgHeader,
+  ALTO_4A as imgCard1,
+} from "../../constsImages";
+
+import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
+import ImageComp from "../../components/ImageComp.astro";
+import UnderHeader from "../../components/astro/UnderHeader.astro";
+
+const data = {
+  data: {
+    upperHeading: "ICAO Services",
+    title: `ICAO Licensing & Compliance Support | ${COMPANY_NICKNAME}`,
+    description:
+      "Ensure your pilot training and certification meet global ICAO standards with US Aviation Training Solutions (USATS). We help pilots and operators align FAA and ICAO requirements, manage license recognition, and simplify international compliance.",
+    pageKeywords:
+      "ICAO pilot license, ICAO compliance, international pilot certification, FAA ICAO alignment, ICAO conversion, ICAO standards aviation, global pilot training, USATS ICAO services",
+
+    header: {
+      stars: true,
+      imagePath: imgHeader.imagePath,
+      imageAlt: imgHeader.imageAlt,
+      headerH1: `${COMPANY_NICKNAME} <br> ICAO Services`,
+      description:
+        "Fly with confidence anywhere in the world. USATS provides ICAO-compliant training and licensing support for pilots and aviation organizations looking to meet international standards.",
+      buttons: [
+        {
+          name: "Start Your ICAO Consultation",
+          link: "/contact-us",
+          primary: true,
+        },
+        {
+          name: "About ICAO",
+          link: "#icao-intro",
+          primary: false,
+        },
+      ],
+    },
+
+    underHeader: {
+      title: "Your Pathway to Global Aviation Recognition",
+      paragraphs: [
+        "At USATS, we help pilots and operators bridge the gap between FAA and ICAO standards. Whether you are a pilot seeking recognition of your license in multiple countries or an operator ensuring compliance with ICAO Annex 1, our experts simplify the process from documentation to validation.",
+        "With decades of international training experience, we provide the resources and guidance needed to keep your credentials globally recognized and compliant with aviation authorities worldwide.",
+      ],
+      image: {
+        imagePath: "/src/assets/alto_4a.jpg",
+        imageAlt: "Pilot studying ICAO regulations and flight procedures",
+      },
+      buttons: [],
+    },
+
+    sections: [
+      {
+        title: "What Are ICAO Services?",
+        descriptions: [
+          "The International Civil Aviation Organization (ICAO) establishes the global framework for pilot training, licensing, and certification recognized by over 190 member states.",
+          "USATS helps align your FAA or foreign training with ICAO standards to ensure international acceptance of your credentials. Our services cover both individual pilots and aviation organizations.",
+          "From documentation to training adjustments, our team ensures that every step of your aviation journey meets ICAO’s regulatory benchmarks.",
+        ],
+        bullets: [
+          {
+            name: "Our ICAO Support Includes:",
+            description:
+              "Guidance on license recognition, ICAO compliance alignment, and international certification support for both airplane and helicopter pilots.",
+          },
+        ],
+        image: {
+          imagePath: "/src/assets/alto_5a.jpg",
+          imageAlt: "Pilot reviewing global aviation documentation",
+        },
+      },
+      {
+        title: "Why Choose USATS for ICAO Compliance?",
+        descriptions: [
+          "With over three decades of global aviation experience, USATS has trained and supported pilots from more than 120 countries. Our ICAO Services ensure your credentials, training, and operations align seamlessly with international aviation standards.",
+        ],
+        bullets: [
+          {
+            name: "Global Expertise",
+            description:
+              "We have extensive experience working with ICAO-compliant authorities and training international pilots under multiple aviation systems.",
+          },
+          {
+            name: "Regulatory Guidance",
+            description:
+              "Our staff assists in interpreting and applying ICAO Annex 1 standards for pilot licensing and certification.",
+          },
+          {
+            name: "International Recognition",
+            description:
+              "Ensure your FAA license or training is recognized worldwide with ICAO-aligned documentation and validation.",
+          },
+          {
+            name: "Operator Support",
+            description:
+              "We provide consulting and training alignment for flight schools, operators, and training centers managing ICAO compliance.",
+          },
+        ],
+        image: {
+          imagePath: "/src/assets/ALTO_NG.webp",
+          imageAlt: "Instructor guiding pilot through ICAO standards",
+        },
+      },
+      {
+        title: "Who Benefits from ICAO Services?",
+        descriptions: [
+          "• Pilots looking to operate internationally or convert between ICAO member states.",
+          "• Flight schools or airlines seeking to maintain global compliance.",
+          "• International students aligning FAA training with ICAO Annex 1 standards.",
+          "<strong>Get ICAO-ready with USATS ,  ensuring your license and training meet the world’s highest aviation standards.</strong>",
+        ],
+        image: {
+          imagePath: "/src/assets/ALTO_3A.webp",
+          imageAlt: "Pilot smiling after achieving ICAO compliance",
+        },
+      },
+    ],
+
+    schedule: {
+      title: "Understanding ICAO Licensing & Compliance",
+      heather2: "ICAO Compliance Overview",
+      imagePath:
+        "/src/assets/heli-instruments-helicopter-training-titusville-florida-2.jpg",
+      imageAlt: "Instructor briefing pilot on ICAO global regulations",
+      description: [
+        "Navigating ICAO standards can be complex ,  but with the right guidance, the process becomes simple and rewarding. Here’s how USATS helps you align your credentials with ICAO requirements:",
+        "Our ICAO compliance process typically includes:",
+      ],
+      list: [
+        "Reviewing your existing training and license documentation",
+        "Identifying ICAO alignment requirements under Annex 1",
+        "Providing training adjustments or verification as needed",
+        "Assisting with documentation and authority submissions",
+        "Issuing ICAO-aligned verification or certification support",
+      ],
+      location: `US Aviation Jet Center <br> 355 Golden Knights Blvd <br> Titusville, FL, 32780`,
+      buttons: [
+        {
+          name: "Get Directions",
+          link: "https://www.google.com/maps/place/Space+Coast+Regional+Airport/@28.5114085,-80.8059907,14.85z/",
+          primary: true,
+        },
+        {
+          name: "Start My ICAO Consultation",
+          link: "/contact-us",
+          primary: false,
+        },
+      ],
+    },
+  },
+};
+
+const CTAFlight = {
+  imagePath:
+    "/src/assets/heli-flying-over-florida-helicopter-training-florida.png",
+  imageAlt: imgCTA.imageAlt,
+  headerH1: `Achieve Global Recognition with <span class="text-accent-600">USATS</span>`,
+  paragraph: `Ensure your pilot training and certification meet ICAO standards with our comprehensive compliance and documentation support.`,
+  buttons: [
+    {
+      name: "Start ICAO Consultation",
+      link: "/contact-us",
+      primary: true,
+    },
+    {
+      name: "Explore Training Programs",
+      link: "/flight-training",
+      primary: false,
+    },
+  ],
+};
+---
+
+<BaseLayout
+  siteTitle={data.data.title}
+  siteDescription={data.data.description}
+  keywords={data.data.pageKeywords}
+>
+  <HeaderScreen content={data.data.header} />
+  <UnderHeader content={data.data.underHeader} />
+
+  <section id="icao-intro">
+    <div
+      class="relative isolate overflow-hidden bg-gradient-to-b from-primary-950 to-primary-800 px-6 pt-24 pb-8 sm:pt-32 lg:overflow-visible lg:px-0"
+    >
+      <div class="mx-auto max-w-6xl lg:pr-4 md:px-10 lg:px-20">
+        <div class="my-9">
+          <p
+            class="text-base font-semibold leading-7 text-accent-700 uppercase"
+          >
+            {data.data.schedule.heather2}
+          </p>
+          <h1
+            class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
+          >
+            {data.data.schedule.title}
+          </h1>
+          <p
+            class="mt-6 text-xl leading-8 text-muted-200"
+            set:html={data.data.schedule.description[0]}
+          />
+        </div>
+      </div>
+      <div class="absolute inset-0 -z-10 overflow-hidden">
+        <svg
+          class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-black [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+          aria-hidden="true"
+        >
+          <defs>
+            <pattern
+              id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+              width="200"
+              height="200"
+              x="50%"
+              y="-1"
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none"></path>
+            </pattern>
+          </defs>
+          <svg x="50%" y="-1" class="overflow-visible fill-primary-950">
+            <path
+              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+              stroke-width="0"></path>
+          </svg>
+          <rect
+            width="100%"
+            height="100%"
+            stroke-width="0"
+            fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"></rect>
+        </svg>
+      </div>
+      <div class="mt-12 flex justify-center align-middle">
+        <ul
+          role="list"
+          class="flex flex-wrap justify-between max-w-7xl divide-y-2"
+        >
+          <li
+            class="group py-5 flex flex-wrap justify-between align-middle items-center"
+          >
+            <div
+              class="mx-auto w-full rounded-xl overflow-hidden h-96 md:w-1/3 ring-primary-50 hover:ring-2 hover:shadow-lg duration-200 ease-in-out"
+            >
+              <ImageComp
+                imagePath={data.data.schedule.imagePath}
+                imageAlt={data.data.schedule.imageAlt}
+                styles="h-full object-cover hover:scale-110 hover:shadow-lg hover:brightness-110 duration-300 ease-in-out"
+                quality={80}
+                loading="lazy"
+              />
+            </div>
+            <div class="w-full md:w-1/2">
+              <p
+                class="text-muted-200 py-3"
+                set:html={data.data.schedule.description[1]}
+              />
+              <ol class="space-y-3 py-3">
+                {
+                  data.data.schedule.list.map((point) => (
+                    <li
+                      class="flex text-lg items-center bg-accent-50/70 p-3 rounded-md shadow-sm hover:scale-105 hover:shadow-md transition-all duration-300"
+                      set:html={point}
+                    >
+                      <FaPlane className="text-accent-600 mr-2 w-4 flex-shrink-0" />{" "}
+                    </li>
+                  ))
+                }
+              </ol>
+              <div class="flex">
+                <a
+                  target="_self"
+                  href="#icao-details"
+                  class="text-base/7 font-semibold text-accent-600"
+                >
+                  Our Services <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="icao-details">
+    <div
+      class="relative isolate overflow-hidden bg-gradient-to-b from-primary-950 to-primary-800 px-6 pt-24 pb-8 sm:pt-32 lg:overflow-visible lg:px-0"
+    >
+      <div class="mx-auto max-w-6xl lg:pr-4 md:px-10 lg:px-20">
+        <div class="my-9">
+          <p
+            class="text-base font-semibold leading-7 text-accent-700 uppercase"
+          >
+            {data.data.upperHeading}
+          </p>
+          <h1
+            class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
+          >
+            {data.data.sections[0].title}
+          </h1>
+          {
+            data.data.sections[0].descriptions.map((paragraph, index) => (
+              <div>
+                <p
+                  class="mt-6 text-xl leading-8 text-muted-200"
+                  set:html={paragraph}
+                />
+                {index == 1 && (
+                  <div class="w-full flex justify-center items-center mx-auto py-6 rounded-xl">
+                    <ImageComp
+                      imagePath={data.data.sections[0].image.imagePath}
+                      imageAlt={data.data.sections[0].image.imageAlt}
+                      styles="rounded-xl h-full object-cover"
+                      quality={80}
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Service Cards -->
+      <div class="group mt-12 flex justify-center align-middle">
+        <ul
+          role="list"
+          class="flex flex-wrap justify-center max-w-4xl divide-y-2"
+        >
+          <div class="">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+              <div class="pb-10">
+                <h3
+                  id="tier-hobby"
+                  class="text-3xl font-semibold text-accent-600"
+                >
+                  {data.data.sections[0].bullets[0].name}
+                </h3>
+                <p class="mt-6 text-base/7 text-muted-200">
+                  {data.data.sections[0].bullets[0].description}
+                </p>
+              </div>
+
+              <div class="mx-auto grid grid-cols-1 gap-8">
+                <!-- ICAO Details Card -->
+                <div
+                  class="flex flex-col justify-between rounded-3xl bg-primary-900 p-8 shadow-xl ring-1 ring-accent-900/60 sm:p-10"
+                >
+                  <div>
+                    <h3
+                      id="tier-hobby"
+                      class="text-base/7 font-semibold text-accent-600"
+                    >
+                      {data.data.sections[1].title}
+                    </h3>
+                    <ul
+                      role="list"
+                      class="mt-10 space-y-4 text-sm/6 text-muted-200"
+                    >
+                      {
+                        data.data.sections[1].bullets &&
+                          data.data.sections[1].bullets.map((bullet) => (
+                            <li class="flex gap-x-3 hover:scale-110 hover:shadow-lg hover:brightness-110 duration-500 ease-in-out">
+                              <svg
+                                class="h-6 w-5 flex-none text-accent-600"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true"
+                                data-slot="icon"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                                  clip-rule="evenodd"
+                                />
+                              </svg>
+                              {bullet.name} - {bullet.description}
+                            </li>
+                          ))
+                      }
+                    </ul>
+                  </div>
+                  <a
+                    href="/contact-us"
+                    aria-describedby="tier-hobby"
+                    class="mt-8 mx-auto block rounded-md bg-accent-600 px-6 py-2 text-center text-sm/6 font-semibold text-white shadow-xs hover:bg-accent-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600"
+                    >Get ICAO Support</a
+                  >
+                </div>
+
+                <!-- Contact-us Card  -->
+                <div
+                  class="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center"
+                >
+                  <div class="lg:min-w-0 lg:flex-1">
+                    <h3 class="text-base/7 font-semibold text-accent-600">
+                      Still have questions? Contact us!
+                    </h3>
+                    <p class="mt-1 text-base/7 text-muted-200">
+                      Our experts will help you align your credentials with ICAO
+                      requirements.
+                    </p>
+                  </div>
+                  <a
+                    href="/contact-us"
+                    class="rounded-md px-3.5 py-2 text-sm/6 font-semibold text-accent-600 ring-1 ring-muted-200 ring-inset hover:ring-accent-600 hover:text-white hover:scale-110 hover:bg-accent-700 transition-all duration-500 ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600"
+                  >
+                    Contact Us <span aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <CTADiscoveryFlights content={CTAFlight} />
+</BaseLayout>

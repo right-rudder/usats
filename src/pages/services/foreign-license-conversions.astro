@@ -1,0 +1,502 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../components/astro/HeaderScreen.astro";
+import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astro";
+import { FaCheck } from "react-icons/fa";
+import { FaPlane } from "react-icons/fa";
+import { ALTO_2A as imgCTA } from "../../constsImages";
+import {
+  USATS_BASE_COVER as imgHeader,
+  ALTO_4A as imgCard1,
+} from "../../constsImages";
+
+import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
+import ImageComp from "../../components/ImageComp.astro";
+import UnderHeader from "../../components/astro/UnderHeader.astro";
+
+const data = {
+  data: {
+    upperHeading: "Foreign License Conversions",
+    title: `Convert Your Foreign Pilot License | ${COMPANY_NICKNAME}`,
+    description:
+      "Convert your foreign or ICAO pilot license into an FAA certificate with US Aviation Training Solutions (USATS). We handle every step of the process ,  from verification to checkride preparation ,  so you can fly legally and confidently in the United States.",
+    pageKeywords:
+      "foreign pilot license conversion, convert ICAO license to FAA, FAA validation, international pilot training USA, pilot license conversion, USATS foreign pilot, FAA license verification, FAA checkride prep",
+
+    header: {
+      stars: true,
+      imagePath: imgHeader.imagePath,
+      imageAlt: imgHeader.imageAlt,
+      headerH1: `${COMPANY_NICKNAME} <br> Foreign License Conversions`,
+      description:
+        "Turn your international pilot credentials into FAA certification with our complete conversion support for both airplane and helicopter pilots.",
+      buttons: [
+        {
+          name: "Start Your Conversion",
+          link: "/contact-us",
+          primary: true,
+        },
+        {
+          name: "Learn More",
+          link: "#license-conversion-intro",
+          primary: false,
+        },
+      ],
+    },
+
+    underHeader: {
+      title: "Fly Under the FAA Banner",
+      paragraphs: [
+        "USATS helps pilots from around the world convert their existing foreign or ICAO licenses into FAA certificates. With decades of experience training international pilots, we make the process smooth, efficient, and fully compliant with FAA standards.",
+        "Whether you're transitioning to a U.S. career, expanding your global privileges, or planning to train in the States, USATS provides step-by-step guidance from document verification to your final FAA checkride.",
+      ],
+      image: {
+        imagePath: "/src/assets/alto_4a.jpg",
+        imageAlt: "International pilot holding an FAA license",
+      },
+      buttons: [],
+    },
+
+    sections: [
+      {
+        title: "The FAA License Conversion Process",
+        descriptions: [
+          "If you already hold a valid ICAO-compliant pilot license, you can apply for an equivalent FAA certificate through the Foreign License Verification and Conversion Process.",
+          "USATS will guide you through each step ,  from verifying your credentials with your home authority to preparing for the required FAA knowledge and practical tests.",
+          "Depending on your flight experience and certification, we’ll tailor your conversion plan to ensure full compliance and efficient completion.",
+        ],
+        bullets: [
+          {
+            name: "Our Conversion Services Include:",
+            description:
+              "End-to-end assistance with FAA paperwork, verification, and test preparation for both airplane and helicopter pilots.",
+          },
+        ],
+        image: {
+          imagePath: "/src/assets/altong_flying_over_coast.jpg",
+          imageAlt: "Pilot preparing documents for FAA license conversion",
+        },
+      },
+      {
+        title: "Why Convert with USATS?",
+        descriptions: [
+          "At USATS, you’ll work with a dedicated team that has helped pilots from more than 120 countries transition to FAA certification. Our instructors and administrative staff ensure you understand every step and meet every requirement ,  without unnecessary stress.",
+        ],
+        bullets: [
+          {
+            name: "Global Expertise",
+            description:
+              "Our instructors specialize in training international students under FAA and ICAO standards.",
+          },
+          {
+            name: "Streamlined Paperwork",
+            description:
+              "We assist you with the FAA’s verification process (Form 8060-71) and coordinate with your home aviation authority.",
+          },
+          {
+            name: "Preparation for Success",
+            description:
+              "Receive personalized ground and flight instruction to prepare for your FAA knowledge and practical tests.",
+          },
+          {
+            name: "Flexible Training",
+            description:
+              "Choose from airplane or helicopter programs based on your current experience and conversion goals.",
+          },
+        ],
+        image: {
+          imagePath: "/src/assets/ALTO_NG.webp",
+          imageAlt: "Instructor assisting pilot during conversion training",
+        },
+      },
+      {
+        title: "Who Can Apply?",
+        descriptions: [
+          "• Pilots holding a valid ICAO-compliant license issued by another country.",
+          "• Commercial or private pilots seeking FAA certification for work or training in the U.S.",
+          "• Airline or corporate pilots expanding their career internationally.",
+          "<strong>Get your FAA license recognized worldwide and unlock new opportunities ,  start your conversion with USATS today!</strong>",
+        ],
+        image: {
+          imagePath: "/src/assets/ALTO_3A.webp",
+          imageAlt: "Pilot smiling after successful FAA conversion",
+        },
+      },
+    ],
+
+    schedule: {
+      title: "Understanding the Conversion Process",
+      heather2: "Foreign License Conversion Overview",
+      imagePath: "/src/assets/David_Wells_PPL_RW_graduate_2.png",
+      imageAlt: "Instructor briefing international pilot before training",
+      description: [
+        "Converting your license to FAA certification is straightforward when you know the steps. Here’s what to expect when working with USATS:",
+        "The FAA foreign license verification and conversion process generally includes:",
+      ],
+      list: [
+        "Submitting FAA Form 8060-71 for license verification",
+        "Coordination with your issuing aviation authority",
+        "Receiving the FAA Letter of Authenticity",
+        "Completing any required ground or flight training",
+        "Passing the FAA knowledge and practical tests (if applicable)",
+      ],
+      location: `US Aviation Jet Center <br> 355 Golden Knights Blvd <br> Titusville, FL, 32780`,
+      buttons: [
+        {
+          name: "Get Directions",
+          link: "https://www.google.com/maps/place/Space+Coast+Regional+Airport/@28.5114085,-80.8059907,14.85z/",
+          primary: true,
+        },
+        {
+          name: "Start My Conversion",
+          link: "/contact-us",
+          primary: false,
+        },
+      ],
+    },
+  },
+};
+
+const CTAFlight = {
+  imagePath: "/src/assets/alto_5a.jpg",
+  imageAlt: imgCTA.imageAlt,
+  headerH1: `Convert Your License. Expand Your Horizons with <span class="text-accent-600">USATS</span>`,
+  paragraph: `Join hundreds of international pilots who have transitioned successfully to FAA certification with our proven process and expert support.`,
+  buttons: [
+    {
+      name: "Start Conversion",
+      link: "/contact-us",
+      primary: true,
+    },
+    {
+      name: "Learn About Our Programs",
+      link: "/training-programs",
+      primary: false,
+    },
+  ],
+};
+---
+
+<BaseLayout
+  siteTitle={data.data.title}
+  siteDescription={data.data.description}
+  keywords={data.data.pageKeywords}
+>
+  <HeaderScreen content={data.data.header} />
+
+  <UnderHeader content={data.data.underHeader} />
+
+  <section id="license-conversion-intro">
+    <div
+      class="relative isolate overflow-hidden bg-gradient-to-b from-primary-950 to-primary-800 px-6 pt-24 pb-8 sm:pt-32 lg:overflow-visible lg:px-0"
+    >
+      <div class="mx-auto max-w-6xl lg:pr-4 md:px-10 lg:px-20">
+        <div class="my-9">
+          <p
+            class="text-base font-semibold leading-7 text-accent-700 uppercase"
+          >
+            {data.data.schedule.heather2}
+          </p>
+          <h1
+            class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
+          >
+            {data.data.schedule.title}
+          </h1>
+          <p
+            class="mt-6 text-xl leading-8 text-muted-200"
+            set:html={data.data.schedule.description[0]}
+          />
+        </div>
+      </div>
+      <div class="absolute inset-0 -z-10 overflow-hidden">
+        <svg
+          class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-black [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+          aria-hidden="true"
+        >
+          <defs>
+            <pattern
+              id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+              width="200"
+              height="200"
+              x="50%"
+              y="-1"
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none"></path>
+            </pattern>
+          </defs>
+          <svg x="50%" y="-1" class="overflow-visible fill-primary-950">
+            <path
+              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+              stroke-width="0"></path>
+          </svg>
+          <rect
+            width="100%"
+            height="100%"
+            stroke-width="0"
+            fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"></rect>
+        </svg>
+      </div>
+      <div class="mt-12 flex justify-center align-middle">
+        <ul
+          role="list"
+          class="flex flex-wrap justify-between max-w-7xl divide-y-2"
+        >
+          <li
+            class="group py-5 flex flex-wrap justify-between align-middle items-center"
+          >
+            <div
+              class="mx-auto w-full rounded-xl overflow-hidden h-96 md:w-1/3 ring-primary-50 hover:ring-2 hover:shadow-lg duration-200 ease-in-out"
+            >
+              <ImageComp
+                imagePath={data.data.schedule.imagePath}
+                imageAlt={data.data.schedule.imageAlt}
+                styles="h-full object-cover hover:scale-110 hover:shadow-lg hover:brightness-110 duration-300 ease-in-out"
+                quality={80}
+                loading="lazy"
+              />
+            </div>
+            <div class="w-full md:w-1/2">
+              <p
+                class="text-muted-200 py-3"
+                set:html={data.data.schedule.description[1]}
+              />
+              <ol class="space-y-3 py-3">
+                {
+                  data.data.schedule.list.map((point) => (
+                    <li
+                      class="flex text-lg items-center bg-accent-50/70 p-3 rounded-md shadow-sm hover:scale-105 hover:shadow-md transition-all duration-300"
+                      set:html={point}
+                    >
+                      <FaPlane className="text-accent-600 mr-2 w-4 flex-shrink-0" />{" "}
+                    </li>
+                  ))
+                }
+              </ol>
+              <div class="flex">
+                <a
+                  target="_self"
+                  href="#license-conversion-services"
+                  class="text-base/7 font-semibold text-accent-600"
+                >
+                  Our Services <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="license-conversion-details">
+    <div
+      class="relative isolate overflow-hidden bg-gradient-to-b from-primary-950 to-primary-800 px-6 pt-24 pb-8 sm:pt-32 lg:overflow-visible lg:px-0"
+    >
+      <div class="mx-auto max-w-6xl lg:pr-4 md:px-10 lg:px-20">
+        <div class="my-9">
+          <p
+            class="text-base font-semibold leading-7 text-accent-700 uppercase"
+          >
+            {data.data.upperHeading}
+          </p>
+          <h1
+            class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
+          >
+            {data.data.sections[0].title}
+          </h1>
+          {
+            data.data.sections[0].descriptions.map((paragraph, index) => (
+              <div>
+                <p
+                  class="mt-6 text-xl leading-8 text-muted-200"
+                  set:html={paragraph}
+                />
+                {index == 1 && (
+                  <div class="w-full flex justify-center items-center mx-auto py-6 rounded-xl">
+                    <ImageComp
+                      imagePath={data.data.sections[0].image.imagePath}
+                      imageAlt={data.data.sections[0].image.imageAlt}
+                      styles="rounded-xl h-full object-cover"
+                      quality={80}
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Card 1 -->
+      <div class="group mt-12 flex justify-center align-middle">
+        <ul
+          role="list"
+          class="flex flex-wrap justify-center max-w-4xl divide-y-2"
+        >
+          <div class="">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+              <div class="pb-10">
+                <h3
+                  id="tier-hobby"
+                  class="text-3xl font-semibold text-accent-600"
+                >
+                  {data.data.sections[0].bullets[0].name}
+                </h3>
+                <p class="mt-6 text-base/7 text-muted-200">
+                  {data.data.sections[0].bullets[0].description}
+                </p>
+              </div>
+
+              <div class="mx-auto grid grid-cols-1 gap-8">
+                <!-- Card 1  -->
+                <div
+                  class="flex flex-col justify-between rounded-3xl bg-primary-900 p-8 shadow-xl ring-1 ring-accent-900/60 sm:p-10"
+                >
+                  <div>
+                    <h3
+                      id="tier-hobby"
+                      class="text-base/7 font-semibold text-accent-600"
+                    >
+                      {data.data.sections[1].title}
+                    </h3>
+                    <ul
+                      role="list"
+                      class="mt-10 space-y-4 text-sm/6 text-muted-200"
+                    >
+                      {
+                        data.data.sections[1].bullets &&
+                          data.data.sections[1].bullets.map((bullet) => (
+                            <li class="flex gap-x-3 hover:scale-110 hover:shadow-lg hover:brightness-110 duration-500 ease-in-out">
+                              <svg
+                                class="h-6 w-5 flex-none text-accent-600"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true"
+                                data-slot="icon"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                                  clip-rule="evenodd"
+                                />
+                              </svg>
+                              {bullet.name} - {bullet.description}
+                            </li>
+                          ))
+                      }
+                    </ul>
+                  </div>
+                  <a
+                    href="/contact-us"
+                    aria-describedby="tier-hobby"
+                    class="mt-8 mx-auto block rounded-md bg-accent-600 px-6 py-2 text-center text-sm/6 font-semibold text-white shadow-xs hover:bg-accent-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600"
+                    >Get started today</a
+                  >
+                </div>
+
+                <!-- Card 2  -->
+                <!-- <div
+                  class="flex flex-col justify-between rounded-3xl bg-primary-900 p-8 shadow-xl ring-1 ring-accent-900/60 sm:p-10"
+                >
+                  <div>
+                    <h3
+                      id="tier-hobby"
+                      class="text-base/7 font-semibold text-accent-600"
+                    >
+                      {data.data.sections[1].title}
+                    </h3>
+                    <ul
+                      role="list"
+                      class="mt-10 space-y-4 text-sm/6 text-muted-200"
+                    >
+                      {
+                        data.data.sections[1].bullets &&
+                          data.data.sections[1].bullets.map((bullet) => (
+                            <li class="flex gap-x-3 hover:scale-110 hover:shadow-lg hover:brightness-110 duration-500 ease-in-out">
+                              <svg
+                                class="h-6 w-5 flex-none text-accent-600"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true"
+                                data-slot="icon"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                                  clip-rule="evenodd"
+                                />
+                              </svg>
+                              {bullet.name} - {bullet.description}
+                            </li>
+                          ))
+                      }
+                    </ul>
+                  </div>
+                  <a
+                    href="#"
+                    aria-describedby="tier-hobby"
+                    class="mt-8 block rounded-md bg-accent-600 px-3.5 py-2 text-center text-sm/6 font-semibold text-white shadow-xs hover:bg-accent-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600"
+                    >Get started today</a
+                  >
+                </div> -->
+                <!-- Contact-us Card  -->
+                <div
+                  class="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center"
+                >
+                  <div class="lg:min-w-0 lg:flex-1">
+                    <h3 class="text-base/7 font-semibold text-accent-600">
+                      Still have questions? Contact-us!
+                    </h3>
+                    <p class="mt-1 text-base/7 text-muted-200">
+                      Give us a call
+                    </p>
+                  </div>
+                  <a
+                    href="/contact-us"
+                    class="rounded-md px-3.5 py-2 text-sm/6 font-semibold text-accent-600 ring-1 ring-muted-200 ring-inset hover:ring-accent-600 hover:text-white hover:scale-110 hover:bg-accent-700 transition-all duration-500 ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600"
+                  >
+                    Contact-us <span aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 -z-10 overflow-hidden">
+        <svg
+          class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-black [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+          aria-hidden="true"
+        >
+          <defs>
+            <pattern
+              id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+              width="200"
+              height="200"
+              x="50%"
+              y="-1"
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none"></path>
+            </pattern>
+          </defs>
+          <svg x="50%" y="-1" class="overflow-visible fill-primary-950">
+            <path
+              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+              stroke-width="0"></path>
+          </svg>
+          <rect
+            width="100%"
+            height="100%"
+            stroke-width="0"
+            fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"></rect>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <CTADiscoveryFlights content={CTAFlight} />
+</BaseLayout>

@@ -149,6 +149,18 @@ export const mobileNavbarLinks = [
         name: "Air Tours",
         link: "https://airtoursusats.com",
       },
+      {
+        name: "Flight Reviews",
+        link: "/services/flight-reviews",
+      },
+      {
+        name: "Foreign License Conversions",
+        link: "/services/foreign-license-conversions",
+      },
+      {
+        name: "ICAO Services",
+        link: "/services/icao-services",
+      },
     ],
   },
   {

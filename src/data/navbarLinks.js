@@ -103,10 +103,10 @@ export const navbarLinks = [
         name: "Authorized Robinson Service Center",
         link: "/services/maintenance#robinson-service-center",
       },
-      {
-        name: "Part 43 Maintenance",
-        link: "/services/maintenance#part-43-maintenance",
-      },
+      // {
+      //   name: "Part 43 Maintenance",
+      //   link: "/services/maintenance#part-43-maintenance",
+      // },
     ],
   },
   {
@@ -132,6 +132,18 @@ export const navbarLinks = [
       {
         name: "Air Tours",
         link: "https://airtoursusats.com",
+      },
+      {
+        name: "Flight Reviews",
+        link: "/services/flight-reviews",
+      },
+      {
+        name: "Foreign License Conversions",
+        link: "/services/foreign-license-conversions",
+      },
+      {
+        name: "ICAO Services",
+        link: "/services/icao-services",
       },
     ],
   },
