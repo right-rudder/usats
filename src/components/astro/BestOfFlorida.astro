@@ -17,6 +17,13 @@ const example = {
       rel: "noopener noreferrer",
     },
     {
+      imagePath: "/src/assets/BOFL-2025-Best-Web-250x250.jpg",
+      imageAlt: "Best of Florida 2025 badge",
+      link: "https://guidetoflorida.com/best-of/winners/2025/college-specialized-training#:~:text=U.S.%20Aviation%20Training%20Solutions%20Inc.",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+    {
       imagePath: "/src/assets/BOFL-2024-Best-Web-1080x1080.jpg",
       imageAlt: "Best of Florida 2024 badge",
       link: "https://guidetoflorida.com/best-of/winners/2024/college-specialized-training#:~:text=Flight%20Instruction%20Schools,Training%20Solutions%20Inc.",
@@ -44,8 +51,9 @@ import ImageComp from "../ImageComp.astro";
   id={content.title}
   class="bg-primary-950 py-6 lg:py-12 flex items-center md:items-start flex-col-reverse md:flex-row justify-between gap-5 md:gap-0 text-white px-5 md:px-10"
 >
+  <!-- Images -->
   <div
-    class="flex flex-col gap-9 md:gap-12 w-1/2 justify-center items-center md:justify-end md:items-end px-6 md:px-16"
+    class="flex flex-col lg:flex-row flex-wrap gap-9 md:gap-12 md:w-1/2 justify-center items-center px-6 md:px-16"
   >
     {
       content.images &&
@@ -54,7 +62,7 @@ import ImageComp from "../ImageComp.astro";
             href={image.link}
             target={image.target}
             rel="noopener noreferrer"
-            class={`w-36 h-36 md:w-72 md:h-72 overflow-hidden ring-1 duration-300 hover:scale-110 transition-all hover:ring-accent-700 ${index % 2 === 1 ? "md:mr-12" : ""}`}
+            class={`w-24 h-24 md:w-52 md:h-52 overflow-hidden ring-1 duration-300 hover:scale-110 transition-all hover:ring-accent-700 ${index % 2 === 0 ? "lg:mr-6 lg:mt-12" : "w-32 h-32 order-first md:order-none "}`}
           >
             <ImageComp
               imagePath={image.imagePath}
@@ -65,6 +73,7 @@ import ImageComp from "../ImageComp.astro";
         ))
     }
   </div>
+  <!-- Text -->
   <div class="flex flex-col gap-9 md:gap-12 md:w-1/2">
     <div class="">
       <h2
