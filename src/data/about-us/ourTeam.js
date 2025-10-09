@@ -4,6 +4,7 @@ import {
   STAFF_PHOTO_HESSE_HELICOPTER_INSTRUCTOR as staffHessHeliInstructor,
   STAFF_PHOTO_RAY_DEPTULA as staffRay,
   STAFF_PHOTO_STEPHANE_REBEIX as staffStephane,
+  PLACEHOLDER_PERSON as staffPlaceHolder,
 } from "../../constsImages";
 
 const ourTeam = {
@@ -46,23 +47,86 @@ const ourTeam = {
     ],
   },
 
-  teamGrid: {
-    upperHeading: "Meet Our Team",
-    heading: "The Airframe of US Aviation Training Solutions",
+  fixedWingTeam: {
+    upperHeading: "Fixed Wing Team",
+    heading: "The Fixed Wing Team of US Aviation Training Solutions",
     description:
       "USATS instructors are FAA-certified professionals with decades of real-world experience, including military and commercial aviation. Trained in advanced safety systems like CRM and TEM, our team provides personalized flight instruction using modern aircraft and a proven curriculum refined over 30 years.",
     members: [
       {
-        name: "Iikka Hesse",
-        imagePath: staffHessHeliInstructor.imagePath,
-        imageAlt: staffHessHeliInstructor.imageAlt,
-        rank: "Helicopter Instructor",
+        name: "Urara Takano",
+        imagePath: staffPlaceHolder.imagePath,
+        imageAlt: staffPlaceHolder.imageAlt,
+        rank: "Chief FW Pilot, CFI, CFII",
       },
       {
-        name: "Stephane Rebeix",
-        imagePath: staffStephane.imagePath,
-        imageAlt: staffStephane.imageAlt,
-        rank: "Chief Flight Instructor",
+        name: "Angela Ramirez",
+        imagePath: staffPlaceHolder.imagePath,
+        imageAlt: staffPlaceHolder.imageAlt,
+        rank: "FW, CFI, CFII, MEI",
+      },
+      {
+        name: "Mike Bleau",
+        imagePath: staffPlaceHolder.imagePath,
+        imageAlt: staffPlaceHolder.imageAlt,
+        rank: "FW, CFII, ATP, MEI",
+      },
+      {
+        name: "Nicolas Burleson",
+        imagePath: staffPlaceHolder.imagePath,
+        imageAlt: staffPlaceHolder.imageAlt,
+        rank: "FW, CFI, CFII",
+      },
+      {
+        name: "Ethan Criss",
+        imagePath: staffPlaceHolder.imagePath,
+        imageAlt: staffPlaceHolder.imageAlt,
+        rank: "FW, CFI",
+      },
+      {
+        name: "Oscar Gomez",
+        imagePath: staffPlaceHolder.imagePath,
+        imageAlt: staffPlaceHolder.imageAlt,
+        rank: "FW/RW — CFII (FW), MEI, ATP | (RW) CFII - ATP",
+      },
+      {
+        name: "Alec Joyner",
+        imagePath: staffPlaceHolder.imagePath,
+        imageAlt: staffPlaceHolder.imageAlt,
+        rank: "FW, CFII, MEI",
+      },
+      {
+        name: "Callum Watson",
+        imagePath: staffPlaceHolder.imagePath,
+        imageAlt: staffPlaceHolder.imageAlt,
+        rank: "FW, CFI, CFII",
+      },
+    ],
+  },
+
+  rotorWingTeam: {
+    upperHeading: "Rotor Wing Team",
+    heading: "The Rotor Wing Team of US Aviation Training Solutions",
+    description:
+      "Our rotor wing instructors bring a wealth of real-world helicopter experience, from commercial operations to advanced flight instruction. With a strong focus on safety and professional development, they ensure every student is well-prepared for real-world flying.",
+    members: [
+      {
+        name: "Jason Krum",
+        imagePath: staffPlaceHolder.imagePath,
+        imageAlt: staffPlaceHolder.imageAlt,
+        rank: "RW, CFI, CFII",
+      },
+      {
+        name: "Katie Dwyer",
+        imagePath: staffPlaceHolder.imagePath,
+        imageAlt: staffPlaceHolder.imageAlt,
+        rank: "RW, CFI, CFII",
+      },
+      {
+        name: "Nelson Hererra",
+        imagePath: staffPlaceHolder.imagePath,
+        imageAlt: staffPlaceHolder.imageAlt,
+        rank: "RW, CFI, CFII, ATP, Ground Instructor",
       },
     ],
   },
