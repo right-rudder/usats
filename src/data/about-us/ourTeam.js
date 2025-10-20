@@ -79,8 +79,8 @@ const ourTeam = {
       },
       {
         name: "Ethan Criss",
-        imagePath: staffPlaceHolder.imagePath,
-        imageAlt: staffPlaceHolder.imageAlt,
+        imagePath: "/src/assets/staff-photo_Ethan-Criss.webp",
+        imageAlt: "Ethan Criss, Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI",
       },
       {
@@ -97,8 +97,8 @@ const ourTeam = {
       },
       {
         name: "Callum Watson",
-        imagePath: staffPlaceHolder.imagePath,
-        imageAlt: staffPlaceHolder.imageAlt,
+        imagePath: "/src/assets/Staff-photo-Callum-Watson.webp",
+        imageAlt: "Callum Watson, Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI, CFII",
       },
     ],
@@ -118,9 +118,9 @@ const ourTeam = {
       },
       {
         name: "Katie Dwyer",
-        imagePath: staffPlaceHolder.imagePath,
-        imageAlt: staffPlaceHolder.imageAlt,
-        rank: "RW, CFI, CFII",
+        imagePath: "/src/assets/staff-photo-Katie-Dwyer.webp",
+        imageAlt: "Katie Dwyer, Flight Instructor at USATS Titusville Florida",
+        rank: "RW, CFI",
       },
       {
         name: "Nelson Hererra",
