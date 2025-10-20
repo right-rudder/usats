@@ -2,7 +2,7 @@
 pubDate: "2025-10-16"
 author: Brian Craddock
 title: "Your Complete Guide to Becoming a Professional Pilot in the U.S."
-description: "Learn every step to become a professional pilot in the U.S. — from your first flight lesson to advanced certifications. Discover how USATS provides world-class training and support."
+description: "Learn every step to become a professional pilot in the U.S. from your first flight lesson to advanced certifications. Discover how USATS provides world-class training and support."
 heroImage: "/blog/Huffstetter-pic.webp"
 readingTime: 5
 category: "Flight Training"
