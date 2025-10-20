@@ -56,6 +56,6 @@ USATS supports graduates with career placement resources, industry connections, 
 
 ## Final Thoughts
 
-Becoming a professional pilot isn’t just about earning a license; it’s about building a foundation for a lifelong career. [**USATS in Titusville, Florida**](https://usats.training) combines expert instruction, modern aircraft, and international recognition to help you achieve your aviation dreams.
+Becoming a professional pilot isn’t just about earning a license; it’s about building a foundation for a lifelong career. [**USATS in Titusville, Florida**](/) combines expert instruction, modern aircraft, and international recognition to help you achieve your aviation dreams.
 
-**Start your journey today** with a [**Discovery Flight**](/contact-us) and take the first step toward your career in aviation.
+**Start your journey today** with a [**Discovery Flight**](/discovery-flight) and take the first step toward your career in aviation.
