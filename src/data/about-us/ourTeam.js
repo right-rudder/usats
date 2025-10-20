@@ -79,7 +79,7 @@ const ourTeam = {
       },
       {
         name: "Ethan Criss",
-        imagePath: "/src/assets/staff-photo_Ethan-Criss.JPG",
+        imagePath: "/src/assets/staff-photo_Ethan-Criss.webp",
         imageAlt: "Ethan Criss, Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI",
       },
@@ -97,7 +97,7 @@ const ourTeam = {
       },
       {
         name: "Callum Watson",
-        imagePath: "/src/assets/Staff-photo-Callum-Watson.JPG",
+        imagePath: "/src/assets/Staff-photo-Callum-Watson.webp",
         imageAlt: "Callum Watson, Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI, CFII",
       },
@@ -118,7 +118,7 @@ const ourTeam = {
       },
       {
         name: "Katie Dwyer",
-        imagePath: "/src/assets/staff-photo-Katie-Dwyer.JPG",
+        imagePath: "/src/assets/staff-photo-Katie-Dwyer.webp",
         imageAlt: "Katie Dwyer, Flight Instructor at USATS Titusville Florida",
         rank: "RW, CFI",
       },
