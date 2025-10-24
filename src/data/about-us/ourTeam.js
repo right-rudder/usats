@@ -55,8 +55,8 @@ const ourTeam = {
     members: [
       {
         name: "Urara Takano",
-        imagePath: staffPlaceHolder.imagePath,
-        imageAlt: staffPlaceHolder.imageAlt,
+        imagePath: "/src/assets/Takano Urara 3.jpg",
+        imageAlt: "Urara Takno, Flight Instructor at USATS Titusville Florida",
         rank: "Chief FW Pilot, CFI, CFII",
       },
       {
@@ -98,7 +98,8 @@ const ourTeam = {
       {
         name: "Callum Watson",
         imagePath: "/src/assets/Staff-photo-Callum-Watson.webp",
-        imageAlt: "Callum Watson, Flight Instructor at USATS Titusville Florida",
+        imageAlt:
+          "Callum Watson, Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI, CFII",
       },
     ],
