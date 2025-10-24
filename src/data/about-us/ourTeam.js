@@ -113,8 +113,9 @@ const ourTeam = {
     members: [
       {
         name: "Jason Krum",
-        imagePath: staffPlaceHolder.imagePath,
-        imageAlt: staffPlaceHolder.imageAlt,
+        imagePath: "/src/assets/Krum, Jason.jpg",
+        imageAlt:
+          "Jason Krum, Helicopter Flight Instructor at USATS Titusville Florida",
         rank: "RW, CFI Gold Seal, CFII, ATP, Instrument Ground Instructor, SFAR",
       },
       {
