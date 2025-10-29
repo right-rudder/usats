@@ -61,8 +61,8 @@ const ourTeam = {
       },
       {
         name: "Angela Ramirez",
-        imagePath: staffPlaceHolder.imagePath,
-        imageAlt: staffPlaceHolder.imageAlt,
+        imagePath: "/src/assets/staff-Angela-Ramirez-Perez.jpg",
+        imageAlt: "Angela Ramirez, Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI, CFII, MEI",
       },
       {
