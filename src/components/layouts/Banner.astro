@@ -13,13 +13,11 @@ import { FaSignalMessenger } from "react-icons/fa6";
 import formatPhoneNumber from "../../scripts/phone-format";
 ---
 
-<div class="w-full bg-black z-0 h-12 px-5 lg:px-0 text-white ">
+<div class="w-full bg-black z-0 h-12 md:px-5 lg:px-0 text-white">
   <div
-    class="flex max-w-8xl mx-auto items-center h-full justify-between px-10 lg:pl-20 lg:pr-14"
+    class="flex md:'max-w-8xl mx-auto items-center h-full justify-between px-4 md:px-10 lg:pl-20 lg:pr-14"
   >
-    <div
-      class="flex items-center justify-start gap-x-3"
-    >
+    <div class="flex items-center justify-start gap-x-3">
       {
         LINKEDIN_URL && (
           <a
@@ -130,7 +128,7 @@ import formatPhoneNumber from "../../scripts/phone-format";
         <FaWhatsapp className="mr-2 text-lg lg:text-xl hover:text-green-600 " />
       </a> -->
       <!-- Signal -->
-        <!-- <a
+      <!-- <a
           aria-label="Chat on Signal"
           href="https://signal.me/13215290795"
           target="_blank"
@@ -140,17 +138,19 @@ import formatPhoneNumber from "../../scripts/phone-format";
             className="mr-2 text-lg lg:text-xl hover:text-blue-500"
           />
         </a> -->
-        <!-- Phone -->
-        <a
-          href={`tel:${PHONE_NUMBER}`}
-          aria-labelledby="Call Us Now"
-          title="Call Us Now"
-          class="flex items-center justify-end text-right text-base lg:text-lg font-sans font-bold hover:scale-110 cursor-pointer transition-all"
-          aria-label="Call telephone Link"
-        >
-            <FaPhoneSquareAlt className="mr-2 text-lg lg:text-xl" />
-            {formatPhoneNumber(PHONE_NUMBER)}
-        </a>
+      <!-- Phone -->
+      <a
+        href={`tel:${PHONE_NUMBER}`}
+        aria-labelledby="Call Us Now"
+        title="Call Us Now"
+        class="flex items-center justify-end text-right text-base lg:text-lg font-sans font-bold hover:scale-110 cursor-pointer transition-all"
+        aria-label="Call telephone Link"
+      >
+        <FaPhoneSquareAlt
+          className="lg:mr-2 text-xs md:text-lg lg:text-xl hidden md:block"
+        />
+        {formatPhoneNumber(PHONE_NUMBER)}
+      </a>
     </div>
   </div>
 </div>
