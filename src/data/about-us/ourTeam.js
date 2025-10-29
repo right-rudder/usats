@@ -60,7 +60,7 @@ const ourTeam = {
         rank: "Chief FW Pilot, CFI, CFII",
       },
       {
-        name: "Angela Ramirez",
+        name: "Angela Ramirez Perez",
         imagePath: "/src/assets/staff-Angela-Ramirez-Perez.jpg",
         imageAlt: "Angela Ramirez, Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI, CFII, MEI",
