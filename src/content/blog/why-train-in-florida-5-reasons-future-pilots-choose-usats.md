@@ -1,5 +1,5 @@
 ---
-pubDate: "2025-10-30"
+pubDate: "2025-11-19"
 author: Brian Craddock
 title: "Why Train in Florida? 5 Reasons Future Pilots Choose USATS"
 description: "Discover why Florida is one of the best places in the world to train as a pilot. See how USATS offers ideal weather, modern aircraft, and an efficient training experience."
@@ -51,4 +51,4 @@ Titusville is minutes from the coast, close to Orlando, and full of outdoor acti
 
 Training in Florida offers clear advantages in weather, airspace, and community. [**USATS**](https://usats.training) leverages these benefits to deliver a world-class training experience for aspiring pilots worldwide.
 
-**Book a [Discovery Flight](/contact-us)** and see why so many students choose to start their aviation journey at USATS.
+**Book a [Discovery Flight](/discovery-flight)** and see why so many students choose to start their aviation journey at USATS.
