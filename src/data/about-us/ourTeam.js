@@ -54,52 +54,51 @@ const ourTeam = {
       "USATS instructors are FAA-certified professionals with decades of real-world experience, including military and commercial aviation. Trained in advanced safety systems like CRM and TEM, our team provides personalized flight instruction using modern aircraft and a proven curriculum refined over 30 years.",
     members: [
       {
-        name: "Urara Takano",
+        name: "Urara T.",
         imagePath: "/src/assets/Takano Urara 3.jpg",
-        imageAlt: "Urara Takno, Flight Instructor at USATS Titusville Florida",
+        imageAlt: "Urara T., Flight Instructor at USATS Titusville Florida",
         rank: "Chief FW Pilot, CFI, CFII",
       },
       {
-        name: "Angela Ramirez Perez",
+        name: "Angela P.",
         imagePath: "/src/assets/staff-Angela-Ramirez-Perez.jpg",
-        imageAlt: "Angela Ramirez, Flight Instructor at USATS Titusville Florida",
+        imageAlt: "Angela P., Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI, CFII, MEI",
       },
       {
-        name: "Mike Bleau",
+        name: "Mike B.", // Mike Bleau
         imagePath: staffPlaceHolder.imagePath,
         imageAlt: staffPlaceHolder.imageAlt,
         rank: "FW, CFII, ATP, MEI",
       },
       {
-        name: "Nicolas Burleson",
+        name: "Nicolas B.", // Nicolas Burleson
         imagePath: staffPlaceHolder.imagePath,
         imageAlt: staffPlaceHolder.imageAlt,
         rank: "FW, CFI, CFII",
       },
       {
-        name: "Ethan Criss",
+        name: "Ethan C.",
         imagePath: "/src/assets/staff-photo_Ethan-Criss.webp",
-        imageAlt: "Ethan Criss, Flight Instructor at USATS Titusville Florida",
+        imageAlt: "Ethan C., Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI",
       },
       {
-        name: "Oscar Gomez",
+        name: "Oscar G.", // Oscar Gomez
         imagePath: staffPlaceHolder.imagePath,
         imageAlt: staffPlaceHolder.imageAlt,
         rank: "FW/RW — CFII (FW), MEI, ATP | (RW) CFII - ATP",
       },
       {
-        name: "Alec Joyner",
+        name: "Alec J.", // Alec Joyner
         imagePath: staffPlaceHolder.imagePath,
         imageAlt: staffPlaceHolder.imageAlt,
         rank: "FW, CFII, MEI",
       },
       {
-        name: "Callum Watson",
+        name: "Callum W.",
         imagePath: "/src/assets/Staff-photo-Callum-Watson.webp",
-        imageAlt:
-          "Callum Watson, Flight Instructor at USATS Titusville Florida",
+        imageAlt: "Callum W., Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI, CFII",
       },
     ],
@@ -112,20 +111,26 @@ const ourTeam = {
       "Our rotor wing instructors bring a wealth of real-world helicopter experience, from commercial operations to advanced flight instruction. With a strong focus on safety and professional development, they ensure every student is well-prepared for real-world flying.",
     members: [
       {
-        name: "Jason Krum",
+        name: "Stephane R.",
+        imagePath: staffStephane.imagePath,
+        imageAlt: staffStephane.imageAlt,
+        rank: "Chief Flight Instructor, RW, CFI, CFII, Dual ATP (US/Europe)",
+      },
+      {
+        name: "Jason K.",
         imagePath: "/src/assets/Krum, Jason.jpg",
         imageAlt:
-          "Jason Krum, Helicopter Flight Instructor at USATS Titusville Florida",
+          "Jason K., Helicopter Flight Instructor at USATS Titusville Florida",
         rank: "RW, CFI Gold Seal, CFII, ATP, Instrument Ground Instructor, SFAR",
       },
       {
-        name: "Katie Dwyer",
+        name: "Katie D.",
         imagePath: "/src/assets/staff-photo-Katie-Dwyer.webp",
-        imageAlt: "Katie Dwyer, Flight Instructor at USATS Titusville Florida",
+        imageAlt: "Katie D., Flight Instructor at USATS Titusville Florida",
         rank: "RW, CFI",
       },
       {
-        name: "Nelson Hererra",
+        name: "Nelson H.", // Nelson Hererra
         imagePath: staffPlaceHolder.imagePath,
         imageAlt: staffPlaceHolder.imageAlt,
         rank: "RW, CFI, CFII , ATP, Ground Instructor, SFAR, NVG Instructor",
