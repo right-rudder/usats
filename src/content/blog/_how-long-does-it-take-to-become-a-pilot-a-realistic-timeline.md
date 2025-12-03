@@ -3,7 +3,7 @@ pubDate: "2025-12-15"
 author: Brian Craddock
 title: "How Long Does It Take to Become a Pilot? A Realistic Timeline"
 description: "Discover how long it really takes to become a pilot in the U.S., step by step. USATS provides a structured training path designed to help students achieve their goals efficiently."
-heroImage: "/blog/directFly_altong_red_flying_over_plains_USATS.jpg"
+heroImage: "/blog//directFly_altong_blue_USATS_ramp.webp"
 readingTime: 4
 category: "Flight Training"
 tags:
