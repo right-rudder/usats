@@ -1,19 +1,16 @@
 export const ALTONG_FLYING_OVER_COAST = {
   imagePath: "/src/assets/altong_flying_over_coast.jpg",
-  imageAlt:
-    "Alto NG airplane flying over coast",
+  imageAlt: "Alto NG airplane flying over coast",
 };
 
 export const ALTONG_MAINTENANCE = {
   imagePath: "/src/assets/altong_maintenance.png",
-  imageAlt:
-    "Alto NG airplane maintenance",
+  imageAlt: "Alto NG airplane maintenance",
 };
 
 export const ALTONG_PANEL = {
   imagePath: "/src/assets/altong_panel.png",
-  imageAlt:
-    "Alto NG airplane panel",
+  imageAlt: "Alto NG airplane panel",
 };
 
 export const DARK_BLUE_HELI_MAINTENANCE = {
@@ -173,26 +170,7 @@ export const DIRECTFLY_ALTONG_PANEL_USATS = {
   imagePath: "/src/assets/directFly_altong_panel_USATS.jpg",
   imageAlt: " ",
 };
-export const DIRECTFLY_ALTONG_RED_FLYING_DEPARTING_USATS = {
-  imagePath: "/src/assets/directFly_altong_red_flying_departing_USATS.jpg",
-  imageAlt: " ",
-};
-export const DIRECTFLY_ALTONG_RED_FLYING_IN_THE_SKY_USATS = {
-  imagePath: "/src/assets/directFly_altong_red_flying_in_the_sky_USATS.jpg",
-  imageAlt: " ",
-};
-export const DIRECTFLY_ALTONG_RED_FLYING_OVER_CITY_USATS_2 = {
-  imagePath: "/src/assets/directFly_altong_red_flying_over_city_USATS_2.jpg",
-  imageAlt: " ",
-};
-export const DIRECTFLY_ALTONG_RED_FLYING_OVER_CITY_USATS = {
-  imagePath: "/src/assets/directFly_altong_red_flying_over_city_USATS.jpg",
-  imageAlt: " ",
-};
-export const DIRECTFLY_ALTONG_RED_FLYING_OVER_PLAINS_USATS = {
-  imagePath: "/src/assets/directFly_altong_red_flying_over_plains_USATS.jpg",
-  imageAlt: " ",
-};
+
 export const DISNEY_WORLD = {
   imagePath: "/src/assets/Disney_World.webp",
   imageAlt: " ",
@@ -210,8 +188,10 @@ export const FLYING_BH = {
   imageAlt: " ",
 };
 export const FLYING_BH2 = {
-  imagePath: "/src/assets/heli-blackhawk-helicopter-flying-helicopter-training.png",
-  imageAlt: "USATS Black Hawk helicopter in flight during military training exercises",
+  imagePath:
+    "/src/assets/heli-blackhawk-helicopter-flying-helicopter-training.png",
+  imageAlt:
+    "USATS Black Hawk helicopter in flight during military training exercises",
 };
 export const FLYING_BLACK_HELI = {
   imagePath: "/src/assets/flyingBlackHeli.png",
@@ -247,8 +227,10 @@ export const FLYING_BLACK_HELI7 = {
   imageAlt: " ",
 };
 export const FLYING_HELI = {
-  imagePath: "/src/assets/heli-flying-over-florida-helicopter-training-florida.png",
-  imageAlt: "Helicopter in flight over Florida landscape during pilot training at USATS",
+  imagePath:
+    "/src/assets/heli-flying-over-florida-helicopter-training-florida.png",
+  imageAlt:
+    "Helicopter in flight over Florida landscape during pilot training at USATS",
 };
 export const FLYING_WHITE_HELI = {
   imagePath: "/src/assets/flyingWhiteHeli.png",
@@ -277,7 +259,8 @@ export const FLYING_WHITE_HELI5 = {
 };
 export const FLYING_WHITE_HELI6 = {
   imagePath: "/src/assets/flyingWhiteHeli6.png",
-  imageAlt: "Black helicopter in flight over Florida landscape during pilot training at USATS",
+  imageAlt:
+    "Black helicopter in flight over Florida landscape during pilot training at USATS",
 };
 export const FLYING_WHITE_HELI7 = {
   imagePath: "/src/assets/flyingWhiteHeli7.png",
@@ -297,7 +280,8 @@ export const HAPPY_LANDINGS_ALO_NG = {
 };
 export const HELICOPTERS_FRAME = {
   imagePath: "/src/assets/heli-helicopter-training-florida.png",
-  imageAlt: "Helicopters frame showcasing various helicopter models used for training at USATS",
+  imageAlt:
+    "Helicopters frame showcasing various helicopter models used for training at USATS",
 };
 export const HUFFSTETTER_PIC = {
   imagePath: "/src/assets/Huffstetter-pic.webp",
@@ -461,8 +445,10 @@ export const HELICOPTER_INSTRUMENTS = {
   imageAlt: "Helicopter instruments panel used for flight training at USATS",
 };
 export const HELICOPTER_INSTRUMENTS2 = {
-  imagePath: "/src/assets/heli-instruments-helicopter-training-titusville-florida-2.jpg",
-  imageAlt: "Helicopter instruments panel with advanced avionics for pilot training at USATS",
+  imagePath:
+    "/src/assets/heli-instruments-helicopter-training-titusville-florida-2.jpg",
+  imageAlt:
+    "Helicopter instruments panel with advanced avionics for pilot training at USATS",
 };
 export const MAINTENANCE_LOGO_141 = {
   imagePath: "/src/assets/Part-145-Repair-Station-Logo.webp",

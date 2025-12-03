@@ -1,8 +1,8 @@
 import { COMPANY_NAME } from "../../../consts";
-import { pppFw as programPrices} from "../../../flightTrainingProgramsPrices";
-import { 
+import { pppFw as programPrices } from "../../../flightTrainingProgramsPrices";
+import {
   CESSNA_172_USATS_RAMP_WEBP as cessnaRamp,
-  DIRECTFLY_ALTONG_RED_FLYING_OVER_CITY_USATS,
+  DIRECTFLY_ALTONG_BLUE_USATS_RAMP_WEBP,
 } from "../../../constsImages";
 
 const professionalPilotProgram = {
@@ -16,7 +16,7 @@ const professionalPilotProgram = {
     // Top Header
     header: {
       badges: ["Part 141/61", "PPL", "IR", "CPL", "CFI", "CFII"],
-      imagePath: DIRECTFLY_ALTONG_RED_FLYING_OVER_CITY_USATS.imagePath,
+      imagePath: DIRECTFLY_ALTONG_BLUE_USATS_RAMP_WEBP.imagePath,
       imageAlt:
         "Students training under sunny Florida skies at US Aviation Training Solutions",
       headerH1: `Professional Pilot <br>PROGRAM</span>`,
