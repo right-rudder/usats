@@ -4,6 +4,7 @@ import HeaderScreen from "../../../components/astro/HeaderScreen.astro";
 import homePage from "../../../data/homePage";
 import "/src/styles/global.css";
 import ourTeam from "../../../data/about-us/ourTeam";
+import { ourTeamSEO } from "../../../data/about-us/ourTeam";
 import StaffGrid from "../../../components/layouts/StaffGrid.astro";
 import TeamGrid from "../../../components/layouts/TeamGrid.astro";
 import HeaderOurTeam from "../../../components/astro/HeaderOurTeam.astro";
@@ -12,9 +13,9 @@ const { data } = homePage;
 ---
 
 <BaseLayout
-  siteTitle={data.pageTitle}
-  siteDescription={data.pageDescription}
-  keywords={data.pageKeywords}
+  siteTitle={ourTeamSEO.pageTitle}
+  siteDescription={ourTeamSEO.pageDescription}
+  keywords={ourTeamSEO.pageKeywords}
 >
   <!-- HEADER -->
   <!-- <HeaderScreen content={ourTeam.header} /> -->

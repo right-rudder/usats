@@ -11,6 +11,7 @@ const data = {
   imageAlt: "",
   headerH1: "Blog",
   headerH2: "Blog Post 1",
+  
 };
 
 const posts = (await getCollection("blog")).sort(
@@ -19,9 +20,9 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <BaseLayout
-  pageTitle=`Blog | ${COMPANY_NAME}`
-  pageDescription="Explore the latest happenings in the world of flight training . Gain valuable insights and tips to ease pre-flight jitters and prepare effectively for your important milestones."
-  pageKeywords=""
+  siteTitle=`Blog | ${COMPANY_NAME}` 
+  siteDescription="Explore the latest happenings in the world of flight training . Gain valuable insights and tips to ease pre-flight jitters and prepare effectively for your important milestones."
+  keywords="flight training blog, aviation tips, pilot training articles, learn to fly resources, flight school insights, aviation news, pilot advice, pre-flight tips, student pilot guidance, flight training milestones, airplane training blog, helicopter training blog, FAA training tips, aviation safety tips"
 >
   <!-- Header -->
   <Header data={data} />
