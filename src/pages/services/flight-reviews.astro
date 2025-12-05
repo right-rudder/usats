@@ -200,11 +200,11 @@ const CTAFlight = {
           >
             {data.data.schedule.heather2}
           </p>
-          <h1
+          <h2
             class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
           >
             {data.data.schedule.title}
-          </h1>
+          </h2>
           <p
             class="mt-6 text-xl leading-8 text-muted-200"
             set:html={data.data.schedule.description[0]}
@@ -305,11 +305,11 @@ const CTAFlight = {
           >
             {data.data.upperHeading}
           </p>
-          <h1
+          <h2
             class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
           >
             {data.data.sections[0].title}
-          </h1>
+          </h2>
           {
             data.data.sections[0].descriptions.map((paragraph, index) => (
               <div>
