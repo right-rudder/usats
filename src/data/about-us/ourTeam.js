@@ -134,4 +134,14 @@ const ourTeam = {
   },
 };
 
+export const ourTeamSEO = {
+  pageTitle:
+    "Our Team at USATS | Flight Instructors & Aviation Staff | Titusville FL",
+  pageDescription:
+    "Meet the expert flight instructors and aviation professionals at USATS in Titusville, FL. Our team delivers top-quality airplane and helicopter training with decades of experience.",
+  pageKeywords:
+    "USATS team, flight instructors Titusville, aviation staff Florida, helicopter instructors FL, airplane instructors Titusville, USATS flight school team, pilot training staff",
+};
+
 export default ourTeam;
+

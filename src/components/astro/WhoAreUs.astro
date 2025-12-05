@@ -11,11 +11,11 @@ const { content } = Astro.props;
   <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
     <div class="max-w-4xl">
       <p class="text-base/7 font-semibold text-muted-900">About us</p>
-      <h1
+      <h2
         class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-accent-800 sm:text-5xl"
       >
         {content.title}
-      </h1>
+      </h2>
       <p class="mt-6 text-xl/8 text-balance text-muted-200">
         {content.paragraph}
       </p>
@@ -29,9 +29,9 @@ const { content } = Astro.props;
           content.bullets &&
             content.bullets.map((bullet) => (
               <div class="pb-10 last:pb-0">
-                <h2 class="text-2xl font-semibold tracking-tight text-pretty text-accent-600">
+                <h3 class="text-2xl font-semibold tracking-tight text-pretty text-accent-600">
                   {bullet.title}
-                </h2>
+                </h3>
                 {bullet.description.map((description) => (
                   <p class="mt-6 text-base/7 text-muted-200">{description}</p>
                 ))}

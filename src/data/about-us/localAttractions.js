@@ -13,8 +13,8 @@ const localAttractions = {
           imageAlt: imgHeader.imageAlt,
           buttons: [],
         },
-        
-
+        paragraph: "Discover Florida’s Space Coast near USATS in Titusville, FL. Explore Kennedy Space Center, Orlando theme parks, Cocoa Beach, Port Canaveral, and top attractions just minutes from our campus.",
+        pageKeywords: "attractions near USATS Titusville, things to do near a flight school in Florida, Kennedy Space Center near aviation students, Orlando theme parks near Titusville, Cocoa Beach near pilot training, Port Canaveral near flight school, Space Coast attractions for student pilots, Titusville local attractions, Space Coast attractions, Orlando attractions, Cocoa Beach, Port Canaveral, Space Coast Florida",
         underHeader: {
           title: `Space Coast`,
           paragraph: "",
@@ -35,7 +35,8 @@ const localAttractions = {
     localAttractions: {
         title: "Discover Florida's Space Coast",
         subtitle: "",
-        paragraph: "",
+        paragraph: "Discover Florida’s Space Coast near USATS in Titusville, FL. Explore Kennedy Space Center, Orlando theme parks, Cocoa Beach, Port Canaveral, and top attractions just minutes from our campus.",
+        pageKeywords: "attractions near USATS Titusville, things to do near a flight school in Florida, Kennedy Space Center near aviation students, Orlando theme parks near Titusville, Cocoa Beach near pilot training, Port Canaveral near flight school, Space Coast attractions for student pilots, Titusville local attractions, Space Coast attractions, Orlando attractions, Cocoa Beach, Port Canaveral, Space Coast Florida",
         attractions: [
             {
               name: "Kennedy Space Center",

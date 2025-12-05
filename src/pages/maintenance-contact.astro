@@ -5,6 +5,7 @@ import { TfiEmail } from "react-icons/tfi";
 import contact from "../data/contact";
 import { COMPANY_NAME } from "../consts";
 import Header from "../components/astro/Header.astro";
+
 const { data } = contact;
 const MAINTENANCE_CONTACT_FORM_WEBHOOK_URL = import.meta.env
   .MAINTENANCE_CONTACT_FORM_WEBHOOK_URL;
@@ -15,11 +16,16 @@ const headerData = {
   imagePath: "/src/assets/placeholder.webp",
   imageAlt: "",
 };
+
+const maintenanceContact = {
+  siteTitle: `Contact Our Maintenance | ${COMPANY_NAME}`,
+  siteDescription: "Contact USATS Maintenance to schedule aircraft inspections, repairs, or support services in Titusville, FL. Our certified maintenance team is ready to assist with reliable, safety-focused aviation solutions for students, owners, and operators."
+}
 ---
 
 <BaseLayout
-  siteTitle={data.pageTitle}
-  siteDescription={data.pageDescription}
+  siteTitle={maintenanceContact.siteTitle}
+  siteDescription={maintenanceContact.siteDescription}
   keywords={data.pageKeywords}
 >
   <Header data={headerData} />

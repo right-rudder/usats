@@ -4,7 +4,7 @@ const fingerprintingTSA = {
   data: {
     title: "Onsite fingerprinting for all your TSA needs",
     subtitle: "Including Flight Training Security Program (formerly AFSP)",
-
+    paragraph: "USATS offers onsite TSA fingerprinting for FTSP (formerly AFSP) applicants, including flight school students and aviation professionals. Follow the NATACS registration steps, then schedule your appointment with our team for fast, compliant fingerprint processing in Titusville, FL.",
     paragraphs:
       "Start the process at https://secure.natacs.aero/ftsp/registration/index.asp, then reach out to us at fingerprinting@usatsolutions.com to set up your appointment time.",
 
