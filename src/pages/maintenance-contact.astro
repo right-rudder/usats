@@ -5,6 +5,7 @@ import { TfiEmail } from "react-icons/tfi";
 import contact from "../data/contact";
 import { COMPANY_NAME } from "../consts";
 import Header from "../components/astro/Header.astro";
+import UnderHeaderTwo from "../components/astro/UnderHeaderTwo.astro";
 
 const { data } = contact;
 const MAINTENANCE_CONTACT_FORM_WEBHOOK_URL = import.meta.env
@@ -21,6 +22,20 @@ const maintenanceContact = {
   siteTitle: `Contact Our Maintenance | ${COMPANY_NAME}`,
   siteDescription: "Contact USATS Maintenance to schedule aircraft inspections, repairs, or support services in Titusville, FL. Our certified maintenance team is ready to assist with reliable, safety-focused aviation solutions for students, owners, and operators."
 }
+
+const underHeader = {
+  title: "Trusted Maintenance Support for Every Aircraft",
+  paragraphs: [
+    "Our maintenance team is committed to delivering dependable service for pilots, owners, and operators who rely on precision and consistency. Every inspection, repair, and diagnostic task is handled by certified technicians who follow strict FAA standards to protect the performance and safety of your aircraft. We work with attention to detail and clear communication so you always understand the condition of your airplane or helicopter and the steps required to keep it operating at its best.",
+    "Whether you need scheduled maintenance, troubleshooting, or a last minute repair, our facility gives you access to the tools, equipment, and expertise required to keep your aircraft airworthy and mission ready. By submitting the maintenance request form, you connect directly with a team that values quality work, quick turnaround times, and reliable support. We are here to help you stay safe, stay compliant, and stay flying with total confidence."
+  ],
+  image: {
+    imagePath: "/src/assets/ALTO_NG.webp",
+    imageAlt: "Aircraft panel showing modern avionics",
+  },
+  buttons: [],
+};
+
 ---
 
 <BaseLayout
@@ -256,6 +271,8 @@ const maintenanceContact = {
       </svg>
     </div>
   </section>
+
+  <UnderHeaderTwo content={underHeader}/>
 
   <script define:vars={{ MAINTENANCE_CONTACT_FORM_WEBHOOK_URL, PORTAL_API_KEY }}
   >

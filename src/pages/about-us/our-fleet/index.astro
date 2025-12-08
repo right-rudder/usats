@@ -17,6 +17,7 @@ import {
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../../consts";
 
 import { ALTO_8A as imgHeader } from "../../../constsImages";
+import UnderHeaderTwo from "../../../components/astro/UnderHeaderTwo.astro";
 
 const header = {
   imagePath: imgHeader.imagePath,
@@ -31,6 +32,18 @@ const header = {
     },
   ],
 };
+const underHeader = {
+  title: "Why Choose USATS for Your Aviation Needs",
+  paragraphs: [
+    "USATS centralizes every major aviation service in one convenient location, creating a smooth and efficient experience for pilots, students, and aviation professionals. You can log TAA hours, complete FAA knowledge exams, schedule maintenance, or begin a foreign license conversion process without needing to coordinate across multiple providers. Our team guides each step with clear communication and dependable expertise, which helps reduce stress and keeps your goals on track.",
+    "Our facility is equipped with modern aircraft, experienced instructors, and certified technicians who prioritize safety, precision, and consistent support. We are focused on giving every visitor the tools and resources needed to train, test, maintain, and advance their aviation path with confidence. Whether you are starting your first lesson or completing advanced certifications, USATS offers a comprehensive and reliable environment that supports your progress from beginning to end."
+  ],
+  image: {
+    imagePath: "/src/assets/ALTO_NG.webp",
+    imageAlt: "AirPlane Panel",
+  },
+  buttons: [],
+}
 ---
 
 <BaseLayout
@@ -188,4 +201,5 @@ const header = {
       <a href="/enroll-now" class="flex-shrink-0 btn-accent"> Enroll now </a>
     </div>
   </section>
+  <UnderHeaderTwo content={underHeader}/>
 </BaseLayout>

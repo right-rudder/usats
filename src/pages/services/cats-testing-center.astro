@@ -13,6 +13,7 @@ const { data } = testingCenterFAACats;
 
 import ImageComp from "../../components/ImageComp.astro";
 import UnderHeader from "../../components/astro/UnderHeader.astro";
+import UnderHeaderTwo from "../../components/astro/UnderHeaderTwo.astro";
 
 const CTAFlight = {
     imagePath: imgCTA.imagePath,
@@ -32,6 +33,19 @@ const CTAFlight = {
 const catsTestingCenterImg = {
   imagePath:"/src/assets/programmer-focused-on-code.webp",
   imageAlt: "",
+};
+
+const underHeader = {
+  title: "Your Trusted Partner for FAA Knowledge Testing",
+  paragraphs: [
+    "Preparing for an FAA knowledge exam is an important step in your aviation journey, and our testing center is designed to make the entire process smooth and stress free. We provide a clean workspace, reliable equipment, and staff members who are ready to assist with check-in and verification procedures. Every candidate receives a quiet and secure environment that supports focus and confidence, allowing you to concentrate fully on the material without distractions or unnecessary delays.",
+    "Whether you are taking your first written exam or completing an advanced certification, USATS is committed to giving you a professional experience from the moment you arrive. Our facility follows all FAA and PSI requirements, and our team is here to answer questions, offer guidance on the scheduling process, and help you feel prepared. By choosing USATS for your CATS testing needs, you gain a dependable location where accuracy, integrity, and student success come first."
+  ],
+  image: {
+    imagePath: "/src/assets/ALTO_NG.webp",
+    imageAlt: "Airplane panel representing precision and testing readiness",
+  },
+  buttons: [],
 };
 ---
 <BaseLayout
@@ -139,7 +153,7 @@ const catsTestingCenterImg = {
         </div>
       </div>      
   </section>
-
+  <UnderHeaderTwo content={underHeader}></UnderHeaderTwo>
   <CTADiscoveryFlights content = {CTAFlight} />
 </BaseLayout>
 
