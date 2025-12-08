@@ -3,7 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HeaderScreen from "../components/astro/HeaderScreen.astro";
 import {
     COMPANY_NAME,
+    CORE_PROGRAM_KEYWORDS,
     KEYWORDS,
+    AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS
   } from "../consts";
   
 import { ALTO_5A as imgHeader } from "../constsImages";
@@ -34,13 +36,16 @@ const enrollNowConfirmation = {
     }
   };
 
-  const { data } = enrollNowConfirmation;
+const { data } = enrollNowConfirmation;
+
+const keywords = `${RENTAL_GROUND_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${data.pageKeywords}`;
+
 ---
 
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
-  keywords={data.pageKeywords}
+  keywords={keywords}
 >
   <HeaderScreen content={data.header} />
 </BaseLayout>

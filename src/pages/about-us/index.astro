@@ -5,14 +5,17 @@ import WhoAreUs from "../../components/astro/WhoAreUs.astro";
 
 import aboutUs from "../../data/about-us/aboutUs";
 import PageSummary from "../../components/astro/PageSummary.astro";
-import { VIDEOLINK_ABOUTUS } from "../../consts";
+import { CAREER_PATH_KEYWORDS, CORE_PROGRAM_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, VIDEOLINK_ABOUTUS } from "../../consts";
 import BestOfFlorida from "../../components/astro/BestOfFlorida.astro";
+
+const keywords = `${aboutUs.pageKeywords}, ${GENERAL_AVIATION_KEYWORDS}, ${LOCATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${CAREER_PATH_KEYWORDS}`;
+
 ---
 
 <BaseLayout
   siteTitle={aboutUs.pageTitle}
   siteDescription={aboutUs.pageDescription}
-  keywords={aboutUs.pageKeywords}
+  keywords={keywords}
   breadcrumbTitle="About Us"
 >
   <!-- HEADER -->

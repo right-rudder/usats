@@ -135,3 +135,117 @@ export const BUSINESS_HOURS = {
   saturday: { opens: "09:00", closes: "15:00" },
   sunday: "closed",
 };
+
+// 🔹 Core Programs (Airplane & Helicopter Training)
+export const CORE_PROGRAM_KEYWORDS = [
+  "private pilot license Florida",
+  "instrument rating training Florida",
+  "commercial pilot license Florida",
+  "CFI training Florida",
+  "CFII training Florida",
+  "professional pilot program Florida",
+  "airplane flight training Titusville",
+  "helicopter flight training Florida",
+  "Part 141 flight school Florida",
+  "Part 61 flight training Titusville",
+  "accelerated pilot training Florida"
+].join(", ");
+
+// 🔹 Aircraft & Fleet
+export const AIRCRAFT_FLEET_KEYWORDS = [
+  "Cessna 172 flight training",
+  "G1000 glass cockpit training",
+  "TAA aircraft rental",
+  "Alto NG DirectFly training",
+  "Alto NG Dynon HDX1200",
+  "Garmin 175 avionics training",
+  "Robinson R44 helicopter training",
+  "Schweizer S-300 training",
+  "UH-60 Black Hawk training",
+  "modern training aircraft Florida",
+  "airplane fleet USATS"
+].join(", ");
+
+// 🔹 Discovery & Beginner Experience
+export const DISCOVERY_EXPERIENCE_KEYWORDS = [
+  "discovery flight Florida",
+  "demo flight near me",
+  "learn to fly Florida",
+  "flying lessons Titusville",
+  "pilot lessons near me",
+  "flight school Florida Space Coast",
+  "private pilot classes near me",
+  "beginner pilot flight"
+].join(", ");
+
+// 🔹 Professional Pathways & Jobs
+export const CAREER_PATH_KEYWORDS = [
+  "flight instructor jobs Florida",
+  "CFI hiring Florida",
+  "helicopter CFI jobs Florida",
+  "aviation career Florida",
+  "pilot career program Florida",
+  "professional pilot Florida",
+  "aviation programs near me",
+  "pilot job pathway"
+].join(", ");
+
+// 🔹 Location-Based SEO (Based on pages you listed)
+export const LOCATION_KEYWORDS = [
+  "Titusville flight school",
+  "Space Coast flight training",
+  "Central Florida flight school",
+  "Windermere FL flight training",
+  "Winter Garden FL flight school",
+  "Winter Park FL pilot training",
+  "flight lessons near Orlando",
+  "Florida flight schools"
+].join(", ");
+
+// 🔹 Aircraft Rental & Ground Training
+export const RENTAL_GROUND_KEYWORDS = [
+  "airplane rental Florida",
+  "aircraft rental Titusville",
+  "helicopter rental Florida",
+  "aviation ground school Florida",
+  "FAA written test prep Florida",
+  "flight simulator training Florida",
+  "flight instruction near me",
+  "TAA time building"
+].join(", ");
+
+// 🔹 General Aviation Interest
+export const GENERAL_AVIATION_KEYWORDS = [
+  "flight schools Florida",
+  "pilot school near Orlando",
+  "aviation academy Florida",
+  "learn to fly USA",
+  "best flight schools in Florida",
+  "aviation programs Florida",
+  "airplane and helicopter training Florida"
+].join(", ");
+
+// 🔹 Flight Tech & Training Tools
+export const TECH_TRAINING_KEYWORDS = [
+  "Dynon HDX training",
+  "G1000 avionics training",
+  "pilot study tools",
+  "flight study app",
+  "pilot training technology",
+  "aircraft instrument panel training"
+].join(", ");
+
+// 🔹 Aviation Services (Maintenance, Tests & TSA)
+export const AVIATION_SERVICES_KEYWORDS = [
+  "aircraft maintenance Titusville",
+  "FAA 145 repair station Florida",
+  "Robinson service center Florida",
+  "Schweizer helicopter maintenance",
+  "Cessna 172 maintenance Florida",
+  "CATS testing center Florida",
+  "FAA written test Florida",
+  "TSA fingerprinting flight training",
+  "air tours Space Coast",
+  "foreign license conversion FAA",
+  "ICAO pilot training Florida"
+].join(", ");

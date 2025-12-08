@@ -6,7 +6,7 @@ import GridPrograms from "../../components/layouts/GridPrograms.astro";
 
 import careers from "../../data/services/career";
 import testingCenterFAACats from "../../data/services/testingCenterFAACats";
-import { COMPANY_NAME } from "../../consts";
+import { CAREER_PATH_KEYWORDS, COMPANY_NAME, CORE_PROGRAM_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../consts";
 import { USATS_BASE_COVER as imgCTA } from "../../constsImages";
 
 const { data } = careers;
@@ -28,12 +28,13 @@ const CTAFlight = {
     ],
   };
 
+const keywords = `${CAREER_PATH_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${LOCATION_KEYWORDS}, ${careers.pageKeywords}`;
+
 ---
 <BaseLayout
   siteTitle={careers.title}
   siteDescription={careers.paragraph}
-  keywords={careers.pageKeywords}
-  >
+  keywords={keywords}>
   
   <HeaderScreen content = {careers.header} />
 

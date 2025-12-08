@@ -9,8 +9,12 @@ import CTAFlight from "../../data/ctaFlight.js";
 import coursesIndex from "../../data/coursesHelicopterIndex";
 import servicesIndex from "../../data/services/services";
 import UnderHeaderTwo from "../../components/astro/UnderHeaderTwo.astro";
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
+
 
 const { data } = servicesIndex;
+
+const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.pageKeywords}`;
 
 const underHeader = {
   title: "Why Choose USATS for Your Aviation Needs",
@@ -24,12 +28,11 @@ const underHeader = {
   },
   buttons: [],
 }
-
 ---
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
-  keywords={data.pageKeywords}
+  keywords={keywords}
   >
   
   <HeaderScreen content = {data.header} />

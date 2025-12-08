@@ -14,7 +14,7 @@ import {
   militaryFleet,
 } from "../../../data/about-us/fleet";
 
-import { COMPANY_NAME, COMPANY_NICKNAME } from "../../../consts";
+import { AIRCRAFT_FLEET_KEYWORDS, COMPANY_NAME, COMPANY_NICKNAME, CORE_PROGRAM_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../../consts";
 
 import { ALTO_8A as imgHeader } from "../../../constsImages";
 import UnderHeaderTwo from "../../../components/astro/UnderHeaderTwo.astro";
@@ -44,12 +44,15 @@ const underHeader = {
   },
   buttons: [],
 }
+
+const keywords = `${AIRCRAFT_FLEET_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${LOCATION_KEYWORDS}, fleet, aircraft, training, time building, Cessna 172, Hampton GA, aviation school`;
+
 ---
 
 <BaseLayout
   siteTitle=`Fleet | ${COMPANY_NAME}`
   siteDescription=`Explore ${COMPANY_NAME}'s modern aircraft available for training and time building in Hampton, GA. Our fleet includes Cessna 172s equipped for both VFR and IFR operations.`
-  keywords=" fleet, aircraft, training, time building, Cessna 172, Hampton GA, aviation school"
+  keywords={keywords}
 >
   <HeaderSmall content={header} />
 

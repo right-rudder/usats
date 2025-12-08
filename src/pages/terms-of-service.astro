@@ -1,14 +1,17 @@
 ---
 import terms from "../data/terms-of-service";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { COMPANY_NAME } from "../consts";
+import { AVIATION_SERVICES_KEYWORDS, COMPANY_NAME, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../consts";
 
 const { data } = terms;
+
+const keywords = `${GENERAL_AVIATION_KEYWORDS}, ${LOCATION_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}`;
 ---
 
 <BaseLayout
   siteTitle=`Terms of Service | ${COMPANY_NAME}`
   siteDescription=`Terms of Service of ${COMPANY_NAME}`
+  keywords={keywords}
 >
   <div class="h-24 lg:h-32 w-full"></div>
 

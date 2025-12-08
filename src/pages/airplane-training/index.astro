@@ -9,11 +9,11 @@ import CTAFlight from "../../data/ctaFlight.js";
 import { ALTO_5A as imgHeader } from "../../constsImages";
 
 const coursesIndex = {
-    data: {
-      // SEO Header Stuff
-      pageTitle: "Training Courses | US Academy ",
-      pageDescription:
-        "Explore complete airplane pilot training programs at USATS in Titusville, FL. From Private to Commercial certificates and instructor ratings, our FAA-approved courses offer expert instruction, modern aircraft, and a clear path to your aviation career.",
+  data: {
+    // SEO Header Stuff
+    pageTitle: "Training Courses | US Academy ",
+    pageDescription:
+    "Explore complete airplane pilot training programs at USATS in Titusville, FL. From Private to Commercial certificates and instructor ratings, our FAA-approved courses offer expert instruction, modern aircraft, and a clear path to your aviation career.",
       pageKeywords:
         "airplane training programs, pilot training Florida, airplane flight school Titusville, Part 141 pilot training, PPL IR CPL CFI CFII courses, professional pilot program USATS, learn to fly airplanes, FAA-approved airplane training, aviation training Space Coast, commercial pilot training Florida, private pilot training Titusville, flight instructor courses Florida",
   
@@ -42,11 +42,14 @@ const coursesIndex = {
 
 const { data } = coursesIndex;
 
+import { AIRCRAFT_FLEET_KEYWORDS, CAREER_PATH_KEYWORDS, CORE_PROGRAM_KEYWORDS, DISCOVERY_EXPERIENCE_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../consts";
+const keywords = `${GENERAL_AVIATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${LOCATION_KEYWORDS}, ${DISCOVERY_EXPERIENCE_KEYWORDS}, ${CAREER_PATH_KEYWORDS}, ${AIRCRAFT_FLEET_KEYWORDS}, ${data.pageKeywords}`
+
 ---
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
-  keywords={data.pageKeywords}
+  keywords={keywords}
   >
   
   <HeaderScreen content = {data.header} /> 

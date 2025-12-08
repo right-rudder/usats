@@ -5,7 +5,8 @@ import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astr
 import UnderHeader from "../../components/astro/UnderHeader.astro";
 import localAttractions from "../../data/about-us/localAttractions";
 import testingCenterFAACats from "../../data/services/testingCenterFAACats";
-import { COMPANY_NAME } from "../../consts";
+import { COMPANY_NAME, DISCOVERY_EXPERIENCE_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../consts";
+
 
 import CardsAttractions from "../../components/astro/CardsAttractions.astro";
 
@@ -24,11 +25,14 @@ const CTAFlight = {
       },
     ],
   };
+
+const keywords = `${data.pageKeywords}, ${LOCATION_KEYWORDS}, ${DISCOVERY_EXPERIENCE_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}`;
+
 ---
 <BaseLayout
   siteTitle={data.title}
   siteDescription={data.paragraph}
-  keywords={data.pageKeywords} 
+  keywords={keywords} 
   >
   
   <HeaderScreen content = {data.header} />

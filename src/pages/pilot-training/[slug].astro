@@ -370,12 +370,16 @@ const data = {
     },
   },
 };
+
+import { AIRCRAFT_FLEET_KEYWORDS, CAREER_PATH_KEYWORDS, CORE_PROGRAM_KEYWORDS, DISCOVERY_EXPERIENCE_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../consts";
+const keywords = `${GENERAL_AVIATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${LOCATION_KEYWORDS}, ${DISCOVERY_EXPERIENCE_KEYWORDS}, ${CAREER_PATH_KEYWORDS}, ${AIRCRAFT_FLEET_KEYWORDS}, ${data.data.pageKeywords}`
+
 ---
 
 <BaseLayout
   siteTitle={data.data.pageTitle}
   siteDescription={data.data.pageDescription}
-  keywords={data.data.pageKeywords}
+  keywords={keywords}
 >
   <!-- HEADER -->
   <HeaderScreen content={data.data.header} headerVideo={VIDEOLINK_HOME} />

@@ -177,12 +177,15 @@ const CTAFlight = {
     },
   ],
 };
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
+const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.data.pageKeywords}`;
+
 ---
 
 <BaseLayout
   siteTitle={data.data.title}
   siteDescription={data.data.description}
-  keywords={data.data.pageKeywords}
+  keywords={keywords}
 >
   <HeaderScreen content={data.data.header} />
   <UnderHeader content={data.data.underHeader} />

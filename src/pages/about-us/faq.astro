@@ -3,8 +3,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeaderScreen from "../../components/astro/HeaderScreen.astro";
 import FreQuestions from "../../components/astro/FreQuestions.astro";
 import homePage from "../../data/homePage";
-import { VIDEOLINK_ABOUTUS } from "../../consts";
+import { AVIATION_SERVICES_KEYWORDS, CORE_PROGRAM_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, VIDEOLINK_ABOUTUS } from "../../consts";
 import { COMPANY_NAME } from "../../consts";
+
 
 
 const faqData = {
@@ -36,13 +37,14 @@ const faqData = {
   }
 };
 
+const keywords = `${faqData.pageKeywords},${GENERAL_AVIATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${LOCATION_KEYWORDS}, ${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}`;
+
 ---
 
 <BaseLayout
   siteTitle={faqData.pageTitle}
   siteDescription={faqData.pageDescription}
-  keywords={faqData.pageKeywords}
->
+  keywords={keywords}>
   <!-- HEADER -->
   <HeaderScreen content={faqData.header} headerVideo={VIDEOLINK_ABOUTUS} />
   <FreQuestions content={homePage.data.frequentQuestions} />

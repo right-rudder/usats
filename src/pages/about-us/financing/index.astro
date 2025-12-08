@@ -6,7 +6,7 @@ import ImageComp from "../../../components/ImageComp.astro";
 
 import financingOptions from "../../../data/about-us/financing";
 import stratusInfo from "../../../data/about-us/stratuss-financing";
-import { STRATUS_ADVANTAGE } from "../../../consts";
+import { CAREER_PATH_KEYWORDS, CORE_PROGRAM_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, STRATUS_ADVANTAGE } from "../../../consts";
 
 const stratusFinance = {
   upperHeading: "Stratus Financial",
@@ -105,12 +105,13 @@ const weFloridaFinancial = {
 };
 
 const { data } = stratusInfo;
+const keywords = `${CORE_PROGRAM_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${CAREER_PATH_KEYWORDS}, ${LOCATION_KEYWORDS}, ${data.pageKeywords}`
 ---
 
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
-  keywords={data.pageKeywords}
+  keywords={keywords}
 >
   <!-- HEADER -->
   <HeaderScreen content={data.header} />

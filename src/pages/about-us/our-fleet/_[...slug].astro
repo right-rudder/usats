@@ -9,7 +9,7 @@ import { fleet } from "../../../data/about-us/fleet";
 // import PlaneCarousel from "../../../components/PlaneCarousel.jsx";
 import CTADiscoveryFlights from "../../../components/astro/CTADiscoveryFlights.astro";
 
-import { COMPANY_NAME, COMPANY_NICKNAME } from "../../../consts";
+import { AIRCRAFT_FLEET_KEYWORDS, COMPANY_NAME, COMPANY_NICKNAME, CORE_PROGRAM_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../../consts";
 
 export async function getStaticPaths() {
   return fleet.map(({ slug, ...plane }) => ({
@@ -59,12 +59,15 @@ const header = {
     },
   ],
 };
+
+const keywords = `${AIRCRAFT_FLEET_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${LOCATION_KEYWORDS}, fleet, aircraft, training, time building, Cessna 172, Hampton GA, aviation school`;
+
 ---
 
 <BaseLayout
   siteTitle={`Aircraft Details | ${name}`}
   siteDescription={`${COMPANY_NAME} offers a fleet of IFR-equipped Cessna 172s for rental and instruction. Learn more about ${name} and schedule your flight today.`}
-  siteKeywords=""
+  keywords={keywords}
 >
   <HeaderSmall content={header} />
 

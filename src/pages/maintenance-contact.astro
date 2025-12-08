@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { IoPhonePortraitOutline, IoLocationOutline } from "react-icons/io5";
 import { TfiEmail } from "react-icons/tfi";
 import contact from "../data/contact";
-import { COMPANY_NAME } from "../consts";
+import { AIRCRAFT_FLEET_KEYWORDS, AVIATION_SERVICES_KEYWORDS, COMPANY_NAME, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../consts";
 import Header from "../components/astro/Header.astro";
 import UnderHeaderTwo from "../components/astro/UnderHeaderTwo.astro";
 
@@ -35,14 +35,14 @@ const underHeader = {
   },
   buttons: [],
 };
+const keywords = `${AVIATION_SERVICES_KEYWORDS}, ${AIRCRAFT_FLEET_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${LOCATION_KEYWORDS}`;
 
 ---
 
 <BaseLayout
   siteTitle={maintenanceContact.siteTitle}
   siteDescription={maintenanceContact.siteDescription}
-  keywords={data.pageKeywords}
->
+  keywords={keywords}>
   <Header data={headerData} />
   <section
     class="py-30 relative isolate bg-gradient-to-b from-primary-950 to-primary-800"

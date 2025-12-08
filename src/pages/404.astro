@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeaderScreen from "../components/astro/HeaderScreen.astro";
+import { GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../consts";
 
 const homePage = {
   pageTitle: "Page Not Found | SCHOOL'S NAME",
@@ -23,12 +24,16 @@ const homePage = {
     ],
   },
 };
+
+const keywords = `${homePage.pageKeywords}, ${GENERAL_AVIATION_KEYWORDS}, ${LOCATION_KEYWORDS}`;
+
+
 ---
 
 <BaseLayout
   siteTitle={homePage.pageTitle}
   siteDescription={homePage.pageDescription}
-  keywords={homePage.pageKeywords}
+  keywords={keywords}
 >
   <!-- HEADER -->
   <HeaderScreen content={homePage.header} />
