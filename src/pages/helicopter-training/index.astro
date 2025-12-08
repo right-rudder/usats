@@ -8,6 +8,7 @@ import CTAFlight from "../../data/ctaFlight.js";
 
 import coursesIndex from "../../data/coursesHelicopterIndex.js";
 import UnderHeaderTwo from "../../components/astro/UnderHeaderTwo.astro";
+import { AIRCRAFT_FLEET_KEYWORDS, CAREER_PATH_KEYWORDS, CORE_PROGRAM_KEYWORDS, DISCOVERY_EXPERIENCE_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../consts";
 
 const { data } = coursesIndex;
 const underHeader = {
@@ -23,7 +24,6 @@ const underHeader = {
   buttons: [],
 }
 
-import { AIRCRAFT_FLEET_KEYWORDS, CAREER_PATH_KEYWORDS, CORE_PROGRAM_KEYWORDS, DISCOVERY_EXPERIENCE_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../consts";
 const keywords = `${GENERAL_AVIATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${LOCATION_KEYWORDS}, ${DISCOVERY_EXPERIENCE_KEYWORDS}, ${CAREER_PATH_KEYWORDS}, ${AIRCRAFT_FLEET_KEYWORDS}, ${data.pageKeywords}`
 
 ---

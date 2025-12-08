@@ -9,6 +9,7 @@ import {
   USATS_BASE_COVER as imgHeader,
   ALTO_4A as imgCard1,
 } from "../../constsImages";
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
 
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
 import ImageComp from "../../components/ImageComp.astro";
@@ -177,7 +178,6 @@ const CTAFlight = {
     },
   ],
 };
-import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
 const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.data.pageKeywords}`;
 
 ---

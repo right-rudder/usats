@@ -13,6 +13,7 @@ import {
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
 import ImageComp from "../../components/ImageComp.astro";
 import UnderHeader from "../../components/astro/UnderHeader.astro";
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
 
 const data = {
   data: {
@@ -176,7 +177,6 @@ const CTAFlight = {
   ],
 };
 
-import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
 const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.data.pageKeywords}`;
 
 ---

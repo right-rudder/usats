@@ -6,17 +6,16 @@ import { TfiEmail } from "react-icons/tfi";
 import contact from "../data/contact";
 import { COMPANY_NAME } from "../consts";
 import { countryPhoneCodes } from "../data/countriesPhone.js";
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../consts";
 
 const { data } = contact;
 
 const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
 const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 
-import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../consts";
 const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.pageKeywords}`;
 
 ---
-
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}

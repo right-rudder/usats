@@ -17,7 +17,8 @@ export async function getStaticPaths() {
     props: { slug, ...plane },
   }));
 }
-
+import type { ImageMetadata } from "astro";
+import DiscoveryFlight from "../../discovery-flight.astro";
 const {
   name,
   rentalPrice,
@@ -30,8 +31,7 @@ const {
   imagesArray,
 } = Astro.props;
 
-import type { ImageMetadata } from "astro";
-import DiscoveryFlight from "../../discovery-flight.astro";
+
 const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg,jpg,png,gif,webp}");
 
 if (!images[imagePath]) {

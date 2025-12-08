@@ -7,6 +7,7 @@ import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astr
 import CTAFlight from "../../data/ctaFlight.js";
 
 import { ALTO_5A as imgHeader } from "../../constsImages";
+import { AIRCRAFT_FLEET_KEYWORDS, CAREER_PATH_KEYWORDS, CORE_PROGRAM_KEYWORDS, DISCOVERY_EXPERIENCE_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../consts";
 
 const coursesIndex = {
   data: {
@@ -42,7 +43,6 @@ const coursesIndex = {
 
 const { data } = coursesIndex;
 
-import { AIRCRAFT_FLEET_KEYWORDS, CAREER_PATH_KEYWORDS, CORE_PROGRAM_KEYWORDS, DISCOVERY_EXPERIENCE_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../consts";
 const keywords = `${GENERAL_AVIATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${LOCATION_KEYWORDS}, ${DISCOVERY_EXPERIENCE_KEYWORDS}, ${CAREER_PATH_KEYWORDS}, ${AIRCRAFT_FLEET_KEYWORDS}, ${data.pageKeywords}`
 
 ---

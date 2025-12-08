@@ -7,6 +7,7 @@ import fingerprintingTSA from "../../data/services/fingerprintingTSA";
 import ImageComp from "../../components/ImageComp.astro";
 import { COMPANY_NAME } from "../../consts";
 import { FaPlane } from "react-icons/fa";
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
 
 const { data } = fingerprintingTSA;
 
@@ -28,7 +29,6 @@ const fingerprintingImage = "";
 const header2 = "";
 const title = "";
 
-import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
 const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.pageKeywords}`;
 
 

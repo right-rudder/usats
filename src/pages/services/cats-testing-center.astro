@@ -8,12 +8,13 @@ import { ALTO_2A as imgCTA } from "../../constsImages";
 
 import testingCenterFAACats from "../../data/services/testingCenterFAACats";
 import { COMPANY_NAME } from "../../consts";
-
-const { data } = testingCenterFAACats;
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
 
 import ImageComp from "../../components/ImageComp.astro";
 import UnderHeader from "../../components/astro/UnderHeader.astro";
 import UnderHeaderTwo from "../../components/astro/UnderHeaderTwo.astro";
+
+const { data } = testingCenterFAACats;
 
 const CTAFlight = {
     imagePath: imgCTA.imagePath,
@@ -48,7 +49,6 @@ const underHeader = {
   buttons: [],
 };
 
-import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
 const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.pageKeywords}`;
 
 ---
