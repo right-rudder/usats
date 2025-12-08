@@ -2,22 +2,21 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { IoLocationOutline } from "react-icons/io5";
+import { TfiEmail } from "react-icons/tfi";
 import contact from "../data/contact";
+import { COMPANY_NAME } from "../consts";
 import { countryPhoneCodes } from "../data/countriesPhone.js";
-import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../consts";
 
 const { data } = contact;
 
-const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.NEW_CONTACT_US_FORM_WEBHOOK_URL;
+const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
 const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
-
-const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.pageKeywords}`;
-
 ---
+
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
-  keywords={keywords}
+  keywords={data.pageKeywords}
 >
   <section
     class="px-6 pt-12 pb-16 lg:pb-4 min-h-screen bg-gradient-to-tr from-primary-800/90 to-primary-950/90"
@@ -28,22 +27,28 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
         <div
           class="order-last w-full lg:w-1/4 lg:order-first px-8 text-right mt-16"
         >
-          <h1 class="text-primary-100 text-2xl font-semibold mt-10">
+          <h3 class="text-primary-100 text-2xl font-semibold mt-10">
             {data.locations[0].title}
-          </h1>
+          </h3>
           <a href={data.locations[0].gMaps} target="_blank">
             <div class="flex justify-end gap-3 mt-5 hover:underline">
               <p class="text-gray-50">
-                {data.locations[0].address}<br />{data.locations[0].city}, {data.locations[0].state}
+                {data.locations[0].address}<br />{data.locations[0].city}, {
+                  data.locations[0].state
+                }
                 {data.locations[0].zip}
               </p>
-              <IoLocationOutline className="lg:size-8 size-6 text-primary-100" />
+              <IoLocationOutline
+                className="lg:size-8 size-6 text-primary-100"
+              />
             </div>
           </a>
           <a href={`tel:${data.locations[0].phone}`}>
             <div class="flex justify-end gap-3 mt-5 hover:underline">
               <p class="text-gray-50">{data.locations[0].phone}</p>
-              <IoPhonePortraitOutline className="lg:size-8 size-6 text-primary-100" />
+              <IoPhonePortraitOutline
+                className="lg:size-8 size-6 text-primary-100"
+              />
             </div>
           </a>
         </div>
@@ -51,7 +56,9 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
           id="contact-form"
           class="flex flex-col rounded-b-xl max-w-2xl mx-auto gap-5 mt-8 lg:mt-12 p-4 lg:p-12 bg-black/30 w-full lg:w-1/2 shadow-xl h-full"
         >
-          <h2 class="text-accent-900 text-5xl font-extrabold mx-auto w-fit">Get in touch</h2>
+          <h2 class="text-accent-900 text-5xl font-extrabold mx-auto w-fit">
+            Get in touch
+          </h2>
           <!-- Name -->
           <div class="flex flex-col lg:flex-row gap-5">
             <input
@@ -93,7 +100,11 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
               autocomplete="tel-country-code"
               class="w-1/3 px-2 py-4 outline-1 border-primary-100border outline-gray-500 text-black bg-white"
             >
-              {countryPhoneCodes.map((country) => <option value={country.value}>{country.name}</option>)}
+              {
+                countryPhoneCodes.map((country) => (
+                  <option value={country.value}>{country.name}</option>
+                ))
+              }
             </select>
             <input
               type="tel"
@@ -101,30 +112,103 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
               id="phone-number"
               autocomplete="tel-national"
               placeholder="Your phone number"
-              class="px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60 placeholder:text-primary-900 text-black"
+              class="px-5 py-4 outline-1 w-full border-primary-100border outline-gray-500 placeholder:text-primary/60 text-black"
               required
             />
           </div>
-
-          <!-- Inquiry purpose -->
-          <div class="sm:col-span-2">
-            <label for="inquiry-purpose" class="block mb-0 font-extralight text-muted-100">
-              What is the purpose of your inquiry?
-            </label>
-
-            <select
-              id="inquiry-purpose"
-              name="inquiry-purpose"
-              class="w-full px-2 py-4 outline-1 border-primary-100 border outline-gray-500 text-black bg-white"
-              required
+          <!-- Interest -->
+          <fieldset
+            id="flight-training-interest-fieldset"
+            class="flex flex-col gap-3 mt-4"
+          >
+            <label
+              class="text-muted-300 text-xl font-semibold text-center w-full"
             >
-              <option value="" disabled selected>Select one...</option>
-              <option value="Flight training (Airplane)">Flight training (Airplane)</option>
-              <option value="Flight training (Helicopter)">Flight training (Helicopter)</option>
-              <option value="Aircraft maintenance">Aircraft maintenance</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
+              Are you interested in flight training at {COMPANY_NAME}? <span
+                class="text-red-500">*</span
+              >
+            </label>
+            <div class="flex gap-6 justify-center">
+              <div class="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="interest-flight-training"
+                  id="interest-flight-training-yes"
+                  value="yes"
+                  required
+                  class="w-4 h-4 text-accent-800 focus:ring-accent-900"
+                />
+                <label for="interest-flight-training-yes" class="text-muted-300"
+                  >Yes</label
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="interest-flight-training"
+                  id="interest-flight-training-no"
+                  value="no"
+                  required
+                  class="w-4 h-4 text-accent-800 focus:ring-accent-900"
+                />
+                <label for="interest-flight-training-no" class="text-muted-300"
+                  >No</label
+                >
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Aircraft type -->
+          <fieldset
+            id="aircraft-type-fieldset"
+            class="flex flex-col justify-center items-center align-middle mt-6 hidden"
+          >
+            <legend
+              class="mb-2 text-xl font-semibold text-muted-300 text-center w-full"
+            >
+              Which aircraft type are you interested in? <span
+                class="text-red-500">*</span
+              >
+            </legend>
+            <div class="flex gap-6">
+              <div class="flex items-center gap-2">
+                <input
+                  type="radio"
+                  id="airplane-type"
+                  name="aircraft-type"
+                  value="Airplane"
+                  required
+                  class="w-4 h-4 text-accent-800 focus:ring-accent-900"
+                />
+                <label for="airplane-type" class="text-muted-300"
+                  >Airplane</label
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <input
+                  type="radio"
+                  id="helicopter-type"
+                  name="aircraft-type"
+                  value="Helicopter"
+                  required
+                  class="w-4 h-4 text-accent-800 focus:ring-accent-900"
+                />
+                <label for="helicopter-type" class="text-muted-300"
+                  >Helicopter</label
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <input
+                  type="radio"
+                  id="both-type"
+                  name="aircraft-type"
+                  value="Both"
+                  class="w-4 h-4 text-accent-800 focus:ring-accent-900"
+                />
+                <label for="both-type" class="text-muted-300">Both</label>
+              </div>
+            </div>
+          </fieldset>
 
           <!-- Airplane Program Options (conditionally shown) -->
           <fieldset
@@ -132,24 +216,33 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
             class="flex flex-col justify-center items-center align-middle mt-4"
             style="display: none;"
           >
-            <legend class="mb-2 text-muted-300 text-xl font-semibold text-center w-full">
+            <legend
+              class="mb-2 text-muted-300 text-xl font-semibold text-center w-full"
+            >
               Airplane Program Interest? <span class="text-red-500">*</span>
             </legend>
-            <div id="airplane-program-options-container" class="hidden flex flex-col gap-2">
+            <div
+              id="airplane-program-options-container"
+              class="hidden flex flex-col gap-2"
+            >
               <!-- Options will be populated by JavaScript -->
             </div>
           </fieldset>
-
           <!-- Helicopter Program Options (conditionally shown) -->
           <fieldset
             id="helicopter-program-fieldset"
             class="flex flex-col justify-center items-center align-middle mt-4"
             style="display: none;"
           >
-            <legend class="mb-2 text-muted-300 text-xl font-semibold text-center w-full">
+            <legend
+              class="mb-2 text-muted-300 text-xl font-semibold text-center w-full"
+            >
               Helicopter Program Interest? <span class="text-red-500">*</span>
             </legend>
-            <div id="helicopter-program-options-container" class="flex flex-col gap-2">
+            <div
+              id="helicopter-program-options-container"
+              class="flex flex-col gap-2"
+            >
               <!-- Options will be populated by JavaScript -->
             </div>
           </fieldset>
@@ -159,11 +252,15 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
             required
             name="message"
             placeholder="Your message"
-            class="px-5 py-4 outline-1 border-primary-100border outline-gray-500 min-h-48 placeholder:text-primary/60 text-black"
+            class="px-5 py-4 outline-1 border-primary-100border outline-gray-500 min-h-48 placeholder:text-primary/60 text-black text-black"
           ></textarea>
 
           <div class="flex gap-3">
-            <input type="checkbox" name="agree-data-collection" id="agree-data-collection" />
+            <input
+              type="checkbox"
+              name="agree-data-collection"
+              id="agree-data-collection"
+            />
 
             <label
               for="agree-data-collection"
@@ -228,11 +325,29 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
 
     const checkbox = document.getElementById("agree-data-collection");
     const submitButton = document.getElementById("submit-button");
-    const inquiryPurpose = document.getElementById("inquiry-purpose");
-    const airplaneProgramFieldset = document.getElementById("airplane-program-fieldset");
-    const airplaneContainer = document.getElementById("airplane-program-options-container");
-    const helicopterProgramFieldset = document.getElementById("helicopter-program-fieldset");
-    const helicopterContainer = document.getElementById("helicopter-program-options-container");
+
+    const flightTrainingInterestRadios = document.querySelectorAll(
+      'input[name="interest-flight-training"]',
+    );
+    const aircraftTypeFieldset = document.getElementById(
+      "aircraft-type-fieldset",
+    );
+    const aircraftTypeRadios = document.querySelectorAll(
+      'input[name="aircraft-type"]',
+    );
+
+    const airplaneProgramFieldset = document.getElementById(
+      "airplane-program-fieldset",
+    );
+    const airplaneContainer = document.getElementById(
+      "airplane-program-options-container",
+    );
+    const helicopterProgramFieldset = document.getElementById(
+      "helicopter-program-fieldset",
+    );
+    const helicopterContainer = document.getElementById(
+      "helicopter-program-options-container",
+    );
 
     function setRequiredForRadioGroup(groupName, isRequired) {
       const radios = document.querySelectorAll(`input[name="${groupName}"]`);
@@ -247,9 +362,18 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
 
     function toggleFlightTrainingSpecificFields(show) {
       if (show) {
+        aircraftTypeFieldset.style.display = "flex"; // Or 'block' or your preferred display type
+        setRequiredForRadioGroup("aircraft-type", true);
         // Trigger update of program sections based on current aircraft type selection (if any)
-        updateDynamicProgramSections(inquiryPurpose.value);
+        const selectedAircraftType = document.querySelector(
+          'input[name="aircraft-type"]:checked',
+        );
+        updateDynamicProgramSections(
+          selectedAircraftType ? selectedAircraftType.value : null,
+        );
       } else {
+        aircraftTypeFieldset.style.display = "none";
+        setRequiredForRadioGroup("aircraft-type", false);
         // Also hide and reset program sections
         airplaneProgramFieldset.style.display = "none";
         airplaneContainer.classList.add("hidden");
@@ -258,10 +382,49 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
         helicopterProgramFieldset.style.display = "none";
         helicopterContainer.classList.add("hidden");
         setRequiredForRadioGroup("helicopter-interest", false);
+
+        // Clear any selected aircraft type
+        aircraftTypeRadios.forEach((radio) => (radio.checked = false));
       }
     }
 
-    function populateAndDisplayProgramOptions(containerElement, fieldsetElement, programs, radioGroupName, isVisible) {
+    checkbox.addEventListener("change", function () {
+      if (checkbox.checked) {
+        submitButton.disabled = false;
+        submitButton.classList.remove(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400",
+        );
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.add(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400",
+        );
+      }
+    });
+
+    flightTrainingInterestRadios.forEach((radio) => {
+      radio.addEventListener("change", (event) => {
+        toggleFlightTrainingSpecificFields(event.target.value === "yes");
+      });
+    });
+
+    aircraftTypeRadios.forEach((radio) => {
+      radio.addEventListener("change", (event) => {
+        updateDynamicProgramSections(event.target.value);
+      });
+    });
+
+    function populateAndDisplayProgramOptions(
+      containerElement,
+      fieldsetElement,
+      programs,
+      radioGroupName,
+      isVisible,
+    ) {
       containerElement.innerHTML = ""; // Clear existing options
 
       if (!isVisible || !programs || programs.length === 0) {
@@ -273,7 +436,8 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
 
       fieldsetElement.style.display = "flex"; // Or 'block'
       containerElement.classList.remove("hidden");
-      
+      setRequiredForRadioGroup(radioGroupName, true);
+
       programs.forEach((program) => {
         const wrapper = document.createElement("div");
         wrapper.className = "flex items-center gap-2";
@@ -296,47 +460,35 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
         wrapper.appendChild(label);
         containerElement.appendChild(wrapper);
       });
-
-      setRequiredForRadioGroup(radioGroupName, true);
     }
 
     function updateDynamicProgramSections(selectedAircraftType) {
-      const showAirplane = selectedAircraftType === "Flight training (Airplane)";
-      const showHelicopter = selectedAircraftType === "Flight training (Helicopter)";
+      const isInterestedInTraining =
+        document.querySelector('input[name="interest-flight-training"]:checked')
+          ?.value === "yes";
+      if (!isInterestedInTraining) return; // Don't show if not interested in training
+
+      const showAirplane =
+        selectedAircraftType === "Airplane" || selectedAircraftType === "Both";
+      const showHelicopter =
+        selectedAircraftType === "Helicopter" ||
+        selectedAircraftType === "Both";
 
       populateAndDisplayProgramOptions(
         airplaneContainer,
         airplaneProgramFieldset,
         trainingPrograms.Airplane,
         "airplane-interest",
-        showAirplane
+        showAirplane,
       );
-
       populateAndDisplayProgramOptions(
         helicopterContainer,
         helicopterProgramFieldset,
         trainingPrograms.Helicopter,
         "helicopter-interest",
-        showHelicopter
+        showHelicopter,
       );
     }
-
-    checkbox.addEventListener("change", function () {
-      if (checkbox.checked) {
-        submitButton.disabled = false;
-        submitButton.classList.remove("cursor-not-allowed", "bg-gray-400", "hover:bg-gray-400");
-      } else {
-        submitButton.disabled = true;
-        submitButton.classList.add("cursor-not-allowed", "bg-gray-400", "hover:bg-gray-400");
-      }
-    });
-
-    inquiryPurpose.addEventListener("change", () => {
-      toggleFlightTrainingSpecificFields(
-        ["Flight training (Airplane)", "Flight training (Helicopter)"].includes(inquiryPurpose.value)
-      );
-    });
-
     document.addEventListener("DOMContentLoaded", () => {
       const form = document.getElementById("contact-form");
       if (!form) {
@@ -353,7 +505,7 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
         const countryCode = formData.get("country-code")?.trim() || "";
         const phoneNumber = formData.get("phone-number")?.trim() || "";
         const fullPhoneNumber = `${countryCode}${phoneNumber}`;
-        
+
         // replace phone fields
         formData.delete("country-code");
         formData.delete("phone-number");
@@ -361,13 +513,6 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
 
         const confirmEmail = formData.get("confirm-email")?.trim();
         if (confirmEmail) return; // honeypot check
-
-        const airplaneInterest = formData.get("airplane-interest")?.trim() || "";
-        const helicopterInterest = formData.get("helicopter-interest")?.trim() || "";
-        formData.delete("airplane-interest");
-        formData.append("airplane-interest", airplaneInterest);
-        formData.delete("helicopter-interest");
-        formData.append("helicopter-interest", helicopterInterest);
 
         const webhookURL = CONTACT_US_FORM_WEBHOOK_URL;
         const apiKey = PORTAL_API_KEY;
@@ -385,7 +530,14 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
           metadata: {},
         };
 
-        const excludedFields = ["first-name", "last-name", "email", "phone", "confirm-email", "agree-data-collection"];
+        const excludedFields = [
+          "first-name",
+          "last-name",
+          "email",
+          "phone",
+          "confirm-email",
+          "agree-data-collection",
+        ];
         for (const [key, value] of formData.entries()) {
           if (!excludedFields.includes(key)) {
             jsonBody.metadata[key] = value?.trim?.() ?? value;
@@ -424,14 +576,15 @@ const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TE
       });
     });
   </script>
-
   <!-- Prevent Multiple Submissions  -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const form = document.querySelector("form");
       if (form) {
         form.addEventListener("submit", function (e) {
-          const submitBtn = form.querySelector<HTMLButtonElement>("button[type='submit']");
+          const submitBtn = form.querySelector<HTMLButtonElement>(
+            "button[type='submit']",
+          );
           if (submitBtn) {
             submitBtn.disabled = true;
             submitBtn.innerText = "Submitting...";

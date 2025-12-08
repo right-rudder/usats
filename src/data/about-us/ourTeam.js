@@ -72,7 +72,7 @@ const ourTeam = {
         rank: "FW, CFII, ATP, MEI",
       },
       {
-        name: "Nicolas B.",
+        name: "Nicolas B.", // Nicolas Burleson
         imagePath: staffPlaceHolder.imagePath,
         imageAlt: staffPlaceHolder.imageAlt,
         rank: "FW, CFI, CFII",
