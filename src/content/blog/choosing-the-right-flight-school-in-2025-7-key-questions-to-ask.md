@@ -3,7 +3,7 @@ pubDate: "2025-05-12"
 author: Brian Craddock
 title: "Choosing the Right Flight School in 2025: 7 Key Questions to Ask"
 description: "Discover the 7 key questions every aspiring pilot should ask when choosing the right flight school. Learn how USATS in Titusville, Florida, offers top-notch training, experienced instructors, and global support for your aviation career."
-heroImage: "/blog/USATS-Best-flight-school-for-2025.webp"
+heroImage: "/blog/usats-best-flight-school-for-2025-USATS-florida-aviation-academy-florida.webp"
 readingTime: 4
 category: "Flight Training"
 tags:

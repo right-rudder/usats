@@ -67,7 +67,7 @@ underHeader: {
     ""
   ],
   image: {
-    imagePath: "/src/assets/ALTO_NG.webp",
+    imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
     imageAlt: "AirPlane Panel",
   },
   buttons: [],
@@ -81,7 +81,7 @@ underHeaderTwo: {
     "If you’re ready to contribute to an organization that prioritizes innovation, safety, and making aviation more accessible and inspiring, your journey starts here."
   ],
   image: {
-    imagePath: "/src/assets/ALTO_NG.webp",
+    imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
     imageAlt: "AirPlane Panel",
   },
   buttons: [],
@@ -97,7 +97,7 @@ underHeaderTwo: {
         cards: [
           {
             title: "Maintenance Technician",
-            imagePath: "/src/assets/maintenanceHeli4.png",
+            imagePath: "/src/assets/maintenanceheli4-USATS-titusville-aviation-academy-florida.png",
             imageAlt:
               "USATS Mechanic working on an Helicopter",
             description:

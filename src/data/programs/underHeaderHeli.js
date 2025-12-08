@@ -11,7 +11,7 @@ const underHeaderHeli = {
           "We have put many pilots with diverse backgrounds into airline cockpits. Our glass-cockpit airplanes and airline training environment will give you the knowledge and skills necessary to make you a highly desirable airline pilot candidate and allow for a smooth transition into your first airline job. ",
         ],
         image: {
-          imagePath: "/src/assets/militaryTraingingBH3.png",
+          imagePath: "/src/assets/militarytraingingbh3-USATS-titusville-instrument-rating-training.png",
           imageAlt: "AirPlane Panel",
         },
         buttons: [

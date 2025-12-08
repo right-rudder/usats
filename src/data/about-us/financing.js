@@ -13,7 +13,7 @@ const financingOptions = {
       //top header
       header: {
         stars: true,
-        imagePath: "/src/assets/placeholder.webp",
+        imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
         imageAlt:
           "",
         headerH1: `Flight School Loans`,
@@ -45,7 +45,7 @@ const financingOptions = {
                     primary: false,
                   },
                 ],
-                imagePath: "/src/assets/placeholder.webp",
+                imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
                 imageAlt: "",
             },
             {
@@ -59,7 +59,7 @@ const financingOptions = {
                     primary: false,
                   },
                 ],
-                imagePath: "/src/assets/placeholder.webp",
+                imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
                 imageAlt: "",
             },
             {
@@ -72,7 +72,7 @@ const financingOptions = {
                     primary: false,
                   },
                 ],
-                imagePath: "/src/assets/placeholder.webp",
+                imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
                 imageAlt: "",
             },
         ],
@@ -81,7 +81,7 @@ const financingOptions = {
   
   
       flyWithUsCTA: {
-        imagePath: "/src/assets/placeholder.webp",
+        imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
         imageAlt: "",
         headerH1: `<span class="text-primary-600">Why don't you check the skies </br></span>With a Discovery Flight`,
         paragraph:

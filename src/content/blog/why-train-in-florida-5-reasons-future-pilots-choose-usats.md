@@ -3,7 +3,7 @@ pubDate: "2025-11-19"
 author: Brian Craddock
 title: "Why Train in Florida? 5 Reasons Future Pilots Choose USATS"
 description: "Discover why Florida is one of the best places in the world to train as a pilot. See how USATS offers ideal weather, modern aircraft, and an efficient training experience."
-heroImage: "/blog/alto_2a.jpg"
+heroImage: "/blog/alto_2a-USATS-florida-commercial-pilot-program.jpg"
 readingTime: 4
 category: "Flight Training"
 tags:

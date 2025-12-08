@@ -122,7 +122,7 @@ const Navbar = ({ pathname }) => {
                 className="relative hover:brightness-110 duration-200 ease-in-out w-full md:w-1/3 lg:w-2/12 px-1 py-1"
               >
                 <img
-                  src="/USATS_Logo_White.webp"
+                  src="/usats_logo_white-USATS-florida-aviation-academy-florida.webp"
                   alt="USATS Logo"
                   aria-label="USATS Logo"
                   title="USATS Logo"
@@ -291,7 +291,7 @@ const Navbar = ({ pathname }) => {
           className="z-30 relative flex justify-center items-center align-middle"
         >
           <img
-            src="/USATS_Logo_White.webp"
+            src="/usats_logo_white-USATS-florida-aviation-academy-florida.webp"
             alt="  Logo"
             aria-label="  Logo"
             title=" "

@@ -3,7 +3,7 @@ pubDate: "2025-09-16"
 author: Ray Deptula
 title: "Emergency Procedures Every Pilot Learns (and Why They Matter)"
 description: "Discover the essential emergency procedures every pilot must master during flight training. Learn how USATS in Titusville, Florida, prioritizes safety and prepares students to handle real-world challenges with confidence."
-heroImage: "/blog/USATS-altong_panel.png"
+heroImage: "/blog/usats-altong_panel-USATS-titusville-professional-pilot-program.png"
 readingTime: 4
 category: "Flight Training"
 tags:

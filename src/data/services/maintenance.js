@@ -142,7 +142,7 @@ const maintenanceServices = {
         name: "Schweizer Helicopters",
         models: "269/300 Series",
         manufacturer: "Schwiezer",
-        imagePath: "/src/assets/White_Schweizer_S300_Usats_Ramp_USATS.webp",
+        imagePath: "/src/assets/white_schweizer_s300_usats_ramp_usats-USATS-titusville-aviation-academy-florida.webp",
         imageAlt: "",
         description: "",
         bullets: [
@@ -156,7 +156,7 @@ const maintenanceServices = {
         name: "Robinson Helicopters",
         models: "R22 & R44 Series",
         manufacturer: "Robinson",
-        imagePath: "/src/assets/White_blue_Robinson_R44_USATS_Ramp.webp",
+        imagePath: "/src/assets/white_blue_robinson_r44_usats_ramp-USATS-titusville-commercial-pilot-program.webp",
         imageAlt: "",
         description: "",
         bullets: [
@@ -178,7 +178,7 @@ const maintenanceServices = {
         name: "Cessna",
         models: "172 Series",
         manufacturer: "Cessna",
-        imagePath: "/src/assets/cessna_172_USATS_Ramp.webp",
+        imagePath: "/src/assets/cessna_172_usats_ramp-USATS-florida-cfi-cfii-training-fl.webp",
         imageAlt: "",
         description: "",
         bullets: [
@@ -190,7 +190,7 @@ const maintenanceServices = {
         name: "Bell Helicopters",
         models: "206 Series",
         manufacturer: "Bell",
-        imagePath: "/src/assets/maintenanceHeli2.png",
+        imagePath: "/src/assets/maintenanceheli2-USATS-titusville-discovery-flight-titusville.png",
         imageAlt: "",
         description: "",
         bullets: [
@@ -205,7 +205,7 @@ const maintenanceServices = {
     partSales: {
       name: "Parts Sales",
       subtitle: "Shop",
-      imagePath: "/src/assets/ALTO_NG_Panel.jpg",
+      imagePath: "/src/assets/alto_ng_panel-USATS-florida-pilot-training-space-coast.jpg",
       imageAlt: "",
       description: "",
       bullets: [

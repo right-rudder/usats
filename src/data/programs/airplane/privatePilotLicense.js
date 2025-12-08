@@ -12,7 +12,7 @@ const privatePilotLicense = {
     // Top Header
     header: {
       badges: ["Part 141", "PPL"],
-      imagePath: "/src/assets/placeholder.webp",
+      imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
       imageAlt: "Cessna 172 training aircraft at the Titusville airport",
       headerH1: `Private Pilot <br>LICENSE</span>`,
       paragraph: `Designed for recreational flying or as a first step toward a professional aviation career, this 2-month course will prepare you to become a certified Private Pilot with hands-on training in a Cessna 172.`,
@@ -91,7 +91,7 @@ const privatePilotLicense = {
       },
 
       cta: {
-        imagePath: "/src/assets/placeholder.webp",
+        imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
         imageAlt: "",
         title: "Take Off with Confidence",
         description:

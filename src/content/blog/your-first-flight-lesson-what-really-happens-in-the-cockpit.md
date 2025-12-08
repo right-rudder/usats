@@ -3,7 +3,7 @@ pubDate: "2025-06-19"
 author: Ray Deptula
 title: "Your First Flight Lesson: What Really Happens in the Cockpit"
 description: "Step inside a USATS training flight from preflight briefing to landing. Learn what student pilots experience, how each flight builds skill and confidence, and explore all available pilot training programs."
-heroImage: "/blog/USATS-classroom-cockpit.webp"
+heroImage: "/blog/usats-classroom-cockpit-USATS-florida-flight-lessons-near-orlando.webp"
 readingTime: 4
 category: "Flight Training"
 tags:

@@ -10,7 +10,7 @@ const fingerprintingTSA = {
 
     header: {
       stars: true,
-      imagePath: "/src/assets/fingerprinting.webp",
+      imagePath: "/src/assets/fingerprinting-USATS-titusville-learn-to-fly-florida.webp",
       imageAlt: "image alt",
       headerH1: `${COMPANY_NICKNAME} <br> TSA Fingerprinting Service`,
       paragraph: ``,
@@ -26,7 +26,7 @@ const fingerprintingTSA = {
 
   fingerPrintingSteps: {
     title: "Flight School Fingerprinting",
-    imagePath: "/src/assets/fingerprintingTSAchatgpt.png",
+    imagePath: "/src/assets/fingerprintingtsachatgpt-USATS-titusville-aviation-academy-florida.png",
     imageAlt: "",
     subtitle:
       "Flight school candidates -- The following steps are required PRIOR to scheduling your fingerprint appointment:",
@@ -63,7 +63,7 @@ const fingerprintingTSA = {
       "Here at USATS we make sure you have all you need to make it.",
     ],
     image: {
-      imagePath: "/src/assets/ALTO_NG.webp",
+      imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
       imageAlt: "AirPlane Panel",
     },
     buttons: [],

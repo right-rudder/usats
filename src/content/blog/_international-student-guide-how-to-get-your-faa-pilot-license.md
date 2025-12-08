@@ -3,7 +3,7 @@ pubDate: "2025-11-15"
 author: Brian Craddock
 title: "International Student Guide: How to Get Your FAA Pilot License"
 description: "Step-by-step guide for international students on how to get an FAA pilot license with USATS. Learn about visa support, TSA approvals, and training programs."
-heroImage: "/blog/flyingWhiteHeli9.png"
+heroImage: "/blog/flyingwhiteheli9-USATS-titusville-cfi-cfii-training-fl.png"
 readingTime: 5
 category: "Flight Training"
 tags:

@@ -3,7 +3,7 @@ pubDate: "2025-12-30"
 author: Brian Craddock
 title: "From Discovery Flight to Airline Pilot: Your Pilot Journey Explained"
 description: "Understand the full pilot training journey, from your first Discovery Flight to becoming an airline pilot. USATS guides you every step of the way."
-heroImage: "/blog/USATS_banner_Application.webp"
+heroImage: "/blog/usats_banner_application-USATS-florida-pilot-training-space-coast.webp"
 readingTime: 5
 category: "Flight Training"
 tags:

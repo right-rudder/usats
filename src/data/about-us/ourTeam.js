@@ -55,13 +55,13 @@ const ourTeam = {
     members: [
       {
         name: "Urara Takano",
-        imagePath: "/src/assets/Takano Urara 3.jpg",
+        imagePath: "/src/assets/takano urara 3-USATS-florida-private-pilot-license-fl.jpg",
         imageAlt: "Urara Takno, Flight Instructor at USATS Titusville Florida",
         rank: "Chief FW Pilot, CFI, CFII",
       },
       {
         name: "Angela Ramirez Perez",
-        imagePath: "/src/assets/staff-Angela-Ramirez-Perez.jpg",
+        imagePath: "/src/assets/staff-angela-ramirez-perez-USATS-florida-commercial-pilot-program.jpg",
         imageAlt: "Angela Ramirez, Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI, CFII, MEI",
       },
@@ -79,7 +79,7 @@ const ourTeam = {
       },
       {
         name: "Ethan Criss",
-        imagePath: "/src/assets/staff-photo_Ethan-Criss.webp",
+        imagePath: "/src/assets/staff-photo_ethan-criss-USATS-florida-aviation-academy-florida.webp",
         imageAlt: "Ethan Criss, Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI",
       },
@@ -97,7 +97,7 @@ const ourTeam = {
       },
       {
         name: "Callum Watson",
-        imagePath: "/src/assets/Staff-photo-Callum-Watson.webp",
+        imagePath: "/src/assets/staff-photo-callum-watson-USATS-titusville-commercial-pilot-program.webp",
         imageAlt:
           "Callum Watson, Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI, CFII",
@@ -113,14 +113,14 @@ const ourTeam = {
     members: [
       {
         name: "Jason Krum",
-        imagePath: "/src/assets/Krum, Jason.jpg",
+        imagePath: "/src/assets/krum_jason-USATS-titusville-private-pilot-license-fl.jpg",
         imageAlt:
           "Jason Krum, Helicopter Flight Instructor at USATS Titusville Florida",
         rank: "RW, CFI Gold Seal, CFII, ATP, Instrument Ground Instructor, SFAR",
       },
       {
         name: "Katie Dwyer",
-        imagePath: "/src/assets/staff-photo-Katie-Dwyer.webp",
+        imagePath: "/src/assets/staff-photo-katie-dwyer-USATS-florida-flight-lessons-near-orlando.webp",
         imageAlt: "Katie Dwyer, Flight Instructor at USATS Titusville Florida",
         rank: "RW, CFI",
       },

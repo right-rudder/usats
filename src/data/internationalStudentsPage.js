@@ -36,7 +36,7 @@ const internationalStudentsPage = {
         "From your first solo to your commercial license, we guide you step by step. Your future in aviation starts here — no borders, just blue skies.",
       ],
       image: {
-        imagePath: "/src/assets/ALTO_NG.webp",
+        imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
         imageAlt: "AirPlane Panel",
       },
       buttons: [

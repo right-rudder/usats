@@ -43,7 +43,7 @@ const {
   image = OG_IMAGE, // Use OG_IMAGE from consts as default
 } = Astro.props;
 
-const logoUrl = new URL("/USATS_Logo_White.webp", Astro.site).href; // Assuming logo is in public folder
+const logoUrl = new URL("/usats_logo_white-USATS-florida-aviation-academy-florida.webp", Astro.site).href; // Assuming logo is in public folder
 const siteImage = new URL(image, Astro.site).href;
 
 // Use the first location as the primary for schema, or adjust if needed
@@ -354,7 +354,7 @@ const combinedSchemaData = JSON.stringify(allSchemas);
     Nice to see you here.  Find new student pilots with Right Rudder Marketing.  https://rightruddermarketing.com/contact-us -->
 
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="icon" type="image/png" href="/favicon-USATS-florida-commercial-pilot-program.png" />
 <link rel="manifest" href="/manifest.json" />
 <meta name="generator" content={Astro.generator} />
 
@@ -425,7 +425,7 @@ const combinedSchemaData = JSON.stringify(allSchemas);
 <!-- Preload critical resources -->
 <link
   rel="preload"
-  href="/USATS_Logo_White.webp"
+  href="/usats_logo_white-USATS-florida-aviation-academy-florida.webp"
   as="image"
   type="image/webp"
 />

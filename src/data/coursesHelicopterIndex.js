@@ -10,7 +10,7 @@ const coursesIndex = {
     // Top Header
     header: {
       stars: true,
-      imagePath: "/src/assets/Schweizer_S300_Usats_Ramp.webp",
+      imagePath: "/src/assets/schweizer_s300_usats_ramp-USATS-florida-private-pilot-license-fl.webp",
       imageAlt: "image alt",
       headerH1: `HELICOPTER TRAINING <br>PROGRAMS</span>`,
       paragraph: ``,

@@ -9,7 +9,7 @@ const programs = {
     {
       title: "Private Pilot License",
       badges: ["PPL"],
-      imagePath: "/src/assets/flyingHeli.png",
+      imagePath: "/src/assets/flyingheli-USATS-titusville-flight-lessons-near-orlando.png",
       imageAlt: "",
       description:
         "Begin your helicopter flying journey by earning your private pilot license and learning essential flight skills.",
@@ -18,7 +18,7 @@ const programs = {
     {
       title: "Instrument Rating",
       badges: ["IR"],
-      imagePath: "/src/assets/flyingWhiteHeli4.png",
+      imagePath: "/src/assets/flyingwhiteheli4-USATS-titusville-commercial-pilot-program.png",
       imageAlt: "",
       description:
         "Learn to safely navigate helicopters in low-visibility conditions using only instruments.",
@@ -27,7 +27,7 @@ const programs = {
     {
       title: "Commercial Pilot License",
       badges: ["CPL"],
-      imagePath: "/src/assets/flyingWhiteHeli9.png",
+      imagePath: "/src/assets/flyingwhiteheli9-USATS-titusville-instrument-rating-training.png",
       imageAlt: "",
       description:
         "Advance your helicopter career by obtaining the certification required to fly professionally.",
@@ -36,7 +36,7 @@ const programs = {
     {
       title: "Certified Flight Instructor",
       badges: ["CFI"],
-      imagePath: "/src/assets/White_blue_Robinson_R44_USATS_Ramp.webp",
+      imagePath: "/src/assets/white_blue_robinson_r44_usats_ramp-USATS-titusville-commercial-pilot-program.webp",
       imageAlt: "",
       description:
         "Become a helicopter flight instructor to build flight time while training new pilots.",
@@ -45,7 +45,7 @@ const programs = {
     {
       title: "Certified Flight Instructor Instrument",
       badges: ["CFII"],
-      imagePath: "/src/assets/directFly_altong_panel_USATS.jpg",
+      imagePath: "/src/assets/directfly_altong_panel_usats-USATS-titusville-pilot-training-space-coast.jpg",
       imageAlt: "",
       description:
         "Expand your teaching credentials by training pilots in instrument flight operations.",
@@ -54,7 +54,7 @@ const programs = {
     {
       title: "Airline Transport Pilot License",
       badges: ["ATP-L"],
-      imagePath: "/src/assets/maintenanceHeli.png",
+      imagePath: "/src/assets/maintenanceheli-USATS-titusville-aviation-academy-florida.png",
       imageAlt: "",
       description:
         "Earn the highest helicopter certification available and qualify to pilot multi-crew IFR operations.",
@@ -63,7 +63,7 @@ const programs = {
     {
       title: "Professional Pilot Program",
       badges: ["PPL", "IR", "CPL", "CFI", "CFII"],
-      imagePath: "/src/assets/flyingWhiteHeli8.png",
+      imagePath: "/src/assets/flyingwhiteheli8-USATS-titusville-private-pilot-license-fl.png",
       imageAlt: "",
       description:
         "Take the first step toward a helicopter career with this all-in-one program for students with no prior experience.",
@@ -72,7 +72,7 @@ const programs = {
     // {
     //   title: "Military Training",
     //   badges: ["MILITARY"],
-    //   imagePath: "/src/assets/militaryTraingingBH6.png",
+    //   imagePath: "/src/assets/militarytraingingbh6-USATS-florida-instrument-rating-training.png",
     //   imageAlt: "",
     //   description:
     //     "Prepare yourself for anything with our military training programs.",

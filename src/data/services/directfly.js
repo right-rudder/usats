@@ -8,7 +8,7 @@ const directFly = {
         subtitle: "North American Dealer and Service Center for DirectFly Alto NG",
         headerH1: `${COMPANY_NICKNAME} <br> DirectFly - Alto NG`,
         paragraph: `North American Dealer and Service Center for DirectFly Alto NG`,
-        imagePath: "/src/assets/placeholder.webp",
+        imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
         imageAlt: "image alt",
         buttons: [
             {
@@ -41,7 +41,7 @@ const directFly = {
     altoNGPitch: {
         title: "Experience the Future With DirectFly",
         subtitle: "The Future is Here",
-        imagePath:"/src/assets/Happy_Landings_ALO_NG.webp",
+        imagePath:"/src/assets/happy_landings_alo_ng-USATS-florida-private-pilot-license-fl.webp",
         imageAlt:"",
         paragraphs: [
             "Elevate your flying experience with the DirectFly Alto NG, the pinnacle of modern aviation innovation. Designed for discerning pilots seeking performance, comfort, and cutting-edge technology, the Alto NG delivers unparalleled excellence in every flight.",
