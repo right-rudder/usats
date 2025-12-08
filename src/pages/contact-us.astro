@@ -7,7 +7,7 @@ import { countryPhoneCodes } from "../data/countriesPhone.js";
 
 const { data } = contact;
 
-const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
+const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.NEW_CONTACT_US_FORM_WEBHOOK_URL;
 const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 ---
 
@@ -115,6 +115,34 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
             </select>
           </div>
 
+          <!-- Airplane Program Options (conditionally shown) -->
+          <fieldset
+            id="airplane-program-fieldset"
+            class="flex flex-col justify-center items-center align-middle mt-4"
+            style="display: none;"
+          >
+            <legend class="mb-2 text-muted-300 text-xl font-semibold text-center w-full">
+              Airplane Program Interest? <span class="text-red-500">*</span>
+            </legend>
+            <div id="airplane-program-options-container" class="hidden flex flex-col gap-2">
+              <!-- Options will be populated by JavaScript -->
+            </div>
+          </fieldset>
+
+          <!-- Helicopter Program Options (conditionally shown) -->
+          <fieldset
+            id="helicopter-program-fieldset"
+            class="flex flex-col justify-center items-center align-middle mt-4"
+            style="display: none;"
+          >
+            <legend class="mb-2 text-muted-300 text-xl font-semibold text-center w-full">
+              Helicopter Program Interest? <span class="text-red-500">*</span>
+            </legend>
+            <div id="helicopter-program-options-container" class="flex flex-col gap-2">
+              <!-- Options will be populated by JavaScript -->
+            </div>
+          </fieldset>
+
           <!-- Message -->
           <textarea
             required
@@ -146,8 +174,141 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
   </section>
 
   <script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
+    const trainingPrograms = {
+      Airplane: [
+        { value: "private-pilot-license", text: "Private Pilot License" },
+        { value: "instrument-rating", text: "Instrument Rating" },
+        { value: "commercial-pilot-license", text: "Commercial Pilot License" },
+        { value: "cfi", text: "Flight Instructor (CFI)" },
+        { value: "cfii", text: "Flight Instructor Instrument (CFII)" },
+        {
+          value: "professional-pilot-program",
+          text: "Professional Pilot Program",
+        },
+        {
+          value: "taa-time-building",
+          text: "TAA time building",
+        },
+        { value: "other-airplane", text: "Other Airplane Interest" },
+      ],
+      Helicopter: [
+        {
+          value: "private-pilot-license-h",
+          text: "Private Pilot License- Helicopter",
+        },
+        {
+          value: "instrument-rating-h",
+          text: "Instrument Rating - Helicopter",
+        },
+        {
+          value: "commercial-pilot-license-h",
+          text: "Commercial Pilot License - Helicopter",
+        },
+        { value: "cfi-h", text: "Flight Instructor - Helicopter" },
+        { value: "cfii-h", text: "Flight Instructor Instrument - Helicopter" },
+        {
+          value: "professional-pilot-program-h",
+          text: "Professional Pilot Program - Helicopter",
+        },
+        { value: "military-transition", text: "Military Transition Training" },
+        { value: "other-helicopter", text: "Other Helicopter Interest" },
+      ],
+    };
+
     const checkbox = document.getElementById("agree-data-collection");
     const submitButton = document.getElementById("submit-button");
+    const inquiryPurpose = document.getElementById("inquiry-purpose");
+    const airplaneProgramFieldset = document.getElementById("airplane-program-fieldset");
+    const airplaneContainer = document.getElementById("airplane-program-options-container");
+    const helicopterProgramFieldset = document.getElementById("helicopter-program-fieldset");
+    const helicopterContainer = document.getElementById("helicopter-program-options-container");
+
+    function setRequiredForRadioGroup(groupName, isRequired) {
+      const radios = document.querySelectorAll(`input[name="${groupName}"]`);
+      radios.forEach((radio) => {
+        if (isRequired) {
+          radio.setAttribute("required", "required");
+        } else {
+          radio.removeAttribute("required");
+        }
+      });
+    }
+
+    function toggleFlightTrainingSpecificFields(show) {
+      if (show) {
+        // Trigger update of program sections based on current aircraft type selection (if any)
+        updateDynamicProgramSections(inquiryPurpose.value);
+      } else {
+        // Also hide and reset program sections
+        airplaneProgramFieldset.style.display = "none";
+        airplaneContainer.classList.add("hidden");
+        setRequiredForRadioGroup("airplane-interest", false);
+
+        helicopterProgramFieldset.style.display = "none";
+        helicopterContainer.classList.add("hidden");
+        setRequiredForRadioGroup("helicopter-interest", false);
+      }
+    }
+
+    function populateAndDisplayProgramOptions(containerElement, fieldsetElement, programs, radioGroupName, isVisible) {
+      containerElement.innerHTML = ""; // Clear existing options
+
+      if (!isVisible || !programs || programs.length === 0) {
+        fieldsetElement.style.display = "none";
+        containerElement.classList.add("hidden");
+        setRequiredForRadioGroup(radioGroupName, false);
+        return;
+      }
+
+      fieldsetElement.style.display = "flex"; // Or 'block'
+      containerElement.classList.remove("hidden");
+      
+      programs.forEach((program) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "flex items-center gap-2";
+        const inputId = `${radioGroupName}-${program.value.replace(/[^a-zA-Z0-9]/g, "-")}`; // Sanitize value for ID
+
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.className = "mx-2 text-accent-800 focus:ring-accent-900";
+        input.id = inputId;
+        input.name = radioGroupName;
+        input.value = program.value;
+        // 'required' is set on the group by setRequiredForRadioGroup
+
+        const label = document.createElement("label");
+        label.className = "text-muted-300";
+        label.htmlFor = inputId;
+        label.textContent = program.text;
+
+        wrapper.appendChild(input);
+        wrapper.appendChild(label);
+        containerElement.appendChild(wrapper);
+      });
+
+      setRequiredForRadioGroup(radioGroupName, true);
+    }
+
+    function updateDynamicProgramSections(selectedAircraftType) {
+      const showAirplane = selectedAircraftType === "Flight training (Airplane)";
+      const showHelicopter = selectedAircraftType === "Flight training (Helicopter)";
+
+      populateAndDisplayProgramOptions(
+        airplaneContainer,
+        airplaneProgramFieldset,
+        trainingPrograms.Airplane,
+        "airplane-interest",
+        showAirplane
+      );
+
+      populateAndDisplayProgramOptions(
+        helicopterContainer,
+        helicopterProgramFieldset,
+        trainingPrograms.Helicopter,
+        "helicopter-interest",
+        showHelicopter
+      );
+    }
 
     checkbox.addEventListener("change", function () {
       if (checkbox.checked) {
@@ -157,6 +318,12 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
         submitButton.disabled = true;
         submitButton.classList.add("cursor-not-allowed", "bg-gray-400", "hover:bg-gray-400");
       }
+    });
+
+    inquiryPurpose.addEventListener("change", () => {
+      toggleFlightTrainingSpecificFields(
+        ["Flight training (Airplane)", "Flight training (Helicopter)"].includes(inquiryPurpose.value)
+      );
     });
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -175,7 +342,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
         const countryCode = formData.get("country-code")?.trim() || "";
         const phoneNumber = formData.get("phone-number")?.trim() || "";
         const fullPhoneNumber = `${countryCode}${phoneNumber}`;
-
+        
         // replace phone fields
         formData.delete("country-code");
         formData.delete("phone-number");
@@ -183,6 +350,13 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 
         const confirmEmail = formData.get("confirm-email")?.trim();
         if (confirmEmail) return; // honeypot check
+
+        const airplaneInterest = formData.get("airplane-interest")?.trim() || "";
+        const helicopterInterest = formData.get("helicopter-interest")?.trim() || "";
+        formData.delete("airplane-interest");
+        formData.append("airplane-interest", airplaneInterest);
+        formData.delete("helicopter-interest");
+        formData.append("helicopter-interest", helicopterInterest);
 
         const webhookURL = CONTACT_US_FORM_WEBHOOK_URL;
         const apiKey = PORTAL_API_KEY;
