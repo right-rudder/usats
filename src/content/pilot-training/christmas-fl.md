@@ -8,11 +8,11 @@ keyPlace1: "Fort Christmas Historical Park"
 keyPlace2: "Tosohatchee Wildlife Management Area"
 
 headerImages:
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
 
 headlines:
   - "Take Flight in Unique {{city}}, {{stateShort}}"

@@ -29,11 +29,11 @@ import MaintenanceParts from "./MaintenanceParts.astro";
             <p class="text-base font-semibold leading-7 text-accent-700 uppercase">
               {data.heather2}
             </p>
-            <h1
+            <h2
               class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
             >
               {data.title}
-            </h1>
+            </h2>
             <p
               class="mt-6 text-xl leading-8 text-muted-200"
               set:html={data.description}
@@ -103,11 +103,11 @@ import MaintenanceParts from "./MaintenanceParts.astro";
         <p class="text-base font-semibold leading-7 text-accent-700 uppercase">
           {data.robinson_service_center.models}
         </p>
-        <h1
+        <h2
           class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
         >
           {data.robinson_service_center.name}
-        </h1>
+        </h2>
         <p
           class="mt-6 text-xl leading-8 text-muted-200"
           set:html={data.robinson_service_center.description}
@@ -123,7 +123,7 @@ import MaintenanceParts from "./MaintenanceParts.astro";
               <!-- image -->
                 <div class="mx-auto w-full rounded-xl overflow-hidden  md:w-full ring-accent-800 group-hover:ring-2 group-hover:shadow-lg duration-200 ease-in-out" >
                   <ImageComp
-                    imagePath="/src/assets/USATS_S300_on_Taxiway_Alpha.webp"
+                    imagePath="/src/assets/usats_s300_on_taxiway_alpha-USATS-titusville-private-pilot-license-fl.webp"
                     imageAlt=""
                     styles="h-full object-cover group-hover:scale-110 group-hover:shadow-lg group-hover:brightness-110 duration-300 ease-in-out"
                     quality={80}
@@ -202,11 +202,11 @@ import MaintenanceParts from "./MaintenanceParts.astro";
         <p class="text-base font-semibold leading-7 text-accent-700 uppercase">
           {data.part_43_maintenance.description}
         </p>
-        <h1
+        <h2
           class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
         >
           {data.part_43_maintenance.name}
-        </h1>
+        </h2>
         {
           data.part_43_maintenance.paragraphs.map((paragraph) => (
             <p

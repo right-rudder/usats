@@ -3,7 +3,7 @@ pubDate: "May 21, 2025"
 author: Brian Craddock
 title: "✈️ Understanding Lift: The Foundation of All Flight"
 description: "Learn how lift works and why it’s essential to every flight. This beginner-friendly guide from USATS explains the science of lift, key aerodynamic factors, and how student pilots master it through hands-on training in airplanes and helicopters."
-heroImage: "/blog/USATS-Lift-Pilot-training.webp"
+heroImage: "/blog/usats-lift-pilot-training-USATS-titusville-learn-to-fly-florida.webp"
 readingTime: 5
 category: "Flight Theory"
 tags:

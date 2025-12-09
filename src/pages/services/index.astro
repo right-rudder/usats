@@ -8,18 +8,36 @@ import CTAFlight from "../../data/ctaFlight.js";
 
 import coursesIndex from "../../data/coursesHelicopterIndex";
 import servicesIndex from "../../data/services/services";
+import UnderHeaderTwo from "../../components/astro/UnderHeaderTwo.astro";
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
+
 
 const { data } = servicesIndex;
 
+const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.pageKeywords}`;
+
+const underHeader = {
+  title: "Why Choose USATS for Your Aviation Needs",
+  paragraphs: [
+    "USATS brings every essential aviation service together in one location, giving pilots, students, and professionals a streamlined experience from start to finish. Whether you're logging TAA hours, completing an FAA knowledge exam, scheduling maintenance, or converting a foreign license, our team ensures you receive expert support at every step.",
+    "With modern facilities, certified professionals, and a strong focus on safety and precision, we make it easy to train, test, maintain, and explore—all in one trusted place. No matter where you are in your aviation journey, USATS delivers the resources and experience you need to move forward with confidence."
+  ],
+  image: {
+    imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
+    imageAlt: "AirPlane Panel",
+  },
+  buttons: [],
+}
 ---
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
-  keywords={data.pageKeywords}
+  keywords={keywords}
   >
   
   <HeaderScreen content = {data.header} />
   <GridPrograms content={servicesIndex} />
+  <UnderHeaderTwo  content={underHeader}/>
   <CTADiscoveryFlights content={CTAFlight} />
 </BaseLayout>
 

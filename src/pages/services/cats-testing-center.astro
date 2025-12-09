@@ -8,11 +8,13 @@ import { ALTO_2A as imgCTA } from "../../constsImages";
 
 import testingCenterFAACats from "../../data/services/testingCenterFAACats";
 import { COMPANY_NAME } from "../../consts";
-
-const { data } = testingCenterFAACats;
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
 
 import ImageComp from "../../components/ImageComp.astro";
 import UnderHeader from "../../components/astro/UnderHeader.astro";
+import UnderHeaderTwo from "../../components/astro/UnderHeaderTwo.astro";
+
+const { data } = testingCenterFAACats;
 
 const CTAFlight = {
     imagePath: imgCTA.imagePath,
@@ -30,14 +32,30 @@ const CTAFlight = {
   };
 
 const catsTestingCenterImg = {
-  imagePath:"/src/assets/programmer-focused-on-code.webp",
+  imagePath:"/src/assets/programmer-focused-on-code-USATS-florida-discovery-flight-titusville.webp",
   imageAlt: "",
 };
+
+const underHeader = {
+  title: "Your Trusted Partner for FAA Knowledge Testing",
+  paragraphs: [
+    "Preparing for an FAA knowledge exam is an important step in your aviation journey, and our testing center is designed to make the entire process smooth and stress free. We provide a clean workspace, reliable equipment, and staff members who are ready to assist with check-in and verification procedures. Every candidate receives a quiet and secure environment that supports focus and confidence, allowing you to concentrate fully on the material without distractions or unnecessary delays.",
+    "Whether you are taking your first written exam or completing an advanced certification, USATS is committed to giving you a professional experience from the moment you arrive. Our facility follows all FAA and PSI requirements, and our team is here to answer questions, offer guidance on the scheduling process, and help you feel prepared. By choosing USATS for your CATS testing needs, you gain a dependable location where accuracy, integrity, and student success come first."
+  ],
+  image: {
+    imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
+    imageAlt: "Airplane panel representing precision and testing readiness",
+  },
+  buttons: [],
+};
+
+const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.pageKeywords}`;
+
 ---
 <BaseLayout
   siteTitle={data.title}
   siteDescription={data.paragraph}
-  keywords={data.pageKeywords}
+  keywords={keywords}
   >
   
   <HeaderScreen content = {data.header} />
@@ -139,7 +157,7 @@ const catsTestingCenterImg = {
         </div>
       </div>      
   </section>
-
+  <UnderHeaderTwo content={underHeader}></UnderHeaderTwo>
   <CTADiscoveryFlights content = {CTAFlight} />
 </BaseLayout>
 

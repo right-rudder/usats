@@ -9,6 +9,7 @@ import {
   USATS_BASE_COVER as imgHeader,
   ALTO_4A as imgCard1,
 } from "../../constsImages";
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
 
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
 import ImageComp from "../../components/ImageComp.astro";
@@ -51,7 +52,7 @@ const data = {
         "With decades of international training experience, we provide the resources and guidance needed to keep your credentials globally recognized and compliant with aviation authorities worldwide.",
       ],
       image: {
-        imagePath: "/src/assets/alto_4a.jpg",
+        imagePath: "/src/assets/alto_4a-USATS-florida-private-pilot-license-fl.jpg",
         imageAlt: "Pilot studying ICAO regulations and flight procedures",
       },
       buttons: [],
@@ -73,7 +74,7 @@ const data = {
           },
         ],
         image: {
-          imagePath: "/src/assets/alto_5a.jpg",
+          imagePath: "/src/assets/alto_5a-USATS-titusville-flight-school-florida.jpg",
           imageAlt: "Pilot reviewing global aviation documentation",
         },
       },
@@ -105,7 +106,7 @@ const data = {
           },
         ],
         image: {
-          imagePath: "/src/assets/ALTO_NG.webp",
+          imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
           imageAlt: "Instructor guiding pilot through ICAO standards",
         },
       },
@@ -128,7 +129,7 @@ const data = {
       title: "Understanding ICAO Licensing & Compliance",
       heather2: "ICAO Compliance Overview",
       imagePath:
-        "/src/assets/heli-instruments-helicopter-training-titusville-florida-2.jpg",
+        "/src/assets/heli-instruments-helicopter-training-2-USATS-titusville-professional-pilot-program.jpg",
       imageAlt: "Instructor briefing pilot on ICAO global regulations",
       description: [
         "Navigating ICAO standards can be complex ,  but with the right guidance, the process becomes simple and rewarding. Here’s how USATS helps you align your credentials with ICAO requirements:",
@@ -160,7 +161,7 @@ const data = {
 
 const CTAFlight = {
   imagePath:
-    "/src/assets/heli-flying-over-florida-helicopter-training-florida.png",
+    "/src/assets/heli-flying-over-helicopter-training-florida-USATS-florida-pilot-training-space-coast.png",
   imageAlt: imgCTA.imageAlt,
   headerH1: `Achieve Global Recognition with <span class="text-accent-600">USATS</span>`,
   paragraph: `Ensure your pilot training and certification meet ICAO standards with our comprehensive compliance and documentation support.`,
@@ -177,12 +178,14 @@ const CTAFlight = {
     },
   ],
 };
+const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.data.pageKeywords}`;
+
 ---
 
 <BaseLayout
   siteTitle={data.data.title}
   siteDescription={data.data.description}
-  keywords={data.data.pageKeywords}
+  keywords={keywords}
 >
   <HeaderScreen content={data.data.header} />
   <UnderHeader content={data.data.underHeader} />
@@ -198,11 +201,11 @@ const CTAFlight = {
           >
             {data.data.schedule.heather2}
           </p>
-          <h1
+          <h2
             class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
           >
             {data.data.schedule.title}
-          </h1>
+          </h2>
           <p
             class="mt-6 text-xl leading-8 text-muted-200"
             set:html={data.data.schedule.description[0]}
@@ -301,11 +304,11 @@ const CTAFlight = {
           >
             {data.data.upperHeading}
           </p>
-          <h1
+          <h2
             class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
           >
             {data.data.sections[0].title}
-          </h1>
+          </h2>
           {
             data.data.sections[0].descriptions.map((paragraph, index) => (
               <div>

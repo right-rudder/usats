@@ -8,11 +8,11 @@ keyPlace1: "Maitland Art Center"
 keyPlace2: "Lake Lily Park"
 
 headerImages:
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
 
 headlines:
   - "Fly Where Art and Aviation Meet: {{city}}, {{stateShort}}"

@@ -8,11 +8,11 @@ keyPlace1: "Wekiwa Springs State Park"
 keyPlace2: "Lake Apopka Wildlife Drive"
 
 headerImages:
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
 
 headlines:
   - "Fly Over Scenic {{city}}, {{stateShort}}"

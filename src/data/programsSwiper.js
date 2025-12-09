@@ -23,6 +23,9 @@ const programsSwiper = {
         link: "/helicopter-training",
       },
     ],
+    descriptions: [
+      "Our facility is equipped with modern aircraft, experienced instructors, and certified technicians who prioritize safety, precision, and consistent support. We are focused on giving every visitor the tools and resources needed to train, test, maintain, and advance their aviation path with confidence. Whether you are starting your first lesson or completing advanced certifications, USATS offers a comprehensive and reliable environment that supports your progress from beginning to end."
+    ]
   };
   
   export default programsSwiper;

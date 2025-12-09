@@ -85,7 +85,7 @@ const militaryTraining = {
       },
 
       cta: {
-        imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
+        imagePath: "/src/assets/uh-60_black_hawk_1-USATS-titusville-commercial-pilot-program.webp",
         imageAlt: "UH-60 Black Hawk conducting night medevac training",
         title: "Ready for Tactical Leadership?",
         description: "Equip yourself to train the next generation of combat aviators. Our program develops instructors who can prepare crews for high-stakes missions anywhere in the world.",

@@ -8,11 +8,11 @@ keyPlace1: "Space Coast Wildlife Sanctuary"
 keyPlace2: "Port St. John Boat Ramp"
 
 headerImages:
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
 
 headlines:
   - "Learn to Fly in Tranquil {{city}}, {{stateShort}}"

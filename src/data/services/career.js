@@ -60,17 +60,34 @@ const careers = {
         ],
     },
 
-    underHeader: {
-      title: "Start Your Journey Here",
-      paragraphs: [
-        "Check our latest opportunities and come make the sky brighter with USATS!",
-        ""],
-      image: {
-        imagePath: "/src/assets/ALTO_NG.webp",
-        imageAlt: "AirPlane Panel",
-      },
-      buttons: [],
-    },
+underHeader: {
+  title: "Start Your Journey Here",
+  paragraphs: [
+    "Check our latest opportunities and come make the sky brighter with USATS, whether you’re guiding the next generation of aviators in the cockpit, ensuring aircraft safety and reliability in the hangar, or supporting mission-critical operations behind the scenes, this is an invitation to join a team where hands-on skill, daily purpose, and tangible impact are part of every shift, and where your work helps shape real outcomes for students, instructors, and the safety of flight.",
+    ""
+  ],
+  image: {
+    imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
+    imageAlt: "AirPlane Panel",
+  },
+  buttons: [],
+},
+
+underHeaderTwo: {
+  title: "Build Your Future in Aviation",
+  paragraphs: [
+    "At USATS, every day begins with possibility — we’re a community built on passion, precision, and a shared commitment to excellence, offering a workplace where learning and growth are encouraged and your expertise is valued across the flight line, classroom, and maintenance bay.",
+    "If you thrive in fast-paced environments and want to develop alongside industry professionals who genuinely care about your career, USATS provides the support, resources, and mentorship you need to grow.",
+    "If you’re ready to contribute to an organization that prioritizes innovation, safety, and making aviation more accessible and inspiring, your journey starts here."
+  ],
+  image: {
+    imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
+    imageAlt: "AirPlane Panel",
+  },
+  buttons: [],
+},
+
+
 
     gridPrograms: {
         upperHeading: "Open Positions",
@@ -80,7 +97,7 @@ const careers = {
         cards: [
           {
             title: "Maintenance Technician",
-            imagePath: "/src/assets/maintenanceHeli4.png",
+            imagePath: "/src/assets/maintenanceheli4-USATS-titusville-aviation-academy-florida.png",
             imageAlt:
               "USATS Mechanic working on an Helicopter",
             description:

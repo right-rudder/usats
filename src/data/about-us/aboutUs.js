@@ -10,7 +10,7 @@ const aboutUs = {
   // Top Header
   header: {
     stars: true,
-    imagePath: "/src/assets/maintenanceHeli2.png",
+    imagePath: "/src/assets/maintenanceheli2-USATS-titusville-discovery-flight-titusville.png",
     imageAlt:
       "US Aviation Training Solutions student pilot celebrating her first solo flight",
     headerH1: `Why Choose<br>USATS?`,
@@ -78,19 +78,19 @@ const aboutUs = {
     ],
     images: {
       // h60: {
-      //   imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
+      //   imagePath: "/src/assets/uh-60_black_hawk_1-USATS-titusville-commercial-pilot-program.webp",
       //   imageAlt: "UH-60 Black Hawk Flying",
       // },
       hdx1200: {
-        imagePath: "/src/assets/ALTO_NG.webp",
+        imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
         imageAlt: "Dynon hdx1200",
       },
       cesna172: {
-        imagePath: "/src/assets/USATS_Plane_N3544W.webp",
+        imagePath: "/src/assets/usats_plane_n3544w-USATS-florida-flight-lessons-near-orlando.webp",
         imageAlt: "One Cessna 172 parked in a ramp",
       },
       s300: {
-        imagePath: "/src/assets/Schweizer_S300_Usats_Ramp.webp",
+        imagePath: "/src/assets/schweizer_s300_usats_ramp-USATS-florida-private-pilot-license-fl.webp",
         imageAlt: "Two S300 helicopters parked in a ramp",
       },
     },
@@ -156,7 +156,7 @@ const aboutUs = {
       link: "/enroll",
       primary: true,
     },
-    imagePath: "/src/assets/placeholder.webp",
+    imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
     imageAlt: "",
   },
 };

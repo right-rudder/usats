@@ -7,17 +7,35 @@ import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astr
 import CTAFlight from "../../data/ctaFlight.js";
 
 import coursesIndex from "../../data/coursesIndex.js";
+import UnderHeaderTwo from "../../components/astro/UnderHeaderTwo.astro";
+import { AIRCRAFT_FLEET_KEYWORDS, CAREER_PATH_KEYWORDS, CORE_PROGRAM_KEYWORDS, DISCOVERY_EXPERIENCE_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../consts";
 
 const { data } = coursesIndex;
+const underHeader = {
+  title: "Why Choose USATS for Your Aviation Needs",
+  paragraphs: [
+    "USATS centralizes every major aviation service in one convenient location, creating a smooth and efficient experience for pilots, students, and aviation professionals.",
+    "You can log TAA hours, complete FAA knowledge exams, schedule maintenance, or begin a foreign license conversion process without needing to coordinate across multiple providers.",
+    "Our team guides each step with clear communication and dependable expertise, which helps reduce stress and keeps your goals on track."
+  ],
+  image: {
+    imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
+    imageAlt: "AirPlane Panel",
+  },
+  buttons: [],
+}
+
+const keywords = `${GENERAL_AVIATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${LOCATION_KEYWORDS}, ${DISCOVERY_EXPERIENCE_KEYWORDS}, ${CAREER_PATH_KEYWORDS}, ${AIRCRAFT_FLEET_KEYWORDS}, ${data.pageKeywords}`
 
 ---
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
-  keywords={data.pageKeywords}
+  keywords={keywords}
   >
   
   <HeaderScreen content = {data.header} />
+  <UnderHeaderTwo content={underHeader}/>
   <GridPrograms content={programs} />
   <CTADiscoveryFlights content={CTAFlight} />
 </BaseLayout>

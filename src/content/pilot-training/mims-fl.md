@@ -8,11 +8,11 @@ keyPlace1: "Fox Lake Sanctuary"
 keyPlace2: "Enchanted Forest Sanctuary"
 
 headerImages:
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
-  - "/src/assets/placeholder.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
+  - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"
 
 headlines:
   - "Learn to Fly Over Scenic {{city}}, {{stateShort}}"

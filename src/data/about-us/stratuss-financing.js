@@ -23,7 +23,7 @@ const stratusInfo = {
       },
   
       flyWithUsCTA: {
-        imagePath: "/src/assets/placeholder.webp",
+        imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
         imageAlt: "Right Rudder Marketing team on the runway",
         headerH1: `<span class="text-primary-600">Start Your Aviation Journey</br></span>With a Discovery Flight`,
         paragraph:

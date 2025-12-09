@@ -13,7 +13,7 @@ const ourFleet = {
       //top header
       header: {
         stars: true,
-        imagePath: "/src/assets/placeholder.webp",
+        imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
         imageAlt:
           "",
         headerH1: `Our</br><span class="text-accent-300">Fleet</span>`,
@@ -45,7 +45,7 @@ const ourFleet = {
       //   aircraft: [
       //     {
       //       title: "Cessna 172",
-      //       imagePath: "/src/assets/placeholder.webp",
+      //       imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
       //       imageAlt: "Sun City Aviation Academy Cessna 172 parked at the airport",
       //       description:
       //         "Start your aviation adventure with our robust fleet of Cessna 172 aircraft. These reliable and versatile planes are perfectly suited for those taking their first steps into the world of flight. Our Cessna 172s provide an ideal learning environment for aspiring pilots.",
@@ -55,7 +55,7 @@ const ourFleet = {
       //     {
       //       title: "Beechcraft Duchess",
       //       imagePath:
-      //         "/src/assets/placeholder.webp",
+      //         "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
       //       imageAlt:
       //         "Sun City Aviation Academy Beechcraft Duchess parked at the airport",
       //       description:
@@ -66,7 +66,7 @@ const ourFleet = {
       //     {
       //       title: "Redbird Flight Simulator",
       //       imagePath:
-      //         "/src/assets/placeholder.webp",
+      //         "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
       //       imageAlt: "Sun City Aviation Academy Redbird Simulator",
       //       description:
       //         "Using a simulator allows you to practice maneuvers, refine techniques, and master emergency procedures. You can pause mid flight and replay different scenarios and conditions which help solidify your training and make you a better and safer pilot.",
@@ -107,7 +107,7 @@ const ourFleet = {
       },
   
       flyWithUsCTA: {
-        imagePath: "/src/assets/placeholder.webp",
+        imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
         imageAlt: "",
         headerH1: `<span class="text-primary-600">Start Your Aviation Journey</br></span>With a Discovery Flight`,
         paragraph:

@@ -4,22 +4,33 @@ import { IoPhonePortraitOutline } from "react-icons/io5";
 import { IoLocationOutline } from "react-icons/io5";
 import contact from "../data/contact";
 import { countryPhoneCodes } from "../data/countriesPhone.js";
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../consts";
 
 const { data } = contact;
 
 const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.NEW_CONTACT_US_FORM_WEBHOOK_URL;
 const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
----
 
-<BaseLayout siteTitle={data.pageTitle} siteDescription={data.pageDescription} keywords={data.pageKeywords}>
-  <section class="px-6 pt-12 pb-16 lg:pb-4 min-h-screen bg-gradient-to-tr from-primary-800/90 to-primary-950/90">
+const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.pageKeywords}`;
+
+---
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={keywords}
+>
+  <section
+    class="px-6 pt-12 pb-16 lg:pb-4 min-h-screen bg-gradient-to-tr from-primary-800/90 to-primary-950/90"
+  >
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-wrap justify-center align-top items-start">
         <!-- Location 1 -->
-        <div class="order-last w-full lg:w-1/4 lg:order-first px-8 text-right mt-16">
-          <h3 class="text-primary-100 text-2xl font-semibold mt-10">
+        <div
+          class="order-last w-full lg:w-1/4 lg:order-first px-8 text-right mt-16"
+        >
+          <h1 class="text-primary-100 text-2xl font-semibold mt-10">
             {data.locations[0].title}
-          </h3>
+          </h1>
           <a href={data.locations[0].gMaps} target="_blank">
             <div class="flex justify-end gap-3 mt-5 hover:underline">
               <p class="text-gray-50">

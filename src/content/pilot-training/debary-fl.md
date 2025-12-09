@@ -1,11 +1,11 @@
 ---
-city: "Altamonte Springs"
+city: "DeBary"
 stateShort: "FL"
 stateLong: "Florida"
-description: "A bustling suburb just north of Orlando with convenient access to training and aviation hubs."
-baseLocation: "Seminole County"
-keyPlace1: "Crane’s Roost Park"
-keyPlace2: "Altamonte Mall"
+description: "A fast-growing Volusia County community with easy access to the Space Coast and Orlando metro, ideal for aviation students seeking convenient commute options."
+baseLocation: "Volusia County"
+keyPlace1: "Gemini Springs Park"
+keyPlace2: "DeBary Hall Historic Site"
 
 headerImages:
   - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"

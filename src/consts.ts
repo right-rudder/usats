@@ -13,7 +13,7 @@ export const SITE_DESCRIPTION =
 export const KEYWORDS =
   "flight school Titusville, pilot training Florida, helicopter school FL, airplane training USATS, learn to fly Titusville, FAA pilot certification, USATS aviation, Brevard County flight school, Space Coast pilot training, Part 141 flight training, international student pilot program, aviation career Florida, discovery flights Titusville, Florida flight instruction, private pilot license Florida, commercial pilot course cost, FAA-certified flight school in Florida, accelerated flight training program, helicopter flight school Florida, flight school for international students, best flight school for veterans, airline transport pilot license training, Part 141 flight school Florida, military helicopter pilot training USA, flight school Titusville FL, pilot training near Cocoa Beach, helicopter training Merritt Island, aviation school near Viera Florida, flight training Space Coast FL, airplane flight school Orlando area, helicopter pilot training Central Florida, discovery flight Florida, learn to fly a plane, how to become a pilot, pilot lessons near me, introductory flight lesson Florida, flight school for beginners, FAA Part 141 flight school, Part 61 vs Part 141 flight training, flight instructor certification Florida, instrument rating course Florida, aircraft maintenance technician training, flight school for international students USA, M1 visa flight training program, aviation training for international students, pilot training with visa support USA, aviation academy, helicopter pilot training, business jet, ultralight aircraft for sale, aviation courses after 12th, pilot school, private pilot licence, pilot training, pilot courses, aviation school, pilot institute, pilot shop, private pilot training, pilot academy, best flight schools, best pilot schools, online flight school, pilot shop near me, aviation training, learn to fly a plane, flight training, pilot lessons near me, airline pilot training, aviation technician, aviation maintenance technician, aviation degree, aircraft technician, aviation management courses, private pilot, flight instructor, aviation management, aviation maintenance, aviation engineering, aviation headset, aviation mechanic, commercial pilot training, part 141 flight schools, aviation training institute, aviation academy, aviation school near me, pilot training near me, aviation courses, flight school near me, flying lessons near me, flight lessons near me, flight training near me, private pilot licence, pilot school near me, aviation mechanic school, airplane mechanic school, aviation management, aircraft maintenance, airline pilot, flight safety, commercial pilot licence, pilot training cost, cabin crew courses, aircraft maintenance technician, aviation headset, discovery flight, drone pilot training, aviation engineering, pilots licence cost, become a pilot, discovery flight near me, used aircraft for sale, airport management courses, flight museum, aviation mechanic, commercial pilot school, pilot headsets, avionics technician, aviation shop, aircraft charter, aviation consulting, aerospace companies near me, aviation courses after 12th, aviation maintenance technician, aviation degree, aircraft technician, aviation training institute, aviation management degree, commercial pilot training, learn to fly a plane, aviation training, light aircraft for sale, flying academy, pilot lessons near me, aviation technician, best aviation headset, airline pilot training, Robinson R44 helicopter training, Schweizer S300 training, Cessna 172 flight instruction, ALTO NG aircraft training, glass cockpit training, IFR flight training, VFR pilot certification, ATP license training, CFI certification course, CFII instrument instructor, multi-engine training, night flying certification, cross-country flight training, checkride preparation, ground school instruction, written exam preparation, oral exam training, practical test standards, aeronautical decision making, crew resource management, threat and error management, weather minimums training, airspace operations training, radio communications training, navigation procedures training, emergency procedures training, flight planning instruction, weight and balance calculations, performance calculations training, aviation weather interpretation, sectional chart reading, approach plate interpretation, ATC communications training";
 
-export const OG_IMAGE = "/USATS-OG-image.webp";
+export const OG_IMAGE = "/usats-og-image-USATS-florida-private-pilot-license-fl.webp";
 
 export const GEO_LATITUDE = 28.51012890041488;
 export const GEO_LONGITUDE = -80.79335517556147;
@@ -40,8 +40,8 @@ export const FACEBOOK_URL = "https://www.facebook.com/USATSolutions/";
 export const INSTAGRAM_URL = "https://www.instagram.com/usatsolutions/";
 export const LINKEDIN_URL =
   "https://www.linkedin.com/company/us-aviation-training-solutions";
-export const YOUTUBE_URL = null;
-export const TWITTER_URL = null;
+export const YOUTUBE_URL = "https://www.youtube.com/@u.s.aviationtrainingsoluti7225";
+export const TWITTER_URL = "https://x.com/USATSolutions";
 export const EMAIL_ADDRESS = "info@usatsolutions.com";
 export const COMPANY_SITE_LINK = "https://usatsflighttraining.com";
 
@@ -135,3 +135,117 @@ export const BUSINESS_HOURS = {
   saturday: { opens: "09:00", closes: "15:00" },
   sunday: "closed",
 };
+
+// 🔹 Core Programs (Airplane & Helicopter Training)
+export const CORE_PROGRAM_KEYWORDS = [
+  "private pilot license Florida",
+  "instrument rating training Florida",
+  "commercial pilot license Florida",
+  "CFI training Florida",
+  "CFII training Florida",
+  "professional pilot program Florida",
+  "airplane flight training Titusville",
+  "helicopter flight training Florida",
+  "Part 141 flight school Florida",
+  "Part 61 flight training Titusville",
+  "accelerated pilot training Florida"
+].join(", ");
+
+// 🔹 Aircraft & Fleet
+export const AIRCRAFT_FLEET_KEYWORDS = [
+  "Cessna 172 flight training",
+  "G1000 glass cockpit training",
+  "TAA aircraft rental",
+  "Alto NG DirectFly training",
+  "Alto NG Dynon HDX1200",
+  "Garmin 175 avionics training",
+  "Robinson R44 helicopter training",
+  "Schweizer S-300 training",
+  "UH-60 Black Hawk training",
+  "modern training aircraft Florida",
+  "airplane fleet USATS"
+].join(", ");
+
+// 🔹 Discovery & Beginner Experience
+export const DISCOVERY_EXPERIENCE_KEYWORDS = [
+  "discovery flight Florida",
+  "demo flight near me",
+  "learn to fly Florida",
+  "flying lessons Titusville",
+  "pilot lessons near me",
+  "flight school Florida Space Coast",
+  "private pilot classes near me",
+  "beginner pilot flight"
+].join(", ");
+
+// 🔹 Professional Pathways & Jobs
+export const CAREER_PATH_KEYWORDS = [
+  "flight instructor jobs Florida",
+  "CFI hiring Florida",
+  "helicopter CFI jobs Florida",
+  "aviation career Florida",
+  "pilot career program Florida",
+  "professional pilot Florida",
+  "aviation programs near me",
+  "pilot job pathway"
+].join(", ");
+
+// 🔹 Location-Based SEO (Based on pages you listed)
+export const LOCATION_KEYWORDS = [
+  "Titusville flight school",
+  "Space Coast flight training",
+  "Central Florida flight school",
+  "Windermere FL flight training",
+  "Winter Garden FL flight school",
+  "Winter Park FL pilot training",
+  "flight lessons near Orlando",
+  "Florida flight schools"
+].join(", ");
+
+// 🔹 Aircraft Rental & Ground Training
+export const RENTAL_GROUND_KEYWORDS = [
+  "airplane rental Florida",
+  "aircraft rental Titusville",
+  "helicopter rental Florida",
+  "aviation ground school Florida",
+  "FAA written test prep Florida",
+  "flight simulator training Florida",
+  "flight instruction near me",
+  "TAA time building"
+].join(", ");
+
+// 🔹 General Aviation Interest
+export const GENERAL_AVIATION_KEYWORDS = [
+  "flight schools Florida",
+  "pilot school near Orlando",
+  "aviation academy Florida",
+  "learn to fly USA",
+  "best flight schools in Florida",
+  "aviation programs Florida",
+  "airplane and helicopter training Florida"
+].join(", ");
+
+// 🔹 Flight Tech & Training Tools
+export const TECH_TRAINING_KEYWORDS = [
+  "Dynon HDX training",
+  "G1000 avionics training",
+  "pilot study tools",
+  "flight study app",
+  "pilot training technology",
+  "aircraft instrument panel training"
+].join(", ");
+
+// 🔹 Aviation Services (Maintenance, Tests & TSA)
+export const AVIATION_SERVICES_KEYWORDS = [
+  "aircraft maintenance Titusville",
+  "FAA 145 repair station Florida",
+  "Robinson service center Florida",
+  "Schweizer helicopter maintenance",
+  "Cessna 172 maintenance Florida",
+  "CATS testing center Florida",
+  "FAA written test Florida",
+  "TSA fingerprinting flight training",
+  "air tours Space Coast",
+  "foreign license conversion FAA",
+  "ICAO pilot training Florida"
+].join(", ");

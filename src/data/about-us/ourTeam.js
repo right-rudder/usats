@@ -38,10 +38,10 @@ const ourTeam = {
         rank: "Business Development Manager & Managing Director",
       },
       {
-        name: "Stephane Rebeix",
+        name: "Stephane R.",
         imagePath: staffStephane.imagePath,
         imageAlt: staffStephane.imageAlt,
-        bio: "Stephane Rebeix, USATS Chief Flight Instructor, is a master helicopter pilot with 9,000+ flight hours (4,200+ instructing) across offshore, military, and training operations. An FAA 141 VFR/IFR expert since 2018, he’s flown AS332L1/2, EC225, and S76C+/++ helicopters globally—from Nigeria’s oil fields to the North Sea. Holder of dual ATP (US/Europe), CFI/CFII, and business degrees, he merges technical precision with academic rigor to shape elite aviators.",
+        bio: "Stephane R., USATS Chief Flight Instructor, is a master helicopter pilot with 9,000+ flight hours (4,200+ instructing) across offshore, military, and training operations. An FAA 141 VFR/IFR expert since 2018, he’s flown AS332L1/2, EC225, and S76C+/++ helicopters globally—from Nigeria’s oil fields to the North Sea. Holder of dual ATP (US/Europe), CFI/CFII, and business degrees, he merges technical precision with academic rigor to shape elite aviators.",
         rank: "Chief Flight Instructor",
       },
     ],
@@ -55,18 +55,18 @@ const ourTeam = {
     members: [
       {
         name: "Urara T.",
-        imagePath: "/src/assets/Takano Urara 3.jpg",
+        imagePath: "/src/assets/takano urara 3-USATS-florida-private-pilot-license-fl.jpg",
         imageAlt: "Urara T., Flight Instructor at USATS Titusville Florida",
         rank: "Chief FW Pilot, CFI, CFII",
       },
       {
         name: "Angela P.",
-        imagePath: "/src/assets/staff-Angela-Ramirez-Perez.jpg",
+        imagePath: "/src/assets/staff-angela-ramirez-perez-USATS-florida-commercial-pilot-program.jpg",
         imageAlt: "Angela P., Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI, CFII, MEI",
       },
       {
-        name: "Mike B.", // Mike Bleau
+        name: "Mike B.",
         imagePath: staffPlaceHolder.imagePath,
         imageAlt: staffPlaceHolder.imageAlt,
         rank: "FW, CFII, ATP, MEI",
@@ -79,25 +79,24 @@ const ourTeam = {
       },
       {
         name: "Ethan C.",
-        imagePath: "/src/assets/staff-photo_Ethan-Criss.webp",
+        imagePath: "/src/assets/staff-photo_ethan-criss-USATS-florida-aviation-academy-florida.webp",
         imageAlt: "Ethan C., Flight Instructor at USATS Titusville Florida",
-        rank: "FW, CFI",
       },
       {
-        name: "Oscar G.", // Oscar Gomez
+         name: "Oscar G.",
         imagePath: staffPlaceHolder.imagePath,
         imageAlt: staffPlaceHolder.imageAlt,
         rank: "FW/RW — CFII (FW), MEI, ATP | (RW) CFII - ATP",
       },
       {
-        name: "Alec J.", // Alec Joyner
+         name: "Alec J.",
         imagePath: staffPlaceHolder.imagePath,
         imageAlt: staffPlaceHolder.imageAlt,
         rank: "FW, CFII, MEI",
       },
       {
         name: "Callum W.",
-        imagePath: "/src/assets/Staff-photo-Callum-Watson.webp",
+        imagePath: "/src/assets/staff-photo-callum-watson-USATS-titusville-commercial-pilot-program.webp",
         imageAlt: "Callum W., Flight Instructor at USATS Titusville Florida",
         rank: "FW, CFI, CFII",
       },
@@ -111,26 +110,20 @@ const ourTeam = {
       "Our rotor wing instructors bring a wealth of real-world helicopter experience, from commercial operations to advanced flight instruction. With a strong focus on safety and professional development, they ensure every student is well-prepared for real-world flying.",
     members: [
       {
-        name: "Stephane R.",
-        imagePath: staffStephane.imagePath,
-        imageAlt: staffStephane.imageAlt,
-        rank: "Chief Flight Instructor, RW, CFI, CFII, Dual ATP (US/Europe)",
-      },
-      {
-        name: "Jason K.",
-        imagePath: "/src/assets/Krum, Jason.jpg",
+         name: "Jason K.",
+        imagePath: "/src/assets/krum_jason-USATS-titusville-private-pilot-license-fl.jpg",
         imageAlt:
-          "Jason K., Helicopter Flight Instructor at USATS Titusville Florida",
+           "Jason K., Helicopter Flight Instructor at USATS Titusville Florida",
         rank: "RW, CFI Gold Seal, CFII, ATP, Instrument Ground Instructor, SFAR",
       },
       {
         name: "Katie D.",
-        imagePath: "/src/assets/staff-photo-Katie-Dwyer.webp",
+        imagePath: "/src/assets/staff-photo-katie-dwyer-USATS-florida-flight-lessons-near-orlando.webp",
         imageAlt: "Katie D., Flight Instructor at USATS Titusville Florida",
         rank: "RW, CFI",
       },
       {
-        name: "Nelson H.", // Nelson Hererra
+        name: "Nelson H.",
         imagePath: staffPlaceHolder.imagePath,
         imageAlt: staffPlaceHolder.imageAlt,
         rank: "RW, CFI, CFII , ATP, Ground Instructor, SFAR, NVG Instructor",
@@ -139,4 +132,14 @@ const ourTeam = {
   },
 };
 
+export const ourTeamSEO = {
+  pageTitle:
+    "Our Team at USATS | Flight Instructors & Aviation Staff | Titusville FL",
+  pageDescription:
+    "Meet the expert flight instructors and aviation professionals at USATS in Titusville, FL. Our team delivers top-quality airplane and helicopter training with decades of experience.",
+  pageKeywords:
+    "USATS team, flight instructors Titusville, aviation staff Florida, helicopter instructors FL, airplane instructors Titusville, USATS flight school team, pilot training staff",
+};
+
 export default ourTeam;
+

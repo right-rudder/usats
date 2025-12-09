@@ -49,7 +49,7 @@ data: {
       title: "YOUR CATS TEST at USATS",
       paragraphs: ["Here at USATS we make sure you have all you need to make it.",],
       image: {
-        imagePath: "/src/assets/ALTO_NG.webp",
+        imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
         imageAlt: "AirPlane Panel",
       },
       buttons: [],

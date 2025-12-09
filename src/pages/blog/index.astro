@@ -7,10 +7,11 @@ import Header from "../../components/astro/Header.astro";
 import ImageComp from "../../components/ImageComp.astro";
 
 const data = {
-  imagePath: "/src/assets/ALTO_NG_Panel.jpg",
+  imagePath: "/src/assets/alto_ng_panel-USATS-florida-pilot-training-space-coast.jpg",
   imageAlt: "",
   headerH1: "Blog",
   headerH2: "Blog Post 1",
+  
 };
 
 const posts = (await getCollection("blog")).sort(
@@ -19,9 +20,9 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <BaseLayout
-  pageTitle=`Blog | ${COMPANY_NAME}`
-  pageDescription="Explore the latest happenings in the world of flight training . Gain valuable insights and tips to ease pre-flight jitters and prepare effectively for your important milestones."
-  pageKeywords=""
+  siteTitle=`Blog | ${COMPANY_NAME}` 
+  siteDescription="Explore the latest happenings in the world of flight training . Gain valuable insights and tips to ease pre-flight jitters and prepare effectively for your important milestones."
+  keywords="flight training blog, aviation tips, pilot training articles, learn to fly resources, flight school insights, aviation news, pilot advice, pre-flight tips, student pilot guidance, flight training milestones, airplane training blog, helicopter training blog, FAA training tips, aviation safety tips"
 >
   <!-- Header -->
   <Header data={data} />
@@ -36,9 +37,9 @@ const posts = (await getCollection("blog")).sort(
             >
               <div class="flex-1 h-full flex flex-col justify-end p-4 lg:px-8 lg:py-10">
                 <div>
-                  <h4 class={`font-semibold leading-8 text-white text-2xl`}>
+                  <h2 class={`font-semibold leading-8 text-white text-2xl`}>
                     {post.data.title}
-                  </h4>
+                  </h2>
                   <p
                     class={`mt-3 font-sans text-muted-400 leading-4 text-ellipsis text-sm`}
                   >

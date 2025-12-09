@@ -1,11 +1,11 @@
 ---
-city: "Altamonte Springs"
+city: "Mount Dora"
 stateShort: "FL"
 stateLong: "Florida"
-description: "A bustling suburb just north of Orlando with convenient access to training and aviation hubs."
-baseLocation: "Seminole County"
-keyPlace1: "Crane’s Roost Park"
-keyPlace2: "Altamonte Mall"
+description: "A scenic lakefront city in Lake County known for its calm atmosphere, making it a great home base for students traveling to the Space Coast for flight training."
+baseLocation: "Lake County"
+keyPlace1: "Lake Dora"
+keyPlace2: "Downtown Mount Dora Historic District"
 
 headerImages:
   - "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp"

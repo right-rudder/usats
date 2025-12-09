@@ -47,5 +47,15 @@ const { content } = Astro.props;
         }
       </ul>
     </div>
+        <div class="text-center pt-12">
+      {
+        content.descriptions && (
+          <p
+            class="mx-auto mb-12 text-lg max-w-3xl text-center tracking-wide text-muted-100"
+            set:html={content.descriptions[0]}
+          />
+        )
+      }
+    </div>
   </div>
 </section>

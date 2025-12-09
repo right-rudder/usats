@@ -6,7 +6,7 @@ const militaryPage = {
 
     header: {
       badges: ["MILITARY"],
-      imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
+      imagePath: "/src/assets/uh-60_black_hawk_1-USATS-titusville-commercial-pilot-program.webp",
       imageAlt: "Black Hawk Flying",
       headerH1: `Become a pilot today`,
       paragraph:
@@ -28,7 +28,7 @@ const militaryPage = {
         " Our commitment to excellence has empowered countless individuals to soar to new heights in their aviation careers.",
       ],
       image: {
-        imagePath: "/src/assets/militaryTraingingBH8.png",
+        imagePath: "/src/assets/militarytraingingbh8-USATS-titusville-private-pilot-license-fl.png",
         imageAlt: "AirPlane Panel",
       },
       buttons: [

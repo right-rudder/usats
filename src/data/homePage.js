@@ -13,7 +13,7 @@ const homePage = {
 
     header: {
       stars: true,
-      imagePath: "/src/assets/Direct_Fly_Alto_NG.jpg",
+      imagePath: "/src/assets/direct_fly_alto_ng-USATS-florida-instrument-rating-training.jpg",
       imageAlt:
         "Direct Fly Alto NG aircraft in flight over Florida's Space Coast - USATS training fleet",
       headerH1: `Become a pilot today`,
@@ -36,7 +36,7 @@ const homePage = {
         "Soar faster, fly smarter — your aviation career begins with us.",
       ],
       image: {
-        imagePath: "/src/assets/ALTO_NG.webp",
+        imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
         imageAlt:
           "ALTO NG training aircraft with glass cockpit avionics at USATS flight school in Titusville",
       },
@@ -55,22 +55,22 @@ const homePage = {
     whatWeOffer: {
       images: {
         // h60: {
-        //   imagePath: "/src/assets/UH-60_Black_Hawk_1.webp",
+        //   imagePath: "/src/assets/uh-60_black_hawk_1-USATS-titusville-commercial-pilot-program.webp",
         //   imageAlt:
         //     "UH-60 Black Hawk helicopter at USATS military aviation training facility in Titusville FL",
         // },
         hdx1200: {
-          imagePath: "/src/assets/ALTO_NG.webp",
+          imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
           imageAlt:
             "ALTO NG aircraft with Dynon HDX1200 glass cockpit avionics for modern flight training",
         },
         cesna172: {
-          imagePath: "/src/assets/USATS_Plane_N3544W.webp",
+          imagePath: "/src/assets/usats_plane_n3544w-USATS-florida-flight-lessons-near-orlando.webp",
           imageAlt:
             "Cessna 172 Skyhawk N3544W training aircraft at USATS flight school ramp in Titusville",
         },
         s300: {
-          imagePath: "/src/assets/Schweizer_S300_Usats_Ramp.webp",
+          imagePath: "/src/assets/schweizer_s300_usats_ramp-USATS-florida-private-pilot-license-fl.webp",
           imageAlt:
             "Schweizer S300 training helicopters on USATS ramp at Space Coast Regional Airport in Florida",
         },
@@ -154,7 +154,7 @@ const homePage = {
         },
       ],
       imageLegend: "Become a Pilot with USATS",
-      imagePath: "/src/assets/USATS_banner_Application.webp",
+      imagePath: "/src/assets/usats_banner_application-USATS-titusville-flight-school-florida.webp",
       imageAlt:
         "USATS flight school application banner for prospective student pilots - start your aviation career",
     },
@@ -204,7 +204,7 @@ const homePage = {
       mainReview: {
         body: "We would like to address our appreciation to all the Schools (personnel), generally, and to the instructors specifically for their complex works and dedication, which has helped us grow our skill and knowledge significantly and provided us with all the ability to become professional pilots in the future.",
         author: "ROYAL MALASIAN POLICE",
-        imagePath: "/src/assets/placeholder.webp",
+        imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
         imageAlt:
           "Royal Malaysian Police aviation unit pilots trained at USATS flight school in Titusville Florida",
         stars: 5,

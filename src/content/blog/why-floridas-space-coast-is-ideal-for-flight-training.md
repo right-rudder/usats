@@ -3,7 +3,7 @@ pubDate: "August 18, 2025"
 author: Ray Deptula
 title: "Why Florida’s Space Coast is Ideal for Flight Training"
 description: "Discover why the Space Coast in Florida offers unmatched flight training opportunities. Learn about year-round VFR conditions, favorable weather, scenic training environments, and how USATS maximizes these advantages for student pilots."
-heroImage: "/blog/NASA_Rocket_Launch.webp"
+heroImage: "/blog/nasa_rocket_launch-USATS-florida-pilot-training-space-coast.webp"
 readingTime: 6
 category: "Flight Training"
 tags:

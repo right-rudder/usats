@@ -16,7 +16,7 @@ const militaryInstructorRoadmap = {
         "Establish core instructional skills using the Schweizer S-300 and Robinson R-44. Master tactical autorotations, confined-area landings, and combat scenario briefings while earning FAA certification to train military pilots.",
         "Our CFI-H phase emphasizes battlefield CRM and TEM strategies, with 60+ hours of ground instruction on threat pattern recognition and debriefing combat simulations."
       ],
-      imagePath: "/src/assets/USATS_145_Repair_Station_UH-60.webp",
+      imagePath: "/src/assets/usats_145_repair_station_uh-60-USATS-florida-aviation-academy-florida.webp",
       imageAlt: "Instructor candidate demonstrating confined-area approach in S-300"
     },
     {
@@ -26,7 +26,7 @@ const militaryInstructorRoadmap = {
         "Qualify to teach instrument operations in degraded visibility environments. Conduct training in GPS/ILS-equipped R-44s, focusing on adverse weather extraction scenarios and night VFR navigation.",
         "This phase includes 25hrs of instrument instruction replicating sandstorm recoveries, electronic warfare system failures, and ATC coordination under stress."
       ],
-      imagePath: "/src/assets/militaryTraingingBH4.png",
+      imagePath: "/src/assets/militarytraingingbh4-USATS-florida-discovery-flight-titusville.png",
       imageAlt: "CFII candidate practicing instrument approaches in R-44"
     },
     {
@@ -36,7 +36,7 @@ const militaryInstructorRoadmap = {
         "Transition to UH-60 Black Hawks for advanced NVG operations. Conduct MEDEVAC hoist drills, external load delivery, and low-level infiltration under night vision conditions.",
         "15+ hours of NVG flight training includes threat detection exercises and joint operations with ground forces using our 38-acre tactical training complex."
       ],
-      imagePath: "/src/assets/militaryTraingingBH9.png",
+      imagePath: "/src/assets/militarytraingingbh9-USATS-florida-flight-lessons-near-orlando.png",
       imageAlt: "UH-60 conducting NVG external load operation at night"
     },
     {
@@ -46,7 +46,7 @@ const militaryInstructorRoadmap = {
         "Master the Black Hawk's combat roles: SAR, MEDEVAC, firefighting, and troop insertion. Train with mission-specific configurations including hoists, external tanks, and NVG-compatible avionics.",
         "Includes 20hrs of scenario-based training with live coordination from Joint Terminal Attack Controllers (JTACs) and combat medic teams."
       ],
-      imagePath: "/src/assets/militaryTraingingBH.png",
+      imagePath: "/src/assets/militarytraingingbh-USATS-titusville-cfi-cfii-training-fl.png",
       imageAlt: "UH-60 performing tactical insertion during daytime ops"
     },
     {

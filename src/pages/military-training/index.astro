@@ -10,18 +10,22 @@ import ProgramDetails from "../../components/layouts/ProgramDetails.astro";
 import militaryTraining from "../../data/programs/helicopter/militaryTraining";
 import militaryPage from "../../data/programs/militaryIndex";
 import RoadMap from "../../components/astro/RoadMap.astro";
+import { AIRCRAFT_FLEET_KEYWORDS, CAREER_PATH_KEYWORDS, CORE_PROGRAM_KEYWORDS, DISCOVERY_EXPERIENCE_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../consts";
 
 const pageTitle = "Military Training Program | USATS Florida";
 const pageDescription =
   "Military Training Program at USATS Florida. Get the best military helicopter training and flight training in the USA.";
 const pageKeywords =
   "military training, military helicopter training, military flight training, military pilot training, military aviation training, USATS Florida, USATS, helicopter training, flight training, aviation training";
+
+const keywords = `${GENERAL_AVIATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${LOCATION_KEYWORDS}, ${DISCOVERY_EXPERIENCE_KEYWORDS}, ${CAREER_PATH_KEYWORDS}, ${AIRCRAFT_FLEET_KEYWORDS}, ${pageKeywords}`
+
 ---
 
 <BaseLayout
   siteTitle={pageTitle}
   siteDescription={pageDescription}
-  keywords={pageKeywords}
+  keywords={keywords}
 >
   <HeaderScreen content={militaryPage.data.header} />
   <UnderHeader content={militaryPage.data.underHeader} />

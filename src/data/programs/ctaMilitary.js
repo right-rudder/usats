@@ -1,5 +1,5 @@
 const militaryCta = {
-  imagePath: "/src/assets/UH-60_Black_Hawk_1.webp", // change-black-hawk-image
+  imagePath: "/src/assets/uh-60_black_hawk_1-USATS-titusville-commercial-pilot-program.webp", // change-black-hawk-image
   imageAlt:
     "UH-60 Black Hawk conducting NVG training mission near Kennedy Space Center",
   headerH1: `Command the Night<br><span class="text-accent-700">Become a Tactical Flight Leader</span>`,

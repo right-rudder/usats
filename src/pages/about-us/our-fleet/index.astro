@@ -2,7 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 // import HeaderSmall from "../../../components/HeaderSmall.astro";
 import { Image } from "astro:assets";
-import Intro from "../../../assets/alto_5a.jpg";
+import Intro from "../../../assets/alto_5a-USATS-titusville-flight-school-florida.jpg";
 import ourFleet from "../../../data/about-us/ourFleet";
 import PlaneCard from "../../../components/astro/PlaneCard.astro";
 import PageSummary from "../../../components/astro/PageSummary.astro";
@@ -14,9 +14,10 @@ import {
   militaryFleet,
 } from "../../../data/about-us/fleet";
 
-import { COMPANY_NAME, COMPANY_NICKNAME } from "../../../consts";
+import { AIRCRAFT_FLEET_KEYWORDS, COMPANY_NAME, COMPANY_NICKNAME, CORE_PROGRAM_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../../consts";
 
 import { ALTO_8A as imgHeader } from "../../../constsImages";
+import UnderHeaderTwo from "../../../components/astro/UnderHeaderTwo.astro";
 
 const header = {
   imagePath: imgHeader.imagePath,
@@ -31,12 +32,27 @@ const header = {
     },
   ],
 };
+const underHeader = {
+  title: "Why Choose USATS for Your Aviation Needs",
+  paragraphs: [
+    "USATS centralizes every major aviation service in one convenient location, creating a smooth and efficient experience for pilots, students, and aviation professionals. You can log TAA hours, complete FAA knowledge exams, schedule maintenance, or begin a foreign license conversion process without needing to coordinate across multiple providers. Our team guides each step with clear communication and dependable expertise, which helps reduce stress and keeps your goals on track.",
+    "Our facility is equipped with modern aircraft, experienced instructors, and certified technicians who prioritize safety, precision, and consistent support. We are focused on giving every visitor the tools and resources needed to train, test, maintain, and advance their aviation path with confidence. Whether you are starting your first lesson or completing advanced certifications, USATS offers a comprehensive and reliable environment that supports your progress from beginning to end."
+  ],
+  image: {
+    imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
+    imageAlt: "AirPlane Panel",
+  },
+  buttons: [],
+}
+
+const keywords = `${AIRCRAFT_FLEET_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${LOCATION_KEYWORDS}, fleet, aircraft, training, time building, Cessna 172, Hampton GA, aviation school`;
+
 ---
 
 <BaseLayout
   siteTitle=`Fleet | ${COMPANY_NAME}`
   siteDescription=`Explore ${COMPANY_NAME}'s modern aircraft available for training and time building in Hampton, GA. Our fleet includes Cessna 172s equipped for both VFR and IFR operations.`
-  keywords=" fleet, aircraft, training, time building, Cessna 172, Hampton GA, aviation school"
+  keywords={keywords}
 >
   <HeaderSmall content={header} />
 
@@ -188,4 +204,5 @@ const header = {
       <a href="/enroll-now" class="flex-shrink-0 btn-accent"> Enroll now </a>
     </div>
   </section>
+  <UnderHeaderTwo content={underHeader}/>
 </BaseLayout>

@@ -3,7 +3,7 @@ pubDate: "2025-07-29"
 author: Ray Deptula
 title: "Mastering the Skies: Night Flying for Upskilling as a Pilot"
 description: "Explore the benefits of night flying training for pilots looking to enhance their skills and confidence. Learn how USATS in Titusville, Florida, provides exceptional night flying instruction and support."
-heroImage: "/blog/night-flight.jpg"
+heroImage: "/blog/night-flight-USATS-florida-flight-lessons-near-orlando.jpg"
 readingTime: 4
 category: "Flight Training"
 tags:

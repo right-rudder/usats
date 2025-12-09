@@ -13,6 +13,7 @@ import {
 import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
 import ImageComp from "../../components/ImageComp.astro";
 import UnderHeader from "../../components/astro/UnderHeader.astro";
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
 
 const data = {
   data: {
@@ -51,7 +52,7 @@ const data = {
         "Whether you're transitioning to a U.S. career, expanding your global privileges, or planning to train in the States, USATS provides step-by-step guidance from document verification to your final FAA checkride.",
       ],
       image: {
-        imagePath: "/src/assets/alto_4a.jpg",
+        imagePath: "/src/assets/alto_4a-USATS-florida-private-pilot-license-fl.jpg",
         imageAlt: "International pilot holding an FAA license",
       },
       buttons: [],
@@ -73,7 +74,7 @@ const data = {
           },
         ],
         image: {
-          imagePath: "/src/assets/altong_flying_over_coast.jpg",
+          imagePath: "/src/assets/altong_flying_over_coast-USATS-florida-flight-lessons-near-orlando.jpg",
           imageAlt: "Pilot preparing documents for FAA license conversion",
         },
       },
@@ -105,7 +106,7 @@ const data = {
           },
         ],
         image: {
-          imagePath: "/src/assets/ALTO_NG.webp",
+          imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
           imageAlt: "Instructor assisting pilot during conversion training",
         },
       },
@@ -127,7 +128,7 @@ const data = {
     schedule: {
       title: "Understanding the Conversion Process",
       heather2: "Foreign License Conversion Overview",
-      imagePath: "/src/assets/David_Wells_PPL_RW_graduate_2.png",
+      imagePath: "/src/assets/david_wells_ppl_rw_graduate_2-USATS-titusville-instrument-rating-training.png",
       imageAlt: "Instructor briefing international pilot before training",
       description: [
         "Converting your license to FAA certification is straightforward when you know the steps. Here’s what to expect when working with USATS:",
@@ -158,7 +159,7 @@ const data = {
 };
 
 const CTAFlight = {
-  imagePath: "/src/assets/alto_5a.jpg",
+  imagePath: "/src/assets/alto_5a-USATS-titusville-flight-school-florida.jpg",
   imageAlt: imgCTA.imageAlt,
   headerH1: `Convert Your License. Expand Your Horizons with <span class="text-accent-600">USATS</span>`,
   paragraph: `Join hundreds of international pilots who have transitioned successfully to FAA certification with our proven process and expert support.`,
@@ -175,12 +176,15 @@ const CTAFlight = {
     },
   ],
 };
+
+const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.data.pageKeywords}`;
+
 ---
 
 <BaseLayout
   siteTitle={data.data.title}
   siteDescription={data.data.description}
-  keywords={data.data.pageKeywords}
+  keywords={keywords}
 >
   <HeaderScreen content={data.data.header} />
 
@@ -197,11 +201,11 @@ const CTAFlight = {
           >
             {data.data.schedule.heather2}
           </p>
-          <h1
+          <h2
             class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
           >
             {data.data.schedule.title}
-          </h1>
+          </h2>
           <p
             class="mt-6 text-xl leading-8 text-muted-200"
             set:html={data.data.schedule.description[0]}
@@ -300,11 +304,11 @@ const CTAFlight = {
           >
             {data.data.upperHeading}
           </p>
-          <h1
+          <h2
             class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
           >
             {data.data.sections[0].title}
-          </h1>
+          </h2>
           {
             data.data.sections[0].descriptions.map((paragraph, index) => (
               <div>

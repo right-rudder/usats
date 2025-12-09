@@ -5,13 +5,13 @@ const underHeaderHeli = {
       pageKeywords: "",
     
       underHeader: {
-        title: `Start you career <br> <span class="text-accent-900">TODAY</span>`,
+        title: `Start your career <br> <span class="text-accent-900">TODAY</span>`,
         paragraphs: [
           "Experience flight like never before. We're here to help you become the ultimate pilot.",
           "We have put many pilots with diverse backgrounds into airline cockpits. Our glass-cockpit airplanes and airline training environment will give you the knowledge and skills necessary to make you a highly desirable airline pilot candidate and allow for a smooth transition into your first airline job. ",
         ],
         image: {
-          imagePath: "/src/assets/militaryTraingingBH3.png",
+          imagePath: "/src/assets/militarytraingingbh3-USATS-titusville-instrument-rating-training.png",
           imageAlt: "AirPlane Panel",
         },
         buttons: [

@@ -6,6 +6,7 @@ import taaTimeBuilding from "../../data/services/taaTimeBuilding";
 import Table from "../../components/astro/Table.astro";
 import CTADiscoveryFlights from "../../components/astro/CTADiscoveryFlights.astro";
 import { CTADISC_FLIGHTS as imgCTA } from "../../constsImages";
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
 
 const { data } = taaTimeBuilding;
 const contentCTA = {
@@ -21,12 +22,14 @@ const contentCTA = {
     },
   ],
 };
+const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.pageKeywords}`;
+
 ---
 
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
-  keywords={data.pageKeywords}
+  keywords={keywords}
 >
   <HeaderScreen content={data.header} />
   <ProgramDetails program={taaTimeBuilding.data.details} />

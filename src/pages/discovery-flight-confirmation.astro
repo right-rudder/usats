@@ -2,11 +2,15 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeaderScreen from "../components/astro/HeaderScreen.astro";
 import {
+  AIRCRAFT_FLEET_KEYWORDS,
     COMPANY_NAME,
+    DISCOVERY_EXPERIENCE_KEYWORDS,
     KEYWORDS,
   } from "../consts";
   
 import { ALTO_5A as imgHeader } from "../constsImages";
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../consts";
+
 
 const discoveryFlightConfirmation = {
     data: {
@@ -34,13 +38,16 @@ const discoveryFlightConfirmation = {
     }
   };
 
-  const { data } = discoveryFlightConfirmation;
+const { data } = discoveryFlightConfirmation;
+
+const keywords = `${DISCOVERY_EXPERIENCE_KEYWORDS}, ${AIRCRAFT_FLEET_KEYWORDS}, ${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.pageKeywords}`;
+
 ---
 
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
-  keywords={data.pageKeywords}
+  keywords={keywords}
 >
   <HeaderScreen content={data.header} />
 </BaseLayout>

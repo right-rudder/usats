@@ -12,6 +12,7 @@ import programsSwiper from "../data/programsSwiper";
 import GridPrograms from "../components/layouts/GridPrograms.astro";
 import ContentCTA from "../components/astro/ContentCTA.astro";
 import { CTADISC_FLIGHTS as imgCTA } from "../constsImages";
+import { CORE_PROGRAM_KEYWORDS, GENERAL_AVIATION_KEYWORDS, KEYWORDS } from "../consts";
 
 const { data } = internationalStudentsPage;
 
@@ -30,13 +31,14 @@ const CTAFlight = {
   ],
 };
 
+const keywords = `${KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}`;
 ---
 
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
-  keywords={data.pageKeywords}
->
+  keywords={keywords}>
+  
   <!-- HEADER -->
   <HeaderScreen content={data.header} />
   <UnderHeader content={data.underHeader} />

@@ -16,22 +16,25 @@ import { COMPANY_NAME, COMPANY_NICKNAME } from "../../consts";
 import ImageComp from "../../components/ImageComp.astro";
 import UnderHeader from "../../components/astro/UnderHeader.astro";
 
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS, AIRCRAFT_FLEET_KEYWORDS } from "../../consts";
+
+
 const data = {
   data: {
     upperHeading: "Flight Reviews",
     title: `FAA Flight Reviews (BFR) | ${COMPANY_NICKNAME}`,
     description:
-      "Stay current, confident, and safe in the skies. FAA Flight Reviews (Biennial Flight Reviews) are more than a regulatory requirement, they’re an opportunity to refine your skills, refresh your knowledge, and rediscover the joy of flying. At US Aviation Training Solutions (USATS), we make your Flight Review a professional and rewarding experience.",
+    "Stay current, confident, and safe in the skies. FAA Flight Reviews (Biennial Flight Reviews) are more than a regulatory requirement, they’re an opportunity to refine your skills, refresh your knowledge, and rediscover the joy of flying. At US Aviation Training Solutions (USATS), we make your Flight Review a professional and rewarding experience.",
     pageKeywords:
-      "flight review, BFR, FAA biennial flight review, pilot recurrent training, flight school Florida, USATS flight training, Titusville aviation, helicopter flight review, airplane BFR, FAA pilot proficiency check",
-
+    "flight review, BFR, FAA biennial flight review, pilot recurrent training, flight school Florida, USATS flight training, Titusville aviation, helicopter flight review, airplane BFR, FAA pilot proficiency check",
+    
     header: {
       stars: true,
       imagePath: imgHeader.imagePath,
       imageAlt: imgHeader.imageAlt,
       headerH1: `${COMPANY_NICKNAME} <br> FAA Flight Reviews`,
       description:
-        "Refresh your skills, regain your confidence, and get back in the cockpit with our tailored FAA Flight Reviews for airplane and helicopter pilots.",
+      "Refresh your skills, regain your confidence, and get back in the cockpit with our tailored FAA Flight Reviews for airplane and helicopter pilots.",
       buttons: [
         {
           name: "Book Your Flight Review",
@@ -45,7 +48,7 @@ const data = {
         },
       ],
     },
-
+    
     underHeader: {
       title: "Your Flight Review, Elevated",
       paragraphs: [
@@ -53,12 +56,12 @@ const data = {
         "Whether you’re current, returning to flying after a break, or transitioning aircraft types, USATS ensures you walk away from your Flight Review sharper, safer, and more capable.",
       ],
       image: {
-        imagePath: "/src/assets/ALTO_NG.webp",
+        imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
         imageAlt: "Aircraft cockpit during flight review",
       },
       buttons: [],
     },
-
+    
     sections: [
       {
         title: "Flight Reviews at USATS",
@@ -72,11 +75,11 @@ const data = {
           {
             name: "Our Flight Review Services Include:",
             description:
-              "Personalized flight and ground instruction for both airplane and helicopter pilots.",
+            "Personalized flight and ground instruction for both airplane and helicopter pilots.",
           },
         ],
         image: {
-          imagePath: "/src/assets/USATS_banner_Application.webp",
+          imagePath: "/src/assets/usats_banner_application-USATS-titusville-flight-school-florida.webp",
           imageAlt: "Pilot and instructor during a flight review session",
         },
       },
@@ -89,26 +92,26 @@ const data = {
           {
             name: "Helicopter & Airplane Options",
             description:
-              "Choose your preferred aircraft type ,  rotor-wing or fixed-wing.",
+            "Choose your preferred aircraft type ,  rotor-wing or fixed-wing.",
           },
           {
             name: "Experienced Instructors",
             description:
-              "Train with FAA-certified professionals who have guided pilots worldwide.",
+            "Train with FAA-certified professionals who have guided pilots worldwide.",
           },
           {
             name: "Real-World Airspace Training",
             description:
-              "Practice in diverse conditions ,  from coastal approaches to controlled airspace at the Space Coast.",
+            "Practice in diverse conditions ,  from coastal approaches to controlled airspace at the Space Coast.",
           },
           {
             name: "Stress-Free Experience",
             description:
-              "We make your Flight Review enjoyable, educational, and completely personalized.",
+            "We make your Flight Review enjoyable, educational, and completely personalized.",
           },
         ],
         image: {
-          imagePath: "/src/assets/ALTO_NG.webp",
+          imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
           imageAlt: "Flight instructor and student reviewing flight data",
         },
       },
@@ -121,16 +124,16 @@ const data = {
           "<strong>Don’t let your flying privileges expire, book your Flight Review today at USATS and get back in the air with confidence!</strong>",
         ],
         image: {
-          imagePath: "/src/assets/ALTO_NG.webp",
+          imagePath: "/src/assets/alto_ng-USATS-titusville-professional-pilot-program.webp",
           imageAlt: "Smiling pilot after completing FAA flight review",
         },
       },
     ],
-
+    
     schedule: {
       title: "What is a Flight Review?",
       heather2: "Flight Review Overview",
-      imagePath: "/src/assets/Dash_and_Nigerian_Army_2.jpg",
+      imagePath: "/src/assets/dash_and_nigerian_army_2-USATS-florida-cfi-cfii-training-fl.jpg",
       imageAlt: "Instructor briefing pilot before flight",
       description: [
         "A Flight Review isn’t a pass/fail exam, it’s a collaborative session between you and your instructor to ensure your skills and knowledge are up to date.",
@@ -159,8 +162,9 @@ const data = {
   },
 };
 
+const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${AIRCRAFT_FLEET_KEYWORDS}, ${data.data.pageKeywords}`;
 const CTAFlight = {
-  imagePath: "/src/assets/cessna.jpg",
+  imagePath: "/src/assets/cessna-USATS-titusville-instrument-rating-training.jpg",
   imageAlt: imgCTA.imageAlt,
   headerH1: `Stay Current. Stay Sharp. Fly with <span class="text-accent-600">USATS</span>`,
   paragraph: `Regain your proficiency and confidence in the air. Airplane or helicopter ,  your Flight Review starts here.`,
@@ -182,7 +186,7 @@ const CTAFlight = {
 <BaseLayout
   siteTitle={data.data.title}
   siteDescription={data.data.description}
-  keywords={data.data.pageKeywords}
+  keywords={keywords}
 >
   <HeaderScreen content={data.data.header} />
 
@@ -200,11 +204,11 @@ const CTAFlight = {
           >
             {data.data.schedule.heather2}
           </p>
-          <h1
+          <h2
             class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
           >
             {data.data.schedule.title}
-          </h1>
+          </h2>
           <p
             class="mt-6 text-xl leading-8 text-muted-200"
             set:html={data.data.schedule.description[0]}
@@ -305,11 +309,11 @@ const CTAFlight = {
           >
             {data.data.upperHeading}
           </p>
-          <h1
+          <h2
             class="mt-0 text-3xl font-bold tracking-tight text-muted-400 sm:text-4xl"
           >
             {data.data.sections[0].title}
-          </h1>
+          </h2>
           {
             data.data.sections[0].descriptions.map((paragraph, index) => (
               <div>

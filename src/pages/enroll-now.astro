@@ -1,11 +1,11 @@
 ---
 import Header from "../components/astro/Header.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { COMPANY_NAME, COMPANY_NICKNAME } from "../consts";
+import { COMPANY_NAME, COMPANY_NICKNAME, CORE_PROGRAM_KEYWORDS, AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../consts";
 import { countryPhoneCodes } from "../data/countriesPhone.js";
 const headerData = {
   headerH1: "START TODAY",
-  imagePath: "/src/assets/placeholder.webp",
+  imagePath: "/src/assets/placeholder-USATS-titusville-aviation-academy-florida.webp",
   imageAlt: "",
 };
 
@@ -15,12 +15,15 @@ const checkboxText = `I agree to the <a href="/privacy-policy" target="_blank" c
 
 const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
 const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
+ 
+const keywords = `${RENTAL_GROUND_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, flight school enrollment, pilot training enrollment, aviation school application, flight training registration, USATS enrollment process, become a pilot, aviation career start, flight school admission, pilot program application, flight training sign up, aviation academy enrollment, helicopter pilot training enrollment, airplane pilot training registration, pilot license program enrollment`;
+
 ---
 
 <BaseLayout
   siteTitle=`Enrollment Form | ${COMPANY_NAME}`
   siteDescription=`${COMPANY_NAME} USATS offers career-track, zero-to-hero pilot training programs at Space Coast Regional Airport (KTIX) in Titusville, Florida. With over 320 flying days per year, state-of-the-art facilities, and FAA-approved Part 141 and 61 programs, we provide top-tier education with flexible scheduling to fit the needs of aspiring airplane and helicopter pilots. Our comprehensive training, experienced instructors, and efficient course structure ensure students receive the highest quality instruction and flight experience to launch successful aviation careers`
-  keywords="flight school enrollment, pilot training enrollment, aviation school application, flight training registration, USATS enrollment process, become a pilot, aviation career start, flight school admission, pilot program application, flight training sign up, aviation academy enrollment, helicopter pilot training enrollment, airplane pilot training registration, pilot license program enrollment"
+  keywords={keywords}
 >
   <Header data={headerData} />
 

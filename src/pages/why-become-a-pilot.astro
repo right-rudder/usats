@@ -4,14 +4,18 @@ import HeaderScreen from "../components/astro/HeaderScreen.astro";
 import CTADiscoveryFlight from "../components/astro/CTADiscoveryFlights.astro";
 import whyBecomePilot from "../data/why-become-a-pilot";
 import Content from "../components/astro/Content.astro";
+import { CAREER_PATH_KEYWORDS, DISCOVERY_EXPERIENCE_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../consts";
 
 const { data } = whyBecomePilot;
+
+const keywords = `${DISCOVERY_EXPERIENCE_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${CAREER_PATH_KEYWORDS}, ${LOCATION_KEYWORDS}`;
+
 ---
 
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
-  keywords={data.pageKeywords}
+  keywords={keywords}
 >
   <!-- HEADER -->
   <HeaderScreen content={data.header} />

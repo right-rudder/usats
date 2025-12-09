@@ -8,6 +8,7 @@ import underHeaderHeli from "../../data/programs/underHeaderHeli";
 import UnderHeader from "../../components/astro/UnderHeader.astro";
 import ProgramDetails from "../../components/layouts/ProgramDetails.astro";
 import programs from "../../data/programs/programsHelicopterData";
+import { AIRCRAFT_FLEET_KEYWORDS, CAREER_PATH_KEYWORDS, CORE_PROGRAM_KEYWORDS, DISCOVERY_EXPERIENCE_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS } from "../../consts";
 
 export function getStaticPaths() {
   return programs.map(( {data} ) => {
@@ -49,12 +50,13 @@ const { data } = Astro.props;
 //   },
 //   keywords: data.pageKeywords,
 // };
+const keywords = `${GENERAL_AVIATION_KEYWORDS}, ${CORE_PROGRAM_KEYWORDS}, ${LOCATION_KEYWORDS}, ${DISCOVERY_EXPERIENCE_KEYWORDS}, ${CAREER_PATH_KEYWORDS}, ${AIRCRAFT_FLEET_KEYWORDS}, ${data.pageKeywords}`
 ---
 
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
-  keywords={data.pageKeywords}
+  keywords={keywords}
 >
   <!-- <script
     type="application/ld+json"

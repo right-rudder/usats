@@ -7,11 +7,12 @@ import fingerprintingTSA from "../../data/services/fingerprintingTSA";
 import ImageComp from "../../components/ImageComp.astro";
 import { COMPANY_NAME } from "../../consts";
 import { FaPlane } from "react-icons/fa";
+import { AVIATION_SERVICES_KEYWORDS, GENERAL_AVIATION_KEYWORDS, LOCATION_KEYWORDS, RENTAL_GROUND_KEYWORDS, TECH_TRAINING_KEYWORDS } from "../../consts";
 
 const { data } = fingerprintingTSA;
 
 const CTAFlight = {
-    imagePath: "/src/assets/CTADiscFlights.png",
+    imagePath: "/src/assets/ctadiscflights-USATS-florida-professional-pilot-program.png",
     imageAlt: "",
     headerH1: `Still have questions?`,
     paragraph:``,
@@ -27,11 +28,15 @@ const CTAFlight = {
 const fingerprintingImage = "";
 const header2 = "";
 const title = "";
+
+const keywords = `${RENTAL_GROUND_KEYWORDS}, ${AVIATION_SERVICES_KEYWORDS}, ${TECH_TRAINING_KEYWORDS}, ${LOCATION_KEYWORDS}, ${GENERAL_AVIATION_KEYWORDS}, ${data.pageKeywords}`;
+
+
 ---
 <BaseLayout
   siteTitle={data.title}
   siteDescription={data.paragraph}
-  keywords={data.pageKeywords}
+  keywords={keywords}
   >
   
   <HeaderScreen content = {data.header} />
