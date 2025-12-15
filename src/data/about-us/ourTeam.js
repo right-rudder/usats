@@ -114,7 +114,7 @@ const ourTeam = {
         name: "Stephane R.",
         imagePath: staffStephane.imagePath,
         imageAlt: staffStephane.imageAlt,
-        rank: "Chief Flight Instructor, RW, CFI, CFII, Dual ATP (US/Europe) ",
+        rank: "Chief Flight Instructor, RW, CFI, CFII, Dual ATP (US/Europe)",
       },
       {
         name: "Jason K.",
