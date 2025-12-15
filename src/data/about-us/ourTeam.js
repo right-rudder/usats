@@ -110,6 +110,12 @@ const ourTeam = {
       "Our rotor wing instructors bring a wealth of real-world helicopter experience, from commercial operations to advanced flight instruction. With a strong focus on safety and professional development, they ensure every student is well-prepared for real-world flying.",
     members: [
       {
+        name: "Stephane R.",
+        imagePath: staffStephane.imagePath,
+        imageAlt: staffStephane.imageAlt,
+        rank: "Chief Flight Instructor, RW, CFI, CFII, Dual ATP (US/Europe)",
+      },
+      {
          name: "Jason K.",
         imagePath: "/src/assets/krum_jason-USATS-titusville-private-pilot-license-fl.jpg",
         imageAlt:
