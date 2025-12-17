@@ -1,9 +1,9 @@
 ---
-pubDate: "2025-12-15"
+pubDate: 2025-12-15T12:00:00
 author: Brian Craddock
 title: "How Long Does It Take to Become a Pilot? A Realistic Timeline"
 description: "Discover how long it really takes to become a pilot in the U.S., step by step. USATS provides a structured training path designed to help students achieve their goals efficiently."
-heroImage: "/blog//directFly_altong_blue_USATS_ramp.webp"
+heroImage: "/blog/student-and-cfi-holding-certificate-USATS-titusville-instrument-rating.webp"
 readingTime: 4
 category: "Flight Training"
 tags:
@@ -22,13 +22,13 @@ tags:
   ]
 ---
 
-One of the most common questions aspiring pilots ask is, **“How long will it take to become a pilot?”** The answer depends on your goals, availability, and training path. At [**USATS**](https://usats.training), students follow an efficient, structured timeline designed to help them earn their licenses and build flight experience without unnecessary delays.
+One of the most common questions aspiring pilots ask is, **“How long will it take to become a pilot?”** The answer depends on your goals, availability, and training path. At **USATS**, students follow an efficient, structured timeline designed to help them earn their licenses and build flight experience without unnecessary delays.
 
 Here’s a **realistic timeline** to becoming a professional pilot.
 
 ## Step 1: Discovery Flight and Enrollment (1–2 Weeks)
 
-Your journey starts with a [**Discovery Flight**](/contact-us) and initial enrollment in the program. During this time, you’ll complete the necessary paperwork, medical certification, and scheduling.
+Your journey starts with a [**Discovery Flight**](/discovery-flight) and initial enrollment in the program. During this time, you’ll complete the necessary paperwork, medical certification, and scheduling.
 
 ## Step 2: Private Pilot License (PPL) (3–6 Months)
 
@@ -52,4 +52,4 @@ Once you meet hour requirements, you can pursue job opportunities in aviation. U
 
 ## Final Thoughts
 
-Becoming a professional pilot is a **clear and achievable process**. With focused training and ideal weather, USATS students often reach their goals faster than the national average. If you’re ready to take the first step, [**book your Discovery Flight**](/contact-us) today.
+Becoming a professional pilot is a **clear and achievable process**. With focused training and ideal weather, USATS students often reach their goals faster than the national average. If you’re ready to take the first step, [**book your Discovery Flight**](/discovery-flight) today.
