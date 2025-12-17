@@ -1,17 +1,25 @@
 ---
+
 ---
- <!-- GHL Embed code -->
- <script 
-  type="text/partytown"
-  src="https://beta.leadconnectorhq.com/loader.js"  
-  data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
-  data-widget-id="684203a37322c263145b3b2a"   
-  defer> 
- </script>
 
+<!-- Generate chat only after user scroll down-->
+<div
+  id="chat-widget-placeholder"
+  data-chat-widget
+  data-widget-id="684203a37322c263145b3b2a"
+  data-location-id="8AsDA5K6uVz3gup1zDrD"
+>
+</div>
 
- <!-- Google Tag Manager GHL Embed code  -->
- <!-- <div 
+<!-- Direct implementation of chat widget -->
+
+<!-- <script
+  type="text/javascript"
+  src="https://widgets.leadconnectorhq.com/loader.js"
+  data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+  data-widget-id="684203a37322c263145b3b2a"></script> -->
+
+<!-- Google Tag Manager GHL Embed code  --><!-- <div 
   data-chat-widget 
   data-widget-id="684203a37322c263145b3b2a" 
   data-location-id="8AsDA5K6uVz3gup1zDrD"  > 
@@ -22,3 +30,31 @@
   data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
  data-widget-id="684203a37322c263145b3b2a"   > 
  </script> -->
+
+<script type="module">
+  let chatLoaded = false;
+
+  function loadChatWidget() {
+    if (chatLoaded) return;
+    chatLoaded = true;
+
+    const script = document.createElement("script");
+    script.src = "https://beta.leadconnectorhq.com/loader.js";
+    script.setAttribute(
+      "data-resources-url",
+      "https://beta.leadconnectorhq.com/chat-widget/loader.js"
+    );
+    script.setAttribute("data-widget-id", "684203a37322c263145b3b2a");
+    document.body.appendChild(script);
+  }
+
+  function onScrollLoadChat() {
+    if (window.scrollY > 100) {
+      // Customize scroll threshold here
+      loadChatWidget();
+      window.removeEventListener("scroll", onScrollLoadChat);
+    }
+  }
+
+  window.addEventListener("scroll", onScrollLoadChat, { passive: true });
+</script>

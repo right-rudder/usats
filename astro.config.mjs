@@ -9,11 +9,11 @@ export default defineConfig({
   site: "https://usatsflighttraining.com/",
   integrations: [
     tailwind(),
-    partytown({
-      config: {
-        forward: ["gtag", "dataLayer.push"],
-      },
-    }),
+    // partytown({
+    //   config: {
+    //     forward: ["gtag", "dataLayer.push"],
+    //   },
+    // }),
     sitemap({
       // Customize URLs in the sitemap
       customPages: [
