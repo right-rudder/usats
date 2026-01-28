@@ -65,4 +65,4 @@ Aviation safety standards work best when they are part of the culture. At Univer
 
 By combining structured training, modern equipment, simulator use, and strong instructor support, Universal Flight Training helps students become pilots who respect the rules and understand their purpose.
 
-If you are ready to begin training in a safety focused environment, Universal Flight Training is ready to help you take the next step.
+If you are ready to begin training in a safety focused environment, [contact Universal Flight Training](/contact-us) today, and take the next step.
